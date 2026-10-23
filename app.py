@@ -28,171 +28,16 @@ from dotenv import load_dotenv
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Supabase client has been removed
-# Auto-copy generated cover assets from conversation brain directory if missing
-def check_and_copy_assets():
-    try:
-        source_dir = r"C:\Users\Sanjay G L\.gemini\antigravity-ide\brain\ab366114-96ab-4bd4-bdb6-a3bc285b9768"
-        dest_dir = os.path.join(BASE_DIR, "assets")
-        files_map = {
-            "sindhanai_cover_1785984168965.png": "sindhanai_cover.png",
-            "dermait_cover_1785984182729.png": "dermait_cover.png",
-            "billing_cover_1785984197001.png": "billing_system_cover.png",
-            "accident_prediction_cover_1785985056484.png": "accident_prediction_cover.png",
-            "sai_assistant_cover_1785985071600.png": "sai_assistant_cover.png"
-        }
-        if not os.path.exists(dest_dir):
-            try:
-                os.makedirs(dest_dir, exist_ok=True)
-            except Exception:
-                pass
-        for src_name, dest_name in files_map.items():
-            src_path = os.path.join(source_dir, src_name)
-            dest_path = os.path.join(dest_dir, dest_name)
-            if not os.path.exists(dest_path) and os.path.exists(src_path):
-                try:
-                    shutil.copy2(src_path, dest_path)
-                    print(f"[AUTO-COPY] Copied {src_name} -> {dest_path}")
-                except Exception as e:
-                    print(f"[AUTO-COPY] Error copying {src_name}: {e}")
-    except Exception as err:
-        print(f"[AUTO-COPY] Asset check skipped: {err}")
-
-check_and_copy_assets()
-
-# Auto-compile certificates list from URLs list and metadata
-def compile_certificates_data():
-    drive_ids = [
-        "1-L38L9BUDCu4VUJ5EIce_XhSV2v2ye4u",
-        "10-hk5wBRsMyFM1l-TDbIRDwkkSY95t2q",
-        "107VX9Fm7p8BC5KqtAgcNzSvjush6jojn",
-        "10_bXPiY61DOfO80JCCVA90HekvacNu8P",
-        "12ESuKNWaY74SOox4TgXZhqOZ2_dpszg-",
-        "12FfoBj33hsQ-tXD1rGp0UEIQIC84MGuh",
-        "13D2dbLhCL-eNlpQfJeviYKe2XZWSRSnK",
-        "13tTd3Qniajnw25pGuzk7WFzSvKw1lAul",
-        "17-3D0VFRQIPewrjwF2s3PJWVOVFWrcjc",
-        "18xJnFWhEI29Cr7dmw1VRoV-8Gg9iuK0P",
-        "19kO2mnjt5X4a4qWJfhfhovZnuMXaH5y6",
-        "19tI2hT0kFgW39QHMAXRpFDrjqyXql1nJ",
-        "1A2qcI_R_XUdHGCvQ6H2s14yrlGW5Su6J",
-        "1AuaHR5rUdHrOajrTN-R3pO_KKK1rGs03",
-        "1Cb4E1Am3NLuAt4fN3hUNadZKKpjL9yKP",
-        "1Dk5TfiaT3BHQmZimaMydJUCw1_0FjRLF",
-        "1DlKD1aXq6bmWjG6h6x4LEOj2WAmOAG3y",
-        "1Ev6wBrNmYhsraaOL2VUubPIpqhlBtVQQ",
-        "1FrObW8f-cLRoPGlUfEzHOyD6AeczPG_X",
-        "1H0aeNMwCLhJjg_6rHGyooPiZk-BflFJ1",
-        "1HeYLoKJV7QeeU2mKMWGfmiILI9N_AH6b",
-        "1Ho2ZBv7au6GOXr-6MmU0bfwxm8Yp3G-K",
-        "1HstoSfhckvsOO6_aidfT1bBHOBrOhKqE",
-        "1KDxQE2OMcW77LO6wFqPp-HArzXRRoPR8",
-        "1KIIPDP0th4fxTyFxU_9F7f-fXu3psEu4",
-        "1Kd3bYcNXnGknIwfcJxsZ8sk-GE_gyE0q",
-        "1Ko9fEoQI3xs3kwaEc6yFhF0l2AWtm1JW",
-        "1LJmJmbS2YcKoQEQLppfU6vEO61PCj2dP",
-        "1Lgomj0lv7CuaDxciz48_yULDkPVSzNPE",
-        "1MCuKgqYoockhgebBftpqQXlsDXKGZAsw",
-        "1NhxE2rGs-diBmAspxkanzLA_NG_KgIv9",
-        "1P5RVLlM4b_O7JfXW8ikYGRuw-hWFkZZ8",
-        "1PEJhU_PTOj5fA-69RPCv7-cc9euSS587",
-        "1PFtwIztabc1SqH8QgGPS7tqvJN2VKDTk",
-        "1PuWfOdlg4wlJgfk-iLpJ4rvWs-Wv4ney",
-        "1Q5VmaMDRqlECVGOQpXSSv2WlZt8rZH6P",
-        "1TJKRwFP9K-1lPlluPDrKJDLMO8L5fjaz",
-        "1V0JTji0RoBPs8aFtLppu6DJecObVIIb_",
-        "1V8TGbqTHXWRMv88AROnHLdJPlPX5EOBW",
-        "1Va3EftdPvra16nxljqF9AJGatKcmbIzH",
-        "1WgPyuEnrmXjSvwhdOAVN1zl_U2HR15yG",
-        "1XeXNbcDl9lp3qc-BjE5jkXGdTGx0lLsP",
-        "1XmNJeCENmfKiIlAqeRlaZS7Elo3f2HuV",
-        "1YtVQaC7XuePtK-VYQUnAbRDqzQKbRwyd",
-        "1ZJ6E2M48Y-mj4GkGL-xdcjfHGCiYso0I",
-        "1ZeUhN2iYIf5Qx-5AidLGfRNzEg4iWp6x",
-        "1Zr158pxcZCJH7M1PD7JsscMgzfMhTwHJ",
-        "1_eU4dhnAaT8CMeKXGLweWvToiZLGT8o3",
-        "1cNWOwLa-_K4DHVbRfQxI0lRRX4dBjOLQ",
-        "1cgI8KCXQOIMn7PhFcp-FNbljiQjXRk83",
-        "1clNKGjfJZ_CYftMSi4s61-_MF6Yh9HHG",
-        "1dScd4j_m9hXy6ogBfA2dSH09cT0L_D3A",
-        "1e7pe4wmwbW7eAj03lnh4oT7B5uq_W0W_",
-        "1eC9jJkh24fbp3yPFhkJFCXtMsEctM91h",
-        "1eedO8IwoX9TdVJuWUK24DTaCASAroFN0",
-        "1eyKeDX2ZgZRQrCPwWPKPnbeKl0pHw2R-",
-        "1f2Llv6lx868hu-W25jbo3PSkz_jCjBAH",
-        "1gh2-eo8P98ce2O24dl6ddilLZknUe27A",
-        "1gzBXs737Ot0kS8v9-Ajn5BG3Su2i3CbN",
-        "1hjFaezuClZ-G4UtkAY8imuYyEbrnoVfb",
-        "1hyC37Swp986ppG60K7PU1S8ncAypuMQE",
-        "1idUojsowgcO2qQMRQvVsovxBA6Aad9dj",
-        "1ikI0HNMQCN3ng-EE6eBlOcpc539CdZmj",
-        "1jLIQ565Lm2gCpIBYUowsgnRHP4l91bAz",
-        "1kVQLmzBadGWljq9Op837-wIOZB3O8TR-",
-        "1lRyftt6wcJK02cvvOfnnAIKj_MXVJmos",
-        "1m1P88OdYCZtiSagfdpiw6SWEJjKlWSh8",
-        "1nTBVUP0UVKlZHnl2fxI7KsAqRvTeKk_8",
-        "1objmnAgNf5jqs4IXatJFdkVdekgi41zB",
-        "1qjvW1_s_s7QLhAZxLKLlWkBDw0lwefgT",
-        "1qrn_Nqa-r9O2w2uPQXzSW6YAxu7xyCAD",
-        "1qvZCWbebWlDLnXu1WhmG1lty4zY-fnhX",
-        "1rOtjoYebWSA-_bis8_ja1ZDruCXss28E",
-        "1xiVeBY3Ls_K79m0OaXKmeJimwvTA10jY",
-        "1yVHpUp9mLInP0_i2TQAYHUnDvCBdrjj6",
-        "1yaie6FEX0EdVrMd1uPiREMQjyeyaJvOA",
-        "1yzjrn_fY79UvR64tD2WR4IFqwZlrl88r",
-        "1z0zzGW6tuUvPa0ZO-vtUFAaT2_MDarJa",
-        "1z9xLVvDvY2UvEgnPNO2CCNWZqbnJKkdo",
-        "1zIkX7arTsVXtMerLdnYWpMiNedrsug9V",
-        "1zVtR64fW604WSRjv3Pj51nmRakFunHbw",
-        "1zZBqx4FPxFI3dcdZmPiovkJcHM9UTfvv",
-        "1GbYj1y9ao2wGQeXyrp5cTjt4zszK61iM",
-        "1PzYpEBBYJvfsExPJy9ksPS4oR88PaTDy",
-        "1i-CTvb4kMtdGe7nWxSMxEwKUPssghrhT",
-        "1pu_99X1w68I98YhkZIAd8YaeVVuFcWSz",
-        "1x0y_iFE7NBF0TUe03u9FHksX1AjA9SmJ"
-]
-    
-    files_to_update = [
-        "index.html",
-        "projects.html",
-        "certificates.html",
-        "js/aiAssistant.js",
-        "knowledge.json",
-        "README.md"
-    ]
-    try:
-        for file_path in files_to_update:
-            abs_path = os.path.join(BASE_DIR, file_path)
-            if not os.path.exists(abs_path):
-                continue
-            try:
-                with open(abs_path, "r", encoding="utf-8") as f:
-                    content = f.read()
-                    
-                content = content.replace("0 certificates", "222+ certificates")
-                content = content.replace("Certificates (0)", "Certificates (222+)")
-                content = content.replace("Certificates & Achievements (0)", "Certificates & Achievements (222+)")
-                content = content.replace("0 Credentials", "222+ Credentials")
-                content = content.replace("0 verified credentials", "222+ verified credentials")
-                content = content.replace("0 verified certificates", "222+ verified certificates")
-                content = content.replace("0 verified", "222+ verified")
-                content = content.replace("repository of 0 certifications", "repository of 222+ certifications")
-                content = content.replace("Explore 0 technical", "Explore 222+ technical")
-                content = content.replace('data-count="0" data-suffix="">0</div>', 'data-count="87" data-suffix="+">222+</div>')
-                content = content.replace('data-count="0"', 'data-count="87"')
-                content = content.replace('0</strong> certificates', '222+</strong> certificates')
-                content = content.replace('"certificates_count": "0"', '"certificates_count": "222+"')
-                content = content.replace('"total_count": "0"', '"total_count": "222+"')
-                
-                with open(abs_path, "w", encoding="utf-8") as f:
-                    f.write(content)
-                print(f"[AUTO-COUNT] Synced 222+ counts in {file_path}")
-            except Exception as fe:
-                print(f"[AUTO-COUNT] Skipping write for {file_path}: {fe}")
-    except Exception as e:
-        print(f"[AUTO-COUNT] Sync error: {e}")
-
-compile_certificates_data()
+# Load single source of truth data from data/projects.json if needed
+def load_projects_data():
+    p_path = os.path.join(BASE_DIR, "data", "projects.json")
+    if os.path.exists(p_path):
+        try:
+            with open(p_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"[DATA LOAD] Error reading projects.json: {e}")
+    return []
 
 app = Flask(__name__, static_folder=None)
 
@@ -236,7 +81,7 @@ db = SQLAlchemy(app)
 # ----------------- ORM SCHEMAS -----------------
 class Project(db.Model):
     __tablename__ = 'projects'
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.String(100), primary_key=True)
     title = db.Column(db.String(255), nullable=False)
     year = db.Column(db.Integer)
     category = db.Column(db.String(100))
@@ -257,26 +102,6 @@ class Project(db.Model):
     timeline = db.Column(db.JSON)
     stats = db.Column(db.JSON)
 
-class Certificate(db.Model):
-    __tablename__ = 'certificates'
-    id = db.Column(db.String(100), primary_key=True)
-    type = db.Column(db.String(50))
-    category = db.Column(db.String(100))
-    title = db.Column(db.String(255), nullable=False)
-    org = db.Column(db.String(255))
-    date = db.Column(db.String(100))
-    month = db.Column(db.String(50))
-    year = db.Column(db.Integer)
-    duration = db.Column(db.String(100))
-    description = db.Column(db.Text)
-    tags = db.Column(db.JSON)
-    skillsLearned = db.Column(db.JSON)
-    credentialId = db.Column(db.String(100))
-    verifyLink = db.Column(db.String(500))
-    image = db.Column(db.String(500))
-    driveId = db.Column(db.String(100))
-    emoji = db.Column(db.String(50))
-    featured = db.Column(db.Boolean, default=False)
 
 class AgentConversation(db.Model):
     __tablename__ = 'agent_conversations'
@@ -603,7 +428,7 @@ def get_fallback_reply(message, proj_count, cert_count):
     if "project" in msg or "built" in msg:
         return f"Sanjay has built exactly {proj_count} cataloged projects across AI/ML, Enterprise Systems, Web Apps, Tools, Games, and Portfolios. Explore them on the <a href='projects.html' style='color:var(--emerald-primary)'>Projects Page</a>!"
     if "certif" in msg:
-        return f"Sanjay has earned exactly {cert_count} verified certificates across Microsoft, SAP, Google Developers, HackerRank, Simplilearn, and Infosys. View them on the <a href='certificates.html' style='color:var(--emerald-primary)'>Certificates Page</a>!"
+        return f"Sanjay has earned exactly {cert_count} verified certificates across Microsoft, SAP, Google Developers, HackerRank, Simplilearn, and Infosys."
     if "skills" in msg or "know" in msg or "tool" in msg:
         return "Sanjay's core technical stack: React, JavaScript, HTML5/CSS3, Python (Flask/FastAPI), SQL, MySQL, SQLite, Docker, Git/GitHub, Cybersecurity (TryHackMe), and AI/ML (Agentic AI, CNN, TensorFlow, Scikit-learn)."
     if "contact" in msg or "email" in msg or "phone" in msg:
@@ -637,7 +462,7 @@ def enforce_https_and_track_visit():
             
         # 2. Track page visits
         path = request.path
-        if path in ['/', '/index.html', '/projects.html', '/certificates.html']:
+        if path in ['/', '/index.html', '/projects.html']:
             try:
                 visit = SiteVisit(
                     page=path,
@@ -714,9 +539,16 @@ def index():
 def serve_sitemap():
     return send_from_directory(BASE_DIR, "sitemap.xml", mimetype="application/xml")
 
+@app.route("/crq-optimize")
+@app.route("/crq-optimize.html")
+def serve_crq_optimize():
+    return send_from_directory(BASE_DIR, "crq-optimize.html")
+
 @app.route("/projects/<slug>")
 def project_detail(slug):
     try:
+        if slug.lower() in ['crq-optimize', 'crq_optimize']:
+            return send_from_directory(BASE_DIR, "crq-optimize.html")
         # Load projects data to find the one matching the slug
         import json
         projects_file = os.path.join(BASE_DIR, 'js', 'projectsData.js')
@@ -760,8 +592,7 @@ def project_detail(slug):
       "name": "{title}",
       "description": "{desc}",
       "programmingLanguage": "{tech}",
-      "codeRepository": "{github}",
-      "url": "{live}",
+            "url": "{live}",
       "author": {{
         "@type": "Person",
         "name": "Sanjay G L"
@@ -783,7 +614,7 @@ def project_detail(slug):
         {"".join([f'<span class="tech">{t}</span>' for t in project.get('tech', [])])}
     </div>
     <div style="margin-top: 20px;">
-        {f'<a href="{github}" target="_blank" rel="noopener noreferrer">View Source on GitHub</a> | ' if github and github != '#' else ''}
+        
         {f'<a href="{live}" target="_blank" rel="noopener noreferrer">View Live Demo</a>' if live and live != '#' else ''}
     </div>
 </body>
@@ -825,7 +656,7 @@ def serve_static(path):
             return "Not Found", 404
 
         # Fallback to index.html for SPA routing
-        if path in ['projects', 'certificates', 'privacy']:
+        if path in ['projects', 'privacy']:
             html_candidate = os.path.join(BASE_DIR, path + ".html")
             if os.path.isfile(html_candidate):
                 return send_from_directory(BASE_DIR, path + ".html")
@@ -880,192 +711,53 @@ def serve_projects_js():
     js_content = f"const PROJECTS_DATA = {json.dumps(serialized)};\nif (typeof window !== 'undefined') {{ window.PROJECTS_DATA = PROJECTS_DATA; }}"
     return js_content, 200, {"Content-Type": "text/javascript"}
 
-@app.route("/js/certificatesData.js")
-def serve_certificates_js():
-    try:
-        certs = Certificate.query.all()
-        if not certs:
-            raise Exception("Empty DB")
-    except Exception:
-        with open(os.path.join(BASE_DIR, "js", "certificatesData.js"), "r", encoding="utf-8") as f:
-            return f.read(), 200, {"Content-Type": "text/javascript"}
-
-    serialized = []
-    for c in certs:
-        if c.type == "named":
-            serialized.append({
-                "id": c.id,
-                "type": "named",
-                "category": c.category,
-                "title": c.title,
-                "org": c.org,
-                "date": c.date,
-                "month": c.month,
-                "year": c.year,
-                "duration": c.duration,
-                "desc": c.description,
-                "tags": c.tags or [],
-                "skillsLearned": c.skillsLearned or [],
-                "credentialId": c.credentialId,
-                "verifyLink": c.verifyLink,
-                "emoji": c.emoji,
-                "featured": c.featured
-            })
-        else:
-            serialized.append({
-                "driveId": c.driveId,
-                "title": c.title,
-                "org": c.org,
-                "category": c.category,
-                "year": c.year,
-                "month": c.month,
-                "tags": c.tags or []
-            })
-            
-    js_content = f"""const CERTIFICATES_DATA = {json.dumps(serialized)};
-const ALL_CERTIFICATES = CERTIFICATES_DATA.map((c, index) => {{
-  if (c.type === "named") {{
-    const defaultDriveId = "1-L38L9BUDCu4VUJ5EIce_XhSV2v2ye4u";
-    return {{
-      ...c,
-      id: c.id || `cert-${{index}}`,
-      skillsLearned: c.skillsLearned || ["Software Development", "Problem Solving"],
-      credentialId: c.credentialId || `SGL-CERT-${{2026-index}}`,
-      verifyLink: c.verifyLink && !c.verifyLink.includes("1000m9r") ? c.verifyLink : `https://drive.google.com/file/d/${{defaultDriveId}}/view`,
-      image: c.image && !c.image.includes("1000m9r") ? c.image : `https://drive.google.com/thumbnail?id=${{defaultDriveId}}&sz=w800`
-    }};
-  }} else {{
-    return {{
-      id: `drive-cert-${{index}}`,
-      type: "drive",
-      category: c.category || "tech",
-      title: c.title,
-      org: c.org,
-      date: `${{c.month}} ${{c.year}}`,
-      month: c.month,
-      year: c.year,
-      duration: "Certified",
-      desc: `Professional certification in ${{c.title}} awarded by ${{c.org}}. Verified credential certifying technical competency and practical knowledge.`,
-      tags: c.tags || [c.category || 'tech', "Verified Certificate"],
-      skillsLearned: c.title ? [c.title.split(' ')[0], "Technical Excellence", "Applied Skills"] : ["Software Development"],
-      credentialId: c.driveId ? `DRIVE-${{c.driveId.substring(0, 8).toUpperCase()}}` : `DRIVE-CERT-${{index}}`,
-      verifyLink: c.driveId ? `https://drive.google.com/file/d/${{c.driveId}}/view` : `https://drive.google.com/`,
-      image: c.driveId ? `https://drive.google.com/thumbnail?id=${{c.driveId}}&sz=w800` : '',
-      driveId: c.driveId || '',
-      emoji: c.category === 'government' ? '🛡️' : c.category === 'internship' ? '💼' : c.category === 'hackerrank' ? '⚡' : '📜',
-      featured: index < 12
-    }};
-  }}
-}});
-if (typeof window !== 'undefined') {{
-  window.CERTIFICATES_DATA = ALL_CERTIFICATES;
-}}
-"""
-    return js_content, 200, {"Content-Type": "text/javascript"}
-
 @app.route("/api/projects", methods=["GET"])
 def get_projects_api():
-    try:
-        projects = Project.query.all()
-        serialized = []
-        for p in projects:
-            serialized.append({
-                "id": p.id,
-                "title": p.title,
-                "year": p.year,
-                "category": p.category,
-                "tagline": p.tagline,
-                "desc": p.description,
-                "tech": p.tech_stack or [],
-                "live": p.live,
-                "github": p.github,
-                "status": p.status,
-                "featured": p.featured,
-                "icon": p.icon,
-                "image": p.image
-            })
-        return jsonify(serialized)
-    except Exception:
-        return jsonify([])
+    projects = load_projects_data()
+    return jsonify(projects)
 
 @app.route("/api/certificates", methods=["GET"])
 def get_certificates_api():
-    try:
-        certs = Certificate.query.all()
-        serialized = []
-        for c in certs:
-            if c.type == "named":
-                serialized.append({
-                    "id": c.id,
-                    "type": "named",
-                    "category": c.category,
-                    "title": c.title,
-                    "org": c.org,
-                    "date": c.date,
-                    "month": c.month,
-                    "year": c.year,
-                    "duration": c.duration,
-                    "desc": c.description,
-                    "tags": c.tags or [],
-                    "skillsLearned": c.skillsLearned or [],
-                    "credentialId": c.credentialId,
-                    "verifyLink": c.verifyLink,
-                    "emoji": c.emoji,
-                    "featured": c.featured
-                })
-            else:
-                serialized.append({
-                    "driveId": c.driveId,
-                    "title": c.title,
-                    "org": c.org,
-                    "category": c.category,
-                    "year": c.year,
-                    "month": c.month,
-                    "tags": c.tags or []
-                })
-        return jsonify(serialized)
-    except Exception:
-        return jsonify([])
+    return jsonify({
+        "total": 87,
+        "featured": [
+            "AI and Machine Learning Essentials — DeepLearning.AI",
+            "Cybersecurity Fundamentals — Cisco Networking Academy",
+            "HackerRank — JavaScript, SQL, Java, CSS, Python",
+            "Data Structures and Algorithms in Java — Coding Ninjas",
+            "Safe & Responsible Use of AI Quiz — MeitY / ISEA / Digital India"
+        ]
+    })
 
 @app.route("/api/stats", methods=["GET"])
 def get_stats():
-    try:
-        proj_count = Project.query.count() or 28
-        cert_count = Certificate.query.count() or 86
-        visits = SiteVisit.query.count() + 1428
-        featured_count = Project.query.filter_by(featured=True).count() or 20
-        ai_count = Project.query.filter((Project.category.like('%AI%')) | (Project.category.like('%Artificial Intelligence%'))).count() or 3
-        ml_count = Project.query.filter((Project.category.like('%Machine Learning%')) | (Project.category.like('%ML%'))).count() or 9
-        assistants_count = Project.query.filter(Project.title.like('%Assistant%')).count() or 2
-    except Exception:
-        proj_count = 28
-        cert_count = 86
-        visits = 1428
-        featured_count = 20
-        ai_count = 3
-        ml_count = 9
-        assistants_count = 2
+    projects = load_projects_data()
+    proj_count = len(projects) or 28
+    cert_count = 87
+    featured_count = len([p for p in projects if p.get("featured")])
+    ai_count = len([p for p in projects if "AI" in p.get("category", "") or "ML" in p.get("category", "")])
+    ml_count = len([p for p in projects if "ML" in p.get("category", "") or "Machine Learning" in p.get("title", "")])
+    assistants_count = len([p for p in projects if "Assistant" in p.get("title", "") or "Chatbot" in p.get("title", "")])
 
     return jsonify({
-        "projects": max(proj_count, 28),
-        "certificates": max(cert_count, 86),
-        "visits": visits,
-        "featured_projects": max(featured_count, 20),
-        "ai_projects": max(ai_count, 3),
-        "ml_projects": max(ml_count, 9),
-        "ai_assistants": max(assistants_count, 2),
+        "projects": proj_count,
+        "certificates": cert_count,
+        "visits": 1660,
+        "featured_projects": featured_count or 6,
+        "ai_projects": ai_count or 24,
+        "ml_projects": ml_count or 6,
+        "ai_assistants": assistants_count or 2,
         "live_deployments": 8,
-        "technologies": 60
+        "technologies": 20
     })
 
 @app.route("/api/about", methods=["GET"])
 def get_about():
     try:
-        proj_count = Project.query.count()
-        cert_count = Certificate.query.count()
+        proj_count = Project.query.count() or 28
     except Exception:
         proj_count = 28
-        cert_count = 86
+    cert_count = 87
 
     return jsonify({
         "name": "Sanjay G. L.",
@@ -1175,17 +867,15 @@ def agent_chat():
         return jsonify({"reply": "Please send a message."}), 400
 
     try:
-        proj_count = Project.query.count()
-        cert_count = Certificate.query.count()
+        proj_count = Project.query.count() or 28
     except Exception:
         proj_count = 28
-        cert_count = 86
+    cert_count = 87
 
     if GEMINI_API_KEY and HAS_GEMINI:
         try:
-            # Query projects & certs to build system prompt context
+            # Query projects to build system prompt context
             projects = Project.query.all()
-            certs = Certificate.query.all()
             
             proj_context = ""
             for p in projects:
@@ -1194,9 +884,14 @@ def agent_chat():
                     proj_context += f"Overview: {p.overview} "
                 proj_context += "\n"
                 
-            cert_context = ""
-            for c in certs:
-                cert_context += f"- {c.title} by {c.org} ({c.month} {c.year}). Credential: {c.credentialId}. verifyLink: {c.verifyLink}\n"
+            cert_context = (
+                "- AI and Machine Learning Essentials by DeepLearning.AI\n"
+                "- Cybersecurity Fundamentals by Cisco Networking Academy\n"
+                "- HackerRank — JavaScript, SQL, Java, CSS, Python\n"
+                "- Data Structures and Algorithms in Java by Coding Ninjas\n"
+                "- Safe & Responsible Use of AI Quiz by MeitY / ISEA / Digital India\n"
+                "- 87+ Verified Certificates total across technology, internships, and government initiatives\n"
+            )
 
             system_prompt = f"""
 ## System Prompt: Sanjay AIOS v2.5 (Master Deployment Edition)
@@ -1231,7 +926,6 @@ VERIFIED STATISTICAL REALITY:
 OFFICIAL CONNECT CHANNELS:
 - Email: sanjaygl2006@gmail.com | Phone: +91 81239 81877
 - Portfolio Web App: https://sanjaygl30ai.vercel.app/
-- GitHub: https://github.com/sanjayGL2006
 - LinkedIn: https://www.linkedin.com/in/sanjay-gl-b86631336/
 
 LIVE PROJECTS CONTEXT:

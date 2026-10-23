@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRQ Optimize — Cyber Risk Quantification & Investment Platform</title>
+  <meta name="description" content="Turn Cyber Risk into Defensible Business Decisions under budget constraints using Monte Carlo simulation, non-linear control overlap math, and knapsack optimization.">
+  <link rel="canonical" href="https://sanjaygl30ai.vercel.app/crq-optimize">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/crq-optimize.css">
+</head>
+<body class="crq-page">
+  <!-- Navigation Header -->
+  <header style="padding: 20px 0; border-bottom: 1px solid var(--crq-border); background: rgba(7, 20, 38, 0.85); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; align-items: center;">
+      <a href="/" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff;">
+        <img src="assets/logo.svg" alt="Sanjay G. L." width="36" height="36" style="border-radius: 6px;">
+        <span style="font-family: var(--crq-font-display); font-weight: 700; font-size: 1.15rem;">Sanjay<span style="color: var(--crq-teal);">.GL</span></span>
+      </a>
+      <div style="display: flex; gap: 16px; align-items: center;">
+        <a href="/projects" class="btn btn-outline btn-sm">← Back to Projects</a>
+        <a href="/" class="btn btn-primary btn-sm" style="background: var(--crq-grad-teal-cyan); border: none; color: #071426; font-weight: 700;">Portfolio Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main style="max-width: 1200px; margin: 0 auto; padding: 48px 24px;">
+    <!-- Hero Banner -->
+    <div style="text-align: center; margin-bottom: 56px;">
+      <span class="tech-pill" style="background: rgba(20, 184, 166, 0.15); border: 1px solid var(--crq-teal); color: var(--crq-cyan); font-weight: 700; font-size: 0.85rem; padding: 6px 16px;">
+        <i class="fa-solid fa-shield-halved"></i> SPVM³ Tech Solutions · Hackathon 3.0 Platform
+      </span>
+      <h1 style="font-family: var(--crq-font-display); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; margin: 20px 0 16px; line-height: 1.2;">
+        CRQ <span style="background: var(--crq-grad-teal-cyan); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Optimize</span>
+      </h1>
+      <p style="font-size: 1.15rem; color: var(--crq-muted); max-width: 800px; margin: 0 auto 32px; line-height: 1.7;">
+        Probabilistic Cyber Risk Quantification and Security Investment Optimization Engine. Translates raw telemetry into financial loss curves and optimizes control portfolios under hard budget caps.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <a href="#simulator" class="btn btn-primary" style="background: var(--crq-grad-teal-cyan); border: none; color: #071426; font-weight: 700; padding: 12px 28px;">
+          <i class="fa-solid fa-calculator"></i> Launch Risk Simulator
+        </a>
+        <a href="#overlap" class="btn btn-outline" style="border-color: var(--crq-border); color: #fff; padding: 12px 24px;">
+          <i class="fa-solid fa-circle-nodes"></i> Overlap Math Engine
+        </a>
+      </div>
+    </div>
+
+    <!-- Section 1: Interactive Risk Simulator -->
+    <section id="simulator" style="margin-bottom: 64px; background: var(--crq-surface-card); border: 1px solid var(--crq-border); border-radius: var(--crq-radius-lg); padding: 36px;">
+      <div style="margin-bottom: 28px;">
+        <h2 style="font-family: var(--crq-font-display); font-size: 1.8rem; margin-bottom: 8px; color: var(--crq-white);">
+          <i class="fa-solid fa-sliders" style="color: var(--crq-teal); margin-right: 8px;"></i>
+          Budget-Constrained Portfolio Optimizer
+        </h2>
+        <p style="color: var(--crq-muted); font-size: 0.95rem;">
+          Select candidate security mitigations and adjust your organizational budget cap. The solver models non-linear diminishing returns and outputs residual risk exceedance metrics (10k Monte Carlo trials).
+        </p>
+      </div>
+
+      <!-- Budget Slider -->
+      <div style="background: rgba(7, 20, 38, 0.6); padding: 20px; border-radius: var(--crq-radius-md); border: 1px solid var(--crq-border); margin-bottom: 28px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span style="font-weight: 600; color: var(--crq-white); font-size: 1rem;">Cybersecurity Annual Budget Cap:</span>
+          <span id="crqBudgetValue" style="font-family: var(--crq-font-code); font-weight: 700; color: var(--crq-cyan); font-size: 1.3rem;">$65,000</span>
+        </div>
+        <input type="range" id="crqBudgetSlider" min="20000" max="150000" step="5000" value="65000" style="width: 100%; accent-color: var(--crq-teal);">
+        <div id="simBudgetWarning" style="color: var(--crq-orange); font-size: 0.85rem; margin-top: 8px; display: none;">
+          ⚠️ Selected mitigations exceed current budget allocation.
+        </div>
+      </div>
+
+      <!-- Controls Grid -->
+      <h3 style="font-size: 1.1rem; margin-bottom: 16px; color: var(--crq-white);">Candidate Security Mitigations</h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-bottom: 32px;">
+        <label style="display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: rgba(7, 20, 38, 0.4); border: 1px solid var(--crq-border); border-radius: var(--crq-radius-md); cursor: pointer;">
+          <input type="checkbox" class="crq-control-checkbox" data-cost="28000" data-eff="0.55" checked style="margin-top: 4px; accent-color: var(--crq-teal);">
+          <div>
+            <strong style="display: block; color: var(--crq-white);">Phishing-Resistant FIDO2 MFA</strong>
+            <span style="font-size: 0.82rem; color: var(--crq-muted);">Cost: $28,000 | Effectiveness: 55%</span>
+          </div>
+        </label>
+
+        <label style="display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: rgba(7, 20, 38, 0.4); border: 1px solid var(--crq-border); border-radius: var(--crq-radius-md); cursor: pointer;">
+          <input type="checkbox" class="crq-control-checkbox" data-cost="22000" data-eff="0.45" checked style="margin-top: 4px; accent-color: var(--crq-teal);">
+          <div>
+            <strong style="display: block; color: var(--crq-white);">Automated Patch Orchestration</strong>
+            <span style="font-size: 0.82rem; color: var(--crq-muted);">Cost: $22,000 | Effectiveness: 45%</span>
+          </div>
+        </label>
+
+        <label style="display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: rgba(7, 20, 38, 0.4); border: 1px solid var(--crq-border); border-radius: var(--crq-radius-md); cursor: pointer;">
+          <input type="checkbox" class="crq-control-checkbox" data-cost="15000" data-eff="0.30" checked style="margin-top: 4px; accent-color: var(--crq-teal);">
+          <div>
+            <strong style="display: block; color: var(--crq-white);">Immutable Offsite Cloud Backups</strong>
+            <span style="font-size: 0.82rem; color: var(--crq-muted);">Cost: $15,000 | Effectiveness: 30%</span>
+          </div>
+        </label>
+
+        <label style="display: flex; gap: 12px; align-items: flex-start; padding: 16px; background: rgba(7, 20, 38, 0.4); border: 1px solid var(--crq-border); border-radius: var(--crq-radius-md); cursor: pointer;">
+          <input type="checkbox" class="crq-control-checkbox" data-cost="35000" data-eff="0.40" style="margin-top: 4px; accent-color: var(--crq-teal);">
+          <div>
+            <strong style="display: block; color: var(--crq-white);">EDR Autonomous Agent Deployment</strong>
+            <span style="font-size: 0.82rem; color: var(--crq-muted);">Cost: $35,000 | Effectiveness: 40%</span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Simulation Loss Distribution KPI Cards -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+        <div style="background: rgba(7, 20, 38, 0.8); padding: 18px; border-radius: var(--crq-radius-md); border: 1px solid var(--crq-border); text-align: center;">
+          <div style="font-size: 0.78rem; color: var(--crq-muted); text-transform: uppercase;">Total Investment</div>
+          <div id="simTotalCost" style="font-family: var(--crq-font-code); font-size: 1.5rem; font-weight: 700; color: var(--crq-white); margin-top: 6px;">$65,000</div>
+        </div>
+
+        <div style="background: rgba(7, 20, 38, 0.8); padding: 18px; border-radius: var(--crq-radius-md); border: 1px solid var(--crq-border); text-align: center;">
+          <div style="font-size: 0.78rem; color: var(--crq-muted); text-transform: uppercase;">Combined Mit. Power</div>
+          <div id="simCombinedEff" style="font-family: var(--crq-font-code); font-size: 1.5rem; font-weight: 700; color: var(--crq-teal); margin-top: 6px;">82.7%</div>
+        </div>
+
+        <div style="background: rgba(7, 20, 38, 0.8); padding: 18px; border-radius: var(--crq-radius-md); border: 1px solid var(--crq-border); text-align: center;">
+          <div style="font-size: 0.78rem; color: var(--crq-muted); text-transform: uppercase;">Baseline EAL</div>
+          <div id="simBaselineEal" style="font-family: var(--crq-font-code); font-size: 1.5rem; font-weight: 700; color: #ef4444; margin-top: 6px;">$242.5K</div>
+        </div>
+
+        <div style="background: rgba(7, 20, 38, 0.8); padding: 18px; border-radius: var(--crq-radius-md); border: 1px solid var(--crq-border); text-align: center;">
+          <div style="font-size: 0.78rem; color: var(--crq-muted); text-transform: uppercase;">Residual Modeled EAL</div>
+          <div id="simResidualEal" style="font-family: var(--crq-font-code); font-size: 1.5rem; font-weight: 700; color: var(--crq-cyan); margin-top: 6px;">$41.9K</div>
+        </div>
+
+        <div style="background: rgba(7, 20, 38, 0.8); padding: 18px; border-radius: var(--crq-radius-md); border: 1px solid var(--crq-border); text-align: center;">
+          <div style="font-size: 0.78rem; color: var(--crq-muted); text-transform: uppercase;">Annual Risk Saved</div>
+          <div id="simRiskReduced" style="font-family: var(--crq-font-code); font-size: 1.5rem; font-weight: 700; color: #10b981; margin-top: 6px;">$200.6K</div>
+        </div>
+      </div>
+
+      <!-- Percentile Risk Exceedance Breakdown -->
+      <div style="margin-top: 24px; padding: 18px; background: rgba(7, 20, 38, 0.5); border-radius: var(--crq-radius-md); display: flex; justify-content: space-around; flex-wrap: wrap; gap: 12px; font-size: 0.9rem;">
+        <div><strong>Median (P50):</strong> <span id="simP50Residual" style="font-family: var(--crq-font-code); color: var(--crq-cyan);">$32.0K</span></div>
+        <div><strong>P90 Tail Loss:</strong> <span id="simP90Residual" style="font-family: var(--crq-font-code); color: var(--crq-orange);">$84.8K</span></div>
+        <div><strong>Extreme Worst-Case (P95):</strong> <span id="simP95Residual" style="font-family: var(--crq-font-code); color: #ef4444;">$116.8K</span></div>
+      </div>
+    </section>
+
+    <!-- Section 2: Non-Linear Overlap Math Engine -->
+    <section id="overlap" style="margin-bottom: 64px; background: var(--crq-surface-card); border: 1px solid var(--crq-border); border-radius: var(--crq-radius-lg); padding: 36px;">
+      <h2 style="font-family: var(--crq-font-display); font-size: 1.8rem; margin-bottom: 8px; color: var(--crq-white);">
+        <i class="fa-solid fa-square-root-variable" style="color: var(--crq-cyan); margin-right: 8px;"></i>
+        Non-Linear Control Overlap Math
+      </h2>
+      <p style="color: var(--crq-muted); font-size: 0.95rem; margin-bottom: 24px;">
+        Traditional models mistakenly sum efficacy rates (e.g., 60% + 50% = 110%). CRQ Optimize uses independent conditional probability 
+        <code style="font-family: var(--crq-font-code); color: var(--crq-teal); background: rgba(20,184,166,0.1); padding: 2px 8px; border-radius: 4px;">1 − (1 − p₁)(1 − p₂)</code> 
+        to guarantee defensible, mathematically bounded mitigation modeling.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 28px;">
+        <div style="background: rgba(7, 20, 38, 0.6); padding: 20px; border-radius: var(--crq-radius-md); border: 1px solid var(--crq-border);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span>Control A Efficacy (p₁):</span>
+            <span id="p1Value" style="font-family: var(--crq-font-code); color: var(--crq-teal); font-weight: 700;">60%</span>
+          </div>
+          <input type="range" id="p1Slider" min="0" max="100" value="60" style="width: 100%; accent-color: var(--crq-teal);">
+        </div>
+
+        <div style="background: rgba(7, 20, 38, 0.6); padding: 20px; border-radius: var(--crq-radius-md); border: 1px solid var(--crq-border);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+            <span>Control B Efficacy (p₂):</span>
+            <span id="p2Value" style="font-family: var(--crq-font-code); color: var(--crq-cyan); font-weight: 700;">50%</span>
+          </div>
+          <input type="range" id="p2Slider" min="0" max="100" value="50" style="width: 100%; accent-color: var(--crq-cyan);">
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-around; background: rgba(7, 20, 38, 0.9); padding: 20px; border-radius: var(--crq-radius-md); border: 1px solid var(--crq-border); flex-wrap: wrap; gap: 16px;">
+        <div style="text-align: center;">
+          <div style="font-size: 0.8rem; color: var(--crq-muted); text-transform: uppercase;">CRQ Modeled True Efficacy</div>
+          <div id="overlapResult" style="font-family: var(--crq-font-code); font-size: 1.8rem; font-weight: 700; color: #10b981; margin-top: 4px;">80.0%</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 0.8rem; color: var(--crq-muted); text-transform: uppercase;">Flawed Linear Sum</div>
+          <div id="naiveResult" style="font-family: var(--crq-font-code); font-size: 1.8rem; font-weight: 700; color: #ef4444; margin-top: 4px;">110.0%</div>
+        </div>
+        <div style="text-align: center;">
+          <div style="font-size: 0.8rem; color: var(--crq-muted); text-transform: uppercase;">Double-Count Error Prevented</div>
+          <div id="overlapDiff" style="font-family: var(--crq-font-code); font-size: 1.8rem; font-weight: 700; color: var(--crq-orange); margin-top: 4px;">+30.0%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Interactive ERD Explorer -->
+    <section style="background: var(--crq-surface-card); border: 1px solid var(--crq-border); border-radius: var(--crq-radius-lg); padding: 36px;">
+      <h2 style="font-family: var(--crq-font-display); font-size: 1.8rem; margin-bottom: 8px; color: var(--crq-white);">
+        <i class="fa-solid fa-database" style="color: var(--crq-teal); margin-right: 8px;"></i>
+        Relational Data Architecture (ERD Explorer)
+      </h2>
+      <p style="color: var(--crq-muted); font-size: 0.95rem; margin-bottom: 24px;">
+        Click any database schema node below to inspect schema fields, foreign keys, and multi-tenant purpose.
+      </p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px;">
+        <button class="crq-erd-node btn btn-outline btn-sm active" data-table="organizations">organizations</button>
+        <button class="crq-erd-node btn btn-outline btn-sm" data-table="users">users</button>
+        <button class="crq-erd-node btn btn-outline btn-sm" data-table="business_services">business_services</button>
+        <button class="crq-erd-node btn btn-outline btn-sm" data-table="assets">assets</button>
+        <button class="crq-erd-node btn btn-outline btn-sm" data-table="findings">findings</button>
+        <button class="crq-erd-node btn btn-outline btn-sm" data-table="scenarios">scenarios</button>
+        <button class="crq-erd-node btn btn-outline btn-sm" data-table="risk_results">risk_results</button>
+      </div>
+
+      <div id="crqErdDetails" style="background: rgba(7, 20, 38, 0.8); border: 1px solid var(--crq-border); border-radius: var(--crq-radius-md); padding: 24px;">
+        <h3 style="color: var(--crq-cyan); margin-bottom: 8px;">Organizations</h3>
+        <p style="color: var(--crq-muted); font-size: 0.9rem; margin-bottom: 12px;">Top-level enterprise tenant representing the company or business unit.</p>
+        <ul style="color: var(--crq-white); font-family: var(--crq-font-code); font-size: 0.88rem; line-height: 1.8; margin-left: 20px;">
+          <li>id: UUID (Primary Key)</li>
+          <li>name: VARCHAR(255)</li>
+          <li>industry_sector: VARCHAR(100)</li>
+          <li>annual_revenue: NUMERIC</li>
+          <li>created_at: TIMESTAMP WITH TIME ZONE</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer style="text-align: center; padding: 40px 24px; border-top: 1px solid var(--crq-border); color: var(--crq-muted); font-size: 0.88rem; margin-top: 64px;">
+    © 2026 Sanjay G. L. · Engineered for Defensible Cyber Risk Decisions.
+  </footer>
+
+  <script src="js/crqOptimize.js"></script>
+</body>
+</html>

@@ -37,7 +37,7 @@ export default function ProfileChecker() {
     {
       platform: "GitHub",
       icon: Code2,
-      url: "https://github.com/sanjayGL2006",
+      url: "https://github.com/SanjayGL-8123",
       color: "text-foreground",
       checks: [
         { name: "Username consistency", status: "warn" },

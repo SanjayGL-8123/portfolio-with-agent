@@ -6,9 +6,9 @@
     "location": "Shivamogga, Karnataka, India (Kanaka Nagara, Devaraj Urs Layout, Vinoba Nagara)",
     "email": "sanjaygl2006@gmail.com",
     "phone": "+91 8123981877",
-    "status": "BCA 3rd Year (5th Semester) \u00b7 PES IAMS",
-    "bio": "Passionate BCA student & developer from Shivamogga, Karnataka. A hands-on builder who lives by 'Learn \u2192 Build \u2192 Test \u2192 Improve \u2192 Build something bigger'. Passionate about Modern Web Development, React, Cybersecurity, AI tools, and practical mini-projects.",
-    "core_philosophy": "Builder mindset: going from 'I have an idea' \u2192 'I built it'. Learning by doing rather than watching passive tutorials.",
+    "status": "BCA 3rd Year (5th Semester) · PES IAMS",
+    "bio": "Passionate BCA student & developer from Shivamogga, Karnataka. A hands-on builder who lives by 'Learn → Build → Test → Improve → Build something bigger'. Passionate about Modern Web Development, React, Cybersecurity, AI tools, and practical mini-projects.",
+    "core_philosophy": "Builder mindset: going from 'I have an idea' → 'I built it'. Learning by doing rather than watching passive tutorials.",
     "future_goal": "Full-stack engineer & Security Developer building scalable web applications, ethical cybersecurity labs, and AI systems.",
     "personal_life": {
       "relationship": "single and i am bca student",
@@ -22,21 +22,22 @@
         "Indian Cinema (Tracking releases like Jana Nayagan, With Love, Karuppu)"
       ]
     },
-    "github": "https://github.com/sanjayGL2006",
+    "github": "https://github.com/SanjayGL-8123",
     "linkedin": "https://www.linkedin.com/in/spvm3-tech-solution-solution-096bb8436",
     "telegram": "https://t.me/sanjaygl2006",
     "instagram": "https://www.instagram.com/spvm3techsolution",
     "youtube": "https://www.youtube.com/@spvm3techsolution",
     "spvm3tech": "https://sanjaygl30ai.vercel.app/#spvm3tech",
-    "resume": "assets/Sanjay_GL_Resume.pdf"
+    "resume": "assets/Sanjay_GL_Resume.pdf",
+    "resume_docx": "assets/Sanjay_GL_Resume.docx"
   },
   "education": [
     {
       "degree": "Bachelor of Computer Applications (BCA)",
       "institution": "PES Institute of Advanced Management Studies (PES IAMS / Kuvempu University)",
       "location": "Shivamogga, Karnataka",
-      "period": "2023 \u2013 Present",
-      "status": "Current \u00b7 3rd Year \u00b7 5th Semester (Completed 4th Sem Exams May 2026)"
+      "period": "2024 – 2026",
+      "status": "Current · 3rd Year · 5th Semester (Completed 4th Sem Exams May 2026)"
     },
     {
       "degree": "30-Hour Blockchain Technology Certification Course",
@@ -49,20 +50,20 @@
       "degree": "Pre-University Course (PUC)",
       "institution": "PES PU College",
       "location": "Shivamogga, Karnataka",
-      "period": "Completed March 2023",
-      "status": "Completed"
+      "period": "Completed · 2022-2024",
+      "status": "Completed · 2022-2024"
     },
     {
       "degree": "SSLC",
       "institution": "Cambridge International Public School",
       "location": "Shivamogga, Karnataka",
-      "period": "Completed April 2021",
-      "status": "Completed"
+      "period": "Completed · April 2022",
+      "status": "Completed · April 2022"
     }
   ],
   "currently_learning": {
     "topic": "Modern Web Development, React & AI Agent Systems",
-    "badge": "SANJAY AI OS v2.5 \u00b7 Active React & Full-Stack AI Stack",
+    "badge": "SANJAY AI OS v2.5 · Active React & Full-Stack AI Stack",
     "subtopics": [
       "React 18 & TypeScript (90%)",
       "SQL & MySQL (90%)",
@@ -137,9 +138,9 @@
         "percentage": 78
       },
       {
-        "name": "Supabase Vector DB",
+        "name": "MongoDB & PostgreSQL",
         "level": "Intermediate",
-        "percentage": 80
+        "percentage": 75
       }
     ],
     "tools_and_productivity": [
@@ -207,158 +208,158 @@
     "live_deployments_count": "8+",
     "list": [
       {
-        "title": "DermAI \u2014 AI-Powered Skincare Diagnosis App",
+        "title": "DermAI — AI-Powered Skincare Diagnosis App",
         "category": "AI & Machine Learning",
-        "github": "https://github.com/sanjayGL2006/DermAI-AI-Powered-Skincare-Diagnosis-App"
+        "github": "https://github.com/SanjayGL-8123/DermAI-AI-Powered-Skincare-Diagnosis-App"
       },
       {
         "title": "AI Agent using Google API",
         "category": "AI & Machine Learning",
-        "github": "https://github.com/sanjayGL2006/AI-Agent-used-google-api"
+        "github": "https://github.com/SanjayGL-8123/AI-Agent-used-google-api"
       },
       {
         "title": "Surya Chatbot",
         "category": "AI & Machine Learning",
-        "github": "https://github.com/sanjayGL2006/Surya-chatbot"
+        "github": "https://github.com/SanjayGL-8123/Surya-chatbot"
       },
       {
         "title": "Kai Assistant",
         "category": "AI & Machine Learning",
-        "github": "https://github.com/sanjayGL2006/kai-assistant"
+        "github": "https://github.com/SanjayGL-8123/kai-assistant"
       },
       {
         "title": "Traffic & Vehicle Object Detection with YOLOv8",
         "category": "AI & Machine Learning",
-        "github": "https://github.com/sanjayGL2006/Traffic-Vehicle-Object-Detection-with-YOLOv8"
+        "github": "https://github.com/SanjayGL-8123/Traffic-Vehicle-Object-Detection-with-YOLOv8"
       },
       {
-        "title": "DataGauge \u2014 Dataset Quality Monitoring System",
+        "title": "DataGauge — Dataset Quality Monitoring System",
         "category": "AI & Machine Learning",
-        "github": "https://github.com/sanjayGL2006/DataGauge-Dataset-Quality-Monitoring-System",
+        "github": "https://github.com/SanjayGL-8123/DataGauge-Dataset-Quality-Monitoring-System",
         "description": "Full-stack dataset quality monitoring system built with FastAPI, React, and Pandas. Automatically computes 0-100 quality scores, flags data issues, provides guided cleaning, interactive dashboards, and PDF exports."
       },
       {
         "title": "Accident Risk Prediction",
         "category": "AI & Machine Learning",
-        "github": "https://github.com/sanjayGL2006/accident-risk-prediction"
+        "github": "https://github.com/SanjayGL-8123/accident-risk-prediction"
       },
       {
         "title": "AIML Course & Practical Labs",
         "category": "AI & Machine Learning",
-        "github": "https://github.com/sanjayGL2006/AIML-course-and-Practical"
+        "github": "https://github.com/SanjayGL-8123/AIML-course-and-Practical"
       },
       {
         "title": "Pure Weaves E-Commerce",
         "category": "Web Applications & Full-Stack Projects",
-        "github": "https://github.com/sanjayGL2006/pure-weaves-ecommerce"
+        "github": "https://github.com/SanjayGL-8123/pure-weaves-ecommerce"
       },
       {
         "title": "Property Manager Dashboard",
         "category": "Web Applications & Full-Stack Projects",
-        "github": "https://github.com/sanjayGL2006/prop-manager-dash-95721"
+        "github": "https://github.com/SanjayGL-8123/prop-manager-dash-95721"
       },
       {
         "title": "Daily Task Nexus (Grab Notes)",
         "category": "Web Applications & Full-Stack Projects",
-        "github": "https://github.com/sanjayGL2006/daily-task-nexus",
+        "github": "https://github.com/SanjayGL-8123/daily-task-nexus",
         "description": "Minimalist, locally-persistent Daily Task manager built with HTML5, CSS3 (Custom Animations & Gradients), and Vanilla JavaScript featuring dynamic filtering and task lifecycle tracking."
       },
       {
         "title": "Expense Tracker (RupeeTrack)",
         "category": "Web Applications & Full-Stack Projects",
-        "github": "https://github.com/sanjayGL2006/expense-tracker"
+        "github": "https://github.com/SanjayGL-8123/expense-tracker"
       },
       {
         "title": "Paperless Office & Billing Management System",
         "category": "Web Applications & Full-Stack Projects",
-        "github": "https://github.com/sanjayGL2006/Paperless-Office-System"
+        "github": "https://github.com/SanjayGL-8123/Paperless-Office-System"
       },
       {
         "title": "Pizza Shop Website",
         "category": "Web Applications & Full-Stack Projects",
-        "github": "https://github.com/sanjayGL2006/pizza-shop-website"
+        "github": "https://github.com/SanjayGL-8123/pizza-shop-website"
       },
       {
         "title": "VPN Service Landing Page",
         "category": "Web Applications & Full-Stack Projects",
-        "github": "https://github.com/sanjayGL2006/vpn-landing-page1"
+        "github": "https://github.com/SanjayGL-8123/vpn-landing-page1"
       },
       {
         "title": "Registration Form",
         "category": "Web Applications & Full-Stack Projects",
-        "github": "https://github.com/sanjayGL2006/Registration-form"
+        "github": "https://github.com/SanjayGL-8123/Registration-form"
       },
       {
         "title": "Vault Secure Auth Gateway",
         "category": "Tools, Security & Utilities",
-        "github": "https://github.com/sanjayGL2006/vault-secure-auth"
+        "github": "https://github.com/SanjayGL-8123/vault-secure-auth"
       },
       {
         "title": "Web Calculator JS",
         "category": "Tools, Security & Utilities",
-        "github": "https://github.com/sanjayGL2006/web-calculator-js"
+        "github": "https://github.com/SanjayGL-8123/web-calculator-js"
       },
       {
         "title": "Temperature Converter Web App",
         "category": "Tools, Security & Utilities",
-        "github": "https://github.com/sanjayGL2006/ttemp-convert-web-app"
+        "github": "https://github.com/SanjayGL-8123/ttemp-convert-web-app"
       },
       {
         "title": "BMI Calculator",
         "category": "Tools, Security & Utilities",
-        "github": "https://github.com/sanjayGL2006/bmi_calculator"
+        "github": "https://github.com/SanjayGL-8123/bmi_calculator"
       },
       {
         "title": "Bluetooth Chat Utility",
         "category": "Tools, Security & Utilities",
-        "github": "https://github.com/sanjayGL2006/bluetooth-chat-"
+        "github": "https://github.com/SanjayGL-8123/bluetooth-chat-"
       },
       {
         "title": "Pixel Perfect Design Tool",
         "category": "Tools, Security & Utilities",
-        "github": "https://github.com/sanjayGL2006/pixel-perfect"
+        "github": "https://github.com/SanjayGL-8123/pixel-perfect"
       },
       {
         "title": "Chess Game Engine",
         "category": "Games",
-        "github": "https://github.com/sanjayGL2006/chess-game"
+        "github": "https://github.com/SanjayGL-8123/chess-game"
       },
       {
         "title": "Tic-Tac-Toe Game in Python",
         "category": "Games",
-        "github": "https://github.com/sanjayGL2006/Tic-Tac-Toe-Game-in-python-coder"
+        "github": "https://github.com/SanjayGL-8123/Tic-Tac-Toe-Game-in-python-coder"
       },
       {
         "title": "Digital Board Duel",
         "category": "Games",
-        "github": "https://github.com/sanjayGL2006/digital-board-duel"
+        "github": "https://github.com/SanjayGL-8123/digital-board-duel"
       },
       {
         "title": "Sanju Portfolio Pro Hub",
         "category": "Portfolios, Profiles & Tributes",
-        "github": "https://github.com/sanjayGL2006/agentportfolio"
+        "github": "https://github.com/SanjayGL-8123/agentportfolio"
       },
       {
         "title": "Sanjay GL Developer Portfolio & Profile",
         "category": "Portfolios, Profiles & Tributes",
-        "github": "https://github.com/sanjayGL2006/sanjayGL2006"
+        "github": "https://github.com/SanjayGL-8123/sanjayGL2006"
       },
       {
         "title": "Sri Mariyamma Temple Portal",
         "category": "Portfolios, Profiles & Tributes",
-        "github": "https://github.com/sanjayGL2006/srimariyammatemple"
+        "github": "https://github.com/SanjayGL-8123/srimariyammatemple"
       },
       {
         "title": "Maya Angelou Tribute Showcase",
         "category": "Portfolios, Profiles & Tributes",
-        "github": "https://github.com/sanjayGL2006/maya-angelou-tribute"
+        "github": "https://github.com/SanjayGL-8123/maya-angelou-tribute"
       },
       {
         "id": 101,
-        "title": "SPVM\u00b3 Spend Tracker",
+        "title": "SPVM³ Spend Tracker",
         "category": "Management & Enterprise Systems",
         "tagline": "Fast, responsive finance and expense management dashboard.",
-        "description": "Fast, responsive finance and expense management dashboard built with React, Recharts, and FastAPI for SPVM\u00b3 Tech Solution.",
+        "description": "Fast, responsive finance and expense management dashboard built with React, Recharts, and FastAPI for SPVM³ Tech Solution.",
         "tech": [
           "React",
           "FastAPI",
@@ -367,13 +368,13 @@
           "JavaScript",
           "Tailwind CSS"
         ],
-        "github": "https://github.com/sanjayGL2006/spvm3-spend-tracker",
+        "github": "https://github.com/SanjayGL-8123/spvm3-spend-tracker",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 102,
-        "title": "SPVM\u00b3 Engineering Blog",
+        "title": "SPVM³ Engineering Blog",
         "category": "Web Applications & Portals",
         "tagline": "Full-stack React & FastAPI technical blog engine.",
         "description": "Full-stack React & FastAPI engine showcasing real-world engineering logs on real-time chat, anti-cheat mechanisms, and AI prompt engineering with load-more pagination.",
@@ -384,13 +385,13 @@
           "JavaScript",
           "CSS3"
         ],
-        "github": "https://github.com/sanjayGL2006/SPVM3-Blog",
+        "github": "https://github.com/SanjayGL-8123/SPVM3-Blog",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 103,
-        "title": "SPVM\u00b3 Music Player",
+        "title": "SPVM³ Music Player",
         "category": "Tools, Systems & Utilities",
         "tagline": "Full-stack glassmorphic music player with local library sync.",
         "description": "Full-stack modern music player built with React 18, Vite, and FastAPI featuring automatic local library sync, ID3 metadata & album art extraction, sleek glassmorphic UI, and audio visualizer.",
@@ -402,13 +403,13 @@
           "JavaScript",
           "Web Audio API"
         ],
-        "github": "https://github.com/sanjayGL2006/spvm3-player",
+        "github": "https://github.com/SanjayGL-8123/spvm3-player",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 104,
-        "title": "SPVM\u00b3 API Platform",
+        "title": "SPVM³ API Platform",
         "category": "Tools, Systems & Utilities",
         "tagline": "Multi-user Flask & MySQL backend for API keys and developer knowledge.",
         "description": "Multi-user Flask & MySQL backend for managing API keys and serving programming knowledge via REST APIs. Includes built-in user dashboard and admin panel.",
@@ -420,7 +421,7 @@
           "SQLAlchemy",
           "JWT"
         ],
-        "github": "https://github.com/sanjayGL2006/spvm3-api-platform",
+        "github": "https://github.com/SanjayGL-8123/spvm3-api-platform",
         "year": 2026,
         "status": "Completed"
       },
@@ -438,7 +439,7 @@
           "JavaScript",
           "HTML5"
         ],
-        "github": "https://github.com/sanjayGL2006/image-to-text-converter",
+        "github": "https://github.com/SanjayGL-8123/image-to-text-converter",
         "year": 2026,
         "status": "Completed"
       },
@@ -456,7 +457,7 @@
           "MongoDB",
           "CSS3"
         ],
-        "github": "https://github.com/sanjayGL2006/cyber-response-platform",
+        "github": "https://github.com/SanjayGL-8123/cyber-response-platform",
         "year": 2026,
         "status": "Completed"
       },
@@ -475,7 +476,7 @@
           "React Flow",
           "FastAPI"
         ],
-        "github": "https://github.com/sanjayGL2006/student-htr-studio",
+        "github": "https://github.com/SanjayGL-8123/student-htr-studio",
         "year": 2026,
         "status": "Completed"
       },
@@ -493,7 +494,7 @@
           "Pandas",
           "JavaScript"
         ],
-        "github": "https://github.com/sanjayGL2006/malicious-url-detector",
+        "github": "https://github.com/SanjayGL-8123/malicious-url-detector",
         "year": 2026,
         "status": "Completed"
       },
@@ -511,7 +512,7 @@
           "Python",
           "JavaScript"
         ],
-        "github": "https://github.com/sanjayGL2006/smart-voice-notes",
+        "github": "https://github.com/SanjayGL-8123/smart-voice-notes",
         "year": 2026,
         "status": "Completed"
       },
@@ -529,7 +530,7 @@
           "NumPy",
           "JavaScript"
         ],
-        "github": "https://github.com/sanjayGL2006/smart-parking-system",
+        "github": "https://github.com/SanjayGL-8123/smart-parking-system",
         "year": 2026,
         "status": "Completed"
       },
@@ -547,13 +548,13 @@
           "Python",
           "JavaScript"
         ],
-        "github": "https://github.com/sanjayGL2006/ai-paper-analyzer",
+        "github": "https://github.com/SanjayGL-8123/ai-paper-analyzer",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 112,
-        "title": "SPVM\u00b3 Secure Anti-Cheat Quiz App",
+        "title": "SPVM³ Secure Anti-Cheat Quiz App",
         "category": "Web Applications & Portals",
         "tagline": "Anti-cheat window focus monitoring quiz platform.",
         "description": "Secure, timed quiz application that monitors window focus and tab switching to prevent cheating. Built with React, Flask, and SQLite.",
@@ -565,13 +566,13 @@
           "JavaScript",
           "CSS3"
         ],
-        "github": "https://github.com/sanjayGL2006/spvm3-quiz-app",
+        "github": "https://github.com/SanjayGL-8123/spvm3-quiz-app",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 113,
-        "title": "SPVM\u00b3 Placement Hub v2",
+        "title": "SPVM³ Placement Hub v2",
         "category": "Management & Enterprise Systems",
         "tagline": "Full-stack campus placement & recruitment management suite.",
         "description": "Full-stack placement management system streamlining student registrations, company drives, ATS scoring, and interview scheduling.",
@@ -583,13 +584,13 @@
           "PostgreSQL",
           "Tailwind CSS"
         ],
-        "github": "https://github.com/sanjayGL2006/SPVM3-placement-hub-v2",
+        "github": "https://github.com/SanjayGL-8123/SPVM3-placement-hub-v2",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 114,
-        "title": "Placement Pro SPVM\u00b3",
+        "title": "Placement Pro SPVM³",
         "category": "Management & Enterprise Systems",
         "tagline": "Campus Recruitment & Placement System with Docker & Kubernetes.",
         "description": "Smart College Placement & Campus Recruitment Management System built with Python Flask, PHP, Docker, Kubernetes & Vercel.",
@@ -601,7 +602,7 @@
           "Kubernetes",
           "MySQL"
         ],
-        "github": "https://github.com/sanjayGL2006/placement-pro-SPVM3",
+        "github": "https://github.com/SanjayGL-8123/placement-pro-SPVM3",
         "year": 2026,
         "status": "Completed"
       },
@@ -610,7 +611,7 @@
         "title": "OTP Email Authentication Module",
         "category": "Tools, Systems & Utilities",
         "tagline": "Flask signup with email OTP verification & secure auth.",
-        "description": "Flask app with user signup, email OTP verification, and login \u2014 built with SQLite, Jinja2, and secure credential hashing.",
+        "description": "Flask app with user signup, email OTP verification, and login — built with SQLite, Jinja2, and secure credential hashing.",
         "tech": [
           "Python",
           "Flask",
@@ -619,13 +620,13 @@
           "Jinja2",
           "HTML5"
         ],
-        "github": "https://github.com/sanjayGL2006/otp-signup",
+        "github": "https://github.com/SanjayGL-8123/otp-signup",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 116,
-        "title": "SPVM\u00b3 Code & Tech Notes Hub",
+        "title": "SPVM³ Code & Tech Notes Hub",
         "category": "Web Applications & Portals",
         "tagline": "Interactive computer science guides for 20+ technologies.",
         "description": "Comprehensive Computer Science & Programming Notes Hub featuring interactive guides for 20+ technologies, code references, and an integrated certificate verification system.",
@@ -636,7 +637,7 @@
           "Markdown",
           "JSON"
         ],
-        "github": "https://github.com/sanjayGL2006/SPVM3-code-notes",
+        "github": "https://github.com/SanjayGL-8123/SPVM3-code-notes",
         "year": 2026,
         "status": "Completed"
       },
@@ -653,13 +654,13 @@
           "CSS3",
           "Web Workers"
         ],
-        "github": "https://github.com/sanjayGL2006/scanner-files-",
+        "github": "https://github.com/SanjayGL-8123/scanner-files-",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 118,
-        "title": "SPVM\u00b3 Real-Time WebSocket Chat",
+        "title": "SPVM³ Real-Time WebSocket Chat",
         "category": "Web Applications & Portals",
         "tagline": "High-performance real-time messaging with WebSockets & FastAPI.",
         "description": "SPVM3 Chat: A high-performance real-time chat app featuring instant messaging, multiple chat rooms, typing indicators, and live user presence powered by WebSockets and FastAPI.",
@@ -671,13 +672,13 @@
           "React",
           "CSS3"
         ],
-        "github": "https://github.com/sanjayGL2006/spvm3-chat",
+        "github": "https://github.com/SanjayGL-8123/spvm3-chat",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 119,
-        "title": "PulseBoard \u2014 Social Analytics Dashboard",
+        "title": "PulseBoard — Social Analytics Dashboard",
         "category": "Management & Enterprise Systems",
         "tagline": "Modern social media analytics dashboard built with React & Recharts.",
         "description": "PulseBoard: A modern social media analytics dashboard built with React, FastAPI, and Recharts. Features follower growth tracking, engagement metrics, and recent post feeds.",
@@ -688,13 +689,13 @@
           "JavaScript",
           "Tailwind CSS"
         ],
-        "github": "https://github.com/sanjayGL2006/social-analytics-ui",
+        "github": "https://github.com/SanjayGL-8123/social-analytics-ui",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 120,
-        "title": "ReelFind \u2014 Movie & TV Discovery App",
+        "title": "ReelFind — Movie & TV Discovery App",
         "category": "Web Applications & Portals",
         "tagline": "Full-stack movie discovery platform with React & FastAPI.",
         "description": "A full-stack movie and TV show discovery app built with React and FastAPI, integrating TMDB APIs, rating filters, and trailer modal previews.",
@@ -705,16 +706,16 @@
           "JavaScript",
           "TMDB API"
         ],
-        "github": "https://github.com/sanjayGL2006/-SPVM3-reelfind-react-fastapi",
+        "github": "https://github.com/SanjayGL-8123/-SPVM3-reelfind-react-fastapi",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 121,
-        "title": "SPVM\u00b3 Kanban Task Manager",
+        "title": "SPVM³ Kanban Task Manager",
         "category": "Tools, Systems & Utilities",
         "tagline": "Interactive drag-and-drop Kanban task app with FastAPI backend.",
-        "description": "SPVM\u00b3 Task App \u2014 A sleek, intuitive Kanban task manager featuring interactive drag-and-drop columns, priority indicators, and REST API integration with FastAPI & React.",
+        "description": "SPVM³ Task App — A sleek, intuitive Kanban task manager featuring interactive drag-and-drop columns, priority indicators, and REST API integration with FastAPI & React.",
         "tech": [
           "React",
           "FastAPI",
@@ -722,7 +723,7 @@
           "JavaScript",
           "HTML5 Drag & Drop"
         ],
-        "github": "https://github.com/sanjayGL2006/spvm3-task-app",
+        "github": "https://github.com/SanjayGL-8123/spvm3-task-app",
         "year": 2026,
         "status": "Completed"
       },
@@ -740,13 +741,13 @@
           "Flask",
           "React"
         ],
-        "github": "https://github.com/sanjayGL2006/sentry-cyber-intel",
+        "github": "https://github.com/SanjayGL-8123/sentry-cyber-intel",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 123,
-        "title": "SPVM\u00b3 Desktop IDE Engine",
+        "title": "SPVM³ Desktop IDE Engine",
         "category": "Tools, Systems & Utilities",
         "tagline": "Local-first desktop IDE built on Electron, React & Monaco Editor.",
         "description": "Modular, local-first desktop IDE built on Electron, React & Monaco. Features multi-language runners (Python, Java, C/C++), A-Z file support, and Extensions Marketplace.",
@@ -757,7 +758,7 @@
           "Node.js",
           "JavaScript"
         ],
-        "github": "https://github.com/sanjayGL2006/spvm3-code-editor",
+        "github": "https://github.com/SanjayGL-8123/spvm3-code-editor",
         "year": 2026,
         "status": "Completed"
       },
@@ -775,13 +776,13 @@
           "MySQL",
           "React"
         ],
-        "github": "https://github.com/sanjayGL2006/smart-attendance-yolo",
+        "github": "https://github.com/SanjayGL-8123/smart-attendance-yolo",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 125,
-        "title": "SPVM\u00b3 Campus Placement AI Suite",
+        "title": "SPVM³ Campus Placement AI Suite",
         "category": "Management & Enterprise Systems",
         "tagline": "AI placement suite with ATS resume scoring & career intelligence.",
         "description": "AI-powered campus placement & career intelligence suite: automated ATS resume analysis, skills gap roadmaps, safe AI natural language queries, and department analytics.",
@@ -793,13 +794,13 @@
           "MySQL",
           "Tailwind CSS"
         ],
-        "github": "https://github.com/sanjayGL2006/spvm3-campus-placement",
+        "github": "https://github.com/SanjayGL-8123/spvm3-campus-placement",
         "year": 2026,
         "status": "Completed"
       },
       {
         "id": 126,
-        "title": "SPVM\u00b3 2D Physics Racing Game",
+        "title": "SPVM³ 2D Physics Racing Game",
         "category": "Games",
         "tagline": "200-level physics racing game with Web Audio & Python telemetry.",
         "description": "Action-packed 2D physics racing game featuring 200-level stage progression, 60+ customizable vehicles, multi-layer parallax scenery, real-time audio synthesis, and companion Python server.",
@@ -810,7 +811,7 @@
           "Web Audio API",
           "CSS3"
         ],
-        "github": "https://github.com/sanjayGL2006/spvm3-car-game",
+        "github": "https://github.com/SanjayGL-8123/spvm3-car-game",
         "year": 2026,
         "status": "Completed"
       },
@@ -828,7 +829,7 @@
           "HTML5",
           "CSS3"
         ],
-        "github": "https://github.com/sanjayGL2006/text2img-studio",
+        "github": "https://github.com/SanjayGL-8123/text2img-studio",
         "year": 2026,
         "status": "Completed"
       },
@@ -837,7 +838,7 @@
         "title": "Website Carbon Intelligence Auditor",
         "category": "Tools, Systems & Utilities",
         "tagline": "Web app & API for auditing website carbon footprint & energy telemetry.",
-        "description": "SANJAY GL Website Carbon Intelligence \u2014 A real-time web application and developer API to audit website carbon footprints, HTTP page payload telemetry, energy consumption (SWD v4), and green hosting checks.",
+        "description": "SANJAY GL Website Carbon Intelligence — A real-time web application and developer API to audit website carbon footprints, HTTP page payload telemetry, energy consumption (SWD v4), and green hosting checks.",
         "tech": [
           "HTML5",
           "CSS3",
@@ -845,7 +846,7 @@
           "Node.js",
           "SWD v4 API"
         ],
-        "github": "https://github.com/sanjayGL2006/sanjay-gl-website-carbon-intelligence",
+        "github": "https://github.com/SanjayGL-8123/sanjay-gl-website-carbon-intelligence",
         "year": 2026,
         "status": "Completed"
       },
@@ -863,7 +864,7 @@
           "MySQL",
           "HTML5"
         ],
-        "github": "https://github.com/sanjayGL2006/resume-analyzer",
+        "github": "https://github.com/SanjayGL-8123/resume-analyzer",
         "year": 2026,
         "status": "Completed"
       },
@@ -880,7 +881,7 @@
           "SVG",
           "CSS3"
         ],
-        "github": "https://github.com/sanjayGL2006/image-to-svg-converter",
+        "github": "https://github.com/SanjayGL-8123/image-to-svg-converter",
         "year": 2026,
         "status": "Completed"
       },
@@ -897,7 +898,7 @@
           "CSS3",
           "Bootstrap"
         ],
-        "github": "https://github.com/sanjayGL2006/Paperless-Office-System",
+        "github": "https://github.com/SanjayGL-8123/Paperless-Office-System",
         "year": 2026,
         "status": "Completed"
       },
@@ -914,7 +915,7 @@
           "Flask",
           "MySQL"
         ],
-        "github": "https://github.com/sanjayGL2006/Traffic-Vehicle-Object-Detection-with-YOLOv8",
+        "github": "https://github.com/SanjayGL-8123/Traffic-Vehicle-Object-Detection-with-YOLOv8",
         "year": 2026,
         "status": "Completed"
       },
@@ -931,7 +932,7 @@
           "Pandas",
           "SQLite"
         ],
-        "github": "https://github.com/sanjayGL2006/accident-risk-prediction",
+        "github": "https://github.com/SanjayGL-8123/accident-risk-prediction",
         "year": 2026,
         "status": "Completed"
       }
@@ -942,11 +943,11 @@
     "named_count": 6,
     "drive_count": 96,
     "highlights": [
-      "PRAVIDHI \u2014 State Level BCA Tech Fest Coding Contest (JSS College Mysore)",
+      "PRAVIDHI — State Level BCA Tech Fest Coding Contest (JSS College Mysore)",
       "National Road Safety Quiz (Ministry of Road Transport & Highways)",
       "Online Quiz on Safe & Responsible Use of AI (MeitY / Digital India)",
-      "Certificate of Completion \u2014 Web Dev Internship (Oasis Infobyte / AICTE)",
-      "Certificate of Appreciation \u2014 Star Performer (Oasis Infobyte / AICTE)",
+      "Certificate of Completion — Web Dev Internship (Oasis Infobyte / AICTE)",
+      "Certificate of Appreciation — Star Performer (Oasis Infobyte / AICTE)",
       "Python for Beginners (Verified Certification)",
       "HackerRank Frontend Developer (React), JavaScript, SQL, Python, Problem Solving",
       "Microsoft Azure & Microsoft Copilot Certifications",
@@ -2141,18 +2142,19 @@
   "volunteer": [
     {
       "role": "NSS Volunteer",
-      "org": "National Service Scheme (PES IAMS)",
-      "period": "2023 \u2013 Present"
+      "org": "National Service Scheme · PESIAMS Shivamogga, KA",
+      "period": "2025 – Present",
+      "description": "Actively participated in community service, literacy, hygiene awareness, environmental sustainability, and social awareness programs across the Shivamogga region, developing teamwork, discipline, and leadership skills."
     },
     {
       "role": "Youth For Seva (YFS)",
       "org": "Virupina Koppa Group Tree Planting Drive (2025)",
-      "period": "2024 \u2013 Present"
+      "period": "2024 – Present"
     },
     {
       "role": "MY Bharat Volunteer",
       "org": "Govt. of India / Viksit Vibrant Village Program Quiz 2026",
-      "period": "2024 \u2013 Present"
+      "period": "2024 – Present"
     },
     {
       "role": "Nasha Mukti Competition",
@@ -2222,8 +2224,8 @@
     {
       "category": "education",
       "question": "When did you start your BCA?",
-      "answer": "I started my BCA in 2023 and it is currently ongoing.",
-      "keywords": "bca,2023"
+      "answer": "I started my BCA in 2024 and it is currently ongoing (2024 – 2026).",
+      "keywords": "bca,2024"
     },
     {
       "category": "education",
@@ -2234,13 +2236,13 @@
     {
       "category": "education",
       "question": "Where did you complete PUC?",
-      "answer": "I completed my Pre-University Course at PES PU College, Shivamogga, in March 2023.",
+      "answer": "I completed my Pre-University Course (PUC) at PES PU College, Shivamogga (Completed · 2022-2024).",
       "keywords": "puc,education"
     },
     {
       "category": "education",
       "question": "Where did you complete SSLC?",
-      "answer": "I completed SSLC at Cambridge International Public School, Shivamogga, in April 2021.",
+      "answer": "I completed SSLC at Cambridge International Public School, Shivamogga, in April 2022.",
       "keywords": "sslc,education"
     },
     {
@@ -2492,7 +2494,7 @@
     {
       "category": "projects",
       "question": "What is DataGauge?",
-      "answer": "DataGauge is a FastAPI and React platform that scores uploaded CSV/Excel datasets from 0\u2013100, flags completeness, validity, and outlier issues, provides guided cleaning, and exports PDF/Excel reports.",
+      "answer": "DataGauge is a FastAPI and React platform that scores uploaded CSV/Excel datasets from 0–100, flags completeness, validity, and outlier issues, provides guided cleaning, and exports PDF/Excel reports.",
       "keywords": "datagauge,project,data-engineering"
     },
     {
@@ -2824,7 +2826,7 @@
     {
       "category": "Elevator Pitch",
       "question": "If you had 30 seconds to describe your edge as a developer, what would you say?",
-      "answer": "I bridge the gap between frontend user experience, robust backend APIs, and emerging AI/security tooling. Rather than just building static UI or writing raw scripts, I focus on end-to-end execution\u2014from containerizing apps in Docker and hardening endpoints to shipping live platforms like Placement Pro and Pure Weaves that solve real operational friction.",
+      "answer": "I bridge the gap between frontend user experience, robust backend APIs, and emerging AI/security tooling. Rather than just building static UI or writing raw scripts, I focus on end-to-end execution—from containerizing apps in Docker and hardening endpoints to shipping live platforms like Placement Pro and Pure Weaves that solve real operational friction.",
       "keywords": "pitch,summary,strengths,value proposition"
     },
     {
@@ -2854,7 +2856,7 @@
     {
       "category": "Continuous Learning",
       "question": "How do you keep up with rapid changes in web frameworks and AI?",
-      "answer": "I follow a build-to-learn methodology. Instead of only reading documentation, I build isolated proof-of-concept projects, test tools in sandbox environments, and earn structured certifications\u2014having completed over 87 technical courses. I also track open-source repositories and document developer workflows daily.",
+      "answer": "I follow a build-to-learn methodology. Instead of only reading documentation, I build isolated proof-of-concept projects, test tools in sandbox environments, and earn structured certifications—having completed over 87 technical courses. I also track open-source repositories and document developer workflows daily.",
       "keywords": "learning,adaptation,growth,certifications"
     },
     {
@@ -2878,7 +2880,7 @@
     {
       "category": "Motivation",
       "question": "What drives you to build software every day?",
-      "answer": "I enjoy turning abstract logic into tools people actually use. Seeing a system go from an empty code editor to a containerized, live deployment handling real user requests\u2014like students checking placement opportunities or customers browsing an artisan catalog\u2014is what keeps me building every day.",
+      "answer": "I enjoy turning abstract logic into tools people actually use. Seeing a system go from an empty code editor to a containerized, live deployment handling real user requests—like students checking placement opportunities or customers browsing an artisan catalog—is what keeps me building every day.",
       "keywords": "motivation,passion,drive,developer mindset"
     },
     {
@@ -2956,7 +2958,7 @@
     {
       "category": "General",
       "question": "Do you know React?",
-      "answer": "Yes, at an intermediate level \u2014 I work with component architecture, custom hooks, state management, and Vite integration.",
+      "answer": "Yes, at an intermediate level — I work with component architecture, custom hooks, state management, and Vite integration.",
       "keywords": ""
     },
     {
@@ -2992,7 +2994,7 @@
     {
       "category": "General",
       "question": "Do you know Docker?",
-      "answer": "Yes, at an intermediate level \u2014 I work with Dockerfiles, containerization, and Docker Compose for microservices.",
+      "answer": "Yes, at an intermediate level — I work with Dockerfiles, containerization, and Docker Compose for microservices.",
       "keywords": ""
     },
     {
@@ -3004,7 +3006,7 @@
     {
       "category": "General",
       "question": "Do you have cybersecurity experience?",
-      "answer": "Yes, intermediate \u2014 I work with web security auditing, XSS/CSRF defenses, Kali Linux, and TryHackMe labs.",
+      "answer": "Yes, intermediate — I work with web security auditing, XSS/CSRF defenses, Kali Linux, and TryHackMe labs.",
       "keywords": ""
     },
     {
@@ -3082,7 +3084,7 @@
     {
       "category": "General",
       "question": "Do you have version control experience?",
-      "answer": "Yes, advanced \u2014 I use Git & GitHub for version control, branching models, merge conflict resolution, and GitHub Actions.",
+      "answer": "Yes, advanced — I use Git & GitHub for version control, branching models, merge conflict resolution, and GitHub Actions.",
       "keywords": ""
     },
     {
@@ -3148,19 +3150,19 @@
     {
       "category": "General",
       "question": "What is your educational background?",
-      "answer": "I completed my SSLC at Cambridge International Public School, my PUC at PES PU College in 2021, and I'm now pursuing BCA at PES IAMS Shivamogga (2023\u2013present).",
+      "answer": "I completed my SSLC at Cambridge International Public School (Completed · April 2022), my PUC at PES PU College (Completed · 2022-2024), and I'm now pursuing BCA at PES IAMS Shivamogga.",
       "keywords": ""
     },
     {
       "category": "General",
       "question": "When did you finish your PUC?",
-      "answer": "I completed my Pre-University Course (PUC) in April 2021.",
+      "answer": "I completed my Pre-University Course (PUC) from PES PU College (2022–2024).",
       "keywords": ""
     },
     {
       "category": "General",
       "question": "When did you finish your SSLC?",
-      "answer": "I completed my SSLC in March 2023 at Cambridge International Public School",
+      "answer": "I completed my SSLC in April 2022 at Cambridge International Public School, Shivamogga.",
       "keywords": ""
     },
     {
@@ -3184,7 +3186,7 @@
     {
       "category": "General",
       "question": "What is your role in NSS?",
-      "answer": "As an NSS Volunteer since 2023, I've participated in community service, literacy drives, hygiene awareness, environmental sustainability, and social awareness programs across Shivamogga.",
+      "answer": "As an NSS Volunteer (2025 – Present) with National Service Scheme · PESIAMS Shivamogga, KA, I actively participate in community service, literacy, hygiene awareness, environmental sustainability, and social awareness programs across the Shivamogga region, developing teamwork, discipline, and leadership skills.",
       "keywords": ""
     },
     {
@@ -3232,7 +3234,7 @@
     {
       "category": "General",
       "question": "Do you have social media or GitHub?",
-      "answer": "Yes — GitHub: github.com/sanjayGL2006, SPVM 3 Tech Instagram: @spvm3techsolution, YouTube: @spvm3techsolution, and LinkedIn: SPVM 3 Tech Solution.",
+      "answer": "Yes — GitHub: github.com/SanjayGL-8123, SPVM 3 Tech Instagram: @spvm3techsolution, YouTube: @spvm3techsolution, and LinkedIn: SPVM 3 Tech Solution.",
       "keywords": "spvm3tech,instagram,youtube,linkedin"
     },
     {
@@ -3257,14 +3259,14 @@
     {
       "category": "General",
       "question": "Tell me about yourself",
-      "answer": "I'm Sanjay G. L., a BCA student (3rd year, 5th semester) at PES Institute of Advanced Management Studies, Shivamogga. I build intelligent web applications, AI systems, and data-driven platforms \u2014 bridging frontend design, machine learning, and secure backend APIs. I'm currently interning at Milano Infotech in the AI/ML/Python domain and I'm open to internships and professional opportunities.",
+      "answer": "I'm Sanjay G. L., a BCA student (3rd year, 5th semester) at PES Institute of Advanced Management Studies, Shivamogga. I build intelligent web applications, AI systems, and data-driven platforms — bridging frontend design, machine learning, and secure backend APIs. I'm currently interning at Milano Infotech in the AI/ML/Python domain and I'm open to internships and professional opportunities.",
       "keywords": "",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "Tell me about yourself",
-      "answer": "I'm Sanjay G. L., a dedicated BCA student at PES Institute of Advanced Management Studies, Shivamogga, currently in my 3rd year, 5th semester. I have a deep passion for frontend development, modern AI architectures, and building smart tech solutions that solve real-world problems. As a disciplined learner, I document AI workflows daily to optimize coding efficiency, and my interests span server management, database architecture using SQL and PL/SQL, and exploring cybersecurity fundamentals through Kali Linux. I've built 29+ projects, earned 87+ certificates, and am currently interning at Milano Infotech in AI, ML, and Python development. Outside the screen, I'm an active NSS and YFS volunteer, aquarium hobbyist, trekker, and history enthusiast \u2014 experiences that sharpen my teamwork, empathy, and problem-solving instincts.",
+      "answer": "I'm Sanjay G. L., a dedicated BCA student at PES Institute of Advanced Management Studies, Shivamogga, currently in my 3rd year, 5th semester. I have a deep passion for frontend development, modern AI architectures, and building smart tech solutions that solve real-world problems. As a disciplined learner, I document AI workflows daily to optimize coding efficiency, and my interests span server management, database architecture using SQL and PL/SQL, and exploring cybersecurity fundamentals through Kali Linux. I've built 29+ projects, earned 87+ certificates, and am currently interning at Milano Infotech in AI, ML, and Python development. Outside the screen, I'm an active NSS and YFS volunteer, aquarium hobbyist, trekker, and history enthusiast — experiences that sharpen my teamwork, empathy, and problem-solving instincts.",
       "keywords": "",
       "answer_type": "long"
     },
@@ -3278,7 +3280,7 @@
     {
       "category": "General",
       "question": "Who are you?",
-      "answer": "I'm Sanjay G. L. \u2014 a BCA student pursuing my degree at PES IAMS, Shivamogga, and a full stack developer focused on AI, web apps, and data-driven platforms. I'm currently interning at Milano Infotech.",
+      "answer": "I'm Sanjay G. L. — a BCA student pursuing my degree at PES IAMS, Shivamogga, and a full stack developer focused on AI, web apps, and data-driven platforms. I'm currently interning at Milano Infotech.",
       "keywords": "",
       "answer_type": "medium"
     },
@@ -3299,21 +3301,21 @@
     {
       "category": "General",
       "question": "What do you do?",
-      "answer": "I build full stack web applications, AI systems, and machine learning models \u2014 combining frontend design, Python/Flask backends, and cloud deployment. I'm also currently interning at Milano Infotech in the AI/ML domain.",
+      "answer": "I build full stack web applications, AI systems, and machine learning models — combining frontend design, Python/Flask backends, and cloud deployment. I'm also currently interning at Milano Infotech in the AI/ML domain.",
       "keywords": "",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "What do you do?",
-      "answer": "I design and build intelligent web applications, AI assistants, and data-driven platforms \u2014 spanning frontend design (React, HTML/CSS/JS), backend development (Python, Flask, FastAPI), databases (SQL/PL-SQL), and machine learning (Scikit-learn, TensorFlow/Keras). I've delivered 29+ projects including AI chatbots, dataset quality tools, and ML risk-prediction systems, and I'm currently applying these skills through an internship at Milano Infotech.",
+      "answer": "I design and build intelligent web applications, AI assistants, and data-driven platforms — spanning frontend design (React, HTML/CSS/JS), backend development (Python, Flask, FastAPI), databases (SQL/PL-SQL), and machine learning (Scikit-learn, TensorFlow/Keras). I've delivered 29+ projects including AI chatbots, dataset quality tools, and ML risk-prediction systems, and I'm currently applying these skills through an internship at Milano Infotech.",
       "keywords": "",
       "answer_type": "long"
     },
     {
       "category": "General",
       "question": "Give me a quick intro",
-      "answer": "Hi, I'm Sanjay G. L. \u2014 Full Stack AI Developer and BCA student from Shivamogga, Karnataka.",
+      "answer": "Hi, I'm Sanjay G. L. — Full Stack AI Developer and BCA student from Shivamogga, Karnataka.",
       "keywords": "",
       "answer_type": "short"
     },
@@ -3327,14 +3329,14 @@
     {
       "category": "General",
       "question": "Give me a quick intro",
-      "answer": "Hi, I'm Sanjay G. L., a BCA student at PES IAMS, Shivamogga, currently in my 3rd year. I'm passionate about full stack development and AI \u2014 I've built 29+ projects (including AI assistants, a dataset quality monitoring tool, and an ML-based accident risk predictor) and earned 87+ certificates along the way. I'm currently interning at Milano Infotech in AI/ML/Python, and beyond tech, I'm an NSS volunteer, trekker, and aquarium hobbyist.",
+      "answer": "Hi, I'm Sanjay G. L., a BCA student at PES IAMS, Shivamogga, currently in my 3rd year. I'm passionate about full stack development and AI — I've built 29+ projects (including AI assistants, a dataset quality monitoring tool, and an ML-based accident risk predictor) and earned 87+ certificates along the way. I'm currently interning at Milano Infotech in AI/ML/Python, and beyond tech, I'm an NSS volunteer, trekker, and aquarium hobbyist.",
       "keywords": "",
       "answer_type": "long"
     },
     {
       "category": "General",
       "question": "Introduce yourself",
-      "answer": "I'm Sanjay G. L. \u2014 a BCA student and Full Stack AI Developer from Shivamogga, Karnataka.",
+      "answer": "I'm Sanjay G. L. — a BCA student and Full Stack AI Developer from Shivamogga, Karnataka.",
       "keywords": "",
       "answer_type": "short"
     },
@@ -3355,21 +3357,21 @@
     {
       "category": "General",
       "question": "Can you describe yourself?",
-      "answer": "Sure \u2014 I'm Sanjay G. L., a BCA student and aspiring Full Stack AI Engineer from Shivamogga.",
+      "answer": "Sure — I'm Sanjay G. L., a BCA student and aspiring Full Stack AI Engineer from Shivamogga.",
       "keywords": "",
       "answer_type": "short"
     },
     {
       "category": "General",
       "question": "Can you describe yourself?",
-      "answer": "I'd describe myself as a disciplined, curious learner \u2014 a BCA student who's passionate about AI, web development, and problem-solving. I document my AI workflows daily and I'm always exploring new tech, from cybersecurity to cloud deployment.",
+      "answer": "I'd describe myself as a disciplined, curious learner — a BCA student who's passionate about AI, web development, and problem-solving. I document my AI workflows daily and I'm always exploring new tech, from cybersecurity to cloud deployment.",
       "keywords": "",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "Can you describe yourself?",
-      "answer": "I'd describe myself as a disciplined and driven learner who documents AI workflows daily to sharpen coding efficiency. I'm currently a BCA student at PES IAMS, Shivamogga, with a strong interest in frontend development, modern AI architectures, server management, and database design using SQL/PL-SQL. Beyond academics, I'm an NSS and YFS volunteer, an aquarium hobbyist, a trekker, and a history enthusiast \u2014 all of which have shaped my teamwork, empathy, and problem-solving abilities.",
+      "answer": "I'd describe myself as a disciplined and driven learner who documents AI workflows daily to sharpen coding efficiency. I'm currently a BCA student at PES IAMS, Shivamogga, with a strong interest in frontend development, modern AI architectures, server management, and database design using SQL/PL-SQL. Beyond academics, I'm an NSS and YFS volunteer, an aquarium hobbyist, a trekker, and a history enthusiast — all of which have shaped my teamwork, empathy, and problem-solving abilities.",
       "keywords": "",
       "answer_type": "long"
     },
@@ -3383,7 +3385,7 @@
     {
       "category": "General",
       "question": "What's your background?",
-      "answer": "My background is in computer applications \u2014 I completed my schooling in Shivamogga, and I'm now in the 3rd year of my BCA at PES IAMS. Alongside my studies, I've built 29+ projects and interned at Milano Infotech in AI/ML.",
+      "answer": "My background is in computer applications — I completed my schooling in Shivamogga, and I'm now in the 3rd year of my BCA at PES IAMS. Alongside my studies, I've built 29+ projects and interned at Milano Infotech in AI/ML.",
       "keywords": "",
       "answer_type": "medium"
     },
@@ -3411,7 +3413,7 @@
     {
       "category": "General",
       "question": "Why should we consider you?",
-      "answer": "I bring hands-on experience across the full stack \u2014 from frontend design and Python/Flask backends to machine learning models and cloud deployment \u2014 backed by 29+ completed projects and 87+ certificates. I'm a disciplined, fast learner who documents AI workflows daily to keep improving, and I'm currently applying these skills in a real internship at Milano Infotech in the AI/ML domain. Beyond technical ability, my volunteer work with NSS and YFS has strengthened my teamwork, leadership, and communication skills, which I bring into every project I work on.",
+      "answer": "I bring hands-on experience across the full stack — from frontend design and Python/Flask backends to machine learning models and cloud deployment — backed by 29+ completed projects and 87+ certificates. I'm a disciplined, fast learner who documents AI workflows daily to keep improving, and I'm currently applying these skills in a real internship at Milano Infotech in the AI/ML domain. Beyond technical ability, my volunteer work with NSS and YFS has strengthened my teamwork, leadership, and communication skills, which I bring into every project I work on.",
       "keywords": "",
       "answer_type": "long"
     },
@@ -3425,14 +3427,14 @@
     {
       "category": "General",
       "question": "What makes you unique?",
-      "answer": "What sets me apart is combining frontend, backend, database, and AI/ML skills into complete, deployed projects \u2014 not just theory. I document my AI workflows daily and I'm equally comfortable in cybersecurity labs, ML notebooks, and React codebases.",
+      "answer": "What sets me apart is combining frontend, backend, database, and AI/ML skills into complete, deployed projects — not just theory. I document my AI workflows daily and I'm equally comfortable in cybersecurity labs, ML notebooks, and React codebases.",
       "keywords": "",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "What makes you unique?",
-      "answer": "What makes me unique is the breadth of my hands-on experience \u2014 I don't just learn concepts, I ship complete projects that combine frontend design, secure backend APIs, database architecture, and machine learning. I've built AI assistants, dataset quality tools, and ML-based prediction systems, all while documenting my AI workflows daily to keep refining my process. On top of that, my volunteer work with NSS and YFS and my interests in trekking, history, and aquarium keeping give me a well-rounded perspective that shapes how I approach problems and work with people.",
+      "answer": "What makes me unique is the breadth of my hands-on experience — I don't just learn concepts, I ship complete projects that combine frontend design, secure backend APIs, database architecture, and machine learning. I've built AI assistants, dataset quality tools, and ML-based prediction systems, all while documenting my AI workflows daily to keep refining my process. On top of that, my volunteer work with NSS and YFS and my interests in trekking, history, and aquarium keeping give me a well-rounded perspective that shapes how I approach problems and work with people.",
       "keywords": "",
       "answer_type": "long"
     }

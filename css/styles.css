@@ -2408,3 +2408,91 @@ body.light-theme .premium-modal-overlay {
   }
 }
 
+/* ===================================================================
+   ACCESSIBILITY & FOCUS ENHANCEMENTS
+=================================================================== */
+.skip-link {
+  position: fixed;
+  top: -120px;
+  left: 20px;
+  background: var(--teal-primary, #0f766e);
+  color: #ffffff !important;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm, 6px);
+  z-index: 100000;
+  transition: top 0.2s ease, opacity 0.2s ease;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 20px;
+  opacity: 1;
+  pointer-events: auto;
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* High contrast visible focus outline for all interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[role="tab"]:focus-visible {
+  outline: 2px solid var(--emerald-primary, #10b981) !important;
+  outline-offset: 3px !important;
+}
+
+/* Form validation styles */
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border-color: var(--coral-pink, #f43f5e) !important;
+  box-shadow: 0 0 0 1px var(--coral-pink, #f43f5e) !important;
+}
+
+.field-error-msg {
+  display: block;
+  color: var(--coral-pink, #f43f5e);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.form-status-msg {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm, 6px);
+  margin-top: 12px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+.form-status-msg.success-status {
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  color: var(--emerald-primary, #10b981);
+}
+.form-status-msg.error-status {
+  background: rgba(244, 63, 94, 0.12);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  color: var(--coral-pink, #f43f5e);
+}
+
+/* Prefers-reduced-motion: disable Three.js animations, floating canvas, and smooth transitions */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  #canvas-3d, #bg-canvas, #solar-system-container {
+    display: none !important;
+  }
+}
+
+

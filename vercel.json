@@ -18,13 +18,13 @@
       "status": 301
     },
     {
-      "src": "/certificates.html",
-      "headers": { "Location": "/certificates" },
+      "src": "/privacy.html",
+      "headers": { "Location": "/privacy" },
       "status": 301
     },
     {
-      "src": "/privacy.html",
-      "headers": { "Location": "/privacy" },
+      "src": "/crq-optimize.html",
+      "headers": { "Location": "/crq-optimize" },
       "status": 301
     },
     {

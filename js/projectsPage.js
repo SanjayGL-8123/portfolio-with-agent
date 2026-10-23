@@ -1,5 +1,4 @@
-
-// Projects Page Interactive Filtering & 3D Flip Cards
+// Projects Page Interactive Filtering, Sort, Search, Pagination & Modal Controls
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof PROJECTS_DATA === 'undefined') return;
 
@@ -9,302 +8,346 @@ document.addEventListener('DOMContentLoaded', () => {
   const techSelect = document.getElementById('techFilter');
   const sortSelect = document.getElementById('sortSelect');
   const visibleCountEl = document.getElementById('visibleCount');
+  const paginationContainer = document.getElementById('paginationControls');
 
-  let currentCategory = 'all';
-  let currentTech = 'all';
-  let currentSearch = '';
-  let currentSort = 'year-desc';
+  const PAGE_SIZE = 12;
+  let currentPage = 1;
 
-  // Categories list
-  const categories = ['all', ...new Set(PROJECTS_DATA.map(p => p.category))];
+  // Categories list per requirements (Part 7, Item 36)
+  const categories = ['all', 'AI & ML', 'Web Apps', 'Tools & Security', 'Games', 'Portfolios & Profiles'];
+  const categoryLabels = {
+    'all': 'All Projects',
+    'AI & ML': 'AI & ML',
+    'Web Apps': 'Web Apps',
+    'Tools & Security': 'Tools & Security',
+    'Games': 'Games',
+    'Portfolios & Profiles': 'Portfolios & Profiles'
+  };
+
   // Technologies list
-  const allTechs = ['all', ...new Set(PROJECTS_DATA.flatMap(p => p.tech))];
+  const allTechs = ['all', ...new Set(PROJECTS_DATA.flatMap(p => p.tech || []))].sort();
 
-  // Render category buttons
-  if (categoryContainer) {
-    categoryContainer.innerHTML = categories.map(cat => `
-      <button class="tab-btn ${cat === 'all' ? 'active' : ''}" data-cat="${cat}">
-        ${cat === 'all' ? 'All Projects' : cat}
-      </button>
-    `).join('');
+  // Parse URL Parameters
+  const urlParams = new URLSearchParams(window.location.search);
+  let currentCategory = urlParams.get('category') || 'all';
+  let currentTech = urlParams.get('tech') || 'all';
+  let currentSearch = urlParams.get('search') || '';
+  let currentSort = urlParams.get('sort') || 'year-desc';
+  const initialPage = parseInt(urlParams.get('page'), 10);
+  if (!isNaN(initialPage) && initialPage > 0) {
+    currentPage = initialPage;
+  }
 
-    categoryContainer.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        categoryContainer.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        currentCategory = btn.getAttribute('data-cat');
-        render();
-      });
-    });
+  // Sync Input Elements with Initial State
+  if (searchInput && currentSearch) {
+    searchInput.value = currentSearch;
+  }
+  if (sortSelect) {
+    sortSelect.value = currentSort;
   }
 
   // Populate tech select
   if (techSelect) {
     techSelect.innerHTML = allTechs.map(t => `<option value="${t}">${t === 'all' ? 'All Technologies' : t}</option>`).join('');
+    techSelect.value = currentTech;
     techSelect.addEventListener('change', (e) => {
       currentTech = e.target.value;
-      render();
+      currentPage = 1;
+      updateUrlAndRender();
     });
   }
 
-  // Search Input
+  // Render category buttons with aria-pressed state
+  function renderCategoryButtons() {
+    if (!categoryContainer) return;
+    categoryContainer.innerHTML = categories.map(cat => {
+      const isActive = cat.toLowerCase() === currentCategory.toLowerCase();
+      return `
+        <button type="button" class="tab-btn ${isActive ? 'active' : ''}" data-cat="${cat}" role="button" aria-pressed="${isActive ? 'true' : 'false'}">
+          ${categoryLabels[cat] || cat}
+        </button>
+      `;
+    }).join('');
+
+    categoryContainer.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentCategory = btn.getAttribute('data-cat');
+        currentPage = 1;
+        updateUrlAndRender();
+      });
+    });
+  }
+
+  // Search Input with debounce
   if (searchInput) {
+    let debounceTimer;
     searchInput.addEventListener('input', (e) => {
-      currentSearch = e.target.value.trim().toLowerCase();
-      render();
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        currentSearch = e.target.value.trim().toLowerCase();
+        currentPage = 1;
+        updateUrlAndRender();
+      }, 200);
     });
   }
 
-  // Sort Select
+  // Sort Select with active state
   if (sortSelect) {
     sortSelect.addEventListener('change', (e) => {
       currentSort = e.target.value;
-      render();
+      currentPage = 1;
+      updateUrlAndRender();
     });
   }
 
-  function render() {
+  function updateUrlAndRender() {
+    renderCategoryButtons();
+
+    // Update query parameters without reloading
+    const params = new URLSearchParams();
+    if (currentCategory !== 'all') params.set('category', currentCategory);
+    if (currentTech !== 'all') params.set('tech', currentTech);
+    if (currentSort !== 'year-desc') params.set('sort', currentSort);
+    if (currentSearch) params.set('search', currentSearch);
+    if (currentPage > 1) params.set('page', currentPage.toString());
+
+    const queryString = params.toString();
+    const newRelativePathQuery = window.location.pathname + (queryString ? '?' + queryString : '');
+    try {
+      window.history.replaceState(null, '', newRelativePathQuery);
+    } catch (e) {}
+
+    render();
+  }
+
+  function getFilteredList() {
     let list = [...PROJECTS_DATA];
 
     // Filter Category
     if (currentCategory !== 'all') {
-      list = list.filter(p => p.category.toLowerCase().includes(currentCategory.toLowerCase()));
+      list = list.filter(p => (p.category || '').toLowerCase() === currentCategory.toLowerCase());
     }
 
     // Filter Tech
     if (currentTech !== 'all') {
-      list = list.filter(p => p.tech.some(t => t.toLowerCase() === currentTech.toLowerCase()));
+      list = list.filter(p => (p.tech || []).some(t => t.toLowerCase() === currentTech.toLowerCase()));
     }
 
     // Search Query
     if (currentSearch) {
       list = list.filter(p =>
-        p.title.toLowerCase().includes(currentSearch) ||
-        p.tagline.toLowerCase().includes(currentSearch) ||
-        p.desc.toLowerCase().includes(currentSearch) ||
-        p.tech.some(t => t.toLowerCase().includes(currentSearch)) ||
-        p.category.toLowerCase().includes(currentSearch)
+        (p.title && p.title.toLowerCase().includes(currentSearch)) ||
+        (p.tagline && p.tagline.toLowerCase().includes(currentSearch)) ||
+        (p.description && p.description.toLowerCase().includes(currentSearch)) ||
+        (p.desc && p.desc.toLowerCase().includes(currentSearch)) ||
+        (p.category && p.category.toLowerCase().includes(currentSearch)) ||
+        ((p.tech || []).some(t => t.toLowerCase().includes(currentSearch)))
       );
     }
 
     // Sort
     if (currentSort === 'year-desc') {
-      list.sort((a, b) => b.year - a.year);
+      list.sort((a, b) => (b.year || 0) - (a.year || 0));
     } else if (currentSort === 'year-asc') {
-      list.sort((a, b) => a.year - b.year);
+      list.sort((a, b) => (a.year || 0) - (b.year || 0));
     } else if (currentSort === 'name-asc') {
-      list.sort((a, b) => a.title.localeCompare(b.title));
+      list.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+    } else if (currentSort === 'name-desc') {
+      list.sort((a, b) => (b.title || '').localeCompare(a.title || ''));
     }
 
-    if (visibleCountEl) visibleCountEl.textContent = list.length;
+    return list;
+  }
 
-    if (!grid) return;
+  function renderPagination(totalItems) {
+    if (!paginationContainer) return;
 
-    if (list.length === 0) {
-      grid.innerHTML = `
-        <div style="grid-column: 1 / -1; text-align:center; padding: 60px 20px;" class="glass">
-          <i class="fa-solid fa-folder-open" style="font-size: 3rem; color: var(--emerald-primary); margin-bottom: 16px;"></i>
-          <h3>No matching projects found</h3>
-          <p style="color: var(--text-muted); margin-top: 8px;">Try clearing your search query or selecting a different category filter.</p>
-        </div>
-      `;
+    const totalPages = Math.ceil(totalItems / PAGE_SIZE);
+    if (totalPages <= 1) {
+      paginationContainer.innerHTML = '';
       return;
     }
-    // Separate Featured projects dynamically to the top (only those with cover images)
-    const showcaseMatches = list.filter(p => p.featured === true && p.image);
-    const regularMatches = list.filter(p => !(p.featured === true && p.image));
 
     let html = '';
 
-    // Render Showcase Projects
-    showcaseMatches.forEach(p => {
-      html += `
-        <div class="featured-project-card scroll-reveal revealed" id="project-card-${p.id}" data-id="${p.id}" style="grid-column: span 1; display:flex; flex-direction:column; height:100%;">
-          <div class="featured-card-glow"></div>
-          <div style="position:relative; z-index: 5; display:flex; flex-direction:column; height:100%; flex:1;">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-              <span class="project-featured-tag">★ Featured Project</span>
-              <span class="tech-pill" style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.4); color: var(--emerald-primary); font-weight:700;">
-                <i class="fa-solid fa-microchip"></i> ${(p.category || 'AI').toUpperCase()}
-              </span>
-            </div>
-            
-            <div style="margin:16px 0; border-radius:var(--radius-md); overflow:hidden; position:relative; height:160px; border:1px solid var(--border-glass); background:#03070c;">
-              ${p.image && !p.image.includes('logo.svg') ? `
-                <img src="${p.image}" alt="${p.title}" style="width:100%; height:100%; object-fit:cover; transition: transform 0.5s ease;" onerror="this.style.display='none'">
-              ` : `
-                <div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.03);">
-                  <i class="fa-solid ${p.icon || 'fa-laptop-code'}" style="font-size:3.5rem; color:var(--emerald-primary)"></i>
-                </div>
-              `}
-            </div>
+    // Previous Button
+    html += `
+      <button type="button" class="btn btn-outline btn-sm" id="prevPageBtn" ${currentPage === 1 ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''} aria-label="Previous Page">
+        <i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Prev
+      </button>
+    `;
 
-            <h3 class="project-title" style="margin-top:0; font-size:1.4rem;">${p.title}</h3>
-            <p class="project-tagline" style="margin-bottom:16px; font-size:0.92rem; color:var(--text-muted); flex:1;">${p.tagline}</p>
-            
-            <!-- Statistics Row -->
-            <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-bottom:16px;">
-              ${Object.entries(p.stats || {}).slice(0, 3).map(([lbl, val]) => `
-                <div style="background:var(--bg-main); border:1px solid var(--border-glass); border-radius:var(--radius-sm); padding:6px; text-align:center;">
-                  <div style="font-size:0.6rem; color:var(--text-muted); text-transform:uppercase;">${lbl}</div>
-                  <div style="font-size:0.8rem; font-weight:700; color:var(--emerald-primary); margin-top:2px;">${val}</div>
-                </div>
-              `).join('')}
-            </div>
+    // Page Numbers
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) {
+        html += `
+          <button type="button" class="tab-btn ${i === currentPage ? 'active' : ''}" data-page="${i}" style="min-width:38px;height:38px;padding:0 12px;font-weight:700;" aria-label="Page ${i}" aria-current="${i === currentPage ? 'page' : 'false'}">
+            ${i}
+          </button>
+        `;
+      } else if (i === currentPage - 3 || i === currentPage + 3) {
+        html += `<span style="color:var(--text-muted);padding:0 4px;" aria-hidden="true">...</span>`;
+      }
+    }
 
-            <div class="project-tech-pills" style="margin-bottom:20px; gap:6px;">
-              ${p.tech.slice(0, 5).map(t => `<span class="tech-pill" style="font-size:0.75rem;">${t}</span>`).join('')}
-              ${p.tech.length > 5 ? `<span class="tech-pill" style="font-size:0.75rem;">+${p.tech.length - 5}</span>` : ''}
-            </div>
+    // Next Button
+    html += `
+      <button type="button" class="btn btn-outline btn-sm" id="nextPageBtn" ${currentPage === totalPages ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''} aria-label="Next Page">
+        Next <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+      </button>
+    `;
 
-            <div style="display:flex; gap:10px; margin-top:auto;">
-              <button class="btn btn-primary btn-sm ripple-btn" onclick="openPremiumProjectModal(${p.id})" style="flex:1; font-weight:700; height:38px;">
-                <i class="fa-solid fa-book-open"></i> Read More
-              </button>
+    paginationContainer.innerHTML = html;
 
-              <a href="${p.github}" target="_blank" rel="noopener" class="btn btn-outline btn-sm ripple-btn" style="width:38px; height:38px; display:flex; align-items:center; justify-content:center;"><i class="fa-brands fa-github"></i></a>
-            </div>
-          </div>
+    const prevBtn = document.getElementById('prevPageBtn');
+    if (prevBtn && currentPage > 1) {
+      prevBtn.addEventListener('click', () => {
+        currentPage--;
+        updateUrlAndRender();
+        window.scrollTo({ top: grid.offsetTop - 120, behavior: 'smooth' });
+      });
+    }
+
+    const nextBtn = document.getElementById('nextPageBtn');
+    if (nextBtn && currentPage < totalPages) {
+      nextBtn.addEventListener('click', () => {
+        currentPage++;
+        updateUrlAndRender();
+        window.scrollTo({ top: grid.offsetTop - 120, behavior: 'smooth' });
+      });
+    }
+
+    paginationContainer.querySelectorAll('[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentPage = parseInt(btn.getAttribute('data-page'), 10);
+        updateUrlAndRender();
+        window.scrollTo({ top: grid.offsetTop - 120, behavior: 'smooth' });
+      });
+    });
+  }
+
+  function render() {
+    const list = getFilteredList();
+
+    if (visibleCountEl) {
+      visibleCountEl.textContent = list.length;
+    }
+
+    if (!grid) return;
+
+    // Empty state (Part 7, Item 38)
+    if (list.length === 0) {
+      grid.innerHTML = `
+        <div style="grid-column: 1 / -1; text-align:center; padding: 60px 20px;" class="glass empty-state-box">
+          <i class="fa-solid fa-folder-open" style="font-size: 3rem; color: var(--emerald-primary); margin-bottom: 16px;" aria-hidden="true"></i>
+          <h3 style="font-size:1.4rem;font-weight:700;margin-bottom:8px;">No projects match these filters</h3>
+          <p style="color: var(--text-muted); margin-bottom: 20px; max-width:480px; margin-left:auto; margin-right:auto;">
+            Try clearing your search query or selecting a different category filter to view Sanjay's projects.
+          </p>
+          <button type="button" class="btn btn-primary btn-sm" id="clearFiltersBtn">
+            <i class="fa-solid fa-rotate-left" aria-hidden="true"></i> Clear filters
+          </button>
         </div>
       `;
-    });
 
-    // Render Regular Projects
-    regularMatches.forEach(p => {
+      if (paginationContainer) paginationContainer.innerHTML = '';
+
+      const clearBtn = document.getElementById('clearFiltersBtn');
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          currentCategory = 'all';
+          currentTech = 'all';
+          currentSearch = '';
+          currentSort = 'year-desc';
+          currentPage = 1;
+          if (searchInput) searchInput.value = '';
+          if (techSelect) techSelect.value = 'all';
+          if (sortSelect) sortSelect.value = 'year-desc';
+          updateUrlAndRender();
+        });
+      }
+      return;
+    }
+
+    // Pagination slice
+    const totalPages = Math.ceil(list.length / PAGE_SIZE);
+    if (currentPage > totalPages) currentPage = totalPages;
+    const startIndex = (currentPage - 1) * PAGE_SIZE;
+    const paginatedItems = list.slice(startIndex, startIndex + PAGE_SIZE);
+
+    let html = '';
+
+    paginatedItems.forEach(p => {
+      const desc = p.description || p.desc || p.tagline || '';
+      const techList = p.tech || [];
+      const hasLive = Boolean(p.live && p.live.trim());
+      const liveHtml = hasLive ? `
+        <a href="${p.live}" class="btn btn-primary btn-sm ripple-btn" style="flex:1;font-weight:700;height:38px;display:flex;align-items:center;justify-content:center;gap:6px;">
+          <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live demo
+        </a>
+      ` : `
+        <button type="button" class="btn btn-outline btn-sm" style="flex:1;font-size:0.8rem;opacity:0.75;cursor:default;" title="Live demo coming soon">
+          <i class="fa-solid fa-clock" aria-hidden="true"></i> Demo coming soon
+        </button>
+      `;
+
+      const imageHtml = p.image ? `
+        <img src="${p.image}" alt="${p.title}" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div style="display:none;width:100%;height:100%;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);">
+          <i class="fa-solid ${p.icon || 'fa-code'}" style="font-size:3rem;color:var(--emerald-primary)" aria-hidden="true"></i>
+        </div>
+      ` : `
+        <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);">
+          <i class="fa-solid ${p.icon || 'fa-code'}" style="font-size:3rem;color:var(--emerald-primary)" aria-hidden="true"></i>
+        </div>
+      `;
+
       html += `
-        <div class="glass flip-card" id="project-card-${p.id}">
-          <div class="flip-card-inner">
-            <!-- CARD FRONT -->
-            <div class="flip-card-front">
-              <div>
-                <div class="project-card-header">
-                  <div class="project-icon-box"><i class="fa-solid ${p.icon}"></i></div>
-                  ${p.featured ? '<span class="project-featured-tag">★ Featured</span>' : `<span class="tech-pill">${p.category}</span>`}
-                </div>
-                <h3 class="project-title">${p.title}</h3>
-                <p class="project-tagline">${p.tagline}</p>
-                <div class="project-tech-pills">
-                  ${p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}
-                </div>
-              </div>
-              <div style="font-size:0.82rem;color:var(--text-muted);display:flex;justify-content:space-between;align-items:center">
-                <span>Status: <strong style="color:var(--emerald-primary)">${p.status}</strong></span>
-                <span>Year: <strong>${p.year}</strong></span>
-              </div>
-            </div>
+        <div class="glass flip-card" id="project-card-${p.id}" style="display:flex;flex-direction:column;height:100%;padding:20px;border-radius:var(--radius-lg);border:1px solid var(--border-glass);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            ${p.featured ? '<span class="project-featured-tag">★ Featured</span>' : `<span></span>`}
+            <span class="tech-pill" style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.4);color:var(--emerald-primary);font-weight:700;font-size:0.75rem;">
+              ${p.category}
+            </span>
+          </div>
 
-            <!-- CARD BACK -->
-            <div class="flip-card-back">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                  <span class="project-featured-tag">${p.category}</span>
-                  <span style="font-size:0.8rem;color:var(--golden-yellow)">Year ${p.year}</span>
-                </div>
-                <h3 class="project-title" style="margin-top:10px">${p.title}</h3>
-                <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:16px;line-height:1.5">${p.desc}</p>
-                <div class="project-tech-pills" style="margin-bottom:20px">
-                  ${p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}
-                </div>
-              </div>
-              <div class="project-links-row" style="gap:6px;">
-                <button onclick="openPremiumProjectModal(${p.id})" class="btn btn-outline btn-sm ripple-btn" style="flex:1;"><i class="fa-solid fa-book-open"></i> Read More</button>
+          <div style="margin:4px 0 14px 0;border-radius:var(--radius-md);overflow:hidden;position:relative;height:150px;border:1px solid var(--border-glass);background:#03070c;">
+            ${imageHtml}
+          </div>
 
-                <a href="${p.github}" target="_blank" rel="noopener" class="btn btn-outline btn-sm ripple-btn" style="width:38px; height:38px; display:flex; align-items:center; justify-content:center;"><i class="fa-brands fa-github"></i></a>
-              </div>
-            </div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+            <span style="font-size:0.75rem;color:var(--golden-yellow);font-family:var(--ff-code);font-weight:700;">Year ${p.year}</span>
+          </div>
+
+          <h3 class="project-title" style="margin-top:0;font-size:1.15rem;line-height:1.4;">${p.title}</h3>
+          <p class="project-tagline" style="margin:8px 0 16px 0;font-size:0.86rem;color:var(--text-muted);flex:1;line-height:1.6;">
+            ${desc}
+          </p>
+
+          <div class="project-tech-pills" style="margin-bottom:18px;gap:6px;">
+            ${techList.slice(0, 4).map(t => `<span class="tech-pill" style="font-size:0.72rem;padding:3px 8px;">${t}</span>`).join('')}
+            ${techList.length > 4 ? `<span class="tech-pill" style="font-size:0.72rem;padding:3px 8px;">+${techList.length - 4}</span>` : ''}
+          </div>
+
+          <div style="display:flex;gap:10px;margin-top:auto;">
+            ${liveHtml}
+            
+            <button type="button" onclick="openPremiumProjectModal('${p.id}')" class="btn btn-outline btn-sm ripple-btn" style="width:38px;height:38px;display:flex;align-items:center;justify-content:center;" title="View project details" aria-label="View details for ${p.title}">
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
       `;
     });
 
     grid.innerHTML = html;
-    initTiltEffects();
-    initRipples();
-  }
-
-  // 3D Tilt Effect on Featured Cards
-  function initTiltEffects() {
-    const cards = document.querySelectorAll('.featured-project-card');
-    cards.forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const xc = rect.width / 2;
-        const yc = rect.height / 2;
-        // Sensitivity control
-        const angleX = (yc - y) / 8;
-        const angleY = (x - xc) / 8;
-        card.style.setProperty('--rx', `${angleX}deg`);
-        card.style.setProperty('--ry', `${angleY}deg`);
-        card.style.setProperty('--mx', `${x}px`);
-        card.style.setProperty('--my', `${y}px`);
-      });
-
-      card.addEventListener('mouseleave', () => {
-        card.style.setProperty('--rx', '0deg');
-        card.style.setProperty('--ry', '0deg');
-      });
-    });
-  }
-
-  // Ripple click effect for buttons
-  function initRipples() {
-    const btns = document.querySelectorAll('.ripple-btn');
-    btns.forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const ripple = document.createElement('span');
-        ripple.className = 'click-ripple';
-        ripple.style.left = `${x}px`;
-        ripple.style.top = `${y}px`;
-        
-        btn.appendChild(ripple);
-        setTimeout(() => ripple.remove(), 600);
-      });
-    });
+    renderPagination(list.length);
   }
 
   // Premium Project Detailed Modal Controls
   window.openPremiumProjectModal = function(id) {
-    const p = PROJECTS_DATA.find(item => item.id === id);
+    const p = PROJECTS_DATA.find(item => String(item.id) === String(id));
     if (!p) return;
-
-    // Synchronize URL query parameter ?id=...
-    try {
-      const newUrl = window.location.pathname + '?id=' + p.id;
-      window.history.replaceState({ projectId: p.id }, '', newUrl);
-    } catch (e) {
-      console.warn("Could not update state URL:", e);
-    }
-
-    // Default fallbacks for missing modal content fields
-    const overviewText = p.overview || p.desc;
-    const timelineList = (p.timeline && p.timeline.length) ? p.timeline : [
-      "Requirements gathering & system architecture specification",
-      "Core feature development & stack implementation",
-      "Testing, security auditing, and deployment optimization"
-    ];
-    const archText = p.architecture || `${p.title} is engineered with ${p.tech ? p.tech.join(', ') : 'modern web standards'} prioritizing responsiveness, high performance, and security.`;
-    const featuresList = (p.features && p.features.length) ? p.features : [
-      p.tagline,
-      `Full integration with ${(p.tech || []).slice(0, 3).join(', ')}`,
-      "Responsive cross-device interface & dark mode design",
-      "Clean modular code structure and error handling"
-    ];
-    const structureList = (p.structure && p.structure.length) ? p.structure : [
-      "src/ — Main source code & component modules",
-      "assets/ — Visual resources, graphics, and stylesheets",
-      "README.md — Project setup and developer guidelines"
-    ];
-    const futureList = (p.futureScope || p.futureImprovements || []).length ? (p.futureScope || p.futureImprovements) : [
-      "Automated integration testing & CI/CD pipeline",
-      "Enhanced UI animations & accessibility improvements",
-      "API scaling and performance optimization"
-    ];
 
     let modal = document.getElementById('premiumProjectModal');
     if (!modal) {
@@ -314,138 +357,69 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.appendChild(modal);
     }
 
+    const desc = p.description || p.desc || p.tagline || '';
     const imageHtml = p.image ? `
-      <img class="modal-project-img" src="${p.image}" alt="${p.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-      <div style="display:none; width:100%; height:180px; align-items:center; justify-content:center; background:rgba(255,255,255,0.03); border-radius:var(--radius-md); border:1px solid var(--border-glass);">
-        <i class="fa-solid ${p.icon || 'fa-laptop-code'}" style="font-size:3.5rem; color:var(--emerald-primary)"></i>
+      <img class="modal-project-img" src="${p.image}" alt="${p.title}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" style="width:100%;max-height:240px;object-fit:cover;border-radius:var(--radius-md);margin-bottom:16px;">
+      <div style="display:none;width:100%;height:180px;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);border-radius:var(--radius-md);border:1px solid var(--border-glass);">
+        <i class="fa-solid ${p.icon || 'fa-laptop-code'}" style="font-size:3.5rem;color:var(--emerald-primary)" aria-hidden="true"></i>
       </div>
     ` : `
-      <div style="width:100%; height:180px; display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.03); border-radius:var(--radius-md); border:1px solid var(--border-glass);">
-        <i class="fa-solid ${p.icon || 'fa-laptop-code'}" style="font-size:3.5rem; color:var(--emerald-primary)"></i>
+      <div style="width:100%;height:180px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.03);border-radius:var(--radius-md);border:1px solid var(--border-glass);margin-bottom:16px;">
+        <i class="fa-solid ${p.icon || 'fa-laptop-code'}" style="font-size:3.5rem;color:var(--emerald-primary)" aria-hidden="true"></i>
       </div>
     `;
 
     modal.innerHTML = `
-      <div class="premium-modal-box">
-        <div class="premium-modal-header">
-          <div style="display:flex; align-items:center; gap:12px;">
-            <div class="project-icon-box" style="width:40px; height:40px; font-size:1.1rem; border-radius:10px;"><i class="fa-solid ${p.icon || 'fa-laptop-code'}"></i></div>
-            <div>
-              <h2 style="font-size:1.3rem; font-weight:800; color: var(--text-main); margin-bottom: 2px;">${p.title}</h2>
-              <span style="font-size:0.75rem; color:var(--text-muted);">${p.category} &bull; Year ${p.year} &bull; Status: <strong style="color:var(--emerald-primary);">${p.status}</strong></span>
-            </div>
-          </div>
-          <button class="premium-modal-close" onclick="closePremiumProjectModal()"><i class="fa-solid fa-xmark"></i></button>
-        </div>
-        <div class="premium-modal-body">
-          <!-- Left Side: Image & Stats -->
-          <div class="premium-modal-left">
-            ${imageHtml}
-            <div class="modal-project-stats">
-              ${Object.entries(p.stats || {}).map(([lbl, val]) => `
-                <div class="modal-stat-card">
-                  <div class="modal-stat-label">${lbl}</div>
-                  <div class="modal-stat-val">${val}</div>
-                </div>
-              `).join('')}
-            </div>
-            <div style="display:flex; gap:12px; margin-top:12px;">
-
-              <a href="${p.github}" target="_blank" rel="noopener" class="btn btn-outline ripple-btn" style="flex:1; text-align:center; display:flex; align-items:center; justify-content:center; gap:6px;"><i class="fa-brands fa-github"></i> GitHub</a>
-            </div>
-          </div>
-          
-          <!-- Right Side: Details Tabs -->
+      <div class="premium-modal-box glass" style="max-width:700px;width:90%;margin:40px auto;padding:28px;border-radius:var(--radius-lg);position:relative;max-height:90vh;overflow-y:auto;border:1px solid var(--border-glass);">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;">
           <div>
-            <div class="modal-tabs-nav">
-              <button class="modal-tab-btn active" onclick="switchModalTab(event, 'overview-tab')">Overview</button>
-              <button class="modal-tab-btn" onclick="switchModalTab(event, 'architecture-tab')">Architecture</button>
-              <button class="modal-tab-btn" onclick="switchModalTab(event, 'features-tab')">Features</button>
-              <button class="modal-tab-btn" onclick="switchModalTab(event, 'structure-tab')">Structure</button>
-              <button class="modal-tab-btn" onclick="switchModalTab(event, 'roadmap-tab')">Future Scope</button>
-            </div>
-            
-            <!-- Tab Contents -->
-            <div id="overview-tab" class="modal-tab-content active">
-              <h4 style="margin-bottom:8px; color:var(--emerald-primary); font-weight:700;">Project Overview</h4>
-              <p style="color:var(--text-muted); font-size:0.95rem;">${overviewText}</p>
-              <h4 style="margin-top:16px; margin-bottom:8px; color:var(--purple-accent); font-weight:700;">Development Timeline</h4>
-              <ul class="modal-bullets-list">
-                ${timelineList.map(t => `<li style="font-size:0.9rem;">${t}</li>`).join('')}
-              </ul>
-            </div>
-            
-            <div id="architecture-tab" class="modal-tab-content">
-              <h4 style="margin-bottom:8px; color:var(--emerald-primary); font-weight:700;">Architecture & Design Pattern</h4>
-              <p style="color:var(--text-muted); font-size:0.95rem;">${archText}</p>
-              <h4 style="margin-top:16px; margin-bottom:8px; color:var(--golden-yellow); font-weight:700;">Tech Stack Used</h4>
-              <div class="project-tech-pills">
-                ${(p.tech || []).map(t => `<span class="tech-pill">${t}</span>`).join('')}
-              </div>
-            </div>
-            
-            <div id="features-tab" class="modal-tab-content">
-              <h4 style="margin-bottom:8px; color:var(--emerald-primary); font-weight:700;">Core Features Included</h4>
-              <ul class="modal-bullets-list" style="list-style:none; padding-left:0;">
-                ${featuresList.map(f => `<li style="margin-bottom:8px; font-size:0.9rem; color:var(--text-muted);"><i class="fa-solid fa-circle-check" style="color:var(--emerald-primary); margin-right:8px;"></i> ${f}</li>`).join('')}
-              </ul>
-            </div>
-            
-            <div id="structure-tab" class="modal-tab-content">
-              <h4 style="margin-bottom:8px; color:var(--emerald-primary); font-weight:700;">Project Structure & File Modules</h4>
-              <ul class="modal-bullets-list" style="font-family:var(--ff-code); font-size:0.82rem; list-style:none; padding-left:0;">
-                ${structureList.map(s => `<li style="margin-bottom:6px; color:var(--text-muted);"><i class="fa-solid fa-file-code" style="color:var(--purple-accent); margin-right:8px;"></i> ${s}</li>`).join('')}
-              </ul>
-            </div>
-            
-            <div id="roadmap-tab" class="modal-tab-content">
-              <h4 style="margin-bottom:8px; color:var(--emerald-primary); font-weight:700;">Future Roadmap & Scope</h4>
-              <ul class="modal-bullets-list" style="list-style:none; padding-left:0;">
-                ${futureList.map(item => `<li style="margin-bottom:8px; font-size:0.9rem; color:var(--text-muted);"><i class="fa-solid fa-rocket" style="color:var(--golden-yellow); margin-right:8px;"></i> ${item}</li>`).join('')}
-              </ul>
-            </div>
+            <span class="tech-pill" style="color:var(--emerald-primary);margin-bottom:6px;display:inline-block;">${p.category} &bull; ${p.year}</span>
+            <h2 style="font-size:1.35rem;font-weight:800;color:var(--text-main);">${p.title}</h2>
           </div>
+          <button type="button" class="premium-modal-close icon-btn" onclick="closePremiumProjectModal()" aria-label="Close modal">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        ${imageHtml}
+
+        <p style="color:var(--text-muted);line-height:1.7;margin-bottom:20px;font-size:0.95rem;">
+          ${desc}
+        </p>
+
+        <h4 style="font-size:0.95rem;font-weight:700;color:var(--text-main);margin-bottom:10px;">Tech Stack</h4>
+        <div class="project-tech-pills" style="margin-bottom:24px;">
+          ${(p.tech || []).map(t => `<span class="tech-pill">${t}</span>`).join('')}
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+          ${p.live ? `<a href="${p.live}" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live Demo</a>` : ''}
+          
+          <button type="button" class="btn btn-outline btn-sm" onclick="closePremiumProjectModal()">Close</button>
         </div>
       </div>
     `;
 
-    setTimeout(() => {
-      modal.classList.add('active');
-      document.body.classList.add('no-scroll');
-    }, 10);
+    modal.classList.add('active');
+    modal.style.display = 'flex';
   };
 
   window.closePremiumProjectModal = function() {
     const modal = document.getElementById('premiumProjectModal');
     if (modal) {
       modal.classList.remove('active');
-      document.body.classList.remove('no-scroll');
-      try {
-        window.history.replaceState(null, '', window.location.pathname);
-      } catch (e) {}
+      modal.style.display = 'none';
     }
   };
 
-  window.switchModalTab = function(e, tabId) {
-    const container = e.target.closest('.premium-modal-box');
-    container.querySelectorAll('.modal-tab-btn').forEach(btn => btn.classList.remove('active'));
-    container.querySelectorAll('.modal-tab-content').forEach(tab => tab.classList.remove('active'));
-    
-    e.target.classList.add('active');
-    document.getElementById(tabId).classList.add('active');
-  };
-
-  // Auto-open modal if project ID is in URL query parameters
-  const urlParams = new URLSearchParams(window.location.search);
-  const projectIdParam = urlParams.get('id');
-  if (projectIdParam) {
-    const projId = parseInt(projectIdParam);
-    if (!isNaN(projId)) {
-      setTimeout(() => {
-        openPremiumProjectModal(projId);
-      }, 350);
+  // Close modal on escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      window.closePremiumProjectModal();
     }
-  }
+  });
 
+  // Initial Render
+  renderCategoryButtons();
   render();
 });

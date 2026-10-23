@@ -1,13 +1,11 @@
-const CACHE_NAME = 'sanjay-ai-os-v3';
+const CACHE_NAME = 'sanjay-ai-os-v4';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './projects.html',
-  './certificates.html',
   './privacy.html',
   './css/styles.css',
   './js/projectsData.js',
-  './js/certificatesData.js',
   './knowledge.json',
   './assets/logo.svg'
 ];

@@ -66,6 +66,47 @@
     }
 
 
+    // Mobile Navigation Hamburger Menu with Accessible States
+    function initMobileMenu() {
+      const hamburger = document.getElementById('hamburger');
+      const menu = document.getElementById('navMenu');
+      if (!hamburger || !menu) return;
+
+      hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', String(!isExpanded));
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('active');
+      });
+
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.classList.remove('active');
+          menu.classList.remove('active');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !hamburger.contains(e.target) && menu.classList.contains('active')) {
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.classList.remove('active');
+          menu.classList.remove('active');
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('active')) {
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.classList.remove('active');
+          menu.classList.remove('active');
+          hamburger.focus();
+        }
+      });
+    }
+    initMobileMenu();
+
     // Developer Console Welcome Message
     console.log("Welcome to Sanjay G. L. Portfolio Website!");
   });
