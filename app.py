@@ -594,7 +594,7 @@ def project_detail(slug):
     <meta property="og:title" content="{title}">
     <meta property="og:description" content="{desc}">
     <meta property="og:image" content="{image}">
-    <link rel="canonical" href="/projects/{slug}">
+    <link rel="canonical" href="https://sanjaygl.vercel.app/projects/{slug}">
     <script type="application/ld+json">
     {{
       "@context": "https://schema.org",

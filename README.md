@@ -1,5 +1,6 @@
 # Sanjay G. L. — Full Stack AI Developer Portfolio & Sanjay AIOS v2.5
 
+[![Live Site](https://img.shields.io/badge/Live_Site-sanjaygl.vercel.app-10b981?style=for-the-badge&logo=vercel)](https://sanjaygl.vercel.app/)
 [![Repository](https://img.shields.io/badge/GitHub-portfolio--with--agent-10b981?style=for-the-badge&logo=github)](https://github.com/SanjayGL-8123/portfolio-with-agent)
 [![Python](https://img.shields.io/badge/Backend-Flask_3.0-3776AB?style=for-the-badge&logo=python)](https://flask.palletsprojects.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
@@ -120,6 +121,7 @@ Official AI-powered developer portfolio, operating system, and interactive techn
 
 **Sanjay G. L. (Sanju)**  
 *Full Stack AI Developer & BCA Student*  
+- **Live Portfolio**: [sanjaygl.vercel.app](https://sanjaygl.vercel.app/)  
 - **Portfolio Repository**: [github.com/SanjayGL-8123/portfolio-with-agent](https://github.com/SanjayGL-8123/portfolio-with-agent)  
 - **Email**: [sanjaygl2006@gmail.com](mailto:sanjaygl2006@gmail.com)  
 - **SPVM 3 Tech Solution - Instagram**: [@spvm3techsolution](https://www.instagram.com/spvm3techsolution)  
