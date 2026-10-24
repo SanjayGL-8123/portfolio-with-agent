@@ -1,6 +1,6 @@
 # Sanjay G. L. — Full Stack AI Developer Portfolio & Sanjay AIOS v2.5
 
-[![Live Site](https://img.shields.io/badge/Live_Site-sanjaygl30ai.vercel.app-10b981?style=for-the-badge&logo=vercel)](https://sanjaygl30ai.vercel.app/)
+[![Repository](https://img.shields.io/badge/GitHub-portfolio--with--agent-10b981?style=for-the-badge&logo=github)](https://github.com/SanjayGL-8123/portfolio-with-agent)
 [![Python](https://img.shields.io/badge/Backend-Flask_3.0-3776AB?style=for-the-badge&logo=python)](https://flask.palletsprojects.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
@@ -13,7 +13,7 @@ Official AI-powered developer portfolio, operating system, and interactive techn
 - **100 Production & Showcase Projects**: Full-stack web applications, AI agents, e-commerce platforms, security scanners, utilities, and games.
 - **Sanjay AIOS v2.5 (Deep Learning Edition)**: Neural portfolio co-pilot powered by Gemini API, trained on real datasets, technical interview question bank, and personal project roadmaps.
 - **Consolidated Single Database Architecture**: All contact messages, site analytics, and project records unified in a single optimized SQLite database (`database/portfolio.db`).
-- **SEO & Digital Identity Optimization**: 100% standardized canonical clean URLs (`sanjaygl30ai.vercel.app`), dynamic project routing (`/projects/<slug>`), Schema.org structured data, strict security headers (CSP, HSTS), and `data/identity.json` consolidation for consistent search engine indexing.
+- **SEO & Digital Identity Optimization**: 100% standardized canonical clean URLs, dynamic project routing (`/projects/<slug>`), Schema.org structured data, strict security headers (CSP, HSTS), and `data/identity.json` consolidation for consistent search engine indexing.
 - **Next.js SEO Analyzer Dashboard**: Custom built internal React/Tailwind application (`/seo-analyzer`) used to analyze cross-platform personal brand identity, search keyword matches, and profile health.
 
 ---
@@ -123,7 +123,7 @@ portfolio/
 
 **Sanjay G. L. (Sanju)**  
 *Full Stack AI Developer & BCA Student*  
-- **Portfolio**: [sanjaygl30ai.vercel.app](https://sanjaygl30ai.vercel.app/)  
+- **Portfolio Repository**: [github.com/SanjayGL-8123/portfolio-with-agent](https://github.com/SanjayGL-8123/portfolio-with-agent)  
 - **Email**: [sanjaygl2006@gmail.com](mailto:sanjaygl2006@gmail.com)  
 - **SPVM 3 Tech Solution - Instagram**: [@spvm3techsolution](https://www.instagram.com/spvm3techsolution)  
 - **SPVM 3 Tech Solution - YouTube**: [@spvm3techsolution](https://www.youtube.com/@spvm3techsolution)  

@@ -167,8 +167,7 @@ def generate_resume_docx(output_path):
     
     items = [
         ("LinkedIn: ", "linkedin.com/in/sanjay-gl-b86631336"),
-        ("GitHub: ", "github.com/SanjayGL-8123"),
-        ("Portfolio: ", "sanjaygl30ai.vercel.app")
+        ("GitHub: ", "github.com/SanjayGL-8123")
     ]
     for i, (lbl, val) in enumerate(items):
         r_l = p_c2.add_run(lbl)

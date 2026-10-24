@@ -939,10 +939,11 @@
     ]
   },
   "certificates": {
-    "total_count": 169,
-    "named_count": 6,
+    "total_count": 170,
+    "named_count": 7,
     "drive_count": 96,
     "highlights": [
+      "AI-Powered Shopping ads Certification — Google Skillshop (Credential ID: 0c84bba4-926a-45d0-9507-e6e85fd1339e)",
       "PRAVIDHI — State Level BCA Tech Fest Coding Contest (JSS College Mysore)",
       "National Road Safety Quiz (Ministry of Road Transport & Highways)",
       "Online Quiz on Safe & Responsible Use of AI (MeitY / Digital India)",
@@ -950,10 +951,21 @@
       "Certificate of Appreciation — Star Performer (Oasis Infobyte / AICTE)",
       "Python for Beginners (Verified Certification)",
       "HackerRank Frontend Developer (React), JavaScript, SQL, Python, Problem Solving",
-      "Microsoft Azure & Microsoft Copilot Certifications",
+      "Microsoft Copilot Certification",
       "Infosys Springboard, IBM SkillsBuild, freeCodeCamp, NPTEL Swayam"
     ],
     "list": [
+      {
+        "title": "AI-Powered Shopping ads Certification",
+        "org": "Google Skillshop",
+        "issuer": "Skillshop / Google",
+        "year": 2026,
+        "completionDate": "2026-06-05",
+        "validUntil": "2027-06-05",
+        "badge": "https://api.accredible.com/v1/credentials/1hnmwguv/artifact/badge",
+        "verifyLink": "https://www.credential.net/0c84bba4-926a-45d0-9507-e6e85fd1339e",
+        "description": "Validates proficiency with using and optimizing AI-Powered Shopping ads, Performance Max campaigns, and Merchant Center product feed strategy."
+      },
       {
         "title": "Verified Technical Credential",
         "org": "Verified Institution",
@@ -2173,6 +2185,12 @@
     "State Level BCA Tech Fest Coding Contestant at Pravidhi 2026"
   ],
   "interview_qna": [
+    {
+      "category": "certificates",
+      "question": "What is your AI-Powered Shopping ads Certification?",
+      "answer": "I hold the verified AI-Powered Shopping ads Certification from Google Skillshop (Credential ID: 0c84bba4-926a-45d0-9507-e6e85fd1339e). This official certification recognizes proficiency in building and optimizing AI-driven Google Shopping ads, Performance Max campaigns for retail, and Google Merchant Center product feed architectures.",
+      "keywords": "google,skillshop,ai,shopping,ads,certification,credential,perfmax"
+    },
     {
       "category": "identity",
       "question": "Who are you?",
@@ -3437,6 +3455,38 @@
       "answer": "What makes me unique is the breadth of my hands-on experience — I don't just learn concepts, I ship complete projects that combine frontend design, secure backend APIs, database architecture, and machine learning. I've built AI assistants, dataset quality tools, and ML-based prediction systems, all while documenting my AI workflows daily to keep refining my process. On top of that, my volunteer work with NSS and YFS and my interests in trekking, history, and aquarium keeping give me a well-rounded perspective that shapes how I approach problems and work with people.",
       "keywords": "",
       "answer_type": "long"
+    }
+  ],
+  "verifiable_credentials": [
+    {
+      "@context": [
+        "https://www.w3.org/ns/credentials/v2"
+      ],
+      "type": [
+        "VerifiableCredential"
+      ],
+      "id": "https://www.credential.net/0c84bba4-926a-45d0-9507-e6e85fd1339e",
+      "name": "AI-Powered Shopping ads Certification",
+      "description": "Validate your proficiency with using and optimizing AI-Powered Shopping ads. Certified users will also demonstrate knowledge of how to create and optimize Performance Max and Shopping campaigns that maximize reach and conversions.",
+      "image": "https://api.accredible.com/v1/credentials/1hnmwguv/artifact/badge",
+      "issuer": {
+        "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:89126",
+        "name": "Skillshop"
+      },
+      "validFrom": "2026-06-05T00:00:00Z",
+      "validUntil": "2027-06-05T00:00:00Z",
+      "credentialSubject": {
+        "name": "Sanjay G. L",
+        "identifier": {
+          "type": "IdentityObject",
+          "hashed": true,
+          "identityHash": "sha256$5554a400a9ceb113086cb7ff7bf462a3b81b87a63d5ebd9bdbdc19c8c03743ab",
+          "identityType": "email",
+          "salt": "a0212ece976821493b5a0995ae609723"
+        }
+      },
+      "completionDate": "2026-06-05",
+      "credential_creation_flow_from_LMS": "certification_awarded"
     }
   ]
 }

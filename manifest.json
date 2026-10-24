@@ -8,9 +8,9 @@
   "theme_color": "#10B981",
   "icons": [
     {
-      "src": "assets/logo.svg",
+      "src": "assets/spvm3-logo.png",
       "sizes": "192x192 512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ]

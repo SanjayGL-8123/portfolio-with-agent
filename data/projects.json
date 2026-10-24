@@ -18,7 +18,7 @@
       "SciPy",
       "FAIR Model"
     ],
-    "live": "/crq-optimize",
+    "live": "https://github.com/SanjayGL-8123/crq-optimize",
     "featured": true,
     "icon": "fa-shield-halved",
     "image": "assets/crq_optimize_cover.svg",

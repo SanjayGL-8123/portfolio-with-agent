@@ -6,8 +6,7 @@ const ASSETS_TO_CACHE = [
   './privacy.html',
   './css/styles.css',
   './js/projectsData.js',
-  './knowledge.json',
-  './assets/logo.svg'
+  './knowledge.json'
 ];
 
 self.addEventListener('install', (event) => {

@@ -486,10 +486,12 @@ def add_security_headers(response):
     response.headers['X-XSS-Protection'] = '1; mode=block'
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     response.headers['Permissions-Policy'] = 'camera=(), microphone=(), geolocation=()'
-    if request.path.endswith(('.css', '.js', '.woff2', '.png', '.jpg', '.jpeg', '.svg', '.ico')):
-        response.headers['Cache-Control'] = 'public, max-age=31536000'
+    if request.path.endswith(('.css', '.js')):
+        response.headers['Cache-Control'] = 'no-cache, must-revalidate'
+    elif request.path.endswith(('.woff2', '.png', '.jpg', '.jpeg', '.svg', '.ico')):
+        response.headers['Cache-Control'] = 'public, max-age=86400'
     elif response.mimetype == 'text/html':
-        response.headers['Cache-Control'] = 'public, max-age=3600, must-revalidate'
+        response.headers['Cache-Control'] = 'no-cache, must-revalidate'
     if request.is_secure:
         response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
     return response
@@ -542,13 +544,11 @@ def serve_sitemap():
 @app.route("/crq-optimize")
 @app.route("/crq-optimize.html")
 def serve_crq_optimize():
-    return send_from_directory(BASE_DIR, "crq-optimize.html")
+    return redirect("/projects", code=301)
 
 @app.route("/projects/<slug>")
 def project_detail(slug):
     try:
-        if slug.lower() in ['crq-optimize', 'crq_optimize']:
-            return send_from_directory(BASE_DIR, "crq-optimize.html")
         # Load projects data to find the one matching the slug
         import json
         projects_file = os.path.join(BASE_DIR, 'js', 'projectsData.js')
@@ -584,7 +584,7 @@ def project_detail(slug):
     <meta property="og:title" content="{title}">
     <meta property="og:description" content="{desc}">
     <meta property="og:image" content="{image}">
-    <link rel="canonical" href="https://sanjaygl30ai.vercel.app/projects/{slug}">
+    <link rel="canonical" href="/projects/{slug}">
     <script type="application/ld+json">
     {{
       "@context": "https://schema.org",
@@ -719,8 +719,9 @@ def get_projects_api():
 @app.route("/api/certificates", methods=["GET"])
 def get_certificates_api():
     return jsonify({
-        "total": 87,
+        "total": 88,
         "featured": [
+            "AI-Powered Shopping ads Certification — Google Skillshop",
             "AI and Machine Learning Essentials — DeepLearning.AI",
             "Cybersecurity Fundamentals — Cisco Networking Academy",
             "HackerRank — JavaScript, SQL, Java, CSS, Python",
@@ -733,7 +734,7 @@ def get_certificates_api():
 def get_stats():
     projects = load_projects_data()
     proj_count = len(projects) or 28
-    cert_count = 87
+    cert_count = 88
     featured_count = len([p for p in projects if p.get("featured")])
     ai_count = len([p for p in projects if "AI" in p.get("category", "") or "ML" in p.get("category", "")])
     ml_count = len([p for p in projects if "ML" in p.get("category", "") or "Machine Learning" in p.get("title", "")])
@@ -757,7 +758,7 @@ def get_about():
         proj_count = Project.query.count() or 28
     except Exception:
         proj_count = 28
-    cert_count = 87
+    cert_count = 88
 
     return jsonify({
         "name": "Sanjay G. L.",
@@ -870,7 +871,7 @@ def agent_chat():
         proj_count = Project.query.count() or 28
     except Exception:
         proj_count = 28
-    cert_count = 87
+    cert_count = 88
 
     if GEMINI_API_KEY and HAS_GEMINI:
         try:
@@ -885,12 +886,13 @@ def agent_chat():
                 proj_context += "\n"
                 
             cert_context = (
+                "- AI-Powered Shopping ads Certification by Google Skillshop (Credential ID: 0c84bba4-926a-45d0-9507-e6e85fd1339e)\n"
                 "- AI and Machine Learning Essentials by DeepLearning.AI\n"
                 "- Cybersecurity Fundamentals by Cisco Networking Academy\n"
                 "- HackerRank — JavaScript, SQL, Java, CSS, Python\n"
                 "- Data Structures and Algorithms in Java by Coding Ninjas\n"
                 "- Safe & Responsible Use of AI Quiz by MeitY / ISEA / Digital India\n"
-                "- 87+ Verified Certificates total across technology, internships, and government initiatives\n"
+                "- 88+ Verified Certificates total across technology, internships, and government initiatives\n"
             )
 
             system_prompt = f"""
