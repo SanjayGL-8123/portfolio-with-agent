@@ -11,10 +11,9 @@ Official AI-powered developer portfolio, operating system, and interactive techn
 ## 🌟 Key Highlights & Statistical Reality
 
 - **100 Production & Showcase Projects**: Full-stack web applications, AI agents, e-commerce platforms, security scanners, utilities, and games.
-- **Sanjay AIOS v2.5 (Deep Learning Edition)**: Neural portfolio co-pilot powered by Gemini API, trained on real datasets, technical interview question bank, and personal project roadmaps.
+- **Sanjay AIOS v2.5 (Deep Learning Edition)**: Neural portfolio co-pilot trained on real datasets, a 206+ technical interview question bank, and personal project roadmaps.
 - **Consolidated Single Database Architecture**: All contact messages, site analytics, and project records unified in a single optimized SQLite database (`database/portfolio.db`).
 - **SEO & Digital Identity Optimization**: 100% standardized canonical clean URLs, dynamic project routing (`/projects/<slug>`), Schema.org structured data, strict security headers (CSP, HSTS), and `data/identity.json` consolidation for consistent search engine indexing.
-- **Next.js SEO Analyzer Dashboard**: Custom built internal React/Tailwind application (`/seo-analyzer`) used to analyze cross-platform personal brand identity, search keyword matches, and profile health.
 
 ---
 
@@ -37,8 +36,8 @@ Official AI-powered developer portfolio, operating system, and interactive techn
 ## 🛠️ Architecture & Tech Stack
 
 - **Frontend**: Vanilla HTML5, CSS3 (Glassmorphic dark design system), JavaScript (ES6+), Canvas animations.
-- **Backend API**: Python 3.11, Flask WSGI framework, Flask-SQLAlchemy ORM.
-- **AI & ML Integration**: Google Gemini API, PyPDF, Custom Prompt Context Injection.
+- **Backend API**: Python 3.12, Flask WSGI framework, Flask-SQLAlchemy ORM.
+- **AI & ML Integration**: Self-contained RAG Knowledge Engine & Co-Pilot (132+ Technical Q&A bank).
 - **Database**: Single consolidated SQLite database (`database/portfolio.db`) with MySQL / PostgreSQL support.
 
 ---
@@ -46,23 +45,21 @@ Official AI-powered developer portfolio, operating system, and interactive techn
 ## 📁 Repository Structure
 
 ```text
-portfolio/
-├── css/                     # Clean minimal CSS & design system (clean-redesign.css, styles.css, crq-optimize.css)
+├── api/                     # Vercel serverless entrypoint (api/index.py)
+├── css/                     # Clean minimal CSS & design system (clean-redesign.css, styles.css)
 ├── data/                    # Unified JSON datasets (projects.json, identity.json)
-├── database/                # Consolidated single database (portfolio.db) & backup utilities
+├── database/                # Consolidated single database (portfolio.db)
 ├── js/                      # Frontend modules & datasets
-│   ├── clean-redesign.js    # Modern minimal portfolio engine (theme toggle, counters, contact form)
+│   ├── aiAssistant.js       # Sanjay AIOS v2.5 co-pilot engine
+│   ├── agentKnowledge.js    # Client-side rapid response knowledge dataset
+│   ├── clean-redesign.js    # Modern minimal portfolio engine
 │   ├── projectsData.js      # Projects dataset
-│   ├── projectsPage.js      # Filter & project showcase logic
-│   ├── crqOptimize.js       # Cyber Risk Quantification simulator engine
-│   └── theme.js             # Theme switcher & persistence
-├── knowledge/               # Profile schemas & AI training base
-├── seo-analyzer/            # Internal Next.js SEO audit tool
-├── app.py                   # Flask backend server & Gemini AI endpoint
+│   └── projectsPage.js      # Filter & project showcase logic
+├── app.py                   # Flask backend server & API endpoints
 ├── index.html               # Main homepage & interactive OS view
 ├── projects.html            # Projects showcase page (100 projects)
 ├── privacy.html             # Privacy policy page
-├── logo.svg                 # Scalable portfolio logo vector
+├── vercel.json              # Vercel deployment configuration
 ├── robots.txt               # Web crawler directives
 ├── sitemap.xml              # Site URL index
 └── vercel.json              # Vercel serverless deployment config

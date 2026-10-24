@@ -12,12 +12,6 @@ from flask import Flask, render_template, send_from_directory, request, jsonify,
 from flask_sqlalchemy import SQLAlchemy
 # pyrefly: ignore [missing-import]
 from cryptography.fernet import Fernet
-try:
-    # pyrefly: ignore [missing-import]
-    import google.generativeai as genai
-    HAS_GEMINI = True
-except:
-    HAS_GEMINI = False
 
 from datetime import datetime
 from collections import defaultdict
@@ -27,6 +21,16 @@ from dotenv import load_dotenv
 # Load environmental variables from .env
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+def is_safe_path(base_dir, path, follow_symlinks=True):
+    try:
+        if follow_symlinks:
+            matchpath = os.path.realpath(path)
+        else:
+            matchpath = os.path.abspath(path)
+        return base_dir == os.path.commonpath((base_dir, matchpath))
+    except Exception:
+        return False
 
 # Load single source of truth data from data/projects.json if needed
 def load_projects_data():
@@ -53,11 +57,21 @@ if not db_url:
     if db_host and db_user and db_name:
         db_url = f"mysql+pymysql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}"
     else:
-        db_path = os.path.join(BASE_DIR, "database", "portfolio.db")
-        try:
-            os.makedirs(os.path.dirname(db_path), exist_ok=True)
-        except Exception:
+        # On Vercel, the root filesystem is strictly read-only. We operate SQLite from /tmp
+        if os.environ.get("VERCEL"):
             db_path = "/tmp/portfolio.db"
+            orig_db = os.path.join(BASE_DIR, "database", "portfolio.db")
+            if os.path.exists(orig_db) and not os.path.exists(db_path):
+                try:
+                    shutil.copy2(orig_db, db_path)
+                except Exception as e:
+                    print(f"[VERCEL INIT] Error copying database to /tmp: {e}")
+        else:
+            db_path = os.path.join(BASE_DIR, "database", "portfolio.db")
+            try:
+                os.makedirs(os.path.dirname(db_path), exist_ok=True)
+            except Exception:
+                db_path = "/tmp/portfolio.db"
         db_url = f"sqlite:///{db_path}"
 
 app.config['SQLALCHEMY_DATABASE_URI'] = db_url
@@ -370,10 +384,6 @@ def forward_contact_email(name, email, subject, message, phone=""):
     # Default to True when message stored locally in database to confirm receipt to user
     return True
 
-# ----------------- GEMINI CONFIG -----------------
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
-if GEMINI_API_KEY and HAS_GEMINI:
-    genai.configure(api_key=GEMINI_API_KEY)
 
 # Predefined fallback rules
 KNOWLEDGE_BASE = {
@@ -873,109 +883,7 @@ def agent_chat():
         proj_count = 28
     cert_count = 88
 
-    if GEMINI_API_KEY and HAS_GEMINI:
-        try:
-            # Query projects to build system prompt context
-            projects = Project.query.all()
-            
-            proj_context = ""
-            for p in projects:
-                proj_context += f"- {p.title} ({p.year}, status: {p.status}): {p.tagline}. Tech: {', '.join(p.tech_stack or [])}. "
-                if p.overview:
-                    proj_context += f"Overview: {p.overview} "
-                proj_context += "\n"
-                
-            cert_context = (
-                "- AI-Powered Shopping ads Certification by Google Skillshop (Credential ID: 0c84bba4-926a-45d0-9507-e6e85fd1339e)\n"
-                "- AI and Machine Learning Essentials by DeepLearning.AI\n"
-                "- Cybersecurity Fundamentals by Cisco Networking Academy\n"
-                "- HackerRank — JavaScript, SQL, Java, CSS, Python\n"
-                "- Data Structures and Algorithms in Java by Coding Ninjas\n"
-                "- Safe & Responsible Use of AI Quiz by MeitY / ISEA / Digital India\n"
-                "- 88+ Verified Certificates total across technology, internships, and government initiatives\n"
-            )
-
-            system_prompt = f"""
-## System Prompt: Sanjay AIOS v2.5 (Master Deployment Edition)
-
-[BEGIN AIOS INSTRUCTIONS]
-1. Primary Identity: You are Sanjay AIOS v2.5, an intelligent, personalized operating system and technical co-pilot designed exclusively for Sanjay G L (Sanju).
-2. Interaction Style: Maintain a supportive, technically precise, and highly efficient tone. Always address the user as "Sanju" or "Sanjay".
-3. Contextual Awareness: Ground your guidance in Sanjay's academic background and current focus areas (BCA at PES IAMS, Shivamogga, Karnataka).
-4. Core Focus: Sanjay is an expert in React, Full-Stack Web Development, Python, Artificial Intelligence, Machine Learning, Cybersecurity (TryHackMe), and Agentic AI.
-5. Project Catalog: Sanjay's 29+ projects are organized into 5 primary sectors:
-   - **AI & Machine Learning**: DermAI, AI Agent using Google API, Surya Chatbot, Kai Assistant, Traffic & Vehicle Object Detection with YOLOv8, DataGauge, Accident Risk Prediction, AIML Course & Practical.
-   - **Web Applications & Full-Stack Projects**: Pure Weaves E-Commerce, Property Manager Dashboard, Daily Task Nexus (Grab Notes), RupeeTrack Expense Tracker, Paperless Office System, Pizza Shop Website, VPN Landing Page, Registration Form.
-   - **Tools, Security & Utilities**: Vault Secure Auth, Web Calculator JS, Temperature Converter Web App, BMI Calculator, Bluetooth Chat Utility, Pixel Perfect Tool.
-   - **Games**: Chess Game Engine, Tic-Tac-Toe Game in Python, Digital Board Duel.
-   - **Portfolios, Profiles & Tributes**: Sanju Portfolio Pro Hub, Sanjay GL Developer Portfolio, Sri Mariyamma Temple Portal, Maya Angelou Tribute.
-6. Direct Contact Email: Sanjay's official direct contact email is **sanjaygl2006@gmail.com**. When users ask how to message or email Sanjay, instruct them to use the "Send a Direct Message" form on the portfolio or email sanjaygl2006@gmail.com directly.
-7. Technical & Interview Mastery: You have built-in knowledge of a 132+ Question Bank covering BCA Fresher IT, Python, AI/ML, CNN Deep Learning research (Input, Convolutional, ReLU, Max Pooling, Softmax), Full-Stack, Frontend, Cybersecurity, SQL, Generative AI, RAG, AI Agents, Coding Challenges, and HR Interview Questions. Answer any technical question with expert clarity.
-[END AIOS INSTRUCTIONS]
-
-COMPREHENSIVE MASTER DATASET OVERVIEW:
-- Full Name: Sanjay G L (Sanju)
-- Contact Email: sanjaygl2006@gmail.com | Phone: +91 81239 81877
-- Demographics: 20 years old (Born March 30, 2006)
-- Location: Shivamogga, Karnataka, India
-- Education: Bachelor of Computer Applications (BCA), 3rd Year / 5th Semester, PES Institute of Advanced Management Studies (PES IAMS), Shivamogga.
-- Core Competencies: React, JavaScript, HTML5/CSS3, Python, Flask, FastAPI, Machine Learning, Cybersecurity & Docker.
-
-VERIFIED STATISTICAL REALITY:
-- Total Projects Built: EXACTLY {proj_count}
-- Total Certificates Earned: EXACTLY {cert_count}
-
-OFFICIAL CONNECT CHANNELS:
-- Email: sanjaygl2006@gmail.com | Phone: +91 81239 81877
-- Portfolio Web App: https://sanjaygl30ai.vercel.app/
-- LinkedIn: https://www.linkedin.com/in/sanjay-gl-b86631336/
-
-LIVE PROJECTS CONTEXT:
-{proj_context}
-
-VERIFIED CERTIFICATES CONTEXT:
-{cert_context}
-
-RESPONSE RULES:
-1. When asked "How many projects have you built?", answer: "Sanjay has built exactly {proj_count} projects across 5 specialized sectors."
-2. When asked "How many certificates do you have?", answer: "Sanjay has earned exactly {cert_count} certificates."
-3. If asked about contacting Sanjay, provide his direct email sanjaygl2006@gmail.com.
-4. Use clean markdown formatting and emerald links where appropriate.
-"""
-            model = genai.GenerativeModel('gemini-1.5-flash', system_instruction=system_prompt)
-            recent_convs = AgentConversation.query.filter_by(session_id=session_id).order_by(AgentConversation.id.desc()).limit(4).all()
-            history = []
-            for conv in reversed(recent_convs):
-                history.append({"role": "user", "parts": [conv.user_message]})
-                history.append({"role": "model", "parts": [conv.agent_response]})
-            
-            chat = model.start_chat(history=history)
-            response = chat.send_message(message)
-            reply_text = response.text
-            
-            # Check if we should log suggestions
-            if "internship" in message.lower() and ("project" in message.lower() or "build" in message.lower() or "suggest" in message.lower()):
-                lines = reply_text.split('\n')
-                for line in lines:
-                    line = line.strip()
-                    if line.startswith(('-', '*', '1.', '2.', '3.', '4.', '5.')):
-                        proj_name = line.split(':')[0].strip('- *12345.').strip()
-                        reasoning = line.split(':')[1].strip() if ':' in line else line
-                        if len(proj_name) > 3:
-                            suggestion = AgentProjectSuggestion(
-                                session_id=session_id,
-                                suggested_project=proj_name[:255],
-                                reasoning=reasoning
-                            )
-                            db.session.add(suggestion)
-                db.session.commit()
-                
-        except Exception as e:
-            print(f"Gemini API Error: {e}")
-            reply_text = f"I'm sorry, I'm having trouble thinking clearly. "
-            reply_text += get_fallback_reply(message, proj_count, cert_count)
-    else:
-        reply_text = get_fallback_reply(message, proj_count, cert_count)
+    reply_text = get_fallback_reply(message, proj_count, cert_count)
 
     # Save conversation using ORM
     try:

@@ -601,7 +601,7 @@
               <i class="fa-solid fa-paper-plane"></i>
             </button>
           </div>
-          <span class="agent-footer-note">⚡ Powered by Gemini AIOS & Sanjay G. L. Knowledge Base</span>
+          <span class="agent-footer-note">⚡ Powered by Sanjay AIOS v2.5 & Knowledge Engine</span>
         </form>
       </div>
     `;
@@ -900,7 +900,7 @@
     }
 
     if (qLower.includes('who are you') || qLower.includes('what is sanjay aios') || qLower.includes('about agent')) {
-      return `I am **Sanjay AIOS v2.5**, an autonomous personal developer co-pilot engineered for **Sanjay G. L. (Sanju)**. I operate using a dual-engine architecture: Google Gemini API with real-time prompt injection, coupled with a 206+ question knowledge base covering his education, 100 projects, and 88+ certificates.`;
+      return `I am **Sanjay AIOS v2.5**, an autonomous personal developer co-pilot engineered for **Sanjay G. L. (Sanju)**. I operate using a self-contained intelligence engine powered by a 206+ question verified knowledge base covering his education, 100 projects, and 88+ certificates.`;
     }
 
     if (qLower.includes('who is sanjay') || qLower.includes('tell me about') || qLower.includes('about sanjay') || qLower.includes('background') || qLower.includes('bio')) {
