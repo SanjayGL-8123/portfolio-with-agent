@@ -10,17 +10,223 @@
     "linkedin": "sanjay-gl-b86631336",
     "site": "sanjaygl",
     "other": [
+      "sanjayGL2006",
       "sanjaygl200630",
       "sanjaygl"
     ]
   },
-  "role": "Full Stack AI Developer | BCA student, PES IAMS, Shivamogga, Karnataka, India",
+  "role": "Full-Stack Aspirant | AI Workflow Engineer | BCA Student (3rd Year, 5th Sem, 2023–2026), PES IAMS, Shivamogga, Karnataka, India",
+  "featured": {
+    "title": "Sanjay GL — Official Developer Portfolio & AIOS",
+    "url": "https://sanjaygl.vercel.app",
+    "pinned": true,
+    "description": "Interactive developer portfolio powered by autonomous AI agent co-pilot, project showcase, verified credentials archive, and live terminal."
+  },
+  "education": {
+    "degree": "Bachelor of Computer Applications (BCA)",
+    "year": "3rd Year, 5th Sem",
+    "period": "2023–2026",
+    "college": "PES Institute of Advanced Management Studies (PESIAMS)",
+    "location": "Shivamogga, Karnataka, India",
+    "puc": {
+      "course": "Pre-University Course (Science)",
+      "college": "PES PU College, Shivamogga",
+      "status": "Completed 2024"
+    }
+  },
+  "internships": [
+    {
+      "company": "Oasis Infobyte",
+      "role": "Web Dev Intern (Star Performer)",
+      "period": "Feb 2026 – Mar 2026",
+      "type": "Remote · AICTE OIB-SIP",
+      "certId": "OIB/F1/IP353",
+      "description": "Awarded Star Performer for high dedication, exceptional code quality, and timely delivery of responsive web applications under ISO 9001:2015 standards."
+    },
+    {
+      "company": "CodSoft",
+      "role": "Web Dev Intern",
+      "period": "2026",
+      "type": "Remote Web Development Internship",
+      "description": "Engineered responsive frontend web interfaces, component architectures, and dynamic user interactions utilizing HTML5, CSS3, and JavaScript."
+    },
+    {
+      "company": "JPMorgan Chase & Co.",
+      "role": "Software Engineering Virtual Experience",
+      "platform": "Forage",
+      "period": "2026",
+      "type": "Virtual Experience Program",
+      "description": "Implemented live financial data feed streaming, perspective data visualization, and unit tests using Python, TypeScript, and financial graphing systems."
+    }
+  ],
+  "skills": [
+    "Python",
+    "JavaScript",
+    "Flask",
+    "SQL",
+    "HTML/CSS",
+    "Java",
+    "Docker",
+    "Git",
+    "MySQL",
+    "REST APIs"
+  ],
+  "projects": [
+    {
+      "name": "PureWeaves",
+      "tagline": "Artisanal Handcrafted Saree E-Commerce",
+      "description": "Full-featured e-commerce platform for artisanal sarees featuring an interactive product catalog, direct WhatsApp checkout pipeline, and MySQL database backend.",
+      "tags": ["HTML/CSS", "JavaScript", "MySQL", "Vercel", "E-Commerce"],
+      "liveUrl": "https://pureweaves.vercel.app/",
+      "github": "https://github.com/SanjayGL-8123"
+    },
+    {
+      "name": "Vinayaka",
+      "tagline": "Intelligent AI Assistant & Conversational Agent",
+      "description": "Advanced conversational AI assistant built with Flask and Python, integrating Google Gemini API and OpenAI model cascades with persistent context memory and multi-intent query handling.",
+      "tags": ["Python", "Flask", "Gemini API", "OpenAI", "REST APIs", "AI"],
+      "github": "https://github.com/SanjayGL-8123"
+    },
+    {
+      "name": "Vibe Chat",
+      "tagline": "Real-Time Collaborative Web Chat Application",
+      "description": "High-performance instant messaging web application featuring real-time room communication, live presence indicators, responsive UI, and secure API messaging.",
+      "tags": ["JavaScript", "WebSockets", "REST APIs", "HTML/CSS", "Real-Time"],
+      "github": "https://github.com/SanjayGL-8123"
+    },
+    {
+      "name": "GrabNotes",
+      "tagline": "AI-Powered Smart Note-Taking Platform",
+      "description": "Intelligent note-taking application deployed on Base44, providing automated note synthesis, semantic search, contextual tagging, and seamless organization.",
+      "tags": ["AI", "Base44", "Web App", "Productivity"],
+      "liveUrl": "https://grab-notes.base44.app/",
+      "github": "https://github.com/SanjayGL-8123"
+    }
+  ],
+  "topCertificates": [
+    {
+      "title": "OpenAI Academy — AI Foundations Badge",
+      "issuer": "OpenAI Academy",
+      "date": "2026",
+      "type": "Official Verified Credential & Badge",
+      "badgeImage": "assets/openai-academy-badge.png"
+    },
+    {
+      "title": "AI-Powered Shopping ads Certification",
+      "issuer": "Google Skillshop",
+      "date": "June 2026",
+      "credentialId": "0c84bba4-926a-45d0-9507-e6e85fd1339e"
+    },
+    {
+      "title": "Star Performer Award — Web Dev Internship",
+      "issuer": "Oasis Infobyte (AICTE OIB-SIP)",
+      "date": "Mar 2026",
+      "certId": "OIB/F1/IP353"
+    },
+    {
+      "title": "Software Engineering Virtual Experience",
+      "issuer": "JPMorgan Chase & Co. / Forage",
+      "date": "2026"
+    },
+    {
+      "title": "Web Development Internship Certificate",
+      "issuer": "CodSoft",
+      "date": "2026"
+    },
+    {
+      "title": "PRAVIDHI — State Level Tech Fest Coding Contest",
+      "issuer": "JSS College Mysore / SPARKTECHTHRA",
+      "date": "2026"
+    },
+    {
+      "title": "Hands-on Workshop on Agentic AI",
+      "issuer": "Anvesana TBI — Unriddle Technologies",
+      "date": "6 June 2026"
+    },
+    {
+      "title": "Online Quiz on Safe & Responsible Use of AI",
+      "issuer": "MeitY / Digital India",
+      "date": "2026"
+    },
+    {
+      "title": "National Road Safety Quiz",
+      "issuer": "Ministry of Road Transport & Highways, Govt. of India",
+      "date": "2026"
+    },
+    {
+      "title": "Youth for Seva — Certificate of Recognition",
+      "issuer": "Ministry of Youth Affairs & Sports, Govt. of India",
+      "date": "2024 – Present"
+    }
+  ],
+  "timeline": [
+    {
+      "title": "Pre-University Course (Science)",
+      "date": "Completed 2024",
+      "org": "PES PU College",
+      "desc": "Shivamogga, Karnataka. Foundational science and mathematics curriculum establishing strong analytic and logical problem-solving principles."
+    },
+    {
+      "title": "Bachelor of Computer Applications (BCA)",
+      "date": "2023 – 2026",
+      "role": "Current · 3rd Year · 5th Sem",
+      "org": "PES Institute of Advanced Management Studies (PESIAMS) — Shivamogga, Karnataka",
+      "desc": "Building comprehensive technical foundations in Python, Java, JavaScript, Flask, SQL, MySQL, Docker, Git, REST APIs, and modern AI workflows."
+    },
+    {
+      "title": "National Service Scheme (NSS)",
+      "date": "2024 – Present",
+      "role": "NSS Active Volunteer",
+      "org": "PESIAMS Shivamogga",
+      "desc": "Actively participated in community service, digital literacy programs, hygiene awareness, environmental sustainability, and social drives across the Shivamogga region."
+    },
+    {
+      "title": "Youth for Seva (Mera Yuva Bharat)",
+      "date": "2024 – Present",
+      "role": "YFS Volunteer",
+      "org": "Ministry of Youth Affairs & Sports, Govt. of India",
+      "desc": "Engaged in national youth-led initiatives, civic engagement programs, and Viksit Bharat campaigns. Awarded a Certificate of Recognition."
+    },
+    {
+      "title": "Web Development & Designing Intern (Star Performer)",
+      "date": "Feb 2026 – Mar 2026",
+      "role": "Star Performer",
+      "org": "Oasis Infobyte (AICTE OIB-SIP)",
+      "desc": "Remote · Certificate ID: OIB/F1/IP353. Awarded Star Performer for dedication, code quality and timely delivery building and deploying real-world web applications. Certified under ISO 9001:2015 standards."
+    },
+    {
+      "title": "Web Development Intern",
+      "date": "2026",
+      "role": "Web Dev Intern",
+      "org": "CodSoft",
+      "desc": "Remote web development internship focusing on building responsive user interfaces, structured components, and interactive web tools with HTML5, CSS3, and JavaScript."
+    },
+    {
+      "title": "Software Engineering Virtual Experience",
+      "date": "2026",
+      "role": "Virtual Experience Participant",
+      "org": "JPMorgan Chase & Co. (via Forage)",
+      "desc": "Completed virtual engineering simulations involving live financial data feed streaming, perspective data visualization, and unit tests using Python and modern web tooling."
+    },
+    {
+      "title": "Hands-on Workshop on Agentic AI",
+      "date": "6 June 2026",
+      "org": "Anvesana TBI — Unriddle Technologies",
+      "desc": "Attended a hands-on workshop conducted by Mr. Pruthvi S, AI Engineer, covering autonomous AI agents, building AI agents with Python 3.12+, and end-to-end AI-driven workflows. Received E-Certificate of Participation."
+    }
+  ],
+  "certifications": {
+    "total": 76,
+    "namedAwards": 7,
+    "verifiedDocs": 69,
+    "featuredBadge": "OpenAI Academy — AI Foundations"
+  },
   "profiles": {
     "portfolio": "https://sanjaygl.vercel.app",
     "github": "https://github.com/SanjayGL-8123",
     "linkedin": "https://www.linkedin.com/in/sanjay-gl-b86631336",
-    "youtube": "https://www.youtube.com/@spvm3techsolution",
-    "instagram": "https://www.instagram.com/spvm3techsolution",
-    "telegram": "https://t.me/Sanjaygl30"
+    "twitter": "https://x.com/SanjayGL8123456",
+    "telegram": "https://t.me/Sanjaygl30",
+    "facebook": "https://www.facebook.com/people/Sanjay-G-L-Sanju/100084034332588/"
   }
 }

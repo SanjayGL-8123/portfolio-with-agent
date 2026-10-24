@@ -1795,3 +1795,203 @@ h6 {
   color: var(--text-subtle);
   text-align: center;
 }
+
+/* ===================================================================
+   FEATURED PINNED SECTION & TOP SKILLS / CERTIFICATES ENHANCEMENTS
+   =================================================================== */
+.featured-pinned-section {
+  padding: 30px 24px 10px;
+}
+
+.featured-pinned-card {
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.12) 0%, rgba(15, 23, 42, 0.75) 100%);
+  border: 1px solid rgba(56, 217, 245, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -5px rgba(15, 118, 110, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-pinned-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 217, 245, 0.6);
+  box-shadow: 0 16px 36px -4px rgba(56, 217, 245, 0.25);
+}
+
+.featured-pin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(56, 217, 245, 0.15);
+  border: 1px solid rgba(56, 217, 245, 0.4);
+  color: #38d9f5;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 9999px;
+  margin-bottom: 10px;
+}
+
+.featured-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  font-family: var(--font-heading);
+}
+
+.featured-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 680px;
+  line-height: 1.5;
+}
+
+.featured-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.featured-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Core Stack 10-Skills Grid */
+.core-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.core-skill-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.core-skill-card:hover {
+  border-color: rgba(56, 217, 245, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px -4px rgba(15, 118, 110, 0.25);
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.08) 0%, var(--bg-card) 100%);
+}
+
+.core-skill-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: rgba(15, 118, 110, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: #38d9f5;
+  flex-shrink: 0;
+}
+
+.core-skill-info h4 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 0 0 2px 0;
+}
+
+.core-skill-info span {
+  font-size: 0.74rem;
+  color: var(--teal-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Compact Top 10 Certificates Sidebar Items */
+.top-certs-scroll-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.cert-item-compact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.cert-item-compact:hover {
+  border-color: rgba(56, 217, 245, 0.4);
+  background: rgba(15, 118, 110, 0.08);
+}
+
+.cert-compact-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: rgba(56, 217, 245, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  color: #38d9f5;
+  flex-shrink: 0;
+}
+
+.cert-compact-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cert-compact-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.cert-compact-meta {
+  font-size: 0.72rem;
+  color: var(--teal-primary);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
