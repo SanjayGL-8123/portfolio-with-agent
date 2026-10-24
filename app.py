@@ -178,6 +178,9 @@ class ContactMessage(db.Model):
             setattr(self, k, v)
 
 def optimize_profile_image():
+    if os.environ.get("VERCEL"):
+        # Root filesystem is read-only on Vercel serverless environment
+        return
     profile_path = os.path.join(BASE_DIR, "assets", "profile.png")
     if os.path.exists(profile_path) and os.path.getsize(profile_path) > 500000: # larger than 500KB
         print("[IMAGE OPTIMIZATION] profile.png is large. Attempting optimization...")
@@ -448,9 +451,9 @@ def get_fallback_reply(message, proj_count, cert_count):
 # ----------------- FLASK ROUTING -----------------
 def is_safe_path(base_dir, target_path):
     try:
-        base = os.path.abspath(base_dir).lower()
-        target = os.path.abspath(target_path).lower()
-        return target.startswith(base) and os.path.isfile(target_path)
+        base = os.path.realpath(base_dir)
+        target = os.path.realpath(target_path)
+        return os.path.commonpath([base, target]) == base
     except Exception:
         return False
 
@@ -496,6 +499,15 @@ def add_security_headers(response):
     response.headers['X-XSS-Protection'] = '1; mode=block'
     response.headers['Referrer-Policy'] = 'strict-origin-when-cross-origin'
     response.headers['Permissions-Policy'] = 'camera=(), microphone=(), geolocation=()'
+    response.headers['Content-Security-Policy'] = (
+        "default-src 'self'; "
+        "script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; "
+        "style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; "
+        "font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com data:; "
+        "img-src 'self' data: https: blob:; "
+        "connect-src 'self' https://api.web3forms.com https://formsubmit.co; "
+        "frame-ancestors 'self';"
+    )
     if request.path.endswith(('.css', '.js')):
         response.headers['Cache-Control'] = 'no-cache, must-revalidate'
     elif request.path.endswith(('.woff2', '.png', '.jpg', '.jpeg', '.svg', '.ico')):
@@ -638,49 +650,63 @@ def project_detail(slug):
 def serve_robots():
     return send_from_directory(BASE_DIR, "robots.txt", mimetype="text/plain")
 
+BLOCKED_EXTENSIONS = {
+    '.py', '.pyc', '.env', '.db', '.sqlite', '.sqlite3', '.sql',
+    '.git', '.md', '.yml', '.yaml', '.toml', '.ini', '.cfg', '.example',
+    '.log', '.sh', '.bat', '.ps1'
+}
+
+ALLOWED_ROOT_FILES = {
+    'favicon.ico', 'manifest.json', 'robots.txt', 'sitemap.xml', 'sw.js'
+}
+
+ALLOWED_STATIC_EXTENSIONS = {
+    '.css', '.js', '.png', '.jpg', '.jpeg', '.svg', '.gif', '.ico',
+    '.webp', '.woff', '.woff2', '.ttf', '.eot', '.pdf', '.docx', '.json'
+}
+
 @app.route("/<path:path>")
 def serve_static(path):
+    # 1. Defensively reject path traversal sequences and hidden files
+    if ".." in path or path.startswith("/") or path.startswith("\\"):
+        return "Not Found", 404
+
+    filename = os.path.basename(path)
+    _, ext = os.path.splitext(filename)
+    ext = ext.lower()
+
+    # 2. Block access to hidden files and sensitive file extensions (source code, configs, DBs)
+    if filename.startswith(".") or ext in BLOCKED_EXTENSIONS:
+        return "Not Found", 404
+
     try:
-        # Check direct path relative to BASE_DIR
-        full_path = os.path.normpath(os.path.join(BASE_DIR, path))
-        if is_safe_path(BASE_DIR, full_path):
-            directory, filename = os.path.split(full_path)
-            return send_from_directory(directory, filename)
+        # 3. Check strictly whitelisted root assets (e.g. favicon.ico, manifest.json, robots.txt, sitemap.xml)
+        if path in ALLOWED_ROOT_FILES:
+            full_path = os.path.normpath(os.path.join(BASE_DIR, path))
+            if is_safe_path(BASE_DIR, full_path) and os.path.isfile(full_path):
+                return send_from_directory(BASE_DIR, path)
 
-        # Check subdirectories if path was requested without directory prefix (e.g., theme.js -> js/theme.js, profile.png -> assets/profile.png)
-        for subfolder in ["js", "assets", "css"]:
-            candidate = os.path.normpath(os.path.join(BASE_DIR, subfolder, path))
-            if is_safe_path(BASE_DIR, candidate):
-                candidate_dir, candidate_file = os.path.split(candidate)
-                return send_from_directory(candidate_dir, candidate_file)
-
-        # Check HTML files (e.g. projects -> projects.html)
-        if not path.endswith(".html"):
-            html_candidate = os.path.normpath(os.path.join(BASE_DIR, path + ".html"))
-            if is_safe_path(BASE_DIR, html_candidate):
-                return send_from_directory(BASE_DIR, path + ".html")
-
-        # Do not fallback to index.html for static asset files (.js, .png, etc.)
-        _, ext = os.path.splitext(path)
-        if ext and ext.lower() in ['.js', '.css', '.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.json', '.woff', '.woff2', '.ttf']:
-            return "Not Found", 404
-
-        # Fallback to index.html for SPA routing
-        if path in ['projects', 'privacy']:
-            html_candidate = os.path.join(BASE_DIR, path + ".html")
+        # 4. Check explicit clean HTML routes (e.g. /projects -> projects.html, /privacy -> privacy.html)
+        clean_name = path[:-5] if path.endswith(".html") else path
+        if clean_name in ['projects', 'privacy']:
+            html_file = clean_name + ".html"
+            html_candidate = os.path.join(BASE_DIR, html_file)
             if os.path.isfile(html_candidate):
-                return send_from_directory(BASE_DIR, path + ".html")
+                return send_from_directory(BASE_DIR, html_file)
 
-        index_path = os.path.join(BASE_DIR, "index.html")
-        if os.path.isfile(index_path):
-            return send_from_directory(BASE_DIR, "index.html")
+        # 5. Check authorized static subdirectories (supports both unprefixed and /static/ prefixed requests)
+        if ext in ALLOWED_STATIC_EXTENSIONS:
+            rel_path = path[7:] if path.startswith("static/") else path
+            for subfolder in ["js", "assets", "css", "data", "static"]:
+                candidate = os.path.normpath(os.path.join(BASE_DIR, subfolder, rel_path))
+                if is_safe_path(BASE_DIR, candidate) and os.path.isfile(candidate):
+                    candidate_dir, candidate_file = os.path.split(candidate)
+                    return send_from_directory(candidate_dir, candidate_file)
 
+        # 6. Any other unmapped route returns 404 Not Found
         return "Not Found", 404
     except Exception as e:
         print(f"[STATIC SERVE ERROR] {path}: {e}")
-        index_path = os.path.join(BASE_DIR, "index.html")
-        if os.path.isfile(index_path):
-            return send_from_directory(BASE_DIR, "index.html")
         return "Internal Server Error", 500
 
 @app.route("/js/projectsData.js")
@@ -914,7 +940,7 @@ def health_check():
     return jsonify({
         "status": "healthy",
         "service": "sanjay-aios-portfolio",
-        "version": "2.5.0",
+        "version": "2.6.0",
         "timestamp": datetime.utcnow().isoformat() + "Z"
     }), 200
 
