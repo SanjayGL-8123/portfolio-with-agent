@@ -5,6 +5,7 @@ import urllib.parse
 import json
 import smtplib
 import shutil
+import html as html_mod
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from flask import Flask, render_template, send_from_directory, request, jsonify, redirect, make_response
@@ -13,7 +14,7 @@ from flask_sqlalchemy import SQLAlchemy
 # pyrefly: ignore [missing-import]
 from cryptography.fernet import Fernet
 
-from datetime import datetime
+from datetime import datetime, timezone
 from collections import defaultdict
 import time
 from dotenv import load_dotenv
@@ -123,7 +124,7 @@ class AgentConversation(db.Model):
     session_id = db.Column(db.String(100), nullable=False)
     user_message = db.Column(db.Text, nullable=False)
     agent_response = db.Column(db.Text, nullable=False)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    timestamp = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
 
     def __init__(self, session_id=None, user_message=None, agent_response=None, **kwargs):
         self.session_id = session_id
@@ -138,7 +139,7 @@ class AgentProjectSuggestion(db.Model):
     session_id = db.Column(db.String(100), nullable=False)
     suggested_project = db.Column(db.String(255), nullable=False)
     reasoning = db.Column(db.Text, nullable=False)
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    timestamp = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
 
     def __init__(self, session_id=None, suggested_project=None, reasoning=None, **kwargs):
         self.session_id = session_id
@@ -152,7 +153,7 @@ class SiteVisit(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     page = db.Column(db.String(100), nullable=False)
     referrer = db.Column(db.String(255))
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    timestamp = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
 
     def __init__(self, page=None, referrer=None, **kwargs):
         self.page = page
@@ -167,7 +168,7 @@ class ContactMessage(db.Model):
     email = db.Column(db.Text, nullable=False) # Encrypted at rest
     subject = db.Column(db.String(255), nullable=False)
     message = db.Column(db.Text, nullable=False) # Encrypted at rest
-    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+    timestamp = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
 
     def __init__(self, name=None, email=None, subject=None, message=None, **kwargs):
         self.name = name
@@ -201,8 +202,6 @@ def optimize_profile_image():
             print("[IMAGE OPTIMIZATION] PIL (Pillow) is not installed. Skipping profile.png compression.")
         except Exception as e:
             print(f"[IMAGE OPTIMIZATION] Error compressing profile image: {e}")
-        except:
-            pass
 
 # Create tables in database context
 with app.app_context():
@@ -304,7 +303,7 @@ def forward_contact_email(name, email, subject, message, phone=""):
     html_body = f"""
     <div style="font-family:Segoe UI,Arial,sans-serif;max-width:640px;line-height:1.6;color:#111">
       <h2 style="color:#059669;margin-bottom:8px">Portfolio Direct Message</h2>
-      <p style="color:#555;margin-top:0">Someone sent a message from sanjaygl30ai.vercel.app</p>
+      <p style="color:#555;margin-top:0">Someone sent a message from sanjaygl.vercel.app</p>
       <table style="border-collapse:collapse;width:100%">
         <tr><td style="padding:8px;border:1px solid #ddd;font-weight:700">Name</td><td style="padding:8px;border:1px solid #ddd">{name}</td></tr>
         <tr><td style="padding:8px;border:1px solid #ddd;font-weight:700">Email</td><td style="padding:8px;border:1px solid #ddd"><a href="mailto:{email}">{email}</a></td></tr>
@@ -449,13 +448,7 @@ def get_fallback_reply(message, proj_count, cert_count):
     return "I am Sanjay AIOS v2.5. You can ask me any question about Sanjay's portfolio, background, or technical interview questions across Python, AI/ML, CNN, Full-Stack, Cybersecurity, and SQL!"
 
 # ----------------- FLASK ROUTING -----------------
-def is_safe_path(base_dir, target_path):
-    try:
-        base = os.path.realpath(base_dir)
-        target = os.path.realpath(target_path)
-        return os.path.commonpath([base, target]) == base
-    except Exception:
-        return False
+# is_safe_path is defined at module top (line 25)
 
 @app.before_request
 def enforce_https_and_track_visit():
@@ -491,9 +484,14 @@ def enforce_https_and_track_visit():
 
 @app.after_request
 def add_security_headers(response):
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, PATCH, DELETE, OPTIONS'
-    response.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, X-Requested-With'
+    allowed_origin = 'https://sanjaygl.vercel.app'
+    req_origin = request.headers.get('Origin', '')
+    if req_origin in (allowed_origin, 'http://localhost:5000', 'http://localhost:5001', 'http://127.0.0.1:5000'):
+        response.headers['Access-Control-Allow-Origin'] = req_origin
+    else:
+        response.headers['Access-Control-Allow-Origin'] = allowed_origin
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type, X-Requested-With'
     response.headers['X-Content-Type-Options'] = 'nosniff'
     response.headers['X-Frame-Options'] = 'SAMEORIGIN'
     response.headers['X-XSS-Protection'] = '1; mode=block'
@@ -522,9 +520,14 @@ def add_security_headers(response):
 def handle_405_error(e):
     if request.method == 'OPTIONS':
         res = make_response('', 200)
-        res.headers['Access-Control-Allow-Origin'] = '*'
-        res.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, PATCH, DELETE, OPTIONS'
-        res.headers['Access-Control-Allow-Headers'] = 'Content-Type, Authorization, X-Requested-With'
+        req_origin = request.headers.get('Origin', '')
+        allowed_origin = 'https://sanjaygl.vercel.app'
+        if req_origin in (allowed_origin, 'http://localhost:5000', 'http://localhost:5001', 'http://127.0.0.1:5000'):
+            res.headers['Access-Control-Allow-Origin'] = req_origin
+        else:
+            res.headers['Access-Control-Allow-Origin'] = allowed_origin
+        res.headers['Access-Control-Allow-Methods'] = 'GET, POST, OPTIONS'
+        res.headers['Access-Control-Allow-Headers'] = 'Content-Type, X-Requested-With'
         return res
     return jsonify({
         "status": "error",
@@ -589,14 +592,19 @@ def project_detail(slug):
             return "Project not found", 404
             
         # Create a simple SEO-friendly HTML string for the project
-        title = project.get('title', 'Project')
-        desc = project.get('desc', '')
-        tech = ", ".join(project.get('tech', []))
-        image = project.get('image', '')
-        github = project.get('github', '')
-        live = project.get('live', '')
+        # Escape all user-facing fields to prevent XSS
+        title = html_mod.escape(project.get('title', 'Project'))
+        desc = html_mod.escape(project.get('desc', ''))
+        tech = html_mod.escape(", ".join(project.get('tech', [])))
+        image = html_mod.escape(project.get('image', ''))
+        github = html_mod.escape(project.get('github', ''))
+        live = html_mod.escape(project.get('live', ''))
+        safe_slug = html_mod.escape(slug)
         
-        html = f"""<!DOCTYPE html>
+        tech_badges = "".join([f'<span class="tech">{html_mod.escape(t)}</span>' for t in project.get('tech', [])])
+        live_link = f'<a href="{live}" target="_blank" rel="noopener noreferrer">View Live Demo</a>' if live and live != '#' else ''
+        
+        page_html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -606,7 +614,7 @@ def project_detail(slug):
     <meta property="og:title" content="{title}">
     <meta property="og:description" content="{desc}">
     <meta property="og:image" content="{image}">
-    <link rel="canonical" href="https://sanjaygl.vercel.app/projects/{slug}">
+    <link rel="canonical" href="https://sanjaygl.vercel.app/projects/{safe_slug}">
     <script type="application/ld+json">
     {{
       "@context": "https://schema.org",
@@ -614,7 +622,7 @@ def project_detail(slug):
       "name": "{title}",
       "description": "{desc}",
       "programmingLanguage": "{tech}",
-            "url": "{live}",
+      "url": "{live}",
       "author": {{
         "@type": "Person",
         "name": "Sanjay G L"
@@ -629,19 +637,14 @@ def project_detail(slug):
     </style>
 </head>
 <body>
-    <a href="/projects">← Back to Projects</a>
+    <a href="/projects">&larr; Back to Projects</a>
     <h1>{title}</h1>
     <p>{desc}</p>
-    <div>
-        {"".join([f'<span class="tech">{t}</span>' for t in project.get('tech', [])])}
-    </div>
-    <div style="margin-top: 20px;">
-        
-        {f'<a href="{live}" target="_blank" rel="noopener noreferrer">View Live Demo</a>' if live and live != '#' else ''}
-    </div>
+    <div>{tech_badges}</div>
+    <div style="margin-top: 20px;">{live_link}</div>
 </body>
 </html>"""
-        return html, 200
+        return page_html, 200
     except Exception as e:
         print(f"Error serving project details: {{e}}")
         return "Internal Server Error", 500
@@ -694,9 +697,18 @@ def serve_static(path):
             if os.path.isfile(html_candidate):
                 return send_from_directory(BASE_DIR, html_file)
 
-        # 5. Check authorized static subdirectories (supports both unprefixed and /static/ prefixed requests)
+        # 5. Check authorized static subdirectories (supports both unprefixed and subfolder-prefixed requests)
         if ext in ALLOWED_STATIC_EXTENSIONS:
             rel_path = path[7:] if path.startswith("static/") else path
+            # Check direct relative path if prefixed with authorized directory
+            first_segment = rel_path.split("/")[0] if "/" in rel_path else ""
+            if first_segment in ["js", "assets", "css", "data", "static"]:
+                candidate = os.path.normpath(os.path.join(BASE_DIR, rel_path))
+                if is_safe_path(BASE_DIR, candidate) and os.path.isfile(candidate):
+                    candidate_dir, candidate_file = os.path.split(candidate)
+                    return send_from_directory(candidate_dir, candidate_file)
+
+            # Check unprefixed paths across authorized subfolders
             for subfolder in ["js", "assets", "css", "data", "static"]:
                 candidate = os.path.normpath(os.path.join(BASE_DIR, subfolder, rel_path))
                 if is_safe_path(BASE_DIR, candidate) and os.path.isfile(candidate):
@@ -757,6 +769,8 @@ def get_certificates_api():
     return jsonify({
         "total": 88,
         "featured": [
+            "OpenAI Academy — Apply AI at Work (Pathway Completion Certificate · ID: 198187379)",
+            "OpenAI Academy — AI Foundations Badge",
             "AI-Powered Shopping ads Certification — Google Skillshop",
             "AI and Machine Learning Essentials — DeepLearning.AI",
             "Cybersecurity Fundamentals — Cisco Networking Academy",
@@ -941,19 +955,20 @@ def health_check():
         "status": "healthy",
         "service": "sanjay-aios-portfolio",
         "version": "2.6.0",
-        "timestamp": datetime.utcnow().isoformat() + "Z"
+        "timestamp": datetime.now(timezone.utc).isoformat()
     }), 200
 
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
+    is_debug = os.environ.get("FLASK_DEBUG", "1").lower() in ("1", "true", "yes")
     try:
-        app.run(host="0.0.0.0", port=port, debug=True)
+        app.run(host="0.0.0.0", port=port, debug=is_debug)
     except OSError as err:
         if "forbidden" in str(err).lower() or "in use" in str(err).lower() or getattr(err, 'winerror', None) == 10013:
             fallback_port = 5001 if port == 5000 else port + 1
             print(f"[SERVER WARN] Port {port} is occupied or restricted. Falling back to port {fallback_port}...")
-            app.run(host="0.0.0.0", port=fallback_port, debug=True)
+            app.run(host="0.0.0.0", port=fallback_port, debug=is_debug)
         else:
             raise err
 

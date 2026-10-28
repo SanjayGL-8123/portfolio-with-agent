@@ -27,7 +27,7 @@
     "telegram": "https://t.me/sanjaygl2006",
     "instagram": "https://www.instagram.com/spvm3techsolution",
     "youtube": "https://www.youtube.com/@spvm3techsolution",
-    "spvm3tech": "https://sanjaygl30ai.vercel.app/#spvm3tech",
+    "spvm3tech": "https://sanjaygl.vercel.app/#spvm3tech",
     "resume": "assets/Sanjay_GL_Resume.pdf",
     "resume_docx": "assets/Sanjay_GL_Resume.docx"
   },
@@ -939,10 +939,11 @@
     ]
   },
   "certificates": {
-    "total_count": 170,
-    "named_count": 7,
+    "total_count": 171,
+    "named_count": 8,
     "drive_count": 96,
     "highlights": [
+      "OpenAI Academy — Pathway Completion Certificate: Apply AI at Work (Credential ID: 198187379 · Oct 24, 2026)",
       "AI-Powered Shopping ads Certification — Google Skillshop (Credential ID: 0c84bba4-926a-45d0-9507-e6e85fd1339e)",
       "PRAVIDHI — State Level BCA Tech Fest Coding Contest (JSS College Mysore)",
       "National Road Safety Quiz (Ministry of Road Transport & Highways)",
@@ -955,6 +956,19 @@
       "Infosys Springboard, IBM SkillsBuild, freeCodeCamp, NPTEL Swayam"
     ],
     "list": [
+      {
+        "title": "Pathway Completion Certificate — Apply AI at Work",
+        "org": "OpenAI Academy",
+        "issuer": "OpenAI Academy",
+        "year": 2026,
+        "completionDate": "2026-10-24",
+        "validUntil": "2027-04-24",
+        "credentialId": "198187379",
+        "badge": "assets/openai-academy-badge.png",
+        "image": "assets/openai-apply-ai-at-work.png",
+        "verifyLink": "https://academy.openai.com",
+        "description": "Completed all three Apply AI at Work Pathway courses and passed each assessment with a score of 80% or higher."
+      },
       {
         "title": "AI-Powered Shopping ads Certification",
         "org": "Google Skillshop",
@@ -2187,6 +2201,13 @@
   "interview_qna": [
     {
       "category": "certificates",
+      "question": "Tell me about your OpenAI Academy certification or Apply AI at Work certificate.",
+      "answer": "I hold the official Pathway Completion Certificate in 'Apply AI at Work' from OpenAI Academy (Credential ID: 198187379, issued October 24, 2026). To earn this credential, I completed all three pathway courses covering practical workplace AI implementation, prompting engineering, workflow automation, and evaluation, passing each assessment with a score of 80% or higher.",
+      "keywords": "openai,academy,apply ai at work,pathway,certificate,credential,198187379,prompting,assessment",
+      "answer_type": "long"
+    },
+    {
+      "category": "certificates",
       "question": "What is your AI-Powered Shopping ads Certification?",
       "answer": "I hold the verified AI-Powered Shopping ads Certification from Google Skillshop (Credential ID: 0c84bba4-926a-45d0-9507-e6e85fd1339e). This official certification recognizes proficiency in building and optimizing AI-driven Google Shopping ads, Performance Max campaigns for retail, and Google Merchant Center product feed architectures.",
       "keywords": "google,skillshop,ai,shopping,ads,certification,credential,perfmax"
@@ -2698,7 +2719,7 @@
     {
       "category": "portfolio",
       "question": "What is your portfolio website?",
-      "answer": "My portfolio is available at https://sanjaygl30ai.vercel.app/",
+      "answer": "My portfolio is available at https://sanjaygl.vercel.app/",
       "keywords": "portfolio,website"
     },
     {
@@ -3458,6 +3479,32 @@
     }
   ],
   "verifiable_credentials": [
+    {
+      "@context": [
+        "https://www.w3.org/ns/credentials/v2"
+      ],
+      "type": [
+        "VerifiableCredential",
+        "PathwayCompletionCertificate"
+      ],
+      "id": "https://academy.openai.com/certificate/198187379",
+      "name": "Pathway Completion Certificate — Apply AI at Work",
+      "description": "Completed all three Apply AI at Work Pathway courses and passed each assessment with a score of 80% or higher.",
+      "image": "assets/openai-apply-ai-at-work.png",
+      "badge": "assets/openai-academy-badge.png",
+      "issuer": {
+        "id": "https://academy.openai.com",
+        "name": "OpenAI Academy"
+      },
+      "validFrom": "2026-10-24T00:00:00Z",
+      "validUntil": "2027-04-24T00:00:00Z",
+      "credentialSubject": {
+        "name": "Sanjay G. L",
+        "credentialId": "198187379",
+        "achievement": "Completed all three Apply AI at Work Pathway courses and passed each assessment with a score of 80% or higher."
+      },
+      "completionDate": "2026-10-24"
+    },
     {
       "@context": [
         "https://www.w3.org/ns/credentials/v2"

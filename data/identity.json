@@ -105,6 +105,18 @@
   ],
   "topCertificates": [
     {
+      "title": "OpenAI Academy — Apply AI at Work (Pathway Completion Certificate)",
+      "issuer": "OpenAI Academy",
+      "credentialId": "198187379",
+      "date": "October 24, 2026",
+      "validUntil": "April 24, 2027",
+      "achievement": "Completed all three Apply AI at Work Pathway courses and passed each assessment with a score of 80% or higher.",
+      "type": "Official Verified Pathway Completion Certificate",
+      "image": "assets/openai-apply-ai-at-work.png",
+      "badgeImage": "assets/openai-academy-badge.png",
+      "verificationUrl": "https://academy.openai.com"
+    },
+    {
       "title": "OpenAI Academy — AI Foundations Badge",
       "issuer": "OpenAI Academy",
       "date": "2026",
@@ -216,10 +228,10 @@
     }
   ],
   "certifications": {
-    "total": 76,
-    "namedAwards": 7,
+    "total": 77,
+    "namedAwards": 8,
     "verifiedDocs": 69,
-    "featuredBadge": "OpenAI Academy — AI Foundations"
+    "featuredBadge": "OpenAI Academy — Apply AI at Work & AI Foundations"
   },
   "profiles": {
     "portfolio": "https://sanjaygl.vercel.app",

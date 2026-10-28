@@ -100,3 +100,17 @@ def test_project_detail_nonexistent(client):
     """GET /projects/<slug> should return 404 for unknown project."""
     response = client.get('/projects/non-existent-project-xyz-123')
     assert response.status_code == 404
+
+def test_static_assets_serving(client):
+    """Static assets like CSS, JS, and certificate images should return 200."""
+    cert = client.get('/assets/openai-apply-ai-at-work.png')
+    assert cert.status_code == 200
+    assert 'image/png' in cert.content_type
+    assert len(cert.data) > 1000
+
+    badge = client.get('/assets/openai-academy-badge.png')
+    assert badge.status_code == 200
+
+    css = client.get('/css/clean-redesign.css')
+    assert css.status_code == 200
+

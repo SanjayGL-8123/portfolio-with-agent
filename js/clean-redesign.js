@@ -4,6 +4,10 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Dynamic Footer Year
+  const footerYear = document.getElementById('footer-year');
+  if (footerYear) footerYear.textContent = new Date().getFullYear();
+
   // 1. Theme Manager
   const themeToggleBtn = document.getElementById('themeToggleBtn');
   const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
@@ -119,6 +123,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const subject = document.getElementById('contact-subject')?.value.trim();
       const message = document.getElementById('contact-message')?.value.trim();
 
+      // Honeypot check: if the hidden website field is filled, it's a bot
+      const honeypot = document.getElementById('contact-website')?.value;
+      if (honeypot) {
+        // Silently succeed to confuse bots
+        showStatus('Thank you, your message has been received!', 'success');
+        contactForm.reset();
+        return;
+      }
+
       if (!name || !email || !message) {
         showStatus('Please fill in all required fields.', 'error');
         return;
@@ -167,22 +180,36 @@ document.addEventListener('DOMContentLoaded', () => {
       formStatus.style.display = 'none';
     }, 6000);
   }
-  // 6. Resume Request Fallback
+  // 6. Resume PDF → DOCX Fallback
   document.querySelectorAll('a[href*="Resume"], .nav-resume-btn').forEach(btn => {
     btn.addEventListener('click', async (e) => {
+      const href = btn.getAttribute('href') || '';
+      if (!href.includes('.pdf')) return; // skip DOCX links
       try {
-        const res = await fetch('assets/Sanjay_GL_Resume.pdf', { method: 'HEAD' });
+        const res = await fetch(href, { method: 'HEAD' });
         if (!res.ok) {
           e.preventDefault();
-          const contactSec = document.getElementById('contact');
-          if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });
-          const subjectInput = document.getElementById('contact-subject');
-          if (subjectInput) {
-            subjectInput.value = 'Resume Request - Sanjay G. L.';
-            subjectInput.focus();
+          // PDF doesn't exist — fall back to DOCX
+          const docxHref = href.replace('.pdf', '.docx');
+          const docxRes = await fetch(docxHref, { method: 'HEAD' });
+          if (docxRes.ok) {
+            btn.setAttribute('href', docxHref);
+            btn.setAttribute('download', 'Sanjay_GL_Resume.docx');
+            btn.querySelector('i')?.classList.replace('fa-file-pdf', 'fa-file-lines');
+            btn.lastChild.textContent && (btn.lastChild.textContent = btn.lastChild.textContent.replace('PDF', 'DOCX'));
+          } else {
+            // Neither exists, scroll to contact form
+            const contactSec = document.getElementById('contact');
+            if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });
+            const subjectInput = document.getElementById('contact-subject');
+            if (subjectInput) {
+              subjectInput.value = 'Resume Request - Sanjay G. L.';
+              subjectInput.focus();
+            }
           }
         }
       } catch (err) {
+        // Network error — scroll to contact
         e.preventDefault();
         const contactSec = document.getElementById('contact');
         if (contactSec) contactSec.scrollIntoView({ behavior: 'smooth' });

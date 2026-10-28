@@ -250,6 +250,42 @@ h6 {
 }
 
 /* ===================================================================
+   ACCESSIBILITY — Visible keyboard focus styles
+   These ensure all interactive elements are usable via Tab key.
+=================================================================== */
+/* Remove default outline on mouse-click, show on keyboard-nav */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible,
+.clean-logo:focus-visible,
+.hero-social-links a:focus-visible,
+.contact-social-links a:focus-visible,
+.footer-nav a:focus-visible,
+.theme-toggle-btn:focus-visible,
+.mobile-toggle:focus-visible,
+.cert-item-compact:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--teal-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Slightly larger offset for icon-only circle buttons */
+.hero-social-links a:focus-visible,
+.contact-social-links a:focus-visible {
+  outline-offset: 4px;
+  border-radius: 50%;
+}
+
+
+/* ===================================================================
    1. NAVBAR
 =================================================================== */
 .clean-navbar {

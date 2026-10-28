@@ -14,7 +14,7 @@
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=SanjayGL-8123&label=Profile%20Views&color=0ea5e9&style=flat" alt="Profile views">
-  <img src="https://img.shields.io/badge/Verified_Certifications-76+-059669?style=flat&logo=badge&logoColor=white" alt="Certifications">
+  <img src="https://img.shields.io/badge/Verified_Certifications-77+-059669?style=flat&logo=badge&logoColor=white" alt="Certifications">
   <img src="https://img.shields.io/badge/Internships_Completed-3-blue?style=flat&logo=briefcase&logoColor=white" alt="Internships">
   <img src="https://img.shields.io/badge/Portfolio_Engine-Sanjay_AIOS_v2.6-7c3aed?style=flat&logo=openai&logoColor=white" alt="Portfolio Engine">
 </p>
@@ -86,8 +86,9 @@
 
 ---
 
-## 🏅 Licenses & Top Certifications (76+ Verified)
+## 🏅 Licenses & Top Certifications (77+ Verified)
 
+- 🎖️ **OpenAI Academy** — Pathway Completion Certificate: Apply AI at Work *(Credential ID: `198187379` · Oct 24, 2026 · Score ≥80%)*
 - 🎖️ **OpenAI Academy** — Official AI Foundations Credential & Badge *(2026)*
 - 🥇 **Star Performer Award** — AICTE Web Development & Designing Internship, Oasis Infobyte *(Mar 2026 · Cert ID: OIB/F1/IP353)*
 - ☁️ **Google Skillshop** — AI-Powered Shopping Ads Certification *(Credential ID: `0c84bba4-926a-45d0-9507-e6e85fd1339e` · June 2026)*
@@ -131,6 +132,7 @@ portfolio-with-agent/
 │   └── index.py             # Vercel serverless WSGI entrypoint & path handler
 ├── assets/                  # Verified credentials, badges, profile images & resume
 │   ├── openai-academy-badge.png
+│   ├── openai-apply-ai-at-work.png
 │   ├── profile.png
 │   └── Sanjay_GL_Resume.docx
 ├── css/
