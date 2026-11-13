@@ -138,7 +138,7 @@
         "percentage": 78
       },
       {
-        "name": "MongoDB & PostgreSQL",
+        "name": "PostgreSQL & SQLite",
         "level": "Intermediate",
         "percentage": 75
       }
@@ -454,7 +454,6 @@
           "React",
           "Node.js",
           "Express",
-          "MongoDB",
           "CSS3"
         ],
         "github": "https://github.com/SanjayGL-8123/cyber-response-platform",

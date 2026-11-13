@@ -15,7 +15,7 @@
       "sanjaygl"
     ]
   },
-  "role": "Full-Stack Aspirant | AI Workflow Engineer | BCA Student (3rd Year, 5th Sem, 2023–2026), PES IAMS, Shivamogga, Karnataka, India",
+  "role": "Full-Stack Aspirant | AI Workflow Engineer | BCA Student (3rd Year, 5th Sem, 2024–2026), PES IAMS, Shivamogga, Karnataka, India",
   "featured": {
     "title": "Sanjay GL — Official Developer Portfolio & AIOS",
     "url": "https://sanjaygl.vercel.app",
@@ -25,7 +25,7 @@
   "education": {
     "degree": "Bachelor of Computer Applications (BCA)",
     "year": "3rd Year, 5th Sem",
-    "period": "2023–2026",
+    "period": "2024–2026",
     "college": "PES Institute of Advanced Management Studies (PESIAMS)",
     "location": "Shivamogga, Karnataka, India",
     "puc": {
@@ -36,27 +36,19 @@
   },
   "internships": [
     {
+      "company": "Milano Infotech",
+      "role": "AI, ML & Python Developer Intern",
+      "period": "Aug 2026 – Present",
+      "type": "AI, ML & Python Development Internship",
+      "description": "Building artificial intelligence assistants, machine learning workflows, computer-vision models, and full-stack Python platforms."
+    },
+    {
       "company": "Oasis Infobyte",
       "role": "Web Dev Intern (Star Performer)",
       "period": "Feb 2026 – Mar 2026",
       "type": "Remote · AICTE OIB-SIP",
       "certId": "OIB/F1/IP353",
       "description": "Awarded Star Performer for high dedication, exceptional code quality, and timely delivery of responsive web applications under ISO 9001:2015 standards."
-    },
-    {
-      "company": "CodSoft",
-      "role": "Web Dev Intern",
-      "period": "2026",
-      "type": "Remote Web Development Internship",
-      "description": "Engineered responsive frontend web interfaces, component architectures, and dynamic user interactions utilizing HTML5, CSS3, and JavaScript."
-    },
-    {
-      "company": "JPMorgan Chase & Co.",
-      "role": "Software Engineering Virtual Experience",
-      "platform": "Forage",
-      "period": "2026",
-      "type": "Virtual Experience Program",
-      "description": "Implemented live financial data feed streaming, perspective data visualization, and unit tests using Python, TypeScript, and financial graphing systems."
     }
   ],
   "skills": [
@@ -136,14 +128,9 @@
       "certId": "OIB/F1/IP353"
     },
     {
-      "title": "Software Engineering Virtual Experience",
-      "issuer": "JPMorgan Chase & Co. / Forage",
-      "date": "2026"
-    },
-    {
-      "title": "Web Development Internship Certificate",
-      "issuer": "CodSoft",
-      "date": "2026"
+      "title": "AI, ML & Python Developer Intern",
+      "issuer": "Milano Infotech",
+      "date": "Aug 2026 – Present"
     },
     {
       "title": "PRAVIDHI — State Level Tech Fest Coding Contest",
@@ -180,10 +167,10 @@
     },
     {
       "title": "Bachelor of Computer Applications (BCA)",
-      "date": "2023 – 2026",
+      "date": "2024 – 2026",
       "role": "Current · 3rd Year · 5th Sem",
       "org": "PES Institute of Advanced Management Studies (PESIAMS) — Shivamogga, Karnataka",
-      "desc": "Building comprehensive technical foundations in Python, Java, JavaScript, Flask, SQL, MySQL, Docker, Git, REST APIs, and modern AI workflows."
+      "desc": "Comprehensive computer applications curriculum building rigorous foundations in Python, Java, JavaScript, Flask, SQL, MySQL, Docker, Git, REST APIs, and modern AI workflows."
     },
     {
       "title": "National Service Scheme (NSS)",
@@ -207,18 +194,11 @@
       "desc": "Remote · Certificate ID: OIB/F1/IP353. Awarded Star Performer for dedication, code quality and timely delivery building and deploying real-world web applications. Certified under ISO 9001:2015 standards."
     },
     {
-      "title": "Web Development Intern",
-      "date": "2026",
-      "role": "Web Dev Intern",
-      "org": "CodSoft",
-      "desc": "Remote web development internship focusing on building responsive user interfaces, structured components, and interactive web tools with HTML5, CSS3, and JavaScript."
-    },
-    {
-      "title": "Software Engineering Virtual Experience",
-      "date": "2026",
-      "role": "Virtual Experience Participant",
-      "org": "JPMorgan Chase & Co. (via Forage)",
-      "desc": "Completed virtual engineering simulations involving live financial data feed streaming, perspective data visualization, and unit tests using Python and modern web tooling."
+      "title": "AI, ML & Python Developer Intern",
+      "date": "Aug 2026 – Present",
+      "role": "AI, ML & Python Developer Intern",
+      "org": "Milano Infotech",
+      "desc": "Developing AI assistants, machine learning workflows, computer-vision applications, and full-stack Python platforms."
     },
     {
       "title": "Hands-on Workshop on Agentic AI",

@@ -904,7 +904,7 @@
     }
 
     if (qLower.includes('who is sanjay') || qLower.includes('tell me about') || qLower.includes('about sanjay') || qLower.includes('background') || qLower.includes('bio')) {
-      return `**Sanjay G. L. (Sanju)** is a dedicated BCA student (2023–2026 · 3rd Year, 5th Semester) at **PES Institute of Advanced Management Studies (PESIAMS)**, Shivamogga, affiliated with Kuvempu University.\n\nHe is a Full-Stack Aspirant and AI Workflow Engineer with three recognized internships:\n1. **Oasis Infobyte** — Web Dev Intern (**Star Performer Award** · AICTE OIB-SIP)\n2. **CodSoft** — Web Dev Intern\n3. **JPMorgan Chase & Co. (via Forage)** — Software Engineering Virtual Experience\n\nHe is also an active NSS volunteer, Youth for Seva volunteer, and builder of 15+ practical web and AI solutions.`;
+      return `**Sanjay G. L. (Sanju)** is a dedicated BCA student (2024–2026 · 3rd Year, 5th Semester) at **PES Institute of Advanced Management Studies (PESIAMS)**, Shivamogga, affiliated with Kuvempu University.\n\nHe is a Full-Stack Developer and AI Workflow Engineer with industry experience:\n1. **Milano Infotech** — AI, ML & Python Developer Intern (Aug 2026 – Present)\n2. **Oasis Infobyte** — Web Dev Intern (**Star Performer Award** · AICTE OIB-SIP)\n\nHe is also an active NSS volunteer, Youth for Seva volunteer, and builder of practical web and AI solutions.`;
     }
 
     if (qLower.includes('skill') || qLower.includes('tech stack') || qLower.includes('technolog') || qLower.includes('react') || qLower.includes('python')) {
@@ -920,7 +920,7 @@
     }
 
     if (qLower.includes('certif') || qLower.includes('award') || qLower.includes('credential')) {
-      return `🎓 **Top Verified Certifications (77+ Total)**:\n1. **OpenAI Academy — Apply AI at Work**: Pathway Completion Certificate (Credential ID: 198187379 · Oct 24, 2026 · Score ≥80%)\n2. **OpenAI Academy — AI Foundations**: Official Verified Credential & Badge (2026)\n3. **AI-Powered Shopping ads Certification**: Google Skillshop (Credential ID: 0c84bba4 · June 2026)\n4. **Star Performer — Web Dev Internship**: Oasis Infobyte (AICTE OIB-SIP · Mar 2026)\n5. **Software Engineering Virtual Experience**: JPMorgan Chase & Co. / Forage (2026)\n6. **Web Development Internship Certificate**: CodSoft (2026)\n7. **PRAVIDHI — State Level Tech Fest**: JSS College Mysore (2026)\n8. **Hands-on Workshop on Agentic AI**: Anvesana TBI — Unriddle Tech (6 June 2026)\n9. **Online Quiz on Safe & Responsible AI**: MeitY / Digital India (2026)\n10. **National Road Safety Quiz**: Ministry of Road Transport & Highways (2026)\n11. **Youth for Seva — Certificate of Recognition**: Ministry of Youth Affairs & Sports (2024–Present)`;
+      return `🎓 **Top Verified Certifications & Honors**:\n1. **OpenAI Academy — Apply AI at Work**: Pathway Completion Certificate (Credential ID: 198187379 · Oct 24, 2026 · Score ≥80%)\n2. **OpenAI Academy — AI Foundations**: Official Verified Credential & Badge (2026)\n3. **AI, ML & Python Developer Intern**: Milano Infotech (Aug 2026 – Present)\n4. **Star Performer — Web Dev Internship**: Oasis Infobyte (AICTE OIB-SIP · Mar 2026)\n5. **AI-Powered Shopping ads Certification**: Google Skillshop (Credential ID: 0c84bba4 · June 2026)\n6. **PRAVIDHI — State Level Tech Fest**: JSS College Mysore (2026)\n7. **Hands-on Workshop on Agentic AI**: Anvesana TBI — Unriddle Tech (6 June 2026)\n8. **Online Quiz on Safe & Responsible AI**: MeitY / Digital India (2026)\n9. **National Road Safety Quiz**: Ministry of Road Transport & Highways (2026)\n10. **Youth for Seva — Certificate of Recognition**: Ministry of Youth Affairs & Sports (2024–Present)`;
     }
 
     if (qLower.includes('contact') || qLower.includes('email') || qLower.includes('phone') || qLower.includes('hire') || qLower.includes('freelance') || qLower.includes('reach')) {
@@ -943,7 +943,7 @@
       return `🤖 **Autonomous AI Agent Workflows**:\nAn AI Agent perceives its environment, breaks complex goals into multi-step execution plans, dynamically selects and invokes external tools (APIs, web browsers, SQL queries), evaluates results, and iterates autonomously until fulfilling the objective.`;
     }
 
-    return `I am **Sanjay AIOS v2.5**! You can ask me any question about Sanjay's education (BCA 2023–2026 at PES IAMS), his 3 internships (Oasis Infobyte Star Performer, CodSoft, JPMorgan Chase Forage), his projects (PureWeaves, Vinayaka, Vibe Chat, GrabNotes), 76+ certificates (including OpenAI Academy & Google Skillshop), or his live portfolio at [sanjaygl.vercel.app](https://sanjaygl.vercel.app).`;
+    return `I am **Sanjay AIOS v2.5**! You can ask me any question about Sanjay's education (BCA 2024–2026 at PES IAMS), his internships (Milano Infotech, Oasis Infobyte Star Performer), his projects (DataGauge, DermAI, Smart Attendance, PureWeaves, Vinayaka), verified certificates (including OpenAI Academy & Google Skillshop), or his live portfolio at [sanjaygl.vercel.app](https://sanjaygl.vercel.app).`;
   }
 
 })();

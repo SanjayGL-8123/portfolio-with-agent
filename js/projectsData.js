@@ -207,7 +207,6 @@ const projectsData = [
       "React",
       "Node.js",
       "Express",
-      "MongoDB",
       "Google Gemini API",
       "Tailwind CSS",
       "JWT"
