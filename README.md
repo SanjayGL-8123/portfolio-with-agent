@@ -168,6 +168,7 @@ portfolio-with-agent/
 │   └── index.py             # Serverless WSGI entrypoint for Vercel deployment
 ├── assets/                  # Static assets: images, icons, credentials & resume PDF
 │   ├── profile.png
+│   ├── Sanjay_GL_Resume.docx
 │   └── Sanjay_GL_Resume.pdf
 ├── css/
 │   ├── clean-redesign.css   # Glassmorphic design system and responsive layout
@@ -183,10 +184,22 @@ portfolio-with-agent/
 │   ├── clean-redesign.js    # UI interactions, navigation, and modal logic
 │   ├── projectsData.js      # Structured project showcase definitions
 │   └── projectsPage.js      # Filter, search, and detail modal renderer
+├── k8s/                     # Kubernetes production manifests
+│   ├── namespace.yaml
+│   ├── configmap.yaml
+│   ├── secret.yaml
+│   ├── pvc.yaml
+│   ├── deployment.yaml
+│   ├── service.yaml
+│   ├── ingress.yaml
+│   └── kustomization.yaml
 ├── app.py                   # Production Flask application & security middleware
 ├── index.html               # Main portfolio interface
 ├── projects.html            # Projects showcase page
 ├── privacy.html             # Privacy policy & data handling notice
+├── Dockerfile               # Multi-stage production container image definition
+├── docker-compose.yml       # Local container orchestration
+├── .dockerignore            # Docker build ignore rules
 ├── requirements.txt         # Python dependencies
 ├── vercel.json              # Vercel serverless build and routing configuration
 ├── robots.txt               # Web crawler instructions
@@ -196,13 +209,49 @@ portfolio-with-agent/
 
 ---
 
+## 🐳 Docker Deployment
+
+### Run with Docker Compose
+```bash
+docker compose up -d --build
+```
+The portfolio will be live at `http://localhost:5000`.
+
+### Run with Docker CLI
+```bash
+# Build the container image
+docker build -t sanjaygl-portfolio .
+
+# Run the container with persistent database volume
+docker run -d -p 5000:5000 -v $(pwd)/database:/app/database --name portfolio-app sanjaygl-portfolio
+```
+
+---
+
+## ☸️ Kubernetes Deployment
+
+Deploy the entire microservice stack to any Kubernetes cluster (Minikube, Kind, GKE, EKS, AKS):
+
+```bash
+# 1. Apply all manifests using Kustomize
+kubectl apply -k k8s/
+
+# 2. Verify pods and services
+kubectl get pods,svc -n portfolio
+
+# 3. Port forward to test locally (if not using Ingress)
+kubectl port-forward svc/portfolio-service 8080:80 -n portfolio
+```
+Then visit `http://localhost:8080`.
+
+---
+
 ## 🚀 Deployment to Vercel
 
 The application is pre-configured for instant zero-config deployment on Vercel:
-1. Push your repository to GitHub.
-2. Import the repository into your Vercel Dashboard.
-3. The build process automatically detects `vercel.json` and routes requests through `api/index.py`.
-4. Production live domain: **[sanjaygl.vercel.app](https://sanjaygl.vercel.app)**
+1. Push your repository to GitHub (`git push origin main`).
+2. Vercel automatically detects the push and triggers a production deployment.
+3. Live production domain: **[sanjaygl.vercel.app](https://sanjaygl.vercel.app)**
 
 ---
 

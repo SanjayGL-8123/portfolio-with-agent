@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
           showStatus('Thank you, Sanjay has received your message!', 'success');
           contactForm.reset();
         } else {
-          showStatus(data.error || 'Failed to send message. Please try emailing directly.', 'error');
+          showStatus(data.message || data.error || 'Failed to send message. Please try emailing directly.', 'error');
         }
       } catch (err) {
         // Fallback for static servers

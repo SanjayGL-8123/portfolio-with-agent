@@ -358,8 +358,8 @@ def forward_contact_email(name, email, subject, message, phone=""):
             print(f"[CONTACT FORM] SMTP error: {e}")
 
     formsubmit_headers = {
-        "Origin": "https://sanjaygl30ai.vercel.app",
-        "Referer": "https://sanjaygl30ai.vercel.app/",
+        "Origin": "https://sanjaygl.vercel.app",
+        "Referer": "https://sanjaygl.vercel.app/",
     }
     fs_payload = {
         "name": name,
@@ -848,16 +848,16 @@ def handle_contact():
     
     # 2. Server-side Validation
     if not name or len(name) < 2:
-        return jsonify({"status": "error", "message": "Please enter a valid name (at least 2 letters)."}), 400
+        return jsonify({"status": "error", "error": "Please enter a valid name (at least 2 letters).", "message": "Please enter a valid name (at least 2 letters)."}), 400
         
     if not email or not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-        return jsonify({"status": "error", "message": "Please enter a valid email address."}), 400
+        return jsonify({"status": "error", "error": "Please enter a valid email address.", "message": "Please enter a valid email address."}), 400
         
     if not subject:
-        return jsonify({"status": "error", "message": "Please select a subject topic."}), 400
+        return jsonify({"status": "error", "error": "Please select a subject topic.", "message": "Please select a subject topic."}), 400
         
-    if not message or len(message) < 10:
-        return jsonify({"status": "error", "message": "Please enter a message of at least 10 characters."}), 400
+    if not message or len(message) < 3:
+        return jsonify({"status": "error", "error": "Please enter a message of at least 3 characters.", "message": "Please enter a message of at least 3 characters."}), 400
         
     # Encrypt name, email, and message at rest
     enc_name = encrypt_val(name)
