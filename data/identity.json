@@ -7,38 +7,51 @@
   ],
   "handles": {
     "github": "SanjayGL-8123",
+    "github_alt": "sanjayGL2006",
     "linkedin": "sanjay-gl-b86631336",
-    "site": "sanjaygl",
-    "other": [
-      "sanjayGL2006",
-      "sanjaygl200630",
-      "sanjaygl"
-    ]
+    "site": "sanjaygl"
   },
-  "role": "Full-Stack Aspirant | AI Workflow Engineer | BCA Student (3rd Year, 5th Sem, 2024–2026), PES IAMS, Shivamogga, Karnataka, India",
+  "role": "Full-Stack Developer & AI Workflow Engineer | BCA Student (2023–2027 · 5th Semester) · Shivamogga, Karnataka, India",
+  "bio": "I specialize in Full Stack Web Development, Frontend Engineering, and building AI‑integrated web applications. I actively use AI workflows in my daily development process and have hands‑on experience in database design and management. With 70+ certifications — including Microsoft and HackerRank credentials in CSS, JavaScript, Python, and SQL — I have completed corporate workshops, web development internships, and technical initiatives. I also run PureWeaves, a handmade saree accessories brand, blending entrepreneurship with modern e‑commerce technology.",
+  "languages": ["Kannada", "English", "Tamil"],
   "featured": {
     "title": "Sanjay GL — Official Developer Portfolio & AIOS",
     "url": "https://sanjaygl.vercel.app",
     "pinned": true,
     "description": "Interactive developer portfolio powered by autonomous AI agent co-pilot, project showcase, verified credentials archive, and live terminal."
   },
-  "education": {
-    "degree": "Bachelor of Computer Applications (BCA)",
-    "year": "3rd Year, 5th Sem",
-    "period": "2024–2026",
-    "college": "PES Institute of Advanced Management Studies (PESIAMS)",
-    "location": "Shivamogga, Karnataka, India",
-    "puc": {
-      "course": "Pre-University Course (Science)",
-      "college": "PES PU College, Shivamogga",
-      "status": "Completed 2024"
+  "education": [
+    {
+      "degree": "Bachelor of Computer Applications (BCA)",
+      "field": "Computer Applications & Software Development",
+      "date": "2023 – 2027 (Currently in 5th Semester)",
+      "period": "2023 – 2027",
+      "location": "Shivamogga, Karnataka, India",
+      "desc": "Advanced studies in Software Engineering, DBMS, Data Structures, Computer Networks, AI & ML, and Python."
+    },
+    {
+      "degree": "Pre-University Course (PUC)",
+      "field": "PCMB",
+      "date": "2022 – 2024",
+      "period": "2022 – 2024",
+      "location": "Shivamogga, Karnataka",
+      "desc": "Foundational science, mathematics, and programming fundamentals."
+    },
+    {
+      "degree": "SSLC (10th Standard)",
+      "field": "Secondary School",
+      "date": "2022",
+      "period": "2022",
+      "location": "Shivamogga, Karnataka",
+      "desc": "Foundational mathematics and analytical problem solving."
     }
-  },
+  ],
   "internships": [
     {
       "company": "Milano Infotech",
       "role": "AI, ML & Python Developer Intern",
       "period": "Aug 2026 – Present",
+      "location": "Shivamogga (Offline)",
       "type": "AI, ML & Python Development Internship",
       "description": "Building artificial intelligence assistants, machine learning workflows, computer-vision models, and full-stack Python platforms."
     },
@@ -53,45 +66,113 @@
   ],
   "skills": [
     "Python",
-    "JavaScript",
+    "JavaScript ES6+",
+    "Node.js",
+    "Electron.js",
     "Flask",
+    "FastAPI",
+    "React",
     "SQL",
-    "HTML/CSS",
-    "Java",
-    "Docker",
-    "Git",
     "MySQL",
+    "PostgreSQL",
+    "SQLite",
+    "PHP",
+    "HTML5",
+    "CSS3",
+    "Bootstrap",
+    "C",
+    "C++",
+    "Java",
+    "AI & ML",
+    "Computer Networks",
+    "Cyber Security",
+    "Data Mining",
+    "Git",
+    "GitHub",
+    "Docker",
+    "Kubernetes",
     "REST APIs"
   ],
   "projects": [
     {
+      "name": "InvoiceGuard",
+      "category": "AI/ML & Security",
+      "tagline": "AI-Powered Invoice Anomaly & Fraud Detector",
+      "description": "Built for hackathon fraud mitigation. Employs machine learning pipelines to detect anomalous line items, duplicate claims, vendor tax mismatches, and synthetic invoice manipulation.",
+      "technologies": ["Python", "Flask", "Scikit-learn", "Pandas", "REST APIs"],
+      "github": "https://github.com/SanjayGL-8123"
+    },
+    {
+      "name": "SentinelAI",
+      "category": "AI/ML & Security",
+      "tagline": "Cyber Threat Early-Warning Intelligence System",
+      "description": "Placed 6th–7th in state-level hackathon. Multi-agent cybersecurity threat intelligence analyzer scanning malicious signatures, CVE mappings, and real-time vulnerability feeds.",
+      "technologies": ["Python", "FastAPI", "CrewAI", "Cybersecurity", "REST APIs"],
+      "github": "https://github.com/SanjayGL-8123"
+    },
+    {
+      "name": "Meluha AI",
+      "category": "Flagship Ambition",
+      "tagline": "Sovereign Indian AI Model & Public API Platform",
+      "description": "Flagship ambition to architect a native Indian AI platform trained from scratch without external commercial API dependencies, alongside a scalable Public API platform.",
+      "technologies": ["Python", "Deep Learning", "PyTorch", "FastAPI", "NLP"],
+      "github": "https://github.com/SanjayGL-8123"
+    },
+    {
       "name": "PureWeaves",
+      "category": "Web & E-Commerce",
       "tagline": "Artisanal Handcrafted Saree E-Commerce",
-      "description": "Full-featured e-commerce platform for artisanal sarees featuring an interactive product catalog, direct WhatsApp checkout pipeline, and MySQL database backend.",
-      "tags": ["HTML/CSS", "JavaScript", "MySQL", "Vercel", "E-Commerce"],
+      "description": "Full-featured e-commerce platform for artisanal sarees featuring dynamic catalog browsing, MySQL database backend, and direct WhatsApp checkout flows.",
+      "technologies": ["HTML5/CSS3", "JavaScript", "Flask", "MySQL", "Vercel"],
       "liveUrl": "https://pureweaves.vercel.app/",
       "github": "https://github.com/SanjayGL-8123"
     },
     {
-      "name": "Vinayaka",
-      "tagline": "Intelligent AI Assistant & Conversational Agent",
-      "description": "Advanced conversational AI assistant built with Flask and Python, integrating Google Gemini API and OpenAI model cascades with persistent context memory and multi-intent query handling.",
-      "tags": ["Python", "Flask", "Gemini API", "OpenAI", "REST APIs", "AI"],
+      "name": "Placement Pro",
+      "category": "Full-Stack Portal",
+      "tagline": "Academic Placement Portal & Drive Workflow Engine",
+      "description": "Comprehensive full-stack placement portal managing student directories, company drives, automated data ingestion, and placement report generation.",
+      "technologies": ["FastAPI", "Python", "React", "PostgreSQL"],
       "github": "https://github.com/SanjayGL-8123"
     },
     {
-      "name": "Vibe Chat",
-      "tagline": "Real-Time Collaborative Web Chat Application",
-      "description": "High-performance instant messaging web application featuring real-time room communication, live presence indicators, responsive UI, and secure API messaging.",
-      "tags": ["JavaScript", "WebSockets", "REST APIs", "HTML/CSS", "Real-Time"],
+      "name": "Disk Recovery & Forensics Suite",
+      "category": "Security & Desktop",
+      "tagline": "Low-Level Digital Forensics & Data Salvage Suite",
+      "description": "Deep-level digital forensics and disk salvage suite combining high-performance C disk parsing with Python analytics and an Electron interface.",
+      "technologies": ["Electron", "C", "Python", "Forensics"],
       "github": "https://github.com/SanjayGL-8123"
     },
     {
-      "name": "GrabNotes",
-      "tagline": "AI-Powered Smart Note-Taking Platform",
-      "description": "Intelligent note-taking application deployed on Base44, providing automated note synthesis, semantic search, contextual tagging, and seamless organization.",
-      "tags": ["AI", "Base44", "Web App", "Productivity"],
-      "liveUrl": "https://grab-notes.base44.app/",
+      "name": "Smart Attendance System",
+      "category": "AI/ML & Computer Vision",
+      "tagline": "YOLOv8 Automated Facial Recognition Attendance",
+      "description": "Classroom attendance system with real-time video stream detection, automated attendance logs, and teacher dashboard.",
+      "technologies": ["YOLOv8", "OpenCV", "Flask", "MySQL", "React"],
+      "github": "https://github.com/SanjayGL-8123"
+    },
+    {
+      "name": "Notes Management System",
+      "category": "Full-Stack Web App",
+      "tagline": "Secure & Privacy-Focused Notes Platform",
+      "description": "Encrypted notes management platform with full markdown editing, tag sorting, and fast client-side searching.",
+      "technologies": ["React 18", "Vite", "Flask", "SQLite"],
+      "github": "https://github.com/SanjayGL-8123"
+    },
+    {
+      "name": "QR Code Studio",
+      "category": "Web Utility",
+      "tagline": "Customizable QR Code Generator & Designer",
+      "description": "Customizable QR code engine featuring 150 design styles, frames, embedded logos, color palettes, and SVG/PNG export.",
+      "technologies": ["Flask", "JavaScript", "MySQL"],
+      "github": "https://github.com/SanjayGL-8123"
+    },
+    {
+      "name": "Meet Video Conferencing",
+      "category": "Full-Stack Web App",
+      "tagline": "Self-Hosted WebRTC Video Communication",
+      "description": "Peer-to-peer audio/video streaming, screen sharing, in-meeting chat, and session authentication.",
+      "technologies": ["React", "FastAPI", "SQLite", "WebRTC"],
       "github": "https://github.com/SanjayGL-8123"
     }
   ],
@@ -104,8 +185,8 @@
       "validUntil": "April 24, 2027",
       "achievement": "Completed all three Apply AI at Work Pathway courses and passed each assessment with a score of 80% or higher.",
       "type": "Official Verified Pathway Completion Certificate",
-      "image": "assets/openai-apply-ai-at-work.png",
-      "badgeImage": "assets/openai-academy-badge.png",
+      "image": "assets/openai-apply-ai-at-work.webp",
+      "badgeImage": "assets/openai-academy-badge.webp",
       "verificationUrl": "https://academy.openai.com"
     },
     {
@@ -113,7 +194,7 @@
       "issuer": "OpenAI Academy",
       "date": "2026",
       "type": "Official Verified Credential & Badge",
-      "badgeImage": "assets/openai-academy-badge.png"
+      "badgeImage": "assets/openai-academy-badge.webp"
     },
     {
       "title": "AI-Powered Shopping ads Certification",
@@ -134,7 +215,7 @@
     },
     {
       "title": "PRAVIDHI — State Level Tech Fest Coding Contest",
-      "issuer": "JSS College Mysore / SPARKTECHTHRA",
+      "issuer": "State Level Tech Fest",
       "date": "2026"
     },
     {
@@ -151,40 +232,19 @@
       "title": "National Road Safety Quiz",
       "issuer": "Ministry of Road Transport & Highways, Govt. of India",
       "date": "2026"
-    },
-    {
-      "title": "Youth for Seva — Certificate of Recognition",
-      "issuer": "Ministry of Youth Affairs & Sports, Govt. of India",
-      "date": "2024 – Present"
     }
   ],
   "timeline": [
     {
       "title": "Pre-University Course (Science)",
       "date": "Completed 2024",
-      "org": "PES PU College",
       "desc": "Shivamogga, Karnataka. Foundational science and mathematics curriculum establishing strong analytic and logical problem-solving principles."
     },
     {
       "title": "Bachelor of Computer Applications (BCA)",
-      "date": "2024 – 2026",
+      "date": "2024 – 2027",
       "role": "Current · 3rd Year · 5th Sem",
-      "org": "PES Institute of Advanced Management Studies (PESIAMS) — Shivamogga, Karnataka",
-      "desc": "Comprehensive computer applications curriculum building rigorous foundations in Python, Java, JavaScript, Flask, SQL, MySQL, Docker, Git, REST APIs, and modern AI workflows."
-    },
-    {
-      "title": "National Service Scheme (NSS)",
-      "date": "2024 – Present",
-      "role": "NSS Active Volunteer",
-      "org": "PESIAMS Shivamogga",
-      "desc": "Actively participated in community service, digital literacy programs, hygiene awareness, environmental sustainability, and social drives across the Shivamogga region."
-    },
-    {
-      "title": "Youth for Seva (Mera Yuva Bharat)",
-      "date": "2024 – Present",
-      "role": "YFS Volunteer",
-      "org": "Ministry of Youth Affairs & Sports, Govt. of India",
-      "desc": "Engaged in national youth-led initiatives, civic engagement programs, and Viksit Bharat campaigns. Awarded a Certificate of Recognition."
+      "desc": "Shivamogga, Karnataka. Comprehensive computer applications curriculum building rigorous foundations in Python, Java, JavaScript, Flask, SQL, MySQL, Git, REST APIs, and modern AI workflows."
     },
     {
       "title": "Web Development & Designing Intern (Star Performer)",
@@ -198,24 +258,25 @@
       "date": "Aug 2026 – Present",
       "role": "AI, ML & Python Developer Intern",
       "org": "Milano Infotech",
-      "desc": "Developing AI assistants, machine learning workflows, computer-vision applications, and full-stack Python platforms."
+      "desc": "Shivamogga. Developing AI assistants, machine learning workflows, computer-vision applications, and full-stack Python platforms."
     },
     {
       "title": "Hands-on Workshop on Agentic AI",
       "date": "6 June 2026",
       "org": "Anvesana TBI — Unriddle Technologies",
-      "desc": "Attended a hands-on workshop conducted by Mr. Pruthvi S, AI Engineer, covering autonomous AI agents, building AI agents with Python 3.12+, and end-to-end AI-driven workflows. Received E-Certificate of Participation."
+      "desc": "Attended a hands-on workshop covering autonomous AI agents, building AI agents with Python, and end-to-end AI-driven workflows. Received E-Certificate of Participation."
     }
   ],
   "certifications": {
-    "total": 77,
+    "total": 70,
     "namedAwards": 8,
-    "verifiedDocs": 69,
+    "verifiedDocs": 70,
     "featuredBadge": "OpenAI Academy — Apply AI at Work & AI Foundations"
   },
   "profiles": {
     "portfolio": "https://sanjaygl.vercel.app",
     "github": "https://github.com/SanjayGL-8123",
+    "github_alt": "https://github.com/sanjayGL2006",
     "linkedin": "https://www.linkedin.com/in/sanjay-gl-b86631336",
     "twitter": "https://x.com/SanjayGL8123456",
     "telegram": "https://t.me/Sanjaygl30",

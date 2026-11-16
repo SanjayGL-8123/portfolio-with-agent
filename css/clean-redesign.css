@@ -333,44 +333,6 @@ h1, h2, h3, h4 {
   transition: width 0.1s linear;
 }
 
-/* ---------- Custom Interactive Cursor ---------- */
-.cursor-dot,
-.cursor-ring {
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 9997;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.cursor-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--blue);
-}
-
-.cursor-ring {
-  width: 34px;
-  height: 34px;
-  border: 1.5px solid var(--blue-soft);
-  transition: width 0.2s, height 0.2s, border-color 0.2s, transform 0.12s ease-out;
-}
-
-.cursor-ring.active {
-  width: 54px;
-  height: 54px;
-  border-color: var(--violet);
-  background: rgba(124, 111, 237, 0.08);
-}
-
-@media (hover: none), (max-width: 900px) {
-  .cursor-dot,
-  .cursor-ring {
-    display: none;
-  }
-}
 
 /* ---------- Navbar ---------- */
 #navbar {
@@ -683,21 +645,28 @@ html[data-theme="dark"] .theme-toggle .fa-moon {
   inset: 28%;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid transparent;
-  background: var(--grad-primary) border-box;
-  -webkit-mask: linear-gradient(#000 0 0) padding-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  padding: 4px;
+  background: var(--grad-primary);
+  box-shadow: 0 12px 36px -6px rgba(47, 111, 237, 0.45);
   z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.profile-core:hover {
+  transform: scale(1.04);
+  box-shadow: 0 16px 44px -6px rgba(47, 111, 237, 0.6);
 }
 
 .profile-core img {
-  position: absolute;
-  inset: 3px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  width: calc(100% - 6px);
-  height: calc(100% - 6px);
+  display: block;
+  background: var(--surface);
 }
 
 .profile-glow {
@@ -946,6 +915,92 @@ html[data-theme="dark"] .theme-toggle .fa-moon {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ---------- Technical Mastery ---------- */
+.mastery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .mastery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mastery-card {
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mastery-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px -12px rgba(16, 23, 42, 0.16);
+  border-color: rgba(47, 111, 237, 0.35);
+}
+
+.mastery-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.mastery-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mastery-title-wrap i {
+  font-size: 22px;
+  width: 24px;
+  text-align: center;
+}
+
+.mastery-title-wrap h4 {
+  font-size: 15px;
+  margin: 0;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.level-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 999px;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.level-badge.badge-adv {
+  background: rgba(47, 111, 237, 0.1);
+  color: var(--blue);
+  border: 1px solid rgba(47, 111, 237, 0.25);
+}
+
+.level-badge.badge-int {
+  background: rgba(22, 192, 152, 0.1);
+  color: var(--mint);
+  border: 1px solid rgba(22, 192, 152, 0.25);
+}
+
+.mastery-desc {
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin: 0;
 }
 
 .skills-col h3 {
@@ -1332,17 +1387,19 @@ html[data-theme="dark"] .theme-toggle .fa-moon {
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
   background: var(--surface);
-  padding: 24px;
+  padding: 30px;
   aspect-ratio: 3 / 4;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  box-shadow: 0 16px 36px -12px rgba(16, 23, 42, 0.08);
 }
 
 .resume-preview .rl {
   height: 8px;
   border-radius: 4px;
   background: var(--line);
+  opacity: 0.85;
 }
 
 .resume-preview .rl.short {
@@ -1353,6 +1410,9 @@ html[data-theme="dark"] .theme-toggle .fa-moon {
   background: var(--grad-primary);
   width: 35%;
   height: 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  opacity: 1;
 }
 
 /* ---------- Behind The Code ---------- */
@@ -1858,3 +1918,22 @@ footer {
     right: 16px;
   }
 }
+
+/* ---------- Page Entrance & Section Slide Transitions ---------- */
+@keyframes pageSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main,
+.page-transition,
+.page-enter {
+  animation: pageSlideUp 0.65s var(--ease) both;
+}
+

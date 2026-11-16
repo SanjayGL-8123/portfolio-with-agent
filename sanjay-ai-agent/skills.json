@@ -1,0 +1,64 @@
+{
+  "programming_languages": [
+    "Python",
+    "JavaScript ES6+",
+    "C",
+    "C++",
+    "Java"
+  ],
+  "frontend": [
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "React",
+    "Electron.js",
+    "Bootstrap"
+  ],
+  "backend": [
+    "Python Flask",
+    "FastAPI",
+    "Node.js",
+    "Express.js",
+    "PHP",
+    "REST APIs"
+  ],
+  "databases": [
+    "SQLite",
+    "MySQL",
+    "PostgreSQL"
+  ],
+  "artificial_intelligence": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Deep Learning",
+    "AI Agents",
+    "Computer Vision",
+    "Natural Language Processing",
+    "TensorFlow",
+    "Keras",
+    "Scikit-learn",
+    "YOLOv8",
+    "MobileNetV2",
+    "Google AI APIs",
+    "Gemini API"
+  ],
+  "cybersecurity": [
+    "Cybersecurity Fundamentals",
+    "Ethical Hacking",
+    "Security Testing",
+    "Kali Linux",
+    "Vulnerability Assessment"
+  ],
+  "devops_and_tools": [
+    "Git",
+    "GitHub",
+    "Docker",
+    "Kubernetes",
+    "VS Code",
+    "Cursor AI",
+    "Figma",
+    "Vercel",
+    "Netlify",
+    "Azure"
+  ]
+}

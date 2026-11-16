@@ -1,31 +1,34 @@
-# Full-Stack Portfolio with AIOS Neural Co-Pilot
+# Sanjay G. L. — Developer Portfolio & AIOS Neural Co-Pilot
 
-An interactive, production-ready web portfolio and technical operating system powered by a Python Flask backend, SQLAlchemy ORM, and an integrated conversational AI agent co-pilot.
+A production-ready developer portfolio and technical operating system for **Sanjay G. L.** — Full-Stack Developer, Python Developer, and AI Workflow Engineer, currently pursuing a Bachelor of Computer Applications (BCA · 3rd Year, 5th Semester, 2024–2027) based in **Shivamogga (Shimoga), Karnataka, India**.
+
+Powered by a high-performance Python Flask backend, dynamic JSON knowledge architecture, and an embedded autonomous AI Portfolio Assistant (`Sanjay AI`).
+
+Live Production URL: **[https://sanjaygl.vercel.app/](https://sanjaygl.vercel.app/)**  
+GitHub Profiles: **[@SanjayGL-8123](https://github.com/SanjayGL-8123)** · **[@sanjayGL2006](https://github.com/sanjayGL2006)**
 
 ---
 
 ## ⚡ Overview & Architecture
 
-This application delivers a high-performance, responsive portfolio with an embedded intelligent assistant that answers visitor questions, highlights showcase projects, and facilitates secure contact inquiries.
-
 ```
 ┌────────────────────────────────────────────────────────┐
 │                   Frontend Client                      │
-│   (HTML5 · CSS3 Glassmorphism · Vanilla JS · PWA)      │
+│   (HTML5 · CSS3 Glassmorphism · Vanilla JS ES6+ · PWA) │
 └──────────────┬───────────────────────────┬─────────────┘
                │ (Direct HTTP)             │ (REST API)
                ▼                           ▼
 ┌─────────────────────────────┐  ┌───────────────────────┐
 │     Static File Server      │  │     Flask Backend     │
-│ (Assets, CSS, JS, Docs, PDF)│  │ (Security Middleware) │
+│ (WebP Assets, CSS, JS, PDF) │  │ (Security Middleware) │
 └─────────────────────────────┘  └───────────┬───────────┘
                                              │
                        ┌─────────────────────┴─────────────────────┐
                        ▼                                           ▼
          ┌───────────────────────────┐               ┌───────────────────────────┐
-         │     Database Layer        │               │   AIOS Co-Pilot Engine    │
-         │  SQLite (Local Dev) /     │               │  Client RAG Cache +       │
-         │  MySQL (Production Cloud) │               │  Backend Fallback API     │
+         │     Database Layer        │               │    Sanjay AI Co-Pilot     │
+         │  SQLite (Local Dev) /     │               │  Dynamic JSON RAG Engine  │
+         │  MySQL (Production Cloud) │               │  sanjay-ai-agent/ Dataset │
          └───────────────────────────┘               └───────────────────────────┘
 ```
 
@@ -33,228 +36,126 @@ This application delivers a high-performance, responsive portfolio with an embed
 
 ## 🚀 Key Architectural Features
 
-### 1. 🤖 AIOS Neural Co-Pilot
-* **Dual-Tier Intelligence**: High-speed client-side RAG knowledge retrieval for instant answers, backed by serverless `/api/agent` endpoints.
-* **Session Persistence**: Maintains session context and conversation history.
-* **Rate Limiting**: Sliding-window IP rate limiting prevents spam and resource exhaustion.
+### 1. 🤖 Sanjay AI — Personal Portfolio Assistant
+* **Autonomous Knowledge Engine**: Dynamic RAG engine indexing Q&A pairs directly from `data/sanjay_ai_dataset.json`, `data/identity.json`, and `sanjay-ai-agent/` modular JSON specifications.
+* **Strict Privacy Guardrails**: Adheres to strict privacy rules — no institutional affiliations or external volunteer programs are referenced; exclusively identifies as a BCA student in Shivamogga, Karnataka.
+* **Direct Intent Matching**: Instant responses for education, internships (Milano Infotech & Oasis Infobyte), featured projects (InvoiceGuard, SentinelAI, PureWeaves, Placement Pro, Meluha AI), and deep technical concepts (CNNs, RAG, Web Security).
 
-### 2. 🛡️ Defensive Security & Encryption
-* **Data Protection**: Sensitive contact submissions are encrypted at rest using Fernet symmetric encryption (`cryptography`).
-* **Honeypot Protection**: Hidden honeypot fields silently discard automated bot submissions.
-* **Security Headers**: Enforces Content Security Policy (CSP), HTTP Strict Transport Security (HSTS), X-Frame-Options, and X-Content-Type-Options.
+### 2. ⚡ High-Speed WebP Image Registry (Single Copy, Ultra-Lightweight)
+* All graphical assets are consolidated into **4 lightweight `.webp` images** plus a structured JSON registry (`assets/images.json`) for fast page loading:
+  1. `assets/profile.webp` — Developer profile portrait (1024×1024, ~95 KB)
+  2. `assets/sanjay-logo.webp` — Official brand emblem (1024×1024, ~170 KB)
+  3. `assets/openai-academy-badge.webp` — OpenAI Academy credential badge (400×400, ~20 KB)
+  4. `assets/openai-apply-ai-at-work.webp` — OpenAI pathway certificate (798×618, ~39 KB)
 
-### 3. 🗄️ Resilient Data Layer
-* **Flexible ORM**: SQLAlchemy models seamlessly support local SQLite (`database/portfolio.db`) and cloud MySQL databases.
-* **Automated Table Creation**: Database schemas and tables are initialized automatically upon first launch.
-* **Asset Optimization**: Built-in Pillow image compression automatically resizes and optimizes high-resolution profile imagery on boot.
-
-### 4. 🎨 UI & Performance
-* Modern responsive glassmorphic dark theme.
-* Full progressive web app (PWA) offline capabilities via Service Worker (`sw.js`).
-* SEO-optimized with JSON-LD schema markup, OpenGraph metadata, XML sitemap, and robots directives.
+### 3. 🛡️ Defensive Security & Data Protection
+* **Data Encryption**: Contact inquiries are encrypted at rest using Fernet symmetric encryption (`cryptography`).
+* **Honeypot & Rate Limiting**: Silent bot rejection via hidden honeypot inputs and sliding-window IP rate limiting on contact and agent APIs.
+* **Strict Security Headers**: HSTS, Content Security Policy (CSP), X-Frame-Options, X-Content-Type-Options, and Permissions-Policy.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Backend**: Python 3.9+, Flask, Flask-SQLAlchemy, Gunicorn
-* **Frontend**: HTML5, Modern CSS3, JavaScript (ES6+), FontAwesome
-* **Data & Storage**: SQLite, MySQL, PyMySQL, Cryptography (Fernet)
-* **Imaging & Documents**: Pillow (PIL), PyPDF, docx
-* **Deployment**: Local development server, Docker, Vercel Serverless WSGI (`api/index.py`)
+* **Core Stack**: Python 3.9+, Flask, Flask-SQLAlchemy, Gunicorn
+* **Frontend**: Vanilla HTML5, CSS3 (Glassmorphism design system), JavaScript (ES6+), FontAwesome
+* **Databases**: SQLite (Development), MySQL, PostgreSQL (Production)
+* **AI & Machine Learning**: Python, TensorFlow, Keras, Scikit-learn, YOLOv8, OpenCV, Google Gemini API
+* **Deployment**: Vercel Serverless WSGI (`api/index.py`), GitHub Actions
 
 ---
 
-## 📋 Prerequisites
+## 📂 Repository Structure
 
-Before running the application, ensure you have:
-* **Python**: Version 3.9 or higher
-* **pip**: Python package manager
-* **Git**: Installed and available in your terminal
+```
+portfolio-with-agent/
+├── app.py                      # Core Flask backend & dynamic AI agent engine
+├── index.html                  # Main portfolio single-page application
+├── projects.html               # 100-project catalog directory with filters & search
+├── privacy.html                # DPDP-friendly privacy policy & data usage page
+├── manifest.json               # Progressive Web App (PWA) manifest
+├── sw.js                       # Service worker for offline caching
+├── assets/                     # Consolidated WebP assets & documents
+│   ├── images.json             # Image metadata registry
+│   ├── profile.webp            # Developer profile photo
+│   ├── sanjay-logo.webp        # Official brand emblem logo
+│   ├── openai-academy-badge.webp # OpenAI Academy verified badge
+│   ├── openai-apply-ai-at-work.webp # OpenAI pathway credential
+│   ├── Sanjay_GL_Resume.pdf    # Downloadable resume (PDF)
+│   └── Sanjay_GL_Resume.docx   # Downloadable resume (Word DOCX)
+├── css/
+│   ├── clean-redesign.css      # v3.0.1 glassmorphic UI design system
+│   └── styles.css              # Supporting project & privacy styles
+├── js/
+│   ├── clean-redesign.js       # Interactive particles, orbit, & chat controller
+│   ├── projectsPage.js         # Full project directory renderer (100 projects)
+│   └── projectsData.js         # Catalog data for 100 showcase projects
+├── data/
+│   ├── identity.json           # Verified profile, education, and career facts
+│   └── sanjay_ai_dataset.json  # Comprehensive unified AI agent dataset
+├── sanjay-ai-agent/            # Modular AI Agent Architecture
+│   ├── personal_profile.json   # Identity, about me, and career goals
+│   ├── projects.json           # Featured project specifications
+│   ├── skills.json             # Categorized technical capabilities
+│   ├── education.json          # Academic background & course interests
+│   └── system_prompt.txt       # Official Sanjay AI system instructions
+└── requirements.txt            # Python dependencies
+```
 
 ---
 
-## 💻 How to Run the Project Locally
+## 💻 Running Locally
 
-### Step 1: Clone or Navigate to the Repository
+### Step 1: Clone Repository
 ```bash
 git clone https://github.com/SanjayGL-8123/portfolio-with-agent.git
 cd portfolio-with-agent
 ```
 
-### Step 2: Create and Activate a Virtual Environment
-
-**Windows (PowerShell):**
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
-
-**Windows (Command Prompt):**
-```cmd
-python -m venv .venv
-.\.venv\Scripts\activate.bat
-```
-
-**macOS / Linux:**
+### Step 2: Set Up Virtual Environment & Dependencies
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
+# Create virtual environment
+python -m venv venv
 
-### Step 3: Install Dependencies
-```bash
+# Activate on Windows PowerShell:
+.\venv\Scripts\Activate.ps1
+
+# Activate on macOS / Linux:
+source venv/bin/activate
+
+# Install dependencies:
 pip install -r requirements.txt
 ```
 
-> [!NOTE]
-> If you are on Windows and encounter a build error compiling `greenlet`, run:
-> ```powershell
-> pip install "greenlet<3.2.5"
-> pip install -r requirements.txt
-> ```
-
-### Step 4: Configure Environment Variables
-Copy the template configuration file:
-
-**Windows (PowerShell):**
-```powershell
-Copy-Item .env.example .env
-```
-
-**macOS / Linux / Bash:**
-```bash
-cp .env.example .env
-```
-
-*(Optional)* You can customize environment variables inside `.env`:
-* `PORT`: Port to run the server on (default: `5000`)
-* `FLASK_DEBUG`: Enable debug mode (`1` for development, `0` for production)
-* `DATABASE_URL`: Cloud MySQL connection string (leave blank to use local SQLite)
-* `ENCRYPTION_KEY`: Symmetric key for contact message encryption
-
-### Step 5: Start the Application
+### Step 3: Start Local Server
 ```bash
 python app.py
 ```
-
-### Step 6: View in Your Browser
-Open your browser and navigate to:
-👉 **[http://localhost:5000](http://localhost:5000)** *(or http://localhost:5001 if port 5000 is occupied)*
+Open **`http://127.0.0.1:5000/`** in your browser.
 
 ---
 
-## 🔗 Key API Endpoints
+## 🌟 Featured Projects
 
-| Endpoint | Method | Description |
-|---|---|---|
-| `GET /` | `GET` | Main portfolio web interface |
-| `GET /health` | `GET` | Service health status and version metadata |
-| `GET /api/stats` | `GET` | Real-time project counts, site visits, and metrics |
-| `GET /api/projects` | `GET` | Showcase projects JSON catalog |
-| `GET /api/certificates` | `GET` | Verified credentials and certifications archive |
-| `GET /api/about` | `GET` | Developer profile and skills summary |
-| `POST /api/agent` | `POST` | Interacts with the AIOS Co-Pilot (`{"message": "...", "session_id": "..."}`) |
-| `POST /api/contact` | `POST` | Validates, encrypts at rest, and saves contact submissions |
-| `GET /projects/<slug>` | `GET` | Dynamic SEO-friendly individual project landing page |
-
----
-
-## 📁 Project Structure
-
-```text
-portfolio-with-agent/
-├── api/
-│   └── index.py             # Serverless WSGI entrypoint for Vercel deployment
-├── assets/                  # Static assets: images, icons, credentials & resume PDF
-│   ├── profile.png
-│   ├── Sanjay_GL_Resume.docx
-│   └── Sanjay_GL_Resume.pdf
-├── css/
-│   ├── clean-redesign.css   # Glassmorphic design system and responsive layout
-│   └── styles.css           # Core theme tokens and typography
-├── data/
-│   ├── identity.json        # Canonical profile records, education & timeline data
-│   └── projects.json        # Unified project catalog dataset
-├── database/
-│   └── portfolio.db         # Local SQLite database (auto-generated on boot)
-├── js/
-│   ├── aiAssistant.js       # Floating AIOS co-pilot widget controller
-│   ├── agentKnowledge.js    # Client-side RAG knowledge graph
-│   ├── clean-redesign.js    # UI interactions, navigation, and modal logic
-│   ├── projectsData.js      # Structured project showcase definitions
-│   └── projectsPage.js      # Filter, search, and detail modal renderer
-├── k8s/                     # Kubernetes production manifests
-│   ├── namespace.yaml
-│   ├── configmap.yaml
-│   ├── secret.yaml
-│   ├── pvc.yaml
-│   ├── deployment.yaml
-│   ├── service.yaml
-│   ├── ingress.yaml
-│   └── kustomization.yaml
-├── app.py                   # Production Flask application & security middleware
-├── index.html               # Main portfolio interface
-├── projects.html            # Projects showcase page
-├── privacy.html             # Privacy policy & data handling notice
-├── Dockerfile               # Multi-stage production container image definition
-├── docker-compose.yml       # Local container orchestration
-├── .dockerignore            # Docker build ignore rules
-├── requirements.txt         # Python dependencies
-├── vercel.json              # Vercel serverless build and routing configuration
-├── robots.txt               # Web crawler instructions
-├── sitemap.xml              # Search engine XML sitemap
-└── .env.example             # Environment variable template
-```
-
----
-
-## 🐳 Docker Deployment
-
-### Run with Docker Compose
-```bash
-docker compose up -d --build
-```
-The portfolio will be live at `http://localhost:5000`.
-
-### Run with Docker CLI
-```bash
-# Build the container image
-docker build -t sanjaygl-portfolio .
-
-# Run the container with persistent database volume
-docker run -d -p 5000:5000 -v $(pwd)/database:/app/database --name portfolio-app sanjaygl-portfolio
-```
-
----
-
-## ☸️ Kubernetes Deployment
-
-Deploy the entire microservice stack to any Kubernetes cluster (Minikube, Kind, GKE, EKS, AKS):
-
-```bash
-# 1. Apply all manifests using Kustomize
-kubectl apply -k k8s/
-
-# 2. Verify pods and services
-kubectl get pods,svc -n portfolio
-
-# 3. Port forward to test locally (if not using Ingress)
-kubectl port-forward svc/portfolio-service 8080:80 -n portfolio
-```
-Then visit `http://localhost:8080`.
+* **InvoiceGuard** — AI-powered invoice anomaly & fraud detector engineered for hackathon fraud mitigation using Scikit-learn, Pandas, and Flask REST APIs.
+* **SentinelAI** — Cyber threat early-warning intelligence platform (ranked 6th–7th in state hackathon) featuring multi-agent security threat scanning.
+* **Meluha AI** — Flagship ambition to architect a sovereign Indian AI model trained from scratch without external commercial API dependencies.
+* **PureWeaves** — Handcrafted saree e-commerce storefront with dynamic catalog browsing and direct WhatsApp API checkout.
+* **Placement Pro** — Full-stack academic placement portal managing student directories, company drives, and report generation via FastAPI and PostgreSQL.
+* **Disk Recovery & Forensics Suite** — Low-level digital forensics and data salvage suite combining high-performance C disk parsing with Python analytics.
+* **Smart Attendance System** — YOLOv8 real-time video stream detection for automated classroom attendance and teacher dashboards.
 
 ---
 
 ## 🚀 Deployment to Vercel
 
-The application is pre-configured for instant zero-config deployment on Vercel:
-1. Push your repository to GitHub (`git push origin main`).
-2. Vercel automatically detects the push and triggers a production deployment.
-3. Live production domain: **[sanjaygl.vercel.app](https://sanjaygl.vercel.app)**
+The application is pre-configured for instant serverless deployment on Vercel:
+1. Push your changes to GitHub `main` branch (`git push origin main`).
+2. Vercel automatically deploys via serverless WSGI integration.
+3. Production domain: **[https://sanjaygl.vercel.app](https://sanjaygl.vercel.app)**
 
 ---
 
 <p align="center">
-  <sub>Built with Flask, SQLAlchemy & Modern Web Standards.</sub>
+  <sub>Designed &amp; Engineered by Sanjay G. L. · Built with Flask, Modern Web Standards &amp; Autonomous AI.</sub>
 </p>

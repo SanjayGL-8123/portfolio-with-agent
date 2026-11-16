@@ -1,0 +1,333 @@
+{
+  "profile": {
+    "full_name": "Sanjay G. L.",
+    "preferred_name": "Sanjay",
+    "professional_title": "Full-Stack Developer & AI Workflow Engineer",
+    "identity": [
+      "BCA Student",
+      "Full-Stack Developer",
+      "AI and ML Developer",
+      "Python Developer",
+      "Technology Enthusiast"
+    ],
+    "location": "Shivamogga, Karnataka, India",
+    "country": "India",
+    "portfolio": "https://sanjaygl.vercel.app/",
+    "github": "https://github.com/SanjayGL-8123",
+    "linkedin": "https://www.linkedin.com/in/sanjay-gl-b86631336/",
+    "email": "sanjaygl3006@gmail.com",
+    "availability": [
+      "Internships",
+      "Freelance opportunities",
+      "Part-time opportunities",
+      "Project collaborations"
+    ]
+  },
+  "about_me": {
+    "introduction": "I am Sanjay G. L., a BCA student based in Shivamogga, Karnataka. I am passionate about full-stack development, artificial intelligence, machine learning, Python programming, cybersecurity, and building practical software solutions.",
+    "description": "I enjoy developing modern web applications, intelligent AI agents, automation workflows, machine learning applications, and user-friendly digital products. I combine academic learning with practical development and internship experience.",
+    "career_goal": "To become a skilled Full-Stack and AI Workflow Engineer capable of architecting scalable digital products that deliver real-world value.",
+    "philosophy": "Learn continuously, think creatively, solve real problems, and build meaningful technology."
+  },
+  "education": {
+    "degree": "Bachelor of Computer Applications (BCA)",
+    "institution": "BCA Student, Shivamogga, Karnataka",
+    "location": "Shivamogga, Karnataka, India",
+    "academic_year": "2023-2027",
+    "current_year": "3rd Year",
+    "current_semester": "5th Semester",
+    "previous_education": [
+      {
+        "qualification": "SSLC",
+        "completion_year": 2022
+      },
+      {
+        "qualification": "PUC",
+        "completion_year": 2024
+      }
+    ],
+    "academic_interests": [
+      "Software Engineering",
+      "Database Management Systems",
+      "Data Structures",
+      "Python Programming"
+    ]
+  },
+  "professional_experience": [
+    {
+      "organization": "Milano Infotech",
+      "role": "AI, ML & Python Developer Intern",
+      "period": "August 2026 - Present",
+      "status": "Current as listed on portfolio",
+      "responsibilities": [
+        "AI agent workflow development",
+        "Machine learning model development",
+        "Computer vision utilities",
+        "Full-stack Python applications",
+        "Intelligent assistant development"
+      ]
+    },
+    {
+      "organization": "Oasis Infobyte",
+      "role": "Web Development Intern",
+      "period": "March 2026",
+      "recognition": "Star Performer",
+      "program": "AICTE OIB-SIP",
+      "responsibilities": [
+        "Responsive website development",
+        "HTML and CSS interfaces",
+        "JavaScript interactions",
+        "Modular web components"
+      ]
+    }
+  ],
+  "technical_skills": {
+    "programming_languages": [
+      "Python",
+      "JavaScript ES6+",
+      "C",
+      "C++",
+      "Java"
+    ],
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "React",
+      "Electron.js",
+      "Bootstrap"
+    ],
+    "backend": [
+      "Python Flask",
+      "FastAPI",
+      "Node.js",
+      "Express.js",
+      "PHP",
+      "REST APIs"
+    ],
+    "databases": [
+      "SQLite",
+      "MySQL",
+      "PostgreSQL"
+    ],
+    "artificial_intelligence": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Deep Learning",
+      "AI Agents",
+      "Computer Vision",
+      "Natural Language Processing",
+      "TensorFlow",
+      "Keras",
+      "Scikit-learn",
+      "YOLOv8",
+      "MobileNetV2",
+      "Google AI APIs",
+      "Gemini API"
+    ],
+    "cybersecurity": [
+      "Cybersecurity Fundamentals",
+      "Ethical Hacking",
+      "Security Testing",
+      "Kali Linux",
+      "Vulnerability Assessment"
+    ],
+    "devops_and_tools": [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Kubernetes",
+      "VS Code",
+      "Cursor AI",
+      "Figma",
+      "Vercel",
+      "Netlify",
+      "Azure"
+    ]
+  },
+  "featured_projects": [
+    {
+      "name": "Meet Video Conferencing",
+      "category": "Full-Stack Web Application",
+      "description": "A self-hosted video conferencing platform with peer-to-peer audio and video, screen sharing, in-meeting chat, and authentication.",
+      "technologies": [
+        "React",
+        "FastAPI",
+        "SQLite",
+        "WebRTC"
+      ]
+    },
+    {
+      "name": "Notes Management System",
+      "category": "Full-Stack Application",
+      "description": "A secure and privacy-focused notes management application.",
+      "technologies": [
+        "React 18",
+        "Vite",
+        "Flask",
+        "SQLite"
+      ]
+    },
+    {
+      "name": "QR Code Studio",
+      "category": "Web Application",
+      "description": "A customizable QR code generator with 150 design styles, frames, logos, color palettes, and PNG export.",
+      "technologies": [
+        "Flask",
+        "JavaScript",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "Image-to-SVG Converter",
+      "category": "Utility Application",
+      "description": "A client-side image conversion application supporting JPG, PNG, WEBP, and GIF formats.",
+      "technologies": [
+        "JavaScript"
+      ]
+    },
+    {
+      "name": "AI Resume Matcher",
+      "category": "AI Application",
+      "description": "An ATS resume matching application with AI career insights, skill matching, improvement suggestions, and application tracking.",
+      "technologies": [
+        "PHP",
+        "Gemini API",
+        "TF-IDF"
+      ]
+    },
+    {
+      "name": "AI Resume Analyzer",
+      "category": "AI Application",
+      "description": "A resume analysis tool using ATS scoring and cosine similarity.",
+      "technologies": [
+        "Flask",
+        "Scikit-learn",
+        "MySQL"
+      ]
+    },
+    {
+      "name": "Accident Risk Prediction",
+      "category": "Machine Learning",
+      "description": "A road-segment accident risk prediction application.",
+      "technologies": [
+        "Flask",
+        "Scikit-learn",
+        "Random Forest"
+      ]
+    },
+    {
+      "name": "Indian Currency Detection",
+      "category": "Computer Vision",
+      "description": "An application that detects Indian currency notes from images and webcam input, calculates totals, and provides voice feedback.",
+      "technologies": [
+        "YOLOv8",
+        "OpenCV"
+      ]
+    },
+    {
+      "name": "Fruit Classification and Recommendation",
+      "category": "Deep Learning",
+      "description": "A fruit classification application with dietary recommendations, GUI, and voice feedback.",
+      "technologies": [
+        "TensorFlow",
+        "Keras",
+        "Tkinter"
+      ]
+    },
+    {
+      "name": "Smart Attendance",
+      "category": "AI and Web Application",
+      "description": "An AI-powered classroom attendance application with a teacher dashboard.",
+      "technologies": [
+        "YOLOv8",
+        "Flask",
+        "MySQL",
+        "React"
+      ]
+    },
+    {
+      "name": "DataGauge",
+      "category": "Data Science Tool",
+      "description": "A dataset quality analysis tool that scores data, flags issues, guides cleaning, and generates PDF and Excel reports.",
+      "technologies": [
+        "FastAPI",
+        "React",
+        "Pandas",
+        "SciPy"
+      ]
+    },
+    {
+      "name": "Sentry Cyber Intel",
+      "category": "AI Cybersecurity",
+      "description": "A multi-agent AI cybersecurity threat intelligence platform.",
+      "technologies": [
+        "CrewAI",
+        "Groq",
+        "Exa"
+      ]
+    },
+    {
+      "name": "Pure Weaves",
+      "category": "E-commerce",
+      "description": "An online handloom saree and textile shopping platform.",
+      "technologies": [
+        "Flask",
+        "JavaScript",
+        "SQLite",
+        "Vercel",
+        "Render"
+      ]
+    }
+  ],
+  "certifications_and_achievements": [
+    "OpenAI Academy - Apply AI at Work pathway credential, 2026",
+    "Microsoft Azure Fundamentals AZ-900",
+    "Python - Simplilearn",
+    "Software Testing Engineer - Simplilearn",
+    "Ethical Hacking - Cisco Networking Academy",
+    "Python - Cisco Networking Academy",
+    "Cybersecurity Fundamentals - Cisco Networking Academy",
+    "Cyber Security Cadet - C-DAC and ISEA",
+    "AI and Machine Learning Essentials - DeepLearning.AI",
+    "HackerRank certifications in JavaScript, SQL, Java, CSS, Python and React",
+    "Full Stack Web Development - Skill India",
+    "SQL Relational Database Management - Skill India",
+    "CPR - Save a Life Award"
+  ],
+  "competitions_and_activities": [
+    "PRAVIDHI State Level BCA Tech Fest - Coding Event",
+    "Code Break Challenge - Global Academy of Technology",
+    "REVA University Hackathon",
+    "National Road Safety Quiz - MyGov",
+    "Blood Donation Volunteer",
+    "Blood Donation Pledge",
+    "Save Life Pledge"
+  ],
+  "current_learning_and_projects": [
+    "AI agent development",
+    "AI-powered applications using FastAPI and React",
+    "Computer vision and deep learning",
+    "YOLOv8 and MobileNetV2",
+    "Docker and cloud deployment",
+    "Cybersecurity vulnerability scanner",
+    "AI emotion detection"
+  ],
+  "interests": [
+    "Full-Stack Engineering",
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Cybersecurity",
+    "Autonomous AI Agents",
+    "Computer Vision",
+    "Open Source Systems",
+    "Product Innovation",
+    "Problem Solving",
+    "Continuous Learning"
+  ],
+  "social_links": {
+    "portfolio": "https://sanjaygl.vercel.app/",
+    "github": "https://github.com/SanjayGL-8123",
+    "linkedin": "https://www.linkedin.com/in/sanjay-gl-b86631336/"
+  }
+}

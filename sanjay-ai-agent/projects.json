@@ -1,0 +1,80 @@
+[
+  {
+    "name": "Meet Video Conferencing",
+    "category": "Full-Stack Web Application",
+    "description": "A self-hosted video conferencing platform with peer-to-peer audio and video, screen sharing, in-meeting chat, and authentication.",
+    "technologies": ["React", "FastAPI", "SQLite", "WebRTC"]
+  },
+  {
+    "name": "Notes Management System",
+    "category": "Full-Stack Application",
+    "description": "A secure and privacy-focused notes management application.",
+    "technologies": ["React 18", "Vite", "Flask", "SQLite"]
+  },
+  {
+    "name": "QR Code Studio",
+    "category": "Web Application",
+    "description": "A customizable QR code generator with 150 design styles, frames, logos, color palettes, and PNG export.",
+    "technologies": ["Flask", "JavaScript", "MySQL"]
+  },
+  {
+    "name": "Image-to-SVG Converter",
+    "category": "Utility Application",
+    "description": "A client-side image conversion application supporting JPG, PNG, WEBP, and GIF formats.",
+    "technologies": ["JavaScript"]
+  },
+  {
+    "name": "AI Resume Matcher",
+    "category": "AI Application",
+    "description": "An ATS resume matching application with AI career insights, skill matching, improvement suggestions, and application tracking.",
+    "technologies": ["PHP", "Gemini API", "TF-IDF"]
+  },
+  {
+    "name": "AI Resume Analyzer",
+    "category": "AI Application",
+    "description": "A resume analysis tool using ATS scoring and cosine similarity.",
+    "technologies": ["Flask", "Scikit-learn", "MySQL"]
+  },
+  {
+    "name": "Accident Risk Prediction",
+    "category": "Machine Learning",
+    "description": "A road-segment accident risk prediction application.",
+    "technologies": ["Flask", "Scikit-learn", "Random Forest"]
+  },
+  {
+    "name": "Indian Currency Detection",
+    "category": "Computer Vision",
+    "description": "An application that detects Indian currency notes from images and webcam input, calculates totals, and provides voice feedback.",
+    "technologies": ["YOLOv8", "OpenCV"]
+  },
+  {
+    "name": "Fruit Classification and Recommendation",
+    "category": "Deep Learning",
+    "description": "A fruit classification application with dietary recommendations, GUI, and voice feedback.",
+    "technologies": ["TensorFlow", "Keras", "Tkinter"]
+  },
+  {
+    "name": "Smart Attendance",
+    "category": "AI and Web Application",
+    "description": "An AI-powered classroom attendance application with a teacher dashboard.",
+    "technologies": ["YOLOv8", "Flask", "MySQL", "React"]
+  },
+  {
+    "name": "DataGauge",
+    "category": "Data Science Tool",
+    "description": "A dataset quality analysis tool that scores data, flags issues, guides cleaning, and generates PDF and Excel reports.",
+    "technologies": ["FastAPI", "React", "Pandas", "SciPy"]
+  },
+  {
+    "name": "Sentry Cyber Intel",
+    "category": "AI Cybersecurity",
+    "description": "A multi-agent AI cybersecurity threat intelligence platform.",
+    "technologies": ["CrewAI", "Groq", "Exa"]
+  },
+  {
+    "name": "Pure Weaves",
+    "category": "E-commerce",
+    "description": "An online handloom saree and textile shopping platform.",
+    "technologies": ["Flask", "JavaScript", "SQLite", "Vercel", "Render"]
+  }
+]

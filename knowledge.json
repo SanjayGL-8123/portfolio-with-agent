@@ -6,9 +6,9 @@
     "location": "Shivamogga, Karnataka, India (Kanaka Nagara, Devaraj Urs Layout, Vinoba Nagara)",
     "email": "sanjaygl2006@gmail.com",
     "phone": "+91 8123981877",
-    "status": "BCA 3rd Year (5th Semester) · PES IAMS",
-    "bio": "Passionate BCA student & developer from Shivamogga, Karnataka. A hands-on builder who lives by 'Learn → Build → Test → Improve → Build something bigger'. Passionate about Modern Web Development, React, Cybersecurity, AI tools, and practical mini-projects.",
-    "core_philosophy": "Builder mindset: going from 'I have an idea' → 'I built it'. Learning by doing rather than watching passive tutorials.",
+    "status": "BCA 3rd Year (5th Semester) \u00b7 Shivamogga, Karnataka",
+    "bio": "Passionate BCA student & developer from Shivamogga, Karnataka. A hands-on builder who lives by 'Learn \u2192 Build \u2192 Test \u2192 Improve \u2192 Build something bigger'. Passionate about Modern Web Development, React, Cybersecurity, AI tools, and practical mini-projects.",
+    "core_philosophy": "Builder mindset: going from 'I have an idea' \u2192 'I built it'. Learning by doing rather than watching passive tutorials.",
     "future_goal": "Full-stack engineer & Security Developer building scalable web applications, ethical cybersecurity labs, and AI systems.",
     "personal_life": {
       "relationship": "single and i am bca student",
@@ -34,36 +34,36 @@
   "education": [
     {
       "degree": "Bachelor of Computer Applications (BCA)",
-      "institution": "PES Institute of Advanced Management Studies (PES IAMS / Kuvempu University)",
+      "institution": "BCA Institution in Shivamogga, Karnataka",
       "location": "Shivamogga, Karnataka",
-      "period": "2024 – 2026",
-      "status": "Current · 3rd Year · 5th Semester (Completed 4th Sem Exams May 2026)"
+      "period": "2024 \u2013 2027",
+      "status": "Current \u00b7 3rd Year \u00b7 5th Semester \u00b7 Advanced studies in Software Engineering, RDBMS, Data Structures, and Python"
     },
     {
       "degree": "30-Hour Blockchain Technology Certification Course",
-      "institution": "PES Institute of Advanced Management Studies",
+      "institution": "BCA Institution in Shivamogga, Karnataka",
       "location": "Shivamogga, Karnataka",
       "period": "2026",
       "status": "Completed"
     },
     {
       "degree": "Pre-University Course (PUC)",
-      "institution": "PES PU College",
+      "institution": "PUC Institution in Shivamogga, Karnataka",
       "location": "Shivamogga, Karnataka",
-      "period": "Completed · 2022-2024",
-      "status": "Completed · 2022-2024"
+      "period": "Completed \u00b7 2022-2024",
+      "status": "Completed \u00b7 2022-2024"
     },
     {
       "degree": "SSLC",
-      "institution": "Cambridge International Public School",
+      "institution": "School in Shivamogga, Karnataka",
       "location": "Shivamogga, Karnataka",
-      "period": "Completed · April 2022",
-      "status": "Completed · April 2022"
+      "period": "Completed \u00b7 April 2022",
+      "status": "Completed \u00b7 April 2022"
     }
   ],
   "currently_learning": {
     "topic": "Modern Web Development, React & AI Agent Systems",
-    "badge": "SANJAY AI OS v2.5 · Active React & Full-Stack AI Stack",
+    "badge": "SANJAY AI OS v2.5 \u00b7 Active React & Full-Stack AI Stack",
     "subtopics": [
       "React 18 & TypeScript (90%)",
       "SQL & MySQL (90%)",
@@ -208,7 +208,7 @@
     "live_deployments_count": "8+",
     "list": [
       {
-        "title": "DermAI — AI-Powered Skincare Diagnosis App",
+        "title": "DermAI \u2014 AI-Powered Skincare Diagnosis App",
         "category": "AI & Machine Learning",
         "github": "https://github.com/SanjayGL-8123/DermAI-AI-Powered-Skincare-Diagnosis-App"
       },
@@ -233,7 +233,7 @@
         "github": "https://github.com/SanjayGL-8123/Traffic-Vehicle-Object-Detection-with-YOLOv8"
       },
       {
-        "title": "DataGauge — Dataset Quality Monitoring System",
+        "title": "DataGauge \u2014 Dataset Quality Monitoring System",
         "category": "AI & Machine Learning",
         "github": "https://github.com/SanjayGL-8123/DataGauge-Dataset-Quality-Monitoring-System",
         "description": "Full-stack dataset quality monitoring system built with FastAPI, React, and Pandas. Automatically computes 0-100 quality scores, flags data issues, provides guided cleaning, interactive dashboards, and PDF exports."
@@ -356,10 +356,10 @@
       },
       {
         "id": 101,
-        "title": "SPVM³ Spend Tracker",
+        "title": "SPVM\u00b3 Spend Tracker",
         "category": "Management & Enterprise Systems",
         "tagline": "Fast, responsive finance and expense management dashboard.",
-        "description": "Fast, responsive finance and expense management dashboard built with React, Recharts, and FastAPI for SPVM³ Tech Solution.",
+        "description": "Fast, responsive finance and expense management dashboard built with React, Recharts, and FastAPI for SPVM\u00b3 Tech Solution.",
         "tech": [
           "React",
           "FastAPI",
@@ -374,7 +374,7 @@
       },
       {
         "id": 102,
-        "title": "SPVM³ Engineering Blog",
+        "title": "SPVM\u00b3 Engineering Blog",
         "category": "Web Applications & Portals",
         "tagline": "Full-stack React & FastAPI technical blog engine.",
         "description": "Full-stack React & FastAPI engine showcasing real-world engineering logs on real-time chat, anti-cheat mechanisms, and AI prompt engineering with load-more pagination.",
@@ -391,7 +391,7 @@
       },
       {
         "id": 103,
-        "title": "SPVM³ Music Player",
+        "title": "SPVM\u00b3 Music Player",
         "category": "Tools, Systems & Utilities",
         "tagline": "Full-stack glassmorphic music player with local library sync.",
         "description": "Full-stack modern music player built with React 18, Vite, and FastAPI featuring automatic local library sync, ID3 metadata & album art extraction, sleek glassmorphic UI, and audio visualizer.",
@@ -409,7 +409,7 @@
       },
       {
         "id": 104,
-        "title": "SPVM³ API Platform",
+        "title": "SPVM\u00b3 API Platform",
         "category": "Tools, Systems & Utilities",
         "tagline": "Multi-user Flask & MySQL backend for API keys and developer knowledge.",
         "description": "Multi-user Flask & MySQL backend for managing API keys and serving programming knowledge via REST APIs. Includes built-in user dashboard and admin panel.",
@@ -553,7 +553,7 @@
       },
       {
         "id": 112,
-        "title": "SPVM³ Secure Anti-Cheat Quiz App",
+        "title": "SPVM\u00b3 Secure Anti-Cheat Quiz App",
         "category": "Web Applications & Portals",
         "tagline": "Anti-cheat window focus monitoring quiz platform.",
         "description": "Secure, timed quiz application that monitors window focus and tab switching to prevent cheating. Built with React, Flask, and SQLite.",
@@ -571,7 +571,7 @@
       },
       {
         "id": 113,
-        "title": "SPVM³ Placement Hub v2",
+        "title": "SPVM\u00b3 Placement Hub v2",
         "category": "Management & Enterprise Systems",
         "tagline": "Full-stack campus placement & recruitment management suite.",
         "description": "Full-stack placement management system streamlining student registrations, company drives, ATS scoring, and interview scheduling.",
@@ -589,7 +589,7 @@
       },
       {
         "id": 114,
-        "title": "Placement Pro SPVM³",
+        "title": "Placement Pro SPVM\u00b3",
         "category": "Management & Enterprise Systems",
         "tagline": "Campus Recruitment & Placement System with Docker & Kubernetes.",
         "description": "Smart College Placement & Campus Recruitment Management System built with Python Flask, PHP, Docker, Kubernetes & Vercel.",
@@ -610,7 +610,7 @@
         "title": "OTP Email Authentication Module",
         "category": "Tools, Systems & Utilities",
         "tagline": "Flask signup with email OTP verification & secure auth.",
-        "description": "Flask app with user signup, email OTP verification, and login — built with SQLite, Jinja2, and secure credential hashing.",
+        "description": "Flask app with user signup, email OTP verification, and login \u2014 built with SQLite, Jinja2, and secure credential hashing.",
         "tech": [
           "Python",
           "Flask",
@@ -625,7 +625,7 @@
       },
       {
         "id": 116,
-        "title": "SPVM³ Code & Tech Notes Hub",
+        "title": "SPVM\u00b3 Code & Tech Notes Hub",
         "category": "Web Applications & Portals",
         "tagline": "Interactive computer science guides for 20+ technologies.",
         "description": "Comprehensive Computer Science & Programming Notes Hub featuring interactive guides for 20+ technologies, code references, and an integrated certificate verification system.",
@@ -659,7 +659,7 @@
       },
       {
         "id": 118,
-        "title": "SPVM³ Real-Time WebSocket Chat",
+        "title": "SPVM\u00b3 Real-Time WebSocket Chat",
         "category": "Web Applications & Portals",
         "tagline": "High-performance real-time messaging with WebSockets & FastAPI.",
         "description": "SPVM3 Chat: A high-performance real-time chat app featuring instant messaging, multiple chat rooms, typing indicators, and live user presence powered by WebSockets and FastAPI.",
@@ -677,7 +677,7 @@
       },
       {
         "id": 119,
-        "title": "PulseBoard — Social Analytics Dashboard",
+        "title": "PulseBoard \u2014 Social Analytics Dashboard",
         "category": "Management & Enterprise Systems",
         "tagline": "Modern social media analytics dashboard built with React & Recharts.",
         "description": "PulseBoard: A modern social media analytics dashboard built with React, FastAPI, and Recharts. Features follower growth tracking, engagement metrics, and recent post feeds.",
@@ -694,7 +694,7 @@
       },
       {
         "id": 120,
-        "title": "ReelFind — Movie & TV Discovery App",
+        "title": "ReelFind \u2014 Movie & TV Discovery App",
         "category": "Web Applications & Portals",
         "tagline": "Full-stack movie discovery platform with React & FastAPI.",
         "description": "A full-stack movie and TV show discovery app built with React and FastAPI, integrating TMDB APIs, rating filters, and trailer modal previews.",
@@ -711,10 +711,10 @@
       },
       {
         "id": 121,
-        "title": "SPVM³ Kanban Task Manager",
+        "title": "SPVM\u00b3 Kanban Task Manager",
         "category": "Tools, Systems & Utilities",
         "tagline": "Interactive drag-and-drop Kanban task app with FastAPI backend.",
-        "description": "SPVM³ Task App — A sleek, intuitive Kanban task manager featuring interactive drag-and-drop columns, priority indicators, and REST API integration with FastAPI & React.",
+        "description": "SPVM\u00b3 Task App \u2014 A sleek, intuitive Kanban task manager featuring interactive drag-and-drop columns, priority indicators, and REST API integration with FastAPI & React.",
         "tech": [
           "React",
           "FastAPI",
@@ -746,7 +746,7 @@
       },
       {
         "id": 123,
-        "title": "SPVM³ Desktop IDE Engine",
+        "title": "SPVM\u00b3 Desktop IDE Engine",
         "category": "Tools, Systems & Utilities",
         "tagline": "Local-first desktop IDE built on Electron, React & Monaco Editor.",
         "description": "Modular, local-first desktop IDE built on Electron, React & Monaco. Features multi-language runners (Python, Java, C/C++), A-Z file support, and Extensions Marketplace.",
@@ -781,7 +781,7 @@
       },
       {
         "id": 125,
-        "title": "SPVM³ Campus Placement AI Suite",
+        "title": "SPVM\u00b3 Campus Placement AI Suite",
         "category": "Management & Enterprise Systems",
         "tagline": "AI placement suite with ATS resume scoring & career intelligence.",
         "description": "AI-powered campus placement & career intelligence suite: automated ATS resume analysis, skills gap roadmaps, safe AI natural language queries, and department analytics.",
@@ -799,7 +799,7 @@
       },
       {
         "id": 126,
-        "title": "SPVM³ 2D Physics Racing Game",
+        "title": "SPVM\u00b3 2D Physics Racing Game",
         "category": "Games",
         "tagline": "200-level physics racing game with Web Audio & Python telemetry.",
         "description": "Action-packed 2D physics racing game featuring 200-level stage progression, 60+ customizable vehicles, multi-layer parallax scenery, real-time audio synthesis, and companion Python server.",
@@ -837,7 +837,7 @@
         "title": "Website Carbon Intelligence Auditor",
         "category": "Tools, Systems & Utilities",
         "tagline": "Web app & API for auditing website carbon footprint & energy telemetry.",
-        "description": "SANJAY GL Website Carbon Intelligence — A real-time web application and developer API to audit website carbon footprints, HTTP page payload telemetry, energy consumption (SWD v4), and green hosting checks.",
+        "description": "SANJAY GL Website Carbon Intelligence \u2014 A real-time web application and developer API to audit website carbon footprints, HTTP page payload telemetry, energy consumption (SWD v4), and green hosting checks.",
         "tech": [
           "HTML5",
           "CSS3",
@@ -942,13 +942,13 @@
     "named_count": 8,
     "drive_count": 96,
     "highlights": [
-      "OpenAI Academy — Pathway Completion Certificate: Apply AI at Work (Credential ID: 198187379 · Oct 24, 2026)",
-      "AI-Powered Shopping ads Certification — Google Skillshop (Credential ID: 0c84bba4-926a-45d0-9507-e6e85fd1339e)",
-      "PRAVIDHI — State Level BCA Tech Fest Coding Contest (JSS College Mysore)",
+      "OpenAI Academy \u2014 Pathway Completion Certificate: Apply AI at Work (Credential ID: 198187379 \u00b7 Oct 24, 2026)",
+      "AI-Powered Shopping ads Certification \u2014 Google Skillshop (Credential ID: 0c84bba4-926a-45d0-9507-e6e85fd1339e)",
+      "PRAVIDHI \u2014 State Level BCA Tech Fest Coding Contest (JSS College Mysore)",
       "National Road Safety Quiz (Ministry of Road Transport & Highways)",
       "Online Quiz on Safe & Responsible Use of AI (MeitY / Digital India)",
-      "Certificate of Completion — Web Dev Internship (Oasis Infobyte / AICTE)",
-      "Certificate of Appreciation — Star Performer (Oasis Infobyte / AICTE)",
+      "Certificate of Completion \u2014 Web Dev Internship (Oasis Infobyte / AICTE)",
+      "Certificate of Appreciation \u2014 Star Performer (Oasis Infobyte / AICTE)",
       "Python for Beginners (Verified Certification)",
       "HackerRank Frontend Developer (React), JavaScript, SQL, Python, Problem Solving",
       "Microsoft Copilot Certification",
@@ -956,15 +956,15 @@
     ],
     "list": [
       {
-        "title": "Pathway Completion Certificate — Apply AI at Work",
+        "title": "Pathway Completion Certificate \u2014 Apply AI at Work",
         "org": "OpenAI Academy",
         "issuer": "OpenAI Academy",
         "year": 2026,
         "completionDate": "2026-10-24",
         "validUntil": "2027-04-24",
         "credentialId": "198187379",
-        "badge": "assets/openai-academy-badge.png",
-        "image": "assets/openai-apply-ai-at-work.png",
+        "badge": "assets/openai-academy-badge.webp",
+        "image": "assets/openai-apply-ai-at-work.webp",
         "verifyLink": "https://academy.openai.com",
         "description": "Completed all three Apply AI at Work Pathway courses and passed each assessment with a score of 80% or higher."
       },
@@ -2164,33 +2164,37 @@
       }
     ]
   },
-  "volunteer": [
+  "project_experience": [
     {
-      "role": "NSS Volunteer",
-      "org": "National Service Scheme · PESIAMS Shivamogga, KA",
-      "period": "2025 – Present",
-      "description": "Actively participated in community service, literacy, hygiene awareness, environmental sustainability, and social awareness programs across the Shivamogga region, developing teamwork, discipline, and leadership skills."
+      "name": "InvoiceGuard",
+      "description": "AI-based invoice anomaly detector that flags 8 types of fraud (Flask)."
     },
     {
-      "role": "Youth For Seva (YFS)",
-      "org": "Virupina Koppa Group Tree Planting Drive (2025)",
-      "period": "2024 – Present"
+      "name": "QR Code Studio",
+      "description": "Full-stack QR generator with many QR types, 20+ colour palettes, and logo embedding (Flask, MySQL)."
     },
     {
-      "role": "MY Bharat Volunteer",
-      "org": "Govt. of India / Viksit Vibrant Village Program Quiz 2026",
-      "period": "2024 – Present"
+      "name": "SentinelAI",
+      "description": "AI-based cyber threat early-warning system for IT teams (FastAPI, React, SQLite)."
     },
     {
-      "role": "Nasha Mukti Competition",
-      "org": "Creative Anthem Entry for Drug-Free India Initiative",
-      "period": "2026"
+      "name": "Smart Attendance System",
+      "description": "Face, ID-card, and location-verified attendance with SMS alerts (Flask, OpenCV)."
+    },
+    {
+      "name": "Text-to-Image Studio",
+      "description": "AI image generation app with a 3-tier fallback, Docker, and Kubernetes support."
+    },
+    {
+      "name": "Vibe Chat",
+      "description": "Real-time chat apps (Flask-SocketIO)."
     }
   ],
   "achievements": [
     "86+ Verified Technical & Government Certificates",
-    "Completed 30-Hour Blockchain Technology Course at PES IAMS (2026)",
-    "Participated in Green IT Competition at PES Institute",
+    "35+ Open Source GitHub Repositories",
+    "Completed 30-Hour Blockchain Technology Course at Shivamogga, Karnataka (2026)",
+    "Participated in Regional Green IT Competition (2025)",
     "35+ Open Source GitHub Repositories",
     "8+ Production Web Applications Live",
     "7+ AI-powered Projects & Chatbots",
@@ -2214,14 +2218,14 @@
     {
       "category": "identity",
       "question": "Who are you?",
-      "answer": "I am Sanjay G. L., a BCA student and aspiring Full-Stack AI Engineer focused on web development, AI systems, machine learning, secure backend APIs, and practical software solutions.",
-      "keywords": "identity,about,sanjay"
+      "answer": "I specialize in Full Stack Web Development, Frontend Engineering, and building AI\u2011integrated web applications. I actively use AI workflows in my daily development process and have hands\u2011on experience in database design and management. With 70+ certifications \u2014 including Microsoft and HackerRank credentials in CSS, JavaScript, Python, and SQL \u2014 I have completed corporate workshops, web development internships, and volunteer initiatives. I also run PureWeaves, a handmade saree accessories brand, blending entrepreneurship with modern e\u2011commerce technology.",
+      "keywords": "identity,about,sanjay,bio,specialization"
     },
     {
       "category": "identity",
       "question": "Tell me about Sanjay G. L.",
-      "answer": "Sanjay G. L. is a BCA student at PES Institute of Advanced Management Studies in Shivamogga. He builds web applications, AI assistants, data-driven platforms, and software projects while continuously learning AI, ML, cybersecurity, Docker, and full-stack development.",
-      "keywords": "about,profile"
+      "answer": "Sanjay G. L. specializes in Full Stack Web Development, Frontend Engineering, and building AI\u2011integrated web applications. He actively uses AI workflows in his daily development process, has hands-on experience in database design, holds 70+ certifications, completed internships at Milano Infotech and Oasis Infobyte, and runs PureWeaves.",
+      "keywords": "about,profile,bio"
     },
     {
       "category": "identity",
@@ -2250,7 +2254,7 @@
     {
       "category": "identity",
       "question": "What are you currently studying?",
-      "answer": "I am pursuing BCA at PES Institute of Advanced Management Studies (PES IAMS), Shivamogga.",
+      "answer": "I am pursuing BCA at BCA Institution in Shivamogga, Karnataka, Shivamogga.",
       "keywords": "education,bca"
     },
     {
@@ -2262,25 +2266,25 @@
     {
       "category": "education",
       "question": "When did you start your BCA?",
-      "answer": "I started my BCA in 2024 and it is currently ongoing (2024 – 2026).",
+      "answer": "I started my BCA in 2024 and it is currently ongoing (2024 \u2013 2026).",
       "keywords": "bca,2024"
     },
     {
       "category": "education",
       "question": "Where are you studying?",
-      "answer": "I study at PES Institute of Advanced Management Studies (PES IAMS), Shivamogga, Karnataka.",
-      "keywords": "college,pesiams"
+      "answer": "I am a BCA student based in Shivamogga, Karnataka.",
+      "keywords": "college,education,bca,shivamogga"
     },
     {
       "category": "education",
       "question": "Where did you complete PUC?",
-      "answer": "I completed my Pre-University Course (PUC) at PES PU College, Shivamogga (Completed · 2022-2024).",
+      "answer": "I completed my Pre-University Course (PUC) at PUC Institution in Shivamogga, Karnataka (Completed \u00b7 2022-2024).",
       "keywords": "puc,education"
     },
     {
       "category": "education",
       "question": "Where did you complete SSLC?",
-      "answer": "I completed SSLC at Cambridge International Public School, Shivamogga, in April 2022.",
+      "answer": "I completed SSLC at School in Shivamogga, Karnataka, in April 2022.",
       "keywords": "sslc,education"
     },
     {
@@ -2417,6 +2421,18 @@
     },
     {
       "category": "skills",
+      "question": "Do you know Kubernetes?",
+      "answer": "Yes. I work with Kubernetes orchestration, cluster manifests, container scheduling, and scalable cloud deployments.",
+      "keywords": "kubernetes,k8s,orchestration,containers"
+    },
+    {
+      "category": "skills",
+      "question": "Do you know Node.js?",
+      "answer": "Yes. I have solid experience with Node.js and Express for asynchronous runtime services, RESTful backend APIs, and npm integration.",
+      "keywords": "nodejs,node,express,javascript,backend"
+    },
+    {
+      "category": "skills",
       "question": "Which cloud deployment platforms have you used?",
       "answer": "I have experience with Vercel, Netlify, Railway, Replit, and Google Cloud Run deployment workflows.",
       "keywords": "cloud,deployment"
@@ -2532,7 +2548,7 @@
     {
       "category": "projects",
       "question": "What is DataGauge?",
-      "answer": "DataGauge is a FastAPI and React platform that scores uploaded CSV/Excel datasets from 0–100, flags completeness, validity, and outlier issues, provides guided cleaning, and exports PDF/Excel reports.",
+      "answer": "DataGauge is a FastAPI and React platform that scores uploaded CSV/Excel datasets from 0\u2013100, flags completeness, validity, and outlier issues, provides guided cleaning, and exports PDF/Excel reports.",
       "keywords": "datagauge,project,data-engineering"
     },
     {
@@ -2621,20 +2637,20 @@
     },
     {
       "category": "volunteering",
-      "question": "Are you an NSS volunteer?",
-      "answer": "Yes. I am an NSS Volunteer at PES IAMS Shivamogga and have participated in community service and awareness activities.",
+      "question": "Are you an community volunteer?",
+      "answer": "Yes. I am an community volunteer at Shivamogga, Karnataka and have participated in community service and awareness activities.",
       "keywords": "nss,volunteer"
     },
     {
       "category": "volunteering",
-      "question": "What did you do as an NSS volunteer?",
+      "question": "What did you do as an community volunteer?",
       "answer": "I participated in community service, literacy, hygiene awareness, environmental sustainability, and social awareness programs, developing teamwork, discipline, and leadership skills.",
       "keywords": "nss,experience"
     },
     {
       "category": "volunteering",
-      "question": "Are you a YFS volunteer?",
-      "answer": "Yes. I am a Youth for Seva (Mera Yuva Bharat) volunteer and have participated in youth-led initiatives, civic engagement programs, and Viksit Bharat campaigns.",
+      "question": "Are you a community volunteer?",
+      "answer": "Yes. I am a Youth Initiatives (Mera Yuva Bharat) volunteer and have participated in youth-led initiatives, civic engagement programs, and Viksit Bharat campaigns.",
       "keywords": "yfs,volunteer"
     },
     {
@@ -2864,7 +2880,7 @@
     {
       "category": "Elevator Pitch",
       "question": "If you had 30 seconds to describe your edge as a developer, what would you say?",
-      "answer": "I bridge the gap between frontend user experience, robust backend APIs, and emerging AI/security tooling. Rather than just building static UI or writing raw scripts, I focus on end-to-end execution—from containerizing apps in Docker and hardening endpoints to shipping live platforms like Placement Pro and Pure Weaves that solve real operational friction.",
+      "answer": "I bridge the gap between frontend user experience, robust backend APIs, and emerging AI/security tooling. Rather than just building static UI or writing raw scripts, I focus on end-to-end execution\u2014from containerizing apps in Docker and hardening endpoints to shipping live platforms like Placement Pro and Pure Weaves that solve real operational friction.",
       "keywords": "pitch,summary,strengths,value proposition"
     },
     {
@@ -2894,7 +2910,7 @@
     {
       "category": "Continuous Learning",
       "question": "How do you keep up with rapid changes in web frameworks and AI?",
-      "answer": "I follow a build-to-learn methodology. Instead of only reading documentation, I build isolated proof-of-concept projects, test tools in sandbox environments, and earn structured certifications—having completed over 87 technical courses. I also track open-source repositories and document developer workflows daily.",
+      "answer": "I follow a build-to-learn methodology. Instead of only reading documentation, I build isolated proof-of-concept projects, test tools in sandbox environments, and earn structured certifications\u2014having completed over 87 technical courses. I also track open-source repositories and document developer workflows daily.",
       "keywords": "learning,adaptation,growth,certifications"
     },
     {
@@ -2918,7 +2934,7 @@
     {
       "category": "Motivation",
       "question": "What drives you to build software every day?",
-      "answer": "I enjoy turning abstract logic into tools people actually use. Seeing a system go from an empty code editor to a containerized, live deployment handling real user requests—like students checking placement opportunities or customers browsing an artisan catalog—is what keeps me building every day.",
+      "answer": "I enjoy turning abstract logic into tools people actually use. Seeing a system go from an empty code editor to a containerized, live deployment handling real user requests\u2014like students checking placement opportunities or customers browsing an artisan catalog\u2014is what keeps me building every day.",
       "keywords": "motivation,passion,drive,developer mindset"
     },
     {
@@ -2996,7 +3012,7 @@
     {
       "category": "General",
       "question": "Do you know React?",
-      "answer": "Yes, at an intermediate level — I work with component architecture, custom hooks, state management, and Vite integration.",
+      "answer": "Yes, at an intermediate level \u2014 I work with component architecture, custom hooks, state management, and Vite integration.",
       "keywords": ""
     },
     {
@@ -3032,7 +3048,7 @@
     {
       "category": "General",
       "question": "Do you know Docker?",
-      "answer": "Yes, at an intermediate level — I work with Dockerfiles, containerization, and Docker Compose for microservices.",
+      "answer": "Yes, at an intermediate level \u2014 I work with Dockerfiles, containerization, and Docker Compose for microservices.",
       "keywords": ""
     },
     {
@@ -3044,7 +3060,7 @@
     {
       "category": "General",
       "question": "Do you have cybersecurity experience?",
-      "answer": "Yes, intermediate — I work with web security auditing, XSS/CSRF defenses, Kali Linux, and TryHackMe labs.",
+      "answer": "Yes, intermediate \u2014 I work with web security auditing, XSS/CSRF defenses, Kali Linux, and TryHackMe labs.",
       "keywords": ""
     },
     {
@@ -3122,7 +3138,7 @@
     {
       "category": "General",
       "question": "Do you have version control experience?",
-      "answer": "Yes, advanced — I use Git & GitHub for version control, branching models, merge conflict resolution, and GitHub Actions.",
+      "answer": "Yes, advanced \u2014 I use Git & GitHub for version control, branching models, merge conflict resolution, and GitHub Actions.",
       "keywords": ""
     },
     {
@@ -3164,7 +3180,7 @@
     {
       "category": "General",
       "question": "Which college do you study at?",
-      "answer": "I study at PES Institute of Advanced Management Studies (PES IAMS)",
+      "answer": "I study at BCA Institution in Shivamogga, Karnataka",
       "keywords": ""
     },
     {
@@ -3188,19 +3204,19 @@
     {
       "category": "General",
       "question": "What is your educational background?",
-      "answer": "I completed my SSLC at Cambridge International Public School (Completed · April 2022), my PUC at PES PU College (Completed · 2022-2024), and I'm now pursuing BCA at PES IAMS Shivamogga.",
+      "answer": "I completed my SSLC at School in Shivamogga, Karnataka (Completed \u00b7 April 2022), my PUC at PUC Institution in Shivamogga, Karnataka (Completed \u00b7 2022-2024), and I'm now pursuing BCA at Shivamogga, Karnataka.",
       "keywords": ""
     },
     {
       "category": "General",
       "question": "When did you finish your PUC?",
-      "answer": "I completed my Pre-University Course (PUC) from PES PU College (2022–2024).",
+      "answer": "I completed my Pre-University Course (PUC) from PUC Institution in Shivamogga, Karnataka (2022\u20132024).",
       "keywords": ""
     },
     {
       "category": "General",
       "question": "When did you finish your SSLC?",
-      "answer": "I completed my SSLC in April 2022 at Cambridge International Public School, Shivamogga.",
+      "answer": "I completed my SSLC in April 2022 at School in Shivamogga, Karnataka.",
       "keywords": ""
     },
     {
@@ -3218,19 +3234,19 @@
     {
       "category": "General",
       "question": "Are you involved in any volunteer work?",
-      "answer": "Yes, I'm an active NSS Volunteer and a YFS Volunteer (Mera Yuva Bharat) under the Ministry of Youth Affairs & Sports.",
+      "answer": "Yes, I'm an active community volunteer and a community volunteer (Mera Yuva Bharat) under the Ministry of Youth Affairs & Sports.",
       "keywords": ""
     },
     {
       "category": "General",
       "question": "What is your role in NSS?",
-      "answer": "As an NSS Volunteer (2025 – Present) with National Service Scheme · PESIAMS Shivamogga, KA, I actively participate in community service, literacy, hygiene awareness, environmental sustainability, and social awareness programs across the Shivamogga region, developing teamwork, discipline, and leadership skills.",
+      "answer": "As an community volunteer (2025 \u2013 Present) with Community Initiatives \u00b7 Shivamogga, Karnataka Shivamogga, KA, I actively participate in community service, literacy, hygiene awareness, environmental sustainability, and social awareness programs across the Shivamogga region, developing teamwork, discipline, and leadership skills.",
       "keywords": ""
     },
     {
       "category": "General",
       "question": "What is your role in YFS?",
-      "answer": "As a YFS Volunteer since 2024, I've engaged in youth-led civic initiatives and Viksit Bharat campaigns, and received a Certificate of Recognition from the Ministry of Youth Affairs & Sports.",
+      "answer": "As a community volunteer since 2024, I've engaged in youth-led civic initiatives and Viksit Bharat campaigns, and received a Certificate of Recognition from the Ministry of Youth Affairs & Sports.",
       "keywords": ""
     },
     {
@@ -3272,7 +3288,7 @@
     {
       "category": "General",
       "question": "Do you have social media or GitHub?",
-      "answer": "Yes — GitHub: github.com/SanjayGL-8123, SPVM 3 Tech Instagram: @spvm3techsolution, YouTube: @spvm3techsolution, and LinkedIn: SPVM 3 Tech Solution.",
+      "answer": "Yes \u2014 GitHub: github.com/SanjayGL-8123, SPVM 3 Tech Instagram: @spvm3techsolution, YouTube: @spvm3techsolution, and LinkedIn: SPVM 3 Tech Solution.",
       "keywords": "spvm3tech,instagram,youtube,linkedin"
     },
     {
@@ -3290,43 +3306,43 @@
     {
       "category": "General",
       "question": "Tell me about yourself",
-      "answer": "I'm Sanjay G. L., a Full Stack AI Developer and BCA student from Shivamogga, Karnataka, building intelligent web apps and AI systems.",
-      "keywords": "",
+      "answer": "I specialize in Full Stack Web Development, Frontend Engineering, and building AI\u2011integrated web applications. I actively use AI workflows in my daily development process and have hands\u2011on experience in database design and management. With 70+ certifications \u2014 including Microsoft and HackerRank credentials in CSS, JavaScript, Python, and SQL \u2014 I have completed corporate workshops, web development internships, and volunteer initiatives. I also run PureWeaves, a handmade saree accessories brand, blending entrepreneurship with modern e\u2011commerce technology.",
+      "keywords": "about,yourself,bio,profile",
       "answer_type": "short"
     },
     {
       "category": "General",
       "question": "Tell me about yourself",
-      "answer": "I'm Sanjay G. L., a BCA student (3rd year, 5th semester) at PES Institute of Advanced Management Studies, Shivamogga. I build intelligent web applications, AI systems, and data-driven platforms — bridging frontend design, machine learning, and secure backend APIs. I'm currently interning at Milano Infotech in the AI/ML/Python domain and I'm open to internships and professional opportunities.",
-      "keywords": "",
+      "answer": "I specialize in Full Stack Web Development, Frontend Engineering, and building AI\u2011integrated web applications. I actively use AI workflows in my daily development process and have hands\u2011on experience in database design and management. With 70+ certifications \u2014 including Microsoft and HackerRank credentials in CSS, JavaScript, Python, and SQL \u2014 I have completed corporate workshops, web development internships (Milano Infotech & Oasis Infobyte), and volunteer initiatives. I also run PureWeaves, a handmade saree accessories brand, blending entrepreneurship with modern e\u2011commerce technology.",
+      "keywords": "about,yourself,bio",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "Tell me about yourself",
-      "answer": "I'm Sanjay G. L., a dedicated BCA student at PES Institute of Advanced Management Studies, Shivamogga, currently in my 3rd year, 5th semester. I have a deep passion for frontend development, modern AI architectures, and building smart tech solutions that solve real-world problems. As a disciplined learner, I document AI workflows daily to optimize coding efficiency, and my interests span server management, database architecture using SQL and PL/SQL, and exploring cybersecurity fundamentals through Kali Linux. I've built 29+ projects, earned 87+ certificates, and am currently interning at Milano Infotech in AI, ML, and Python development. Outside the screen, I'm an active NSS and YFS volunteer, aquarium hobbyist, trekker, and history enthusiast — experiences that sharpen my teamwork, empathy, and problem-solving instincts.",
-      "keywords": "",
+      "answer": "I specialize in Full Stack Web Development, Frontend Engineering, and building AI\u2011integrated web applications. I actively use AI workflows in my daily development process and have hands\u2011on experience in database design and management. With 70+ certifications \u2014 including Microsoft and HackerRank credentials in CSS, JavaScript, Python, and SQL \u2014 I have completed corporate workshops, web development internships, and volunteer initiatives. I am a 3rd Year BCA student (2024\u20132027) at BCA Institution in Shivamogga, Karnataka, Shivamogga, currently interning at Milano Infotech in AI, ML, and Python development. I also run PureWeaves, a handmade saree accessories brand, blending entrepreneurship with modern e\u2011commerce technology.",
+      "keywords": "about,yourself,bio,long",
       "answer_type": "long"
     },
     {
       "category": "General",
       "question": "Who are you?",
-      "answer": "I'm Sanjay G. L., a Full Stack AI Developer and BCA student from Shivamogga, Karnataka, India.",
-      "keywords": "",
+      "answer": "I'm Sanjay G. L. I specialize in Full Stack Web Development, Frontend Engineering, and building AI\u2011integrated web applications. I also run PureWeaves, an artisanal saree accessories brand.",
+      "keywords": "who,identity",
       "answer_type": "short"
     },
     {
       "category": "General",
       "question": "Who are you?",
-      "answer": "I'm Sanjay G. L. — a BCA student pursuing my degree at PES IAMS, Shivamogga, and a full stack developer focused on AI, web apps, and data-driven platforms. I'm currently interning at Milano Infotech.",
-      "keywords": "",
+      "answer": "I specialize in Full Stack Web Development, Frontend Engineering, and building AI\u2011integrated web applications. I actively use AI workflows in my daily development process and have hands\u2011on experience in database design and management. With 70+ certifications, I have completed corporate workshops, web development internships at Milano Infotech, and run PureWeaves.",
+      "keywords": "who,identity",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "Who are you?",
-      "answer": "I'm Sanjay G. L., a BCA student in my 3rd year at PES Institute of Advanced Management Studies, Shivamogga. I specialize in building intelligent web applications, AI systems, and secure backend APIs, with 29+ projects and 87+ certificates to my name. I'm also an NSS/YFS volunteer, aquarium hobbyist, trekker, and history enthusiast, and I'm currently interning at Milano Infotech in AI, ML, and Python development while staying open to new opportunities.",
-      "keywords": "",
+      "answer": "I specialize in Full Stack Web Development, Frontend Engineering, and building AI\u2011integrated web applications. I actively use AI workflows in my daily development process and have hands\u2011on experience in database design and management. With 70+ certifications \u2014 including Microsoft and HackerRank credentials in CSS, JavaScript, Python, and SQL \u2014 I have completed corporate workshops, web development internships, and volunteer initiatives. I also run PureWeaves, a handmade saree accessories brand, blending entrepreneurship with modern e\u2011commerce technology.",
+      "keywords": "who,identity,long",
       "answer_type": "long"
     },
     {
@@ -3339,21 +3355,21 @@
     {
       "category": "General",
       "question": "What do you do?",
-      "answer": "I build full stack web applications, AI systems, and machine learning models — combining frontend design, Python/Flask backends, and cloud deployment. I'm also currently interning at Milano Infotech in the AI/ML domain.",
+      "answer": "I build full stack web applications, AI systems, and machine learning models \u2014 combining frontend design, Python/Flask backends, and cloud deployment. I'm also currently interning at Milano Infotech in the AI/ML domain.",
       "keywords": "",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "What do you do?",
-      "answer": "I design and build intelligent web applications, AI assistants, and data-driven platforms — spanning frontend design (React, HTML/CSS/JS), backend development (Python, Flask, FastAPI), databases (SQL/PL-SQL), and machine learning (Scikit-learn, TensorFlow/Keras). I've delivered 29+ projects including AI chatbots, dataset quality tools, and ML risk-prediction systems, and I'm currently applying these skills through an internship at Milano Infotech.",
+      "answer": "I design and build intelligent web applications, AI assistants, and data-driven platforms \u2014 spanning frontend design (React, HTML/CSS/JS), backend development (Python, Flask, FastAPI), databases (SQL/PL-SQL), and machine learning (Scikit-learn, TensorFlow/Keras). I've delivered 29+ projects including AI chatbots, dataset quality tools, and ML risk-prediction systems, and I'm currently applying these skills through an internship at Milano Infotech.",
       "keywords": "",
       "answer_type": "long"
     },
     {
       "category": "General",
       "question": "Give me a quick intro",
-      "answer": "Hi, I'm Sanjay G. L. — Full Stack AI Developer and BCA student from Shivamogga, Karnataka.",
+      "answer": "Hi, I'm Sanjay G. L. \u2014 Full Stack AI Developer and BCA student from Shivamogga, Karnataka.",
       "keywords": "",
       "answer_type": "short"
     },
@@ -3367,49 +3383,49 @@
     {
       "category": "General",
       "question": "Give me a quick intro",
-      "answer": "Hi, I'm Sanjay G. L., a BCA student at PES IAMS, Shivamogga, currently in my 3rd year. I'm passionate about full stack development and AI — I've built 29+ projects (including AI assistants, a dataset quality monitoring tool, and an ML-based accident risk predictor) and earned 87+ certificates along the way. I'm currently interning at Milano Infotech in AI/ML/Python, and beyond tech, I'm an NSS volunteer, trekker, and aquarium hobbyist.",
+      "answer": "Hi, I'm Sanjay G. L., a BCA student at Shivamogga, Karnataka, Shivamogga, currently in my 3rd year. I'm passionate about full stack development and AI \u2014 I've built 29+ projects (including AI assistants, a dataset quality monitoring tool, and an ML-based accident risk predictor) and earned 87+ certificates along the way. I'm currently interning at Milano Infotech in AI/ML/Python, and beyond tech, I'm an community volunteer, trekker, and aquarium hobbyist.",
       "keywords": "",
       "answer_type": "long"
     },
     {
       "category": "General",
       "question": "Introduce yourself",
-      "answer": "I'm Sanjay G. L. — a BCA student and Full Stack AI Developer from Shivamogga, Karnataka.",
+      "answer": "I'm Sanjay G. L. \u2014 a BCA student and Full Stack AI Developer from Shivamogga, Karnataka.",
       "keywords": "",
       "answer_type": "short"
     },
     {
       "category": "General",
       "question": "Introduce yourself",
-      "answer": "I'm Sanjay G. L., currently pursuing my BCA at PES Institute of Advanced Management Studies, Shivamogga. I focus on full stack development, AI systems, and machine learning, and I'm interning at Milano Infotech in the AI/ML/Python space.",
+      "answer": "I'm Sanjay G. L., currently pursuing my BCA at BCA Institution in Shivamogga, Karnataka, Shivamogga. I focus on full stack development, AI systems, and machine learning, and I'm interning at Milano Infotech in the AI/ML/Python space.",
       "keywords": "",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "Introduce yourself",
-      "answer": "I'm Sanjay G. L., a BCA student at PES IAMS, Shivamogga, in my 3rd year, 5th semester. I'm passionate about frontend development, AI architectures, and solving real-world problems with smart tech. I've built 29+ projects and earned 87+ certificates across web development, AI, and machine learning, and I'm currently gaining hands-on experience through an internship at Milano Infotech. Outside of tech, I volunteer with NSS and YFS, and enjoy trekking, aquarium keeping, and history.",
+      "answer": "I'm Sanjay G. L., a BCA student at Shivamogga, Karnataka, Shivamogga, in my 3rd year, 5th semester. I'm passionate about frontend development, AI architectures, and solving real-world problems with smart tech. I've built 29+ projects and earned 87+ certificates across web development, AI, and machine learning, and I'm currently gaining hands-on experience through an internship at Milano Infotech. Outside of tech, I volunteer with NSS and YFS, and enjoy trekking, aquarium keeping, and history.",
       "keywords": "",
       "answer_type": "long"
     },
     {
       "category": "General",
       "question": "Can you describe yourself?",
-      "answer": "Sure — I'm Sanjay G. L., a BCA student and aspiring Full Stack AI Engineer from Shivamogga.",
+      "answer": "Sure \u2014 I'm Sanjay G. L., a BCA student and aspiring Full Stack AI Engineer from Shivamogga.",
       "keywords": "",
       "answer_type": "short"
     },
     {
       "category": "General",
       "question": "Can you describe yourself?",
-      "answer": "I'd describe myself as a disciplined, curious learner — a BCA student who's passionate about AI, web development, and problem-solving. I document my AI workflows daily and I'm always exploring new tech, from cybersecurity to cloud deployment.",
+      "answer": "I'd describe myself as a disciplined, curious learner \u2014 a BCA student who's passionate about AI, web development, and problem-solving. I document my AI workflows daily and I'm always exploring new tech, from cybersecurity to cloud deployment.",
       "keywords": "",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "Can you describe yourself?",
-      "answer": "I'd describe myself as a disciplined and driven learner who documents AI workflows daily to sharpen coding efficiency. I'm currently a BCA student at PES IAMS, Shivamogga, with a strong interest in frontend development, modern AI architectures, server management, and database design using SQL/PL-SQL. Beyond academics, I'm an NSS and YFS volunteer, an aquarium hobbyist, a trekker, and a history enthusiast — all of which have shaped my teamwork, empathy, and problem-solving abilities.",
+      "answer": "I'd describe myself as a disciplined and driven learner who documents AI workflows daily to sharpen coding efficiency. I'm currently a BCA student at Shivamogga, Karnataka, Shivamogga, with a strong interest in frontend development, modern AI architectures, server management, and database design using SQL/PL-SQL. Beyond academics, I'm an technical volunteer work, an aquarium hobbyist, a trekker, and a history enthusiast \u2014 all of which have shaped my teamwork, empathy, and problem-solving abilities.",
       "keywords": "",
       "answer_type": "long"
     },
@@ -3423,14 +3439,14 @@
     {
       "category": "General",
       "question": "What's your background?",
-      "answer": "My background is in computer applications — I completed my schooling in Shivamogga, and I'm now in the 3rd year of my BCA at PES IAMS. Alongside my studies, I've built 29+ projects and interned at Milano Infotech in AI/ML.",
+      "answer": "My background is in computer applications \u2014 I completed my schooling in Shivamogga, and I'm now in the 3rd year of my BCA at Shivamogga, Karnataka. Alongside my studies, I've built 29+ projects and interned at Milano Infotech in AI/ML.",
       "keywords": "",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "What's your background?",
-      "answer": "I completed my SSLC at Cambridge International Public School and my PUC at PES PU College, both in Shivamogga. I'm now in the 3rd year of my BCA at PES Institute of Advanced Management Studies. Over this time, I've built a strong technical background across web development, Python, databases, and AI/ML, delivering 29+ projects and earning 87+ certificates. I've also gained practical experience through an internship at Milano Infotech and volunteer roles with NSS and YFS.",
+      "answer": "I completed my SSLC at School in Shivamogga, Karnataka and my PUC at PUC Institution in Shivamogga, Karnataka, both in Shivamogga. I'm now in the 3rd year of my BCA at BCA Institution in Shivamogga, Karnataka. Over this time, I've built a strong technical background across web development, Python, databases, and AI/ML, delivering 29+ projects and earning 87+ certificates. I've also gained practical experience through an internship at Milano Infotech and volunteer roles with NSS and YFS.",
       "keywords": "",
       "answer_type": "long"
     },
@@ -3451,7 +3467,7 @@
     {
       "category": "General",
       "question": "Why should we consider you?",
-      "answer": "I bring hands-on experience across the full stack — from frontend design and Python/Flask backends to machine learning models and cloud deployment — backed by 29+ completed projects and 87+ certificates. I'm a disciplined, fast learner who documents AI workflows daily to keep improving, and I'm currently applying these skills in a real internship at Milano Infotech in the AI/ML domain. Beyond technical ability, my volunteer work with NSS and YFS has strengthened my teamwork, leadership, and communication skills, which I bring into every project I work on.",
+      "answer": "I bring hands-on experience across the full stack \u2014 from frontend design and Python/Flask backends to machine learning models and cloud deployment \u2014 backed by 29+ completed projects and 87+ certificates. I'm a disciplined, fast learner who documents AI workflows daily to keep improving, and I'm currently applying these skills in a real internship at Milano Infotech in the AI/ML domain. Beyond technical ability, my volunteer work with NSS and YFS has strengthened my teamwork, leadership, and communication skills, which I bring into every project I work on.",
       "keywords": "",
       "answer_type": "long"
     },
@@ -3465,14 +3481,14 @@
     {
       "category": "General",
       "question": "What makes you unique?",
-      "answer": "What sets me apart is combining frontend, backend, database, and AI/ML skills into complete, deployed projects — not just theory. I document my AI workflows daily and I'm equally comfortable in cybersecurity labs, ML notebooks, and React codebases.",
+      "answer": "What sets me apart is combining frontend, backend, database, and AI/ML skills into complete, deployed projects \u2014 not just theory. I document my AI workflows daily and I'm equally comfortable in cybersecurity labs, ML notebooks, and React codebases.",
       "keywords": "",
       "answer_type": "medium"
     },
     {
       "category": "General",
       "question": "What makes you unique?",
-      "answer": "What makes me unique is the breadth of my hands-on experience — I don't just learn concepts, I ship complete projects that combine frontend design, secure backend APIs, database architecture, and machine learning. I've built AI assistants, dataset quality tools, and ML-based prediction systems, all while documenting my AI workflows daily to keep refining my process. On top of that, my volunteer work with NSS and YFS and my interests in trekking, history, and aquarium keeping give me a well-rounded perspective that shapes how I approach problems and work with people.",
+      "answer": "What makes me unique is the breadth of my hands-on experience \u2014 I don't just learn concepts, I ship complete projects that combine frontend design, secure backend APIs, database architecture, and machine learning. I've built AI assistants, dataset quality tools, and ML-based prediction systems, all while documenting my AI workflows daily to keep refining my process. On top of that, my volunteer work with NSS and YFS and my interests in trekking, history, and aquarium keeping give me a well-rounded perspective that shapes how I approach problems and work with people.",
       "keywords": "",
       "answer_type": "long"
     }
@@ -3487,10 +3503,10 @@
         "PathwayCompletionCertificate"
       ],
       "id": "https://academy.openai.com/certificate/198187379",
-      "name": "Pathway Completion Certificate — Apply AI at Work",
+      "name": "Pathway Completion Certificate \u2014 Apply AI at Work",
       "description": "Completed all three Apply AI at Work Pathway courses and passed each assessment with a score of 80% or higher.",
-      "image": "assets/openai-apply-ai-at-work.png",
-      "badge": "assets/openai-academy-badge.png",
+      "image": "assets/openai-apply-ai-at-work.webp",
+      "badge": "assets/openai-academy-badge.webp",
       "issuer": {
         "id": "https://academy.openai.com",
         "name": "OpenAI Academy"

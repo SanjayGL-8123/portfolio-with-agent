@@ -81,38 +81,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- 5. Custom Smooth Trailing Cursor ---------- */
-  const dot = document.querySelector('.cursor-dot');
-  const ring = document.querySelector('.cursor-ring');
-
-  if (dot && ring && window.matchMedia('(hover: hover)').matches) {
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
-    let ringX = mouseX;
-    let ringY = mouseY;
-
-    window.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      dot.style.left = mouseX + 'px';
-      dot.style.top = mouseY + 'px';
-    });
-
-    const renderCursor = () => {
-      ringX += (mouseX - ringX) * 0.18;
-      ringY += (mouseY - ringY) * 0.18;
-      ring.style.left = ringX + 'px';
-      ring.style.top = ringY + 'px';
-      requestAnimationFrame(renderCursor);
-    };
-    renderCursor();
-
-    const hoverTargets = 'a, button, .btn, .skill-card, .tool-card, .proj-card, .cert-card, .interest-card';
-    document.querySelectorAll(hoverTargets).forEach(el => {
-      el.addEventListener('mouseenter', () => ring.classList.add('active'));
-      el.addEventListener('mouseleave', () => ring.classList.remove('active'));
-    });
-  }
 
   /* ---------- 6. Ripple Effect on Buttons ---------- */
   document.querySelectorAll('.btn').forEach(btn => {
@@ -161,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'Full Stack Web Developer',
         'AI Workflow Engineer',
         'Python & Backend Developer',
-        'BCA Student @ PESIAMS',
+        'BCA Student (Shivamogga)',
         'Problem Solver & Builder'
       ],
       typeSpeed: 44,
@@ -301,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
   skillBars.forEach(el => animationObserver.observe(el));
 
   /* ---------- 12. Category Filter Buttons ---------- */
-  document.querySelectorAll('#projects .filter-row, #certificates .filter-row').forEach(row => {
+  document.querySelectorAll('#projects .filter-row, #certificates .filter-row, #skills .filter-row').forEach(row => {
     const scope = row.closest('section');
     const buttons = row.querySelectorAll('.filter-btn');
 
@@ -447,24 +415,24 @@ document.addEventListener('DOMContentLoaded', () => {
       answer: "I'm Sanjay G. L. — a BCA student, AI workflow engineer, and full-stack Python/web developer based in Shivamogga, Karnataka."
     },
     {
-      keys: ['education', 'college', 'degree', 'bca', 'university', 'study'],
-      answer: "Sanjay is pursuing his Bachelor of Computer Applications (BCA) at PES Institute of Advanced Management Studies (PESIAMS), Shivamogga (2024–2026, 3rd Year, 5th Sem)."
+      keys: ['education', 'college', 'degree', 'bca', 'university', 'study', 'studies', 'semester'],
+      answer: "Sanjay is pursuing his Bachelor of Computer Applications (BCA) in Shivamogga, Karnataka (2023–2027 · Currently in 5th Semester). Curriculum highlights: Software Engineering, Relational Database Management Systems, Data Structures, AI & ML, and Python."
     },
     {
       keys: ['internship', 'experience', 'work', 'job', 'milano', 'oasis'],
       answer: "Sanjay is currently an AI, ML & Python Developer Intern at Milano Infotech (Aug 2026 – Present), and previously completed an internship at Oasis Infobyte (AICTE OIB-SIP Star Performer, Mar 2026)."
     },
     {
-      keys: ['skills', 'tech', 'stack', 'languages', 'tools'],
-      answer: "Core skills: Python, JavaScript, HTML5/CSS3, Bootstrap, C, C++, Java, SQL, PostgreSQL, SQLite, Docker, Blockchain, Cyber Security, Git, VS Code, Cursor AI, Figma, and Vercel."
+      keys: ['skills', 'tech', 'stack', 'languages', 'tools', 'docker', 'kubernetes', 'electron', 'node'],
+      answer: "Core skills: Python, JavaScript, React, Node.js, Electron.js, HTML5/CSS3, SQL, MySQL, PostgreSQL, SQLite, Docker, Kubernetes, Cyber Security, Git, VS Code, Cursor AI, and Vercel."
     },
     {
       keys: ['projects', 'portfolio', 'built', 'work'],
-      answer: "Sanjay has built over 100 projects! Key highlights include PureWeaves (handloom saree e-commerce), Vinayaka Construction platform, GrabNotes (BCA notes hub), Vibe Chat (AI assistant), and AI agents using Google AI APIs."
+      answer: "Sanjay has built over 100 projects! Key highlights include InvoiceGuard, SentinelAI, PureWeaves, Placement Pro, Text-to-Image Studio, and Vibe Chat."
     },
     {
       keys: ['certificates', 'certification', 'openai', 'skill india'],
-      answer: "Sanjay holds 60+ verified certificates, including OpenAI Academy: Apply AI at Work, Skill India Cyber Security & Software Testing, Skill India Python & Full-Stack, and government CPR / Road Safety awards."
+      answer: "Sanjay holds 70+ verified certificates, including OpenAI Academy: Apply AI at Work, Skill India Cyber Security & Software Testing, Skill India Python & Full-Stack, and government CPR / Road Safety awards."
     },
     {
       keys: ['contact', 'email', 'phone', 'reach', 'hire'],
@@ -476,7 +444,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       keys: ['volunteer', 'community', 'blood', 'cpr'],
-      answer: "Sanjay actively gives back through voluntary blood donation camps, CPR Save a Life award programs, and national road safety initiatives."
+      answer: "Sanjay has participated in community voluntary blood donation camps, CPR Save a Life award programs, and national road safety initiatives."
     },
     {
       keys: ['hello', 'hi', 'hey', 'start'],
@@ -484,7 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  const FALLBACK_REPLY = "I'm here to help with information on Sanjay's education (PESIAMS), skills, internships (Milano Infotech & Oasis Infobyte), projects, or how to contact him. What would you like to know?";
+  const FALLBACK_REPLY = "I'm here to help with information on Sanjay's BCA education in Shivamogga, skills, internships (Milano Infotech & Oasis Infobyte), projects, or how to contact him. What would you like to know?";
 
   function getAnswer(query) {
     const text = query.toLowerCase();
@@ -500,23 +468,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!chatBody) return;
     const msg = document.createElement('div');
     msg.className = 'chat-msg ' + sender;
-    msg.textContent = text;
+    if (sender === 'bot') {
+      msg.innerHTML = text;
+    } else {
+      msg.textContent = text;
+    }
     chatBody.appendChild(msg);
     chatBody.scrollTop = chatBody.scrollHeight;
   }
 
   function initChatAssistant() {
     if (chatBody && chatBody.children.length === 0) {
-      appendChatMessage("Hi! 👋 I'm Sanjay's AI assistant. Ask me anything about his projects, internships at Milano Infotech, skills, or certifications.", 'bot');
+      appendChatMessage("Hey! 👋 Welcome to Sanjay GL's portfolio. I'm Sanjay AI, your personal guide. You can ask me about his skills, projects, internships, certifications, education, and career journey. What would you like to explore?", 'bot');
 
-      const suggestions = ['Education?', 'Internships?', 'Top Projects?', 'Skills?', 'Contact Info?'];
+      const suggestions = ['Who is Sanjay?', 'Internships?', 'Featured Projects?', 'Technical Skills?', 'Certifications?'];
       if (chatSuggest) {
         chatSuggest.innerHTML = suggestions.map(s => `<button type="button">${s}</button>`).join('');
         chatSuggest.querySelectorAll('button').forEach(btn => {
           btn.addEventListener('click', () => {
             const q = btn.textContent;
             appendChatMessage(q, 'user');
-            setTimeout(() => appendChatMessage(getAnswer(q), 'bot'), 300);
+            sendUserChatMessageWithQuery(q);
           });
         });
       }
@@ -534,17 +506,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function sendUserChatMessage() {
+  async function sendUserChatMessageWithQuery(val) {
+    if (!val) return;
+    const typingIndicator = document.createElement('div');
+    typingIndicator.className = 'chat-msg bot';
+    typingIndicator.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Thinking...';
+    chatBody.appendChild(typingIndicator);
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    try {
+      const response = await fetch('/api/agent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: val })
+      });
+      const data = await response.json();
+      typingIndicator.remove();
+      if (response.ok && data.reply) {
+        appendChatMessage(data.reply, 'bot');
+      } else {
+        appendChatMessage(getAnswer(val), 'bot');
+      }
+    } catch (err) {
+      typingIndicator.remove();
+      appendChatMessage(getAnswer(val), 'bot');
+    }
+  }
+
+  async function sendUserChatMessage() {
     if (!chatInput) return;
     const val = chatInput.value.trim();
     if (!val) return;
     appendChatMessage(val, 'user');
     chatInput.value = '';
-
-    // Simulate smart thinking delay
-    setTimeout(() => {
-      appendChatMessage(getAnswer(val), 'bot');
-    }, 320);
+    sendUserChatMessageWithQuery(val);
   }
 
   if (chatSend) {

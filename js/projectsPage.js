@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const visibleCountEl = document.getElementById('visibleCount');
   const paginationContainer = document.getElementById('paginationControls');
 
-  const PAGE_SIZE = 12;
+  const PAGE_SIZE = 100;
   let currentPage = 1;
 
   // Categories list per requirements (Part 7, Item 36)

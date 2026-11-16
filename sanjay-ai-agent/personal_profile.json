@@ -1,0 +1,32 @@
+{
+  "full_name": "Sanjay G. L.",
+  "preferred_name": "Sanjay",
+  "professional_title": "Full-Stack Developer & AI Workflow Engineer",
+  "identity": [
+    "BCA Student",
+    "Full-Stack Developer",
+    "AI and ML Developer",
+    "Python Developer",
+    "Technology Enthusiast"
+  ],
+  "location": "Shivamogga, Karnataka, India",
+  "country": "India",
+  "portfolio": "https://sanjaygl.vercel.app/",
+  "github": "https://github.com/SanjayGL-8123",
+  "github_alt": "https://github.com/sanjayGL2006",
+  "linkedin": "https://www.linkedin.com/in/sanjay-gl-b86631336/",
+  "languages": ["Kannada", "English", "Tamil"],
+  "email": "Use the contact information displayed on the portfolio",
+  "availability": [
+    "Internships",
+    "Freelance opportunities",
+    "Part-time opportunities",
+    "Project collaborations"
+  ],
+  "about_me": {
+    "introduction": "I am Sanjay G. L., a 3rd-year BCA student (5th semester) based in Shivamogga, Karnataka. I am passionate about full-stack development, artificial intelligence, machine learning, Python programming, cybersecurity, and building practical software solutions.",
+    "description": "I enjoy developing modern web applications, intelligent AI agents, automation workflows, machine learning applications, and user-friendly digital products. I combine academic learning with practical development and internship experience.",
+    "career_goal": "To become a skilled Full-Stack and AI Workflow Engineer capable of architecting scalable digital products that deliver real-world value.",
+    "philosophy": "Learn continuously, think creatively, solve real problems, and build meaningful technology."
+  }
+}

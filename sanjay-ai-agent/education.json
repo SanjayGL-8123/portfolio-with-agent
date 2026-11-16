@@ -1,0 +1,31 @@
+{
+  "degree": "Bachelor of Computer Applications (BCA)",
+  "institution": "BCA Student, Shivamogga, Karnataka, India",
+  "location": "Shivamogga, Karnataka, India",
+  "academic_year": "2023-2027",
+  "current_year": "3rd Year",
+  "current_semester": "5th Semester",
+  "previous_education": [
+    {
+      "qualification": "SSLC",
+      "completion_year": 2022,
+      "location": "Shivamogga, Karnataka"
+    },
+    {
+      "qualification": "PUC",
+      "completion_year": 2024,
+      "location": "Shivamogga, Karnataka"
+    }
+  ],
+  "academic_interests": [
+    "Software Engineering",
+    "Database Management Systems (DBMS)",
+    "Data Structures & Algorithms",
+    "Computer Networks",
+    "PHP & MySQL",
+    "AI & ML",
+    "Cyber Security",
+    "Data Mining",
+    "Python Programming"
+  ]
+}

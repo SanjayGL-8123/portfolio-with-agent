@@ -389,63 +389,233 @@ def forward_contact_email(name, email, subject, message, phone=""):
 
 # Predefined fallback rules
 KNOWLEDGE_BASE = {
-    "intro": "I am Sanjay G L, a Computer Applications student at PES Institute of Advanced Management Studies (affiliated with Kuvempu University) in Shivamogga. I am a passionate full-stack web developer and cybersecurity enthusiast with hands-on experience building production web platforms, AI/ML tools, and secure network architectures.",
-    "education": "I am pursuing a Bachelor of Computer Applications (BCA) degree at PES Institute of Advanced Management Studies, Shivamogga, under Kuvempu University, focusing on core computer science subjects, software engineering, databases, and network security.",
-    "skills": "My primary technical stack covers full-stack web development (HTML, CSS, JavaScript, PHP, Python, Node.js, Express.js, FastAPI, MySQL, PostgreSQL, SQLite), containerization and virtualization (Docker, VirtualBox), and security tools (Kali Linux, Wireshark, Nmap, Nikto). I also build machine learning pipelines using OpenCV and YOLOv8.",
-    "placement_pro_project": "I engineered Placement Pro, a comprehensive full-stack placement portal for PESIAMS. It streamlines recruitment workflows by managing student directories, company drives, automated data ingestion, and placement report generation using a FastAPI backend and modern database schemas.",
-    "projects": "I built Pure Weaves, a full-stack e-commerce platform for an authentic saree enterprise featuring dynamic catalog browsing and WhatsApp API checkout flows. I also built GrabNotes, an academic resource-sharing dashboard, and created the landing page and registration system for the HACK4 SHIVAMOGGA hackathon.",
-    "experience": "Yes. I completed a Cybersecurity Internship with Oasis Infobyte focusing on vulnerability assessments and secure programming, as well as an Artificial Intelligence & Machine Learning Internship with Milano Info Tech where I built computer vision pipelines and model evaluation scripts.",
-    "cybersecurity": "I actively practice network traffic analysis, port scanning, and vulnerability detection using tools like Wireshark, Nmap, and Nikto on Kali Linux environments. I focus on web application security best practices, secure API routing, and defensive configuration.",
-    "ai": "I implement computer vision and deep learning pipelines with OpenCV and YOLOv8 for object recognition tasks, optimize system logic using LLM APIs, and design retrieval-augmented generation (RAG) agent architectures for intelligent information retrieval.",
-    "leadership": "I organized technical event assets including registration workflows for the HACK4 SHIVAMOGGA hackathon, participated in the PES Institute Green IT Competition promoting sustainable computing, and create educational tech content via code_catalyst_collective.",
-    "strengths": "I combine strong problem-solving initiative with rapid full-stack execution. Whether structuring database schemas, hardening API endpoints, or deploying scalable cloud containers, I prioritize clean architecture, security, and measurable user utility.",
-    "hobbies": "Outside of programming, I enjoy trekking, cycling, walking, exploring historical architecture and travel destinations, and maintaining freshwater aquarium setups.",
-    "career goals": "My goal is to work as a Software Development Engineer or Security Analyst where I can design robust, high-performance web systems, integrate intelligent AI automations, and safeguard digital infrastructure.",
-    "who are you": "I am Sanjay's personal AI Portfolio Assistant! I can answer questions about Sanjay G. L.'s skills, projects, certificates, and background.",
-    "tell me about yourself": "Sanjay G. L. is a BCA student at PES Institute of Advanced Management Studies, Shivamogga, Karnataka. He is a Full Stack Developer, AI/ML Intern at Milano Infotech, and NSS Volunteer who builds scalable React web applications and AI tools.",
-    "skills": "Sanjay's skills: HTML5/CSS3, JavaScript (ES6+), React.js, TypeScript, Python (Flask/FastAPI), SQL, SQLite, MySQL, Git & GitHub, AI Productivity Tools, Lovable AI, Base44, TryHackMe Labs, Bash Scripting, Docker, and C/C++.",
-    "programming languages": "Sanjay works with C, C++, Java, Python, JavaScript, TypeScript, Bash Scripting, SQL, PL/SQL, and MySQL.",
-    "future goals": "Sanjay aims to excel as a Senior Full Stack Engineer & AI Developer, focusing on React, Full-Stack Architecture, Machine Learning, Agentic AI, Cyber Security (TryHackMe), and System Design.",
-    "technologies": "Sanjay's tech stack includes React, HTML5, CSS3, JavaScript, TypeScript, Python, Flask, FastAPI, Bash, C/C++, Java, SQL, MySQL, Lovable AI, Base44, TryHackMe, Git, GitHub, VS Code, Google AI Studio, Figma, Replit, Antigravity, and AI Productivity tools.",
+    "intro": "I am Sanjay G L, a BCA student (3rd year, 5th semester) based in Shivamogga, Karnataka, India. I am a passionate full-stack developer, Python developer, and AI workflow engineer who builds production web platforms and AI tools.",
+    "education": "I am pursuing a Bachelor of Computer Applications (BCA) degree (2023–2027 · Currently in 5th Semester) in Shivamogga, Karnataka, focusing on core subjects: Software Engineering, DBMS, Data Structures & Algorithms, Computer Networks, PHP & MySQL, AI & ML, Cyber Security, and Python.",
+    "skills": "My primary technical stack covers full-stack web development (HTML5, CSS3, JavaScript ES6+, React, Node.js, Electron.js, PHP, Python, Flask, FastAPI, MySQL, PostgreSQL, SQLite), DevOps & Cloud (Docker, Kubernetes, Git, Vercel, Netlify), AI & ML pipelines (TensorFlow, Scikit-learn, YOLOv8, OpenCV), and security tooling (Kali Linux, Wireshark, Nmap).",
+    "placement_pro_project": "I engineered Placement Pro, a comprehensive full-stack placement portal that streamlines recruitment workflows, student directories, company drives, automated data ingestion, and placement report generation using a FastAPI backend and modern database schemas.",
+    "invoiceguard": "InvoiceGuard is an AI-powered invoice anomaly and fraud detector built for hackathon fraud mitigation using Scikit-learn, Pandas, and Flask REST APIs.",
+    "sentinelai": "SentinelAI is a cyber threat early-warning intelligence system that placed 6th–7th in a state-level hackathon, featuring multi-agent security threat scanning.",
+    "meluha_ai": "Meluha AI is Sanjay's flagship ambition to architect a sovereign Indian AI model trained from scratch without external API keys, alongside a scalable Public API platform.",
+    "projects": "I built InvoiceGuard, SentinelAI, PureWeaves (handcrafted saree e-commerce with WhatsApp API checkout), Placement Pro, QR Code Studio (150+ designs), Notes Management System, and Video Conferencing App.",
+    "experience": "Yes. I completed a Web Development Internship with Oasis Infobyte (Star Performer, AICTE OIB-SIP, Feb–Mar 2026), and I am currently working as an AI, ML & Python Developer Intern at Milano Infotech in Shivamogga (offline, Aug 2026 – Present).",
+    "cybersecurity": "I practice vulnerability assessments, secure API routing, and security scanning with Kali Linux, Wireshark, and Nmap, with a strong focus on defensive application architecture.",
+    "ai": "I implement computer vision and deep learning pipelines with OpenCV and YOLOv8, optimize workflows with Gemini API and OpenAI pathways, and design autonomous AI agent architectures.",
+    "leadership": "I build technical event platforms, share developer guides on GitHub, and organize educational tech content.",
+    "strengths": "I combine rapid full-stack execution with disciplined architecture, clean database design, and real problem-solving drive.",
+    "hobbies": "Outside of programming, I enjoy gaming, music, photography, travel, fitness, and maintaining freshwater aquariums.",
+    "career goals": "My goal is to excel as a Senior Full Stack Engineer & AI Workflow Engineer, architecting scalable digital products that deliver real user and enterprise value.",
+    "who are you": "I am Sanjay G. L.'s personal AI Portfolio Assistant. Sanjay specializes in Full Stack Web Development, Frontend Engineering, and building AI‑integrated web applications with 70+ certifications.",
+    "tell me about yourself": "I specialize in Full Stack Web Development, Frontend Engineering, and building AI‑integrated web applications. I actively use AI workflows in my daily development process and have hands‑on experience in database design and management. With 70+ certifications — including Microsoft and HackerRank credentials in CSS, JavaScript, Python, and SQL — I have completed corporate workshops, web development internships, and volunteer initiatives. I also run PureWeaves, a handmade saree accessories brand, blending entrepreneurship with modern e‑commerce technology.",
+    "pureweaves": "PureWeaves is a handmade saree accessories brand founded by Sanjay, blending entrepreneurship with modern e-commerce technology.",
+    "skills": "Sanjay's skills: Python, JavaScript (ES6+), React.js, Node.js, Electron.js, Flask, FastAPI, PHP, HTML5, CSS3, Bootstrap, SQL, MySQL, PostgreSQL, SQLite, C, C++, Java, Docker, Kubernetes, AI/ML, and Cyber Security.",
+    "programming languages": "Sanjay works with Python, JavaScript ES6+, C, C++, Java, PHP, and SQL.",
+    "future goals": "Sanjay aims to build scalable full-stack products, deploy native AI models like Meluha AI, and launch a Public API platform.",
+    "technologies": "Sanjay's tech stack includes Python, Flask, FastAPI, React, Node.js, Electron.js, JavaScript, HTML5, CSS3, SQL, MySQL, PostgreSQL, SQLite, Docker, Kubernetes, OpenCV, YOLOv8, Git, GitHub, VS Code, Cursor AI, Antigravity, and Vercel.",
     "freelance": "Yes! Sanjay is open to freelance web development, AI workflow integration, and software projects, as well as full-time internships.",
-    "spvm3tech": "SPVM 3 Tech Solution is a modern tech ecosystem dedicated to building web application operations and teaching core programming languages (Python, JavaScript, C/C++, Java, SQL). Official channels: Instagram (@spvm3techsolution), YouTube (@spvm3techsolution), and LinkedIn (SPVM 3 Tech Solution).",
-    "contact": "You can contact Sanjay directly via email at sanjaygl2006@gmail.com, phone at +91 81239 81877, or connect on Instagram (@spvm3techsolution), YouTube (@spvm3techsolution), and LinkedIn (spvm3-tech-solution).",
-    "from": "Sanjay is from Shivamogga, Karnataka, India.",
-    "why hire": "Sanjay brings strong problem-solving skills, hands-on experience in React & full-stack web and AI development, 222+ certifications, a passion for clean code, and a proven track record of building production-ready projects."
+    "contact": "You can contact Sanjay directly via email at sanjaygl3006@gmail.com, call/WhatsApp at +91 81232 40049, or use the interactive Contact Form on this site.",
+    "from": "Sanjay is from Shivamogga (Shimoga), Karnataka, India.",
+    "why hire": "Sanjay brings strong problem-solving skills, hands-on experience in full-stack web and AI development, 70+ certifications, a passion for clean code, and a proven track record of shipping production-ready software."
 }
 
-def get_fallback_reply(message, proj_count, cert_count):
-    msg = message.lower()
+# ----------------- DYNAMIC KNOWLEDGE & LLM AGENT ENGINE -----------------
+_agent_knowledge_cache = None
+
+def load_trained_knowledge():
+    """
+    Automatically trains and indexes portfolio data from knowledge.json,
+    identity.json, and projects catalog for the AI Chatbot.
+    """
+    global _agent_knowledge_cache
+    if _agent_knowledge_cache is not None:
+        return _agent_knowledge_cache
+
+    base_path = os.path.dirname(os.path.abspath(__file__))
+    qna = []
+
+    # 1. Primary Knowledge Base (Q&A Pairs)
+    k_path = os.path.join(base_path, 'knowledge.json')
+    if os.path.exists(k_path):
+        try:
+            with open(k_path, 'r', encoding='utf-8') as f:
+                k_data = json.load(f)
+                all_qna = k_data.get('interview_qna', []) + k_data.get('extended_qna', [])
+                for pair in all_qna:
+                    q = pair.get('question', '').strip()
+                    a = pair.get('answer', '').strip()
+                    if q and a:
+                        tokens = [w.lower() for w in re.findall(r'\b[a-zA-Z0-9_]{3,}\b', q)]
+                        qna.append({'tokens': tokens, 'question': q, 'answer': a})
+        except Exception as e:
+            print(f"Error indexing knowledge.json: {e}")
+
+    # 2. Verified Identity & Bio
+    ident_path = os.path.join(base_path, 'data', 'identity.json')
+    if os.path.exists(ident_path):
+        try:
+            with open(ident_path, 'r', encoding='utf-8') as f:
+                ident = json.load(f)
+                # Education intent
+                qna.append({
+                    'tokens': ['education', 'college', 'bca', 'degree', 'semester', 'study', 'studies'],
+                    'question': "What is Sanjay's education?",
+                    'answer': "Sanjay is pursuing a Bachelor of Computer Applications (BCA) (2024–2027 · 3rd Year, 5th Semester) based in Shivamogga, Karnataka, India. Key coursework includes Software Engineering, Relational Database Management Systems, Data Structures & Algorithms, Computer Networks, and Python."
+                })
+                # Internship intent
+                qna.append({
+                    'tokens': ['internship', 'experience', 'milano', 'oasis', 'work', 'job', 'company', 'role'],
+                    'question': "Where has Sanjay worked or interned?",
+                    'answer': "Sanjay is currently an AI, ML & Python Developer Intern at Milano Infotech (Aug 2026 – Present), developing smart AI agents, machine learning workflows, and full-stack Python platforms. He also completed a Web Development Internship at Oasis Infobyte (AICTE OIB-SIP Star Performer, Mar 2026)."
+                })
+                # Bio & Contact intent
+                qna.append({
+                    'tokens': ['contact', 'email', 'phone', 'hire', 'reach', 'connect', 'call'],
+                    'question': "How can I contact Sanjay?",
+                    'answer': "You can reach Sanjay directly at <a href='mailto:sanjaygl3006@gmail.com'>sanjaygl3006@gmail.com</a>, call/WhatsApp +91 81232 40049, or use the interactive Contact Form on this site."
+                })
+                qna.append({
+                    'tokens': ['who', 'sanjay', 'about', 'introduce', 'profile', 'name', 'specialize', 'yourself', 'pureweaves'],
+                    'question': "Who is Sanjay G. L.?",
+                    'answer': "I specialize in Full Stack Web Development, Frontend Engineering, and building AI‑integrated web applications. I actively use AI workflows in my daily development process and have hands‑on experience in database design and management. With 70+ certifications — including Microsoft and HackerRank credentials in CSS, JavaScript, Python, and SQL — I have completed corporate workshops, web development internships, and volunteer initiatives. I also run PureWeaves, a handmade saree accessories brand, blending entrepreneurship with modern e‑commerce technology."
+                })
+        except Exception as e:
+            print(f"Error indexing identity.json: {e}")
+
+    _agent_knowledge_cache = qna
+    return qna
+
+def get_fallback_reply(message, proj_count=100, cert_count=70):
+    msg = message.lower().strip()
+    qna = load_trained_knowledge()
+
+    # 1. Direct Intent Priority Matches
+    if any(k in msg for k in ['education', 'college', 'bca', 'degree', 'semester', 'study', 'studies', 'school', 'sslc', 'puc']):
+        return (
+            "Sanjay is pursuing his <strong>Bachelor of Computer Applications (BCA)</strong> "
+            "(<strong>2024–2027 · 3rd Year, 5th Semester</strong>), based in <strong>Shivamogga, Karnataka, India</strong>.<br>"
+            "Curriculum highlights: Software Engineering, Relational Database Management Systems (RDBMS), Data Structures &amp; Algorithms, Computer Networks, AI &amp; ML, and Python."
+        )
+
+    if any(k in msg for k in ['intern', 'internship', 'experience', 'milano', 'oasis', 'work experience', 'company', 'job']):
+        return (
+            "Sanjay is currently working as an <strong>AI, ML &amp; Python Developer Intern at Milano Infotech</strong> "
+            "(Aug 2026 – Present), developing smart AI agents, machine learning workflows, and full-stack Python platforms.<br>"
+            "He also completed a Web Development Internship at <strong>Oasis Infobyte</strong> (AICTE OIB-SIP Star Performer, Mar 2026)."
+        )
+
+    if any(k in msg for k in ['contact', 'email', 'phone', 'reach', 'hire', 'call', 'whatsapp']):
+        return (
+            "You can contact Sanjay directly via email at "
+            "<a href='mailto:sanjaygl3006@gmail.com'>sanjaygl3006@gmail.com</a>, "
+            "call/WhatsApp <strong>+91 81232 40049</strong>, or use the Contact Form on this site!"
+        )
+
+    if any(k in msg for k in ['who are you', 'who is sanjay', 'about sanjay', 'introduce', 'profile', 'tell me about yourself', 'specialize', 'specialise']):
+        return (
+            "I specialize in <strong>Full Stack Web Development</strong>, <strong>Frontend Engineering</strong>, "
+            "and building <strong>AI‑integrated web applications</strong>. I actively use AI workflows in my daily "
+            "development process and have hands‑on experience in database design and management.<br><br>"
+            "With <strong>70+ certifications</strong> — including Microsoft and HackerRank credentials in CSS, JavaScript, Python, "
+            "and SQL — I have completed corporate workshops, web development internships, and volunteer initiatives.<br><br>"
+            "I also run <strong>PureWeaves</strong>, a handmade saree accessories brand, blending entrepreneurship with modern e‑commerce technology."
+        )
+
+    if "invoiceguard" in msg or "invoice guard" in msg or "fraud" in msg:
+        return (
+            "<strong>InvoiceGuard</strong>: An AI-powered invoice anomaly &amp; fraud detector engineered by Sanjay for hackathon fraud mitigation. "
+            "It combines machine learning pipelines (Scikit-learn, Pandas) and Flask REST APIs to detect anomalous line items, duplicate claims, vendor tax mismatches, and synthetic invoice manipulation."
+        )
+
+    if "sentinel" in msg or "cyber threat" in msg:
+        return (
+            "<strong>SentinelAI</strong>: A cyber threat early-warning intelligence platform engineered by Sanjay that placed 6th–7th in a state-level hackathon. "
+            "It features multi-agent security threat scanning, CVE mappings, and real-time vulnerability detection."
+        )
+
+    if "meluha" in msg:
+        return (
+            "<strong>Meluha AI</strong>: Sanjay's flagship long-term ambition to architect a native Indian AI platform trained from scratch "
+            "without external commercial API dependencies, alongside a scalable open Public API platform."
+        )
+
+    if "placement pro" in msg or "placement" in msg:
+        return (
+            "<strong>Placement Pro</strong>: A comprehensive full-stack academic placement portal and drive workflow engine built with FastAPI, Python, and modern relational database schemas. "
+            "It manages student directories, company drives, automated data ingestion, and placement report generation."
+        )
+
+    if "pureweaves" in msg or "pure weaves" in msg or "saree" in msg:
+        return (
+            "<strong>PureWeaves</strong>: Sanjay's artisanal handmade saree accessories and textile storefront. "
+            "It blends entrepreneurship with modern web technology, featuring an interactive product catalog, direct WhatsApp checkout pipeline, and a MySQL backend."
+        )
+
+    # 2. Deep Technical Topics
     if "cnn" in msg or "convolutional" in msg or "deep learning" in msg:
         return (
             "<strong>Convolutional Neural Network (CNN) Deep Learning Architecture</strong>:<br>"
-            "CNNs are multi-layer neural networks designed for grid-structured data like images. Core pipeline:<br>"
-            "1. <strong>Input Layer</strong>: Accepts raw pixel matrices (e.g. 224×224×3 RGB).<br>"
-            "2. <strong>Convolutional Layers</strong>: Applies learned sliding kernels/filters to extract spatial feature maps (edges, textures, shapes).<br>"
+            "CNNs are multi-layer neural networks designed for spatial grid data (images):<br>"
+            "1. <strong>Input Layer</strong>: Accepts raw matrices (e.g. 224×224×3 RGB).<br>"
+            "2. <strong>Convolutional Layers</strong>: Applies learned sliding kernels to extract spatial feature maps.<br>"
             "3. <strong>Activation (ReLU)</strong>: Introduces non-linearity max(0, x).<br>"
-            "4. <strong>Pooling Layers (Max Pooling)</strong>: Downsamples feature maps to reduce spatial dimension and computation.<br>"
-            "5. <strong>Fully Connected (Dense) & Softmax</strong>: Flattens features to output classification probabilities.<br>"
-            "Sanjay applied CNN models in <strong>DermAI</strong> (94% lesion screening accuracy), <strong>Traffic & Vehicle Detection (YOLOv8)</strong>, and <strong>Indian Traffic Sign Classifier</strong>!"
+            "4. <strong>Pooling Layers (Max Pooling)</strong>: Downsamples feature maps to reduce dimensions.<br>"
+            "5. <strong>Dense / Softmax</strong>: Outputs classification probabilities.<br>"
+            "Sanjay applied CNNs in <strong>DermAI</strong> (94% lesion screening accuracy) and vehicle detection pipelines."
         )
+
     if "rag" in msg or "retrieval augmented" in msg:
-        return "<strong>Retrieval-Augmented Generation (RAG)</strong> combines vector database retrieval (FAISS, PostgreSQL pgvector) with Large Language Models (LLMs) to ground responses in verified external documents, eliminating hallucinations without retraining model weights."
-    if "agent" in msg or "ai agent" in msg:
-        return "An <strong>AI Agent</strong> perceives its environment, formulates multi-step plans, calls dynamic tools (APIs, calculators, SQL DBs), observes results, and iterates autonomously toward a user-defined goal."
+        return "<strong>Retrieval-Augmented Generation (RAG)</strong> combines vector database retrieval (FAISS, PostgreSQL pgvector) with Large Language Models (LLMs) to ground responses in verified external documents, eliminating hallucinations without retraining weights."
+
     if "oop" in msg or "object oriented" in msg:
-        return "<strong>OOP (Object-Oriented Programming)</strong> organizes software around Objects and Classes. Four core pillars: <strong>Encapsulation</strong> (data hiding), <strong>Abstraction</strong> (hiding implementation complexity), <strong>Inheritance</strong> (reusing parent class traits), and <strong>Polymorphism</strong> (overriding/overloading methods)."
+        return "<strong>OOP (Object-Oriented Programming)</strong> organizes code around Objects and Classes: <strong>Encapsulation</strong> (data hiding), <strong>Abstraction</strong> (reducing complexity), <strong>Inheritance</strong> (reusing parent traits), and <strong>Polymorphism</strong> (overriding/overloading)."
+
     if "sql injection" in msg or "sqli" in msg:
         return "<strong>SQL Injection (SQLi)</strong> occurs when untrusted user input is concatenated directly into SQL query strings. Prevented using <strong>Parameterized Queries / Prepared Statements</strong>, input validation, and principle of least privilege."
+
     if "xss" in msg or "cross site scripting" in msg:
         return "<strong>Cross-Site Scripting (XSS)</strong> allows attackers to inject malicious scripts into trusted websites. Prevented via HTML output encoding, Content Security Policy (CSP), and avoiding unescaped innerHTML insertion."
+
+    if "kubernetes" in msg or "k8s" in msg or "cubernative" in msg:
+        return "Sanjay works with <strong>Kubernetes</strong> for container orchestration, cluster scheduling, YAML manifests, and scalable cloud deployments, integrated into projects such as Text-to-Image Studio."
+
+    if "docker" in msg or "container" in msg:
+        return "Sanjay has intermediate hands-on experience with <strong>Docker</strong>, crafting Dockerfiles, Docker Compose multi-container workflows, and containerized microservices."
+
+    if "electron" in msg:
+        return "Sanjay develops cross-platform desktop applications using <strong>Electron.js</strong>, integrating local file pipelines and native OS capabilities, such as in his Disk Recovery & Forensics Suite."
+
+    if "node" in msg:
+        return "Sanjay uses <strong>Node.js</strong> and Express for asynchronous server-side runtimes, npm ecosystem tooling, and high-performance RESTful microservices."
+
+    # 3. Dynamic Relevance Matcher Across Indexed Q&A
+    best_item = None
+    best_score = 0
+    msg_tokens = re.findall(r'\b[a-zA-Z0-9_]{3,}\b', msg)
+
+    for item in qna:
+        score = 0
+        for token in item['tokens']:
+            if token in msg:
+                score += 3 if len(token) > 4 else 2
+        for mt in msg_tokens:
+            if mt in item['tokens']:
+                score += 2
+        if score > best_score:
+            best_score = score
+            best_item = item
+
+    if best_item and best_score >= 4:
+        return best_item['answer']
+
     if "project" in msg or "built" in msg:
-        return f"Sanjay has built exactly {proj_count} cataloged projects across AI/ML, Enterprise Systems, Web Apps, Tools, Games, and Portfolios. Explore them on the <a href='projects.html' style='color:var(--emerald-primary)'>Projects Page</a>!"
+        return f"Sanjay has built over {proj_count} cataloged projects across AI/ML, Enterprise Systems, Web Apps, and Tools. Explore them on the <a href='projects.html'>Projects Showcase</a>!"
+
     if "certif" in msg:
-        return f"Sanjay has earned exactly {cert_count} verified certificates across Microsoft, SAP, Google Developers, HackerRank, Simplilearn, and Infosys."
-    if "skills" in msg or "know" in msg or "tool" in msg:
-        return "Sanjay's core technical stack: React, JavaScript, HTML5/CSS3, Python (Flask/FastAPI), SQL, MySQL, SQLite, Docker, Git/GitHub, Cybersecurity (TryHackMe), and AI/ML (Agentic AI, CNN, TensorFlow, Scikit-learn)."
-    if "contact" in msg or "email" in msg or "phone" in msg:
-        return "Contact Sanjay directly via email at <a href='mailto:sanjaygl2006@gmail.com' style='color:var(--emerald-primary)'>sanjaygl2006@gmail.com</a> or phone at +91 81239 81877."
-    return "I am Sanjay AIOS v2.5. You can ask me any question about Sanjay's portfolio, background, or technical interview questions across Python, AI/ML, CNN, Full-Stack, Cybersecurity, and SQL!"
+        return f"Sanjay has earned {cert_count}+ verified certificates, including OpenAI Academy (Apply AI at Work), Skill India (Cyber Security & Full-Stack), and government civic honors."
+
+    if "skill" in msg or "stack" in msg or "tool" in msg:
+        return "Sanjay's core technical stack includes Python, JavaScript, React, Node.js, Electron.js, HTML5/CSS3, SQL (MySQL, PostgreSQL, SQLite), Docker, Kubernetes, Git/GitHub, Cursor AI, and AI agent frameworks."
+
+    return "I am Sanjay AI Assistant v3.0, automatically trained on Sanjay's portfolio knowledge. You can ask me anything about his BCA education (2023–2027 · 5th Sem) in Shivamogga, internships at Milano Infotech & Oasis Infobyte, 100+ projects (InvoiceGuard, SentinelAI, PureWeaves, Placement Pro, Meluha AI), or technical topics like Python, Docker, Kubernetes, Electron.js, Node.js, and Cyber Security!"
 
 # ----------------- FLASK ROUTING -----------------
 # is_safe_path is defined at module top (line 25)
@@ -805,10 +975,10 @@ def get_stats():
 @app.route("/api/about", methods=["GET"])
 def get_about():
     try:
-        proj_count = Project.query.count() or 28
+        proj_count = Project.query.count() or 100
     except Exception:
-        proj_count = 28
-    cert_count = 88
+        proj_count = 100
+    cert_count = 70
 
     return jsonify({
         "name": "Sanjay G. L.",
@@ -817,9 +987,9 @@ def get_about():
         "email": "sanjaygl2006@gmail.com",
         "phone": "+91 81239 81877",
         "skills": [
-            "HTML5", "CSS3", "JavaScript", "React", "TypeScript", "Python", "SQL", "SQLite", "MySQL",
+            "HTML5", "CSS3", "JavaScript", "React", "Node.js", "Electron.js", "Python", "SQL", "SQLite", "MySQL",
             "Artificial Intelligence", "Machine Learning", "FastAPI", "Flask",
-            "Git", "GitHub", "VS Code", "Cursor AI", "Postman", "Docker", "Kali Linux", "Electron.js"
+            "Git", "GitHub", "VS Code", "Cursor AI", "Postman", "Docker", "Kubernetes", "Kali Linux"
         ],
         "total_projects": proj_count,
         "total_certificates": cert_count,
