@@ -431,16 +431,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
               </div>
 
-              <div style="display:flex;gap:10px;margin-top:auto;">
-                <button type="button" onclick="openPremiumProjectModal('${p.id}')" class="btn btn-primary btn-sm" style="flex:1;" aria-label="View full details for ${p.title}">
-                  <i class="fa-solid fa-circle-info"></i> Full Specs
-                </button>
-                ${hasLive ? `
-                  <a href="${p.live}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="padding:0 14px;" title="View Source on GitHub">
-                    <i class="fa-brands fa-github"></i> Code
-                  </a>
-                ` : ''}
-              </div>
             </div>
           </div>
         </div>
