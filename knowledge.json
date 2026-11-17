@@ -23,11 +23,9 @@
       ]
     },
     "github": "https://github.com/SanjayGL-8123",
-    "linkedin": "https://www.linkedin.com/in/spvm3-tech-solution-solution-096bb8436",
+    "linkedin": "https://linkedin.com/in/sanjay-gl-b86631336",
     "telegram": "https://t.me/sanjaygl2006",
-    "instagram": "https://www.instagram.com/spvm3techsolution",
-    "youtube": "https://www.youtube.com/@spvm3techsolution",
-    "spvm3tech": "https://sanjaygl.vercel.app/#spvm3tech",
+    "facebook": "https://www.facebook.com/people/Sanjay-G-L-Sanju/100084034332588/",
     "resume": "assets/Sanjay_GL_Resume.pdf",
     "resume_docx": "assets/Sanjay_GL_Resume.docx"
   },
@@ -662,7 +660,7 @@
         "title": "SPVM\u00b3 Real-Time WebSocket Chat",
         "category": "Web Applications & Portals",
         "tagline": "High-performance real-time messaging with WebSockets & FastAPI.",
-        "description": "SPVM3 Chat: A high-performance real-time chat app featuring instant messaging, multiple chat rooms, typing indicators, and live user presence powered by WebSockets and FastAPI.",
+        "description": "Real-Time Web Chat: A high-performance real-time chat app featuring instant messaging, multiple chat rooms, typing indicators, and live user presence powered by WebSockets and FastAPI.",
         "tech": [
           "JavaScript",
           "FastAPI",
@@ -3288,13 +3286,13 @@
     {
       "category": "General",
       "question": "Do you have social media or GitHub?",
-      "answer": "Yes \u2014 GitHub: github.com/SanjayGL-8123, SPVM 3 Tech Instagram: @spvm3techsolution, YouTube: @spvm3techsolution, and LinkedIn: SPVM 3 Tech Solution.",
-      "keywords": "spvm3tech,instagram,youtube,linkedin"
+      "answer": "Yes \u2014 GitHub: github.com/SanjayGL-8123, LinkedIn: linkedin.com/in/sanjay-gl-sanju, and portfolio: sanjaygl.vercel.app.",
+      "keywords": "github,linkedin,social"
     },
     {
       "category": "General",
       "question": "Why did you build an AI portfolio?",
-      "answer": "I built an AI-powered portfolio and operating system to showcase my projects and certificates interactively using an AI assistant.",
+      "answer": "I built an AI-powered portfolio to showcase my projects and certificates interactively using an AI assistant.",
       "keywords": ""
     },
     {

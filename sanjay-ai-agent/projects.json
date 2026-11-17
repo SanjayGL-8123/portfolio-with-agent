@@ -1,80 +1,1425 @@
 [
   {
-    "name": "Meet Video Conferencing",
-    "category": "Full-Stack Web Application",
-    "description": "A self-hosted video conferencing platform with peer-to-peer audio and video, screen sharing, in-meeting chat, and authentication.",
-    "technologies": ["React", "FastAPI", "SQLite", "WebRTC"]
+    "name": "FieldShift — Climate-Informed Crop Rotation & Soil Health Engine",
+    "repo": "fieldshift",
+    "category": "AI & ML",
+    "description": "Climate-informed crop rotation decision support powered by NASA POWER Earth observations. Helps smallholder farmers optimize soil health, water efficiency, and crop resilience under changing weather.",
+    "technologies": [
+      "Python",
+      "NASA POWER API",
+      "Earth Observations",
+      "Climate Modeling",
+      "Agronomy Decision Engine",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (NASA POWER API)",
+    "database": "SQLite",
+    "id": 1
   },
   {
-    "name": "Notes Management System",
-    "category": "Full-Stack Application",
-    "description": "A secure and privacy-focused notes management application.",
-    "technologies": ["React 18", "Vite", "Flask", "SQLite"]
+    "name": "InvoiceShield AI — Invoice Fraud & Anomaly Detector",
+    "repo": "invoice-shield-ai",
+    "category": "AI & ML",
+    "description": "AI-based invoice fraud and anomaly detection tool.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "SQLite",
+    "id": 2
   },
   {
-    "name": "QR Code Studio",
-    "category": "Web Application",
-    "description": "A customizable QR code generator with 150 design styles, frames, logos, color palettes, and PNG export.",
-    "technologies": ["Flask", "JavaScript", "MySQL"]
+    "name": "Billing Management System — Enterprise Invoicing & Receipts",
+    "repo": "Billing-Management-System-SPVM-Tech-Solution",
+    "category": "Web Apps",
+    "description": "Billing and invoice management system for SPVM Tech Solution.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "LocalStorage"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None (browser LocalStorage)",
+    "id": 3
   },
   {
-    "name": "Image-to-SVG Converter",
-    "category": "Utility Application",
-    "description": "A client-side image conversion application supporting JPG, PNG, WEBP, and GIF formats.",
-    "technologies": ["JavaScript"]
+    "name": "SentinelAI — Cyber Threat Early Warning & Autonomous SOC Triage",
+    "repo": "-SentinelAI-AI-Based-Cyber-Threat-Early-Warning-Autonomous-SOC-Triage",
+    "category": "Tools & Security",
+    "description": "AI-based cyber threat early-warning system with autonomous SOC alert triage.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "FastAPI",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (FastAPI)",
+    "database": "SQLite",
+    "id": 4
   },
   {
-    "name": "AI Resume Matcher",
-    "category": "AI Application",
-    "description": "An ATS resume matching application with AI career insights, skill matching, improvement suggestions, and application tracking.",
-    "technologies": ["PHP", "Gemini API", "TF-IDF"]
+    "name": "CRQ Platform — Cyber Risk Quantification & Investment Optimization",
+    "repo": "AI-Powered-Continuous-Cyber-Risk-Quantification-and-Investment-Optimization-Platform",
+    "category": "Tools & Security",
+    "description": "Platform that continuously quantifies cyber risk in financial terms and optimises security investment.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "FastAPI",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (FastAPI)",
+    "database": "SQLite",
+    "id": 5
   },
   {
-    "name": "AI Resume Analyzer",
-    "category": "AI Application",
-    "description": "A resume analysis tool using ATS scoring and cosine similarity.",
-    "technologies": ["Flask", "Scikit-learn", "MySQL"]
+    "name": "Daily Tasks App — To-Do & Daily Task Planner",
+    "repo": "daily-tasks-app",
+    "category": "Web Apps",
+    "description": "Daily to-do and task planner web app.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "LocalStorage"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None (browser LocalStorage)",
+    "id": 6
   },
   {
-    "name": "Accident Risk Prediction",
-    "category": "Machine Learning",
-    "description": "A road-segment accident risk prediction application.",
-    "technologies": ["Flask", "Scikit-learn", "Random Forest"]
+    "name": "SanjayGL2006 — GitHub Profile & System Architecture",
+    "repo": "sanjayGL2006",
+    "category": "Portfolios & Profiles",
+    "description": "GitHub profile README (not a software project).",
+    "technologies": [],
+    "frontEnd": "N/A",
+    "backEnd": "N/A",
+    "database": "N/A",
+    "id": 7
   },
   {
-    "name": "Indian Currency Detection",
-    "category": "Computer Vision",
-    "description": "An application that detects Indian currency notes from images and webcam input, calculates totals, and provides voice feedback.",
-    "technologies": ["YOLOv8", "OpenCV"]
+    "name": "AgentPortfolio — AI Agent Projects Portfolio Showcase",
+    "repo": "agentportfolio",
+    "category": "Portfolios & Profiles",
+    "description": "Portfolio site presenting AI agent projects.",
+    "technologies": [
+      "JavaScript"
+    ],
+    "frontEnd": "JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 8
   },
   {
-    "name": "Fruit Classification and Recommendation",
-    "category": "Deep Learning",
-    "description": "A fruit classification application with dietary recommendations, GUI, and voice feedback.",
-    "technologies": ["TensorFlow", "Keras", "Tkinter"]
+    "name": "Placement Hub — Student Careers & Campus Drives Portal",
+    "repo": "-placement-hub",
+    "category": "Web Apps",
+    "description": "Placement hub for students: jobs, drives and preparation resources.",
+    "technologies": [
+      "TypeScript",
+      "React",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "frontEnd": "TypeScript (React)",
+    "backEnd": "Supabase (BaaS)",
+    "database": "PostgreSQL (Supabase)",
+    "id": 9
   },
   {
-    "name": "Smart Attendance",
-    "category": "AI and Web Application",
-    "description": "An AI-powered classroom attendance application with a teacher dashboard.",
-    "technologies": ["YOLOv8", "Flask", "MySQL", "React"]
+    "name": "Smart Library Assistant — Book Search & Catalog Management",
+    "repo": "smart-library-assistant",
+    "category": "AI & ML",
+    "description": "Smart assistant for searching and managing library books.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "SQLite",
+    "id": 10
   },
   {
-    "name": "DataGauge",
-    "category": "Data Science Tool",
-    "description": "A dataset quality analysis tool that scores data, flags issues, guides cleaning, and generates PDF and Excel reports.",
-    "technologies": ["FastAPI", "React", "Pandas", "SciPy"]
+    "name": "PhishGuard AI — ML-Based Phishing Email & URL Detection",
+    "repo": "phishguard-ai",
+    "category": "Tools & Security",
+    "description": "ML-based phishing email and website detection.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "None (trained model files)",
+    "id": 11
   },
   {
-    "name": "Sentry Cyber Intel",
-    "category": "AI Cybersecurity",
-    "description": "A multi-agent AI cybersecurity threat intelligence platform.",
-    "technologies": ["CrewAI", "Groq", "Exa"]
+    "name": "Learning Platform — E-Learning & Course Progress Tracker",
+    "repo": "-Learning-Platform",
+    "category": "Web Apps",
+    "description": "Online learning platform with courses and progress tracking.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "SQLite",
+    "id": 12
   },
   {
-    "name": "Pure Weaves",
-    "category": "E-commerce",
-    "description": "An online handloom saree and textile shopping platform.",
-    "technologies": ["Flask", "JavaScript", "SQLite", "Vercel", "Render"]
+    "name": "Photo Recovery Tool — Storage Device Deleted Photo Recovery",
+    "repo": "photo-recovery-tool",
+    "category": "Tools & Security",
+    "description": "Desktop tool to recover deleted photos from storage devices.",
+    "technologies": [
+      "Python",
+      "Tkinter GUI"
+    ],
+    "frontEnd": "Python (Tkinter GUI)",
+    "backEnd": "Python",
+    "database": "None",
+    "id": 13
+  },
+  {
+    "name": "Cyber Intel Agent — Autonomous Cyber Threat Intelligence Aggregator",
+    "repo": "cyber-intel-agent",
+    "category": "Tools & Security",
+    "description": "AI agent that collects and summarises cyber threat intelligence.",
+    "technologies": [
+      "Command Line",
+      "Python"
+    ],
+    "frontEnd": "Command line / HTML",
+    "backEnd": "Python",
+    "database": "None",
+    "id": 14
+  },
+  {
+    "name": "Python Internship Projects — Core Python Automation & Utilities",
+    "repo": "python-internship-projects",
+    "category": "Tools & Security",
+    "description": "Collection of Python programs from internship work.",
+    "technologies": [
+      "Console (no UI)",
+      "Python"
+    ],
+    "frontEnd": "Console (no UI)",
+    "backEnd": "Python",
+    "database": "None",
+    "id": 15
+  },
+  {
+    "name": "Photo-to-Doc Desktop — OCR Document Scanner & Converter",
+    "repo": "photo-to-doc-desktop",
+    "category": "Tools & Security",
+    "description": "Desktop app that converts photos of documents into editable files using OCR.",
+    "technologies": [
+      "Python",
+      "Tkinter GUI"
+    ],
+    "frontEnd": "Python (Tkinter GUI)",
+    "backEnd": "Python",
+    "database": "None",
+    "id": 16
+  },
+  {
+    "name": "Disk Recovery & Forensics Tool — Storage Analysis & Data Salvage",
+    "repo": "disk-recovery-forensics-tool",
+    "category": "Tools & Security",
+    "description": "Disk recovery and digital forensics analysis tool.",
+    "technologies": [
+      "Python",
+      "Tkinter GUI"
+    ],
+    "frontEnd": "Python (Tkinter GUI)",
+    "backEnd": "Python",
+    "database": "None",
+    "id": 17
+  },
+  {
+    "name": "Real-Time Web Chat — Real-Time Web Messaging Application",
+    "repo": "-chat",
+    "category": "Web Apps",
+    "description": "Real-time web chat application.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Firebase"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "JavaScript (Firebase)",
+    "database": "Firebase Realtime Database",
+    "id": 18
+  },
+  {
+    "name": "Spend Tracker — Income & Expense Budget Manager",
+    "repo": "-spend-tracker",
+    "category": "Web Apps",
+    "description": "Income and expense (spend) tracker.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "LocalStorage"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None (browser LocalStorage)",
+    "id": 19
+  },
+  {
+    "name": "Tech Blog & CMS — Content Management & Publishing System",
+    "repo": "-Blog",
+    "category": "Web Apps",
+    "description": "Blog platform with posts and admin management.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "Python",
+      "Flask",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS (Jinja templates)",
+    "backEnd": "Python (Flask)",
+    "database": "SQLite",
+    "id": 20
+  },
+  {
+    "name": "Responsive Audio & Media Player — Responsive Web Audio & Media Player",
+    "repo": "-player",
+    "category": "Web Apps",
+    "description": "Web-based music/media player.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 21
+  },
+  {
+    "name": "API Platform & Testing Suite — Endpoint Management & Testing Suite",
+    "repo": "-api-platform",
+    "category": "Tools & Security",
+    "description": "API platform for managing and testing APIs.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "FastAPI",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (FastAPI)",
+    "database": "SQLite",
+    "id": 22
+  },
+  {
+    "name": "Cyber Response Platform — Incident Response Management System",
+    "repo": "cyber-response-platform",
+    "category": "Tools & Security",
+    "description": "Cyber incident response management platform.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "frontEnd": "JavaScript (React)",
+    "backEnd": "Node.js (Express)",
+    "database": "MongoDB",
+    "id": 23
+  },
+  {
+    "name": "Student HTR Studio — Handwritten Text Recognition Deep Learning",
+    "repo": "student-htr-studio",
+    "category": "AI & ML",
+    "description": "Student handwritten text recognition (HTR) studio.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "OCR",
+      "Deep Learning"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (OCR/deep learning)",
+    "database": "None",
+    "id": 24
+  },
+  {
+    "name": "Malicious URL Detector — Machine Learning Cyber Threat Classifier",
+    "repo": "malicious-url-detector",
+    "category": "Tools & Security",
+    "description": "ML-based malicious URL detector.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "None (trained model files)",
+    "id": 25
+  },
+  {
+    "name": "Smart Voice Notes — Speech-to-Text Audio Note Taking App",
+    "repo": "smart-voice-notes",
+    "category": "Web Apps",
+    "description": "Voice-to-text note taking app using speech recognition.",
+    "technologies": [
+      "JavaScript",
+      "LocalStorage"
+    ],
+    "frontEnd": "JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None (browser LocalStorage)",
+    "id": 26
+  },
+  {
+    "name": "Smart Parking System — Parking Slot Booking & Space Management",
+    "repo": "smart-parking-system",
+    "category": "Web Apps",
+    "description": "Smart parking slot booking and management system.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "SQLite",
+    "id": 27
+  },
+  {
+    "name": "AI Paper Analyzer — Research Paper Summarization & Analysis",
+    "repo": "ai-paper-analyzer",
+    "category": "AI & ML",
+    "description": "AI tool that analyses and summarises research papers.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "FastAPI"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (FastAPI)",
+    "database": "None",
+    "id": 28
+  },
+  {
+    "name": "Interactive Quiz Application — Interactive Assessment & Knowledge Engine",
+    "repo": "-quiz-app",
+    "category": "Games",
+    "description": "Interactive quiz application.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 29
+  },
+  {
+    "name": "SPVM Tech Solution — Corporate Agency Portal & Backend",
+    "repo": "-tech-solution",
+    "category": "Web Apps",
+    "description": "Company backend/website for SPVM Tech Solution.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "SQLite",
+    "id": 30
+  },
+  {
+    "name": "OTP Signup System — Secure Email & OTP Verification Flow",
+    "repo": "otp-signup",
+    "category": "Tools & Security",
+    "description": "Email/OTP-verified user signup system.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "SQLite",
+    "id": 31
+  },
+  {
+    "name": "Developer Code Notes & Cheatsheets — Developer Cheat Sheets & Code Snippets",
+    "repo": "-code-notes",
+    "category": "Web Apps",
+    "description": "Web notes site for coding concepts and snippets.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 32
+  },
+  {
+    "name": "Scanner Files — Web File Scanner & Storage Organizer",
+    "repo": "scanner-files",
+    "category": "Tools & Security",
+    "description": "Web tool for scanning and organising files.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 33
+  },
+  {
+    "name": "Social Analytics UI — Social Media Metrics & Growth Dashboard",
+    "repo": "social-analytics-ui",
+    "category": "Web Apps",
+    "description": "Social media analytics dashboard UI.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "None (sample data)"
+    ],
+    "frontEnd": "JavaScript (React)",
+    "backEnd": "None (client-side only)",
+    "database": "None (sample data)",
+    "id": 34
+  },
+  {
+    "name": "ReelFind Short-Video Discovery — Short-Video Discovery & Search Engine",
+    "repo": "--reelfind-react-fastapi",
+    "category": "Web Apps",
+    "description": "Reel finder web app with React front end and FastAPI back end.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Python",
+      "FastAPI",
+      "SQLite"
+    ],
+    "frontEnd": "JavaScript (React)",
+    "backEnd": "Python (FastAPI)",
+    "database": "SQLite",
+    "id": 35
+  },
+  {
+    "name": "FastAPI React ToDo — Modern Full-Stack Task Manager",
+    "repo": "fastapi-react-todo",
+    "category": "Web Apps",
+    "description": "To-do app built with React and FastAPI.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Python",
+      "FastAPI",
+      "SQLite"
+    ],
+    "frontEnd": "JavaScript (React)",
+    "backEnd": "Python (FastAPI)",
+    "database": "SQLite",
+    "id": 36
+  },
+  {
+    "name": "Team Workflow & Task App — Team Workflow & Project Task Management",
+    "repo": "-task-app",
+    "category": "Web Apps",
+    "description": "Task management web app.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "frontEnd": "JavaScript (React)",
+    "backEnd": "Node.js (Express)",
+    "database": "MongoDB",
+    "id": 37
+  },
+  {
+    "name": "Milano Infotech Internship — Python Automation & ML Work",
+    "repo": "Milano-infotech-internship",
+    "category": "AI & ML",
+    "description": "Python work and exercises from the Milano Infotech internship.",
+    "technologies": [
+      "Console (no UI)",
+      "Python"
+    ],
+    "frontEnd": "Console (no UI)",
+    "backEnd": "Python",
+    "database": "None",
+    "id": 38
+  },
+  {
+    "name": "Browser Code Editor & IDE — Browser-Based IDE & Sandbox",
+    "repo": "-code-editor",
+    "category": "Tools & Security",
+    "description": "Browser-based code editor.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 39
+  },
+  {
+    "name": "Smart Attendance YOLO — Computer Vision Face & Attendance System",
+    "repo": "smart-attendance-yolo",
+    "category": "AI & ML",
+    "description": "Smart attendance system using YOLO object/face detection.",
+    "technologies": [
+      "Python",
+      "OpenCV GUI",
+      "SQLite"
+    ],
+    "frontEnd": "Python (OpenCV GUI)",
+    "backEnd": "Python",
+    "database": "SQLite / CSV",
+    "id": 40
+  },
+  {
+    "name": "Campus Placement Management — University Placement Cell Management",
+    "repo": "-campus-placement",
+    "category": "Web Apps",
+    "description": "Campus placement management system.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "SQLite"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "SQLite",
+    "id": 41
+  },
+  {
+    "name": "2D Retro Arcade Car Game — 2D Retro Arcade Racing Game",
+    "repo": "-car-game",
+    "category": "Games",
+    "description": "Browser car racing game.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 42
+  },
+  {
+    "name": "AIML Course & Practical Labs — Machine Learning Experiments",
+    "repo": "AIML-course-and-Practical",
+    "category": "AI & ML",
+    "description": "AI/ML course notes and practical exercises (Jupyter notebooks).",
+    "technologies": [
+      "Python",
+      "Jupyter Notebook",
+      "None (CSV datasets)"
+    ],
+    "frontEnd": "Jupyter Notebook",
+    "backEnd": "Python",
+    "database": "None (CSV datasets)",
+    "id": 43
+  },
+  {
+    "name": "Text2Img Studio — AI Text-to-Image Generation Studio",
+    "repo": "text2img-studio",
+    "category": "AI & ML",
+    "description": "Text-to-image generation studio.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python",
+    "database": "None",
+    "id": 44
+  },
+  {
+    "name": "DermAI — AI-Powered Skincare Diagnosis & Lesion Analysis",
+    "repo": "DermAI-AI-Powered-Skincare-Diagnosis-App",
+    "category": "AI & ML",
+    "description": "AI-powered skincare diagnosis app that analyses skin images.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "Deep Learning"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask, deep learning)",
+    "database": "None",
+    "id": 45
+  },
+  {
+    "name": "Small Project — Starter Web Prototype & Responsive Sandbox",
+    "repo": "small-project",
+    "category": "Web Apps",
+    "description": "Small starter web project.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "frontEnd": "HTML, CSS",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 46
+  },
+  {
+    "name": "Carbon Intelligence — Climate & Carbon Footprint Portal",
+    "repo": "sanjay-gl-website-carbon-intelligence",
+    "category": "Web Apps",
+    "description": "Carbon footprint / carbon intelligence website.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 47
+  },
+  {
+    "name": "Resume Analyzer — Keyword & ATS Compatibility Matcher",
+    "repo": "resume-analyzer",
+    "category": "AI & ML",
+    "description": "Resume analyser that checks resumes against keywords.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 48
+  },
+  {
+    "name": "Image-to-SVG Converter — Client-Side Raster to Vector Utility",
+    "repo": "image-to-svg-converter",
+    "category": "Tools & Security",
+    "description": "Converts raster images to SVG vector graphics.",
+    "technologies": [
+      "JavaScript"
+    ],
+    "frontEnd": "JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 49
+  },
+  {
+    "name": "Paperless Office System — Enterprise Digital Document Management",
+    "repo": "Paperless-Office-System",
+    "category": "Web Apps",
+    "description": "Digital document management system to reduce paper use.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MongoDB"
+    ],
+    "frontEnd": "JavaScript (React)",
+    "backEnd": "Node.js (Express)",
+    "database": "MongoDB",
+    "id": 50
+  },
+  {
+    "name": "Bluetooth Chat — Peer-to-Peer Offline Mobile Messaging",
+    "repo": "bluetooth-chat",
+    "category": "Tools & Security",
+    "description": "Bluetooth-based chat mobile app.",
+    "technologies": [
+      "Dart",
+      "Flutter",
+      "Bluetooth API"
+    ],
+    "frontEnd": "Dart (Flutter)",
+    "backEnd": "Dart (Flutter, device Bluetooth)",
+    "database": "None (on-device)",
+    "id": 51
+  },
+  {
+    "name": "DataGauge — Dataset Quality Monitoring & Diagnostic System",
+    "repo": "DataGauge-Dataset-Quality-Monitoring-System",
+    "category": "AI & ML",
+    "description": "Dataset quality monitoring and reporting system.",
+    "technologies": [
+      "Python",
+      "Streamlit"
+    ],
+    "frontEnd": "Python (Streamlit)",
+    "backEnd": "Python",
+    "database": "None",
+    "id": 52
+  },
+  {
+    "name": "Accident Risk Prediction — ML Road Segment Risk Modeling",
+    "repo": "accident-risk-prediction",
+    "category": "AI & ML",
+    "description": "ML-based road accident risk prediction.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Python",
+      "Flask",
+      "Scikit-learn",
+      "None (CSV dataset)"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask), scikit-learn",
+    "database": "None (CSV dataset)",
+    "id": 53
+  },
+  {
+    "name": "PropManager Dash — Real-Estate & Property Management Portal",
+    "repo": "prop-manager-dash-95721",
+    "category": "Web Apps",
+    "description": "Property management dashboard.",
+    "technologies": [
+      "TypeScript",
+      "React",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "frontEnd": "TypeScript (React)",
+    "backEnd": "Supabase (BaaS)",
+    "database": "PostgreSQL (Supabase)",
+    "id": 54
+  },
+  {
+    "name": "Sanjay G. L. Portfolio — AI-Powered Interactive Portfolio",
+    "repo": "portfolio",
+    "category": "Portfolios & Profiles",
+    "description": "Personal portfolio website.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 55
+  },
+  {
+    "name": "Expense Tracker — Personal Finance & Budget Management App",
+    "repo": "expense-tracker",
+    "category": "Web Apps",
+    "description": "Expense tracker web app.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "LocalStorage"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None (browser LocalStorage)",
+    "id": 56
+  },
+  {
+    "name": "Pure Weaves Heritage — Handcrafted Handloom E-Commerce Store",
+    "repo": "-Handcrafted-with-Love-Pure-Weaves",
+    "category": "Web Apps",
+    "description": "Online store website for handcrafted handloom products.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "frontEnd": "HTML, CSS",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 57
+  },
+  {
+    "name": "Surya Chatbot — Intelligent Conversational AI Web Assistant",
+    "repo": "Surya-chatbot",
+    "category": "AI & ML",
+    "description": "AI chatbot web app.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Node.js"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Node.js",
+    "database": "None",
+    "id": 58
+  },
+  {
+    "name": "Google AI Agent — Automated Workflow Agent with Google APIs",
+    "repo": "AI-Agent-used-google-api",
+    "category": "AI & ML",
+    "description": "AI agent that uses Google APIs to automate tasks.",
+    "technologies": [
+      "Command Line",
+      "Python"
+    ],
+    "frontEnd": "Command line",
+    "backEnd": "Python",
+    "database": "None (Google services)",
+    "id": 59
+  },
+  {
+    "name": "Pixel Perfect — Grid-Based Pixel Art & UI Design Canvas",
+    "repo": "pixel-perfect",
+    "category": "Games",
+    "description": "Pixel-art / UI design web app.",
+    "technologies": [
+      "TypeScript",
+      "React"
+    ],
+    "frontEnd": "TypeScript (React)",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 60
+  },
+  {
+    "name": "Sri Mariyamma Temple Portal — Community Cultural & Seva Platform",
+    "repo": "srimariyammatemple-ad2fd3a5",
+    "category": "Web Apps",
+    "description": "Website for Sri Mariyamma Temple.",
+    "technologies": [
+      "TypeScript",
+      "React",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "frontEnd": "TypeScript (React)",
+    "backEnd": "Supabase (BaaS)",
+    "database": "PostgreSQL (Supabase)",
+    "id": 61
+  },
+  {
+    "name": "BMI Calculator — Body Mass Index Health Assessment Tool",
+    "repo": "bmi_calculator",
+    "category": "Games",
+    "description": "BMI calculator.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 62
+  },
+  {
+    "name": "Pizza Shop Website — Artisan Pizzeria Menu & Ordering Portal",
+    "repo": "pizza-shop-website",
+    "category": "Web Apps",
+    "description": "Pizza shop website.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "frontEnd": "HTML, CSS",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 63
+  },
+  {
+    "name": "Maya Angelou Tribute — Literary Memorial & Biography Showcase",
+    "repo": "maya-angelou-tribute",
+    "category": "Web Apps",
+    "description": "Tribute web page for Maya Angelou.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "frontEnd": "HTML, CSS",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 64
+  },
+  {
+    "name": "Vault Secure Auth — Client-Side Authentication & Encryption Demo",
+    "repo": "vault-secure-auth",
+    "category": "Tools & Security",
+    "description": "Secure login/authentication demo.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "LocalStorage"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None (browser LocalStorage)",
+    "id": 65
+  },
+  {
+    "name": "Daily Task Nexus — Priority Task Planner & Activity Board",
+    "repo": "daily-task-nexus",
+    "category": "Web Apps",
+    "description": "Daily task manager web app.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "LocalStorage"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None (browser LocalStorage)",
+    "id": 66
+  },
+  {
+    "name": "Web Calculator JS — Responsive Mathematical Calculator",
+    "repo": "web-calculator-js",
+    "category": "Games",
+    "description": "JavaScript web calculator.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 67
+  },
+  {
+    "name": "TempConvert — Multi-Unit Temperature Conversion Utility",
+    "repo": "temp-convert-web-app",
+    "category": "Games",
+    "description": "Temperature converter web app.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 68
+  },
+  {
+    "name": "VPN Shield Landing Page — Cybersecurity VPN Product Showcase",
+    "repo": "vpn-landing-page1",
+    "category": "Web Apps",
+    "description": "VPN landing page.",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "frontEnd": "HTML, CSS",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 69
+  },
+  {
+    "name": "Sri Mariyamma Temple (Legacy) — Devotee Information Portal",
+    "repo": "srimariyammatemple",
+    "category": "Web Apps",
+    "description": "Website for Sri Mariyamma Temple (earlier version).",
+    "technologies": [
+      "TypeScript",
+      "React",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "frontEnd": "TypeScript (React)",
+    "backEnd": "Supabase (BaaS)",
+    "database": "PostgreSQL (Supabase)",
+    "id": 70
+  },
+  {
+    "name": "Pure Weaves — Handloom Products Store (Pure Weaves)",
+    "repo": "Pure-Weaves",
+    "category": "Web Apps",
+    "description": "Handloom products website (Pure Weaves).",
+    "technologies": [
+      "HTML5",
+      "CSS3"
+    ],
+    "frontEnd": "HTML, CSS",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 71
+  },
+  {
+    "name": "Registration Form — Interactive User Onboarding & Validation",
+    "repo": "Registration-form",
+    "category": "Web Apps",
+    "description": "User registration form.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "None (client-side only)",
+    "database": "None",
+    "id": 72
+  },
+  {
+    "name": "Digital Board Duel — Two-Player Digital Board Game",
+    "repo": "digital-board-duel",
+    "category": "Games",
+    "description": "Two-player digital board game.",
+    "technologies": [
+      "TypeScript",
+      "React",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "frontEnd": "TypeScript (React)",
+    "backEnd": "Supabase (BaaS)",
+    "database": "PostgreSQL (Supabase)",
+    "id": 73
+  },
+  {
+    "name": "Meet — WebRTC Video Conferencing Platform",
+    "repo": "Meet-Video-Conferencing-React-FastAPI-SQLite-",
+    "category": "Web Apps",
+    "description": "Lightweight, self-hosted WebRTC video conferencing app built with React, FastAPI, and SQLite. Features peer-to-peer audio/video mesh, screen sharing, real-time in-meeting chat, and secure authentication.",
+    "technologies": [
+      "React",
+      "FastAPI",
+      "WebRTC",
+      "PeerJS",
+      "Python",
+      "SQLite",
+      "Socket.io"
+    ],
+    "frontEnd": "React (JavaScript)",
+    "backEnd": "Python (FastAPI)",
+    "database": "SQLite",
+    "id": 74
+  },
+  {
+    "name": "Notes Management System — Privacy-Focused Encrypted Notes",
+    "repo": "Notes-Management-System-",
+    "category": "Web Apps",
+    "description": "A secure, private, full-stack notes management application built with React 18 (Vite) on the frontend and Flask (Python 3.10+) with SQLite on the backend. Designed with privacy, data isolation, and fast full-text note search.",
+    "technologies": [
+      "React 18",
+      "Vite",
+      "Python",
+      "Flask",
+      "SQLite",
+      "Tailwind CSS"
+    ],
+    "frontEnd": "React 18 (Vite)",
+    "backEnd": "Python (Flask)",
+    "database": "SQLite",
+    "id": 75
+  },
+  {
+    "name": "AI Resume Matcher — Intelligent ATS Career & Upskilling Matcher",
+    "repo": "ai-resume-matcher",
+    "category": "AI & ML",
+    "description": "Full-stack AI Resume Analyzer & Job Matcher with automated ATS scoring, Google Gemini career insights, TF-IDF skill matching, upskilling recommendations, and an application tracker. Built with PHP.",
+    "technologies": [
+      "PHP",
+      "Google Gemini API",
+      "TF-IDF",
+      "ATS Scoring",
+      "MySQL",
+      "JavaScript"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "PHP",
+    "database": "MySQL",
+    "id": 76
+  },
+  {
+    "name": "Indian Rupee Currency Detector & Valuation System (YOLOv8)",
+    "repo": "currency-detect-indian-rupee-",
+    "category": "AI & ML",
+    "description": "AI-powered Indian Currency Detection and Valuation system using YOLOv8. Detects notes (₹10–₹2000) from images and live webcam feeds, computes the total sum in Rupees, and announces amounts via offline voice feedback.",
+    "technologies": [
+      "Python",
+      "YOLOv8",
+      "OpenCV",
+      "PyTorch",
+      "Text-to-Speech (TTS)",
+      "Computer Vision"
+    ],
+    "frontEnd": "Tkinter GUI / OpenCV",
+    "backEnd": "Python (YOLOv8)",
+    "database": "None",
+    "id": 77
+  },
+  {
+    "name": "Fruit Classification & Dietary Recommendation System",
+    "repo": "Fruit-Classification-Recommendation-System-",
+    "category": "AI & ML",
+    "description": "AI-powered fruit classification and dietary recommendation system using a TensorFlow/Keras CNN with interactive Tkinter GUI and voice feedback.",
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "CNN",
+      "Tkinter",
+      "Nutrition AI"
+    ],
+    "frontEnd": "Tkinter GUI",
+    "backEnd": "Python (TensorFlow / Keras)",
+    "database": "None",
+    "id": 78
+  },
+  {
+    "name": "Apple & Orange Real-Time Object Detection (YOLOv8)",
+    "repo": "apple-orange-yolo",
+    "category": "AI & ML",
+    "description": "Real-time Apple & Orange detection using YOLOv8 with interactive Tkinter GUIs, webcam/video support, voice (TTS) narration, and protein & nutrition intelligence.",
+    "technologies": [
+      "Python",
+      "YOLOv8",
+      "OpenCV",
+      "Tkinter",
+      "TTS Narration"
+    ],
+    "frontEnd": "Tkinter GUI / OpenCV",
+    "backEnd": "Python (YOLOv8)",
+    "database": "None",
+    "id": 79
+  },
+  {
+    "name": "Accident Risk Predictor — Desktop ML Safety Analyzer",
+    "repo": "accident-risk-predictor",
+    "category": "AI & ML",
+    "description": "A desktop ML application that evaluates road accident risk using Gradient Boosting and Random Forest. Features automated hazard identification, traffic safety countermeasures, scenario presets, and risk heatmaps.",
+    "technologies": [
+      "Python",
+      "Scikit-Learn",
+      "Gradient Boosting",
+      "Random Forest",
+      "Pandas",
+      "NumPy"
+    ],
+    "frontEnd": "Tkinter GUI",
+    "backEnd": "Python (Scikit-Learn)",
+    "database": "CSV Dataset",
+    "id": 80
+  },
+  {
+    "name": "Indian Currency Recognition — MobileNetV2 Vision for Visually Impaired",
+    "repo": "indian-currency-recognition",
+    "category": "AI & ML",
+    "description": "Real-time Indian currency note recognition and classification using MobileNetV2 and OpenCV, featuring voice feedback for visually impaired assistance.",
+    "technologies": [
+      "Python",
+      "MobileNetV2",
+      "OpenCV",
+      "Assistive Technology",
+      "Voice Feedback"
+    ],
+    "frontEnd": "OpenCV / Tkinter",
+    "backEnd": "Python (MobileNetV2)",
+    "database": "None",
+    "id": 81
+  },
+  {
+    "name": "Salary Prediction Engine — Machine Learning Career Analytics",
+    "repo": "salarypredition",
+    "category": "AI & ML",
+    "description": "Supervised machine learning model predicting tech industry salaries based on experience, education level, role specialization, and technical skill stacks.",
+    "technologies": [
+      "Python",
+      "Scikit-Learn",
+      "Linear Regression",
+      "Pandas",
+      "NumPy"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Scikit-Learn)",
+    "database": "CSV Dataset",
+    "id": 82
+  },
+  {
+    "name": "Industrial Scrap Inventory & Order Management — Industrial Scrap Inventory & Order Management",
+    "repo": "-scrap",
+    "category": "Web Apps",
+    "description": "Inventory and order management application for reusable industrial scrap. Features customer catalog browsing, cart ordering, administrative stock controls, and PostgreSQL schema.",
+    "technologies": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Express",
+      "PostgreSQL"
+    ],
+    "frontEnd": "JavaScript (React)",
+    "backEnd": "Node.js (Express)",
+    "database": "PostgreSQL",
+    "id": 83
+  },
+  {
+    "name": "Project Hub — Developer Project Catalog & Showcase",
+    "repo": "project-hub",
+    "category": "Portfolios & Profiles",
+    "description": "Official project showcase & catalog for SPVM Tech Solution, featuring 74+ student, full-stack, and AI projects with direct WhatsApp and email inquiry links.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "Responsive Design",
+      "WhatsApp API"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Client-Side Engine",
+    "database": "JSON Registry",
+    "id": 84
+  },
+  {
+    "name": "Custom Quick Response Code Studio — Custom QR Code Studio",
+    "repo": "-quick-response-code",
+    "category": "Web Apps",
+    "description": "A full-stack custom QR code generator studio built with Flask, Vanilla JS, and MySQL. Supports 150 design styles, frames, festive occasions, custom logos, palettes, and PNG downloads.",
+    "technologies": [
+      "Flask",
+      "Python",
+      "MySQL",
+      "JavaScript",
+      "qrcode-py",
+      "Pillow"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Python (Flask)",
+    "database": "MySQL",
+    "id": 85
+  },
+  {
+    "name": "Local QR Code Studio — Client-Side QR Generator",
+    "repo": "Local-QR-Code-Studio",
+    "category": "Tools & Security",
+    "description": "Blazingly fast offline client-side QR code generator supporting text, URLs, vCards, WiFi credentials, custom colors, and SVG/PNG exports without server upload.",
+    "technologies": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "QRCode.js",
+      "SVG Export"
+    ],
+    "frontEnd": "HTML, CSS, JavaScript",
+    "backEnd": "Client-Side",
+    "database": "LocalStorage",
+    "id": 86
+  },
+  {
+    "name": "Watchful Vision Plan — Video Analytics & Surveillance Framework",
+    "repo": "watchful-vision-plan",
+    "category": "Tools & Security",
+    "description": "Modern surveillance and security monitoring analytics dashboard built with TypeScript and React.",
+    "technologies": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Video Analytics"
+    ],
+    "frontEnd": "TypeScript (React)",
+    "backEnd": "Node.js",
+    "database": "PostgreSQL",
+    "id": 87
+  },
+  {
+    "name": "Encode Genius — Developer Encoders & Data Transformers",
+    "repo": "encode-genius",
+    "category": "Tools & Security",
+    "description": "Developer utility platform providing base64, URL, hash algorithms (SHA, MD5), JWT inspection, and data format transformations in real-time.",
+    "technologies": [
+      "TypeScript",
+      "React",
+      "CryptoJS",
+      "Utilities"
+    ],
+    "frontEnd": "TypeScript (React)",
+    "backEnd": "Client-Side",
+    "database": "None",
+    "id": 88
+  },
+  {
+    "name": "Hyper Rent Local — Neighborhood Equipment Rental System",
+    "repo": "hyper-rent-local",
+    "category": "Web Apps",
+    "description": "Local equipment and asset rental portal connecting community owners with renters, featuring availability schedules and deposit tracking.",
+    "technologies": [
+      "TypeScript",
+      "React",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "frontEnd": "TypeScript (React)",
+    "backEnd": "Supabase",
+    "database": "PostgreSQL (Supabase)",
+    "id": 89
   }
 ]

@@ -912,7 +912,7 @@
     }
 
     if (qLower.includes('project') || qLower.includes('built') || qLower.includes('showcase')) {
-      return `🚀 **Sanjay's Featured Projects**:\n- **PureWeaves**: Artisanal saree e-commerce storefront with WhatsApp checkout & MySQL backend ([Live Demo](https://pureweaves.vercel.app/)).\n- **Vinayaka**: Intelligent conversational AI assistant powered by Flask, Google Gemini API & OpenAI cascades.\n- **Vibe Chat**: Real-time collaborative web messaging application with live presence detection & WebSockets.\n- **GrabNotes**: AI-powered smart note-taking web app deployed on Base44 ([Live Demo](https://grab-notes.base44.app/)).\n\nExplore all code on [GitHub](https://github.com/SanjayGL-8123)!`;
+      return `🚀 **Sanjay's Featured Projects**:\n- **PureWeaves**: Artisanal saree e-commerce storefront with WhatsApp checkout & MySQL backend ([Storefront](https://pureweaves.vercel.app/)).\n- **Vinayaka**: Intelligent conversational AI assistant powered by Flask, Google Gemini API & OpenAI cascades.\n- **Vibe Chat**: Real-time collaborative web messaging application with live presence detection & WebSockets.\n- **GrabNotes**: AI-powered smart note-taking web app deployed on Base44 ([Web App](https://grab-notes.base44.app/)).\n\nExplore all code on [GitHub](https://github.com/SanjayGL-8123)!`;
     }
 
     if (qLower.includes('openai') || qLower.includes('apply ai at work')) {
@@ -927,8 +927,8 @@
       return `📬 **Get in Touch with Sanjay G. L.**:\n- **Portfolio**: [https://sanjaygl.vercel.app](https://sanjaygl.vercel.app)\n- **Email**: [sanjaygl2006@gmail.com](mailto:sanjaygl2006@gmail.com)\n- **Phone**: +91 81239 81877\n- **Location**: Shivamogga, Karnataka, India\n- **LinkedIn**: [linkedin.com/in/sanjay-gl-b86631336](https://www.linkedin.com/in/sanjay-gl-b86631336/)\n- **GitHub**: [github.com/SanjayGL-8123](https://github.com/SanjayGL-8123)\n- **Open to Opportunities**: Open for internships, web dev, and AI workflow engineering roles!`;
     }
 
-    if (qLower.includes('spvm') || qLower.includes('tech solution')) {
-      return `🌐 **SPVM 3 Tech Solution** is Sanjay's educational and technical ecosystem dedicated to teaching programming fundamentals (Python, JavaScript, C/C++, Java, SQL) and building high-utility web platforms. Follow on YouTube and Instagram at **@spvm3techsolution**.`;
+    if (qLower.includes('tech') || qLower.includes('skills')) {
+      return `💻 **Sanjay G. L. Tech Stack**:\n- **Languages**: Python (Flask, FastAPI), JavaScript (ES6+), TypeScript, SQL, HTML5, CSS3\n- **Frontend**: React, Tailwind CSS, Responsive Design, Glassmorphism\n- **Backend & DB**: Python (Flask, FastAPI), Node.js, SQLite, MySQL, Supabase (PostgreSQL)\n- **AI & ML**: Google Gemini API, OpenAI APIs, YOLOv8, CNNs, Scikit-Learn\n- **DevOps**: Vercel, Docker, Git/GitHub, PWA Service Workers`;
     }
 
     if (qLower.includes('cnn') || qLower.includes('convolutional') || qLower.includes('deep learning')) {

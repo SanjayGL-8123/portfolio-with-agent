@@ -126,11 +126,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typedEl && window.Typed) {
     new Typed('#typed-role', {
       strings: [
-        'Full Stack Web Developer',
-        'AI Workflow Engineer',
-        'Python & Backend Developer',
-        'BCA Student (Shivamogga)',
-        'Problem Solver & Builder'
+        'Full Stack AI Developer',
+        'AI Agent Engineer',
+        'Cybersecurity Explorer',
+        'Python Developer',
+        'BCA Student @ PES IAMS'
       ],
       typeSpeed: 44,
       backSpeed: 26,
@@ -415,8 +415,8 @@ document.addEventListener('DOMContentLoaded', () => {
       answer: "I'm Sanjay G. L. — a BCA student, AI workflow engineer, and full-stack Python/web developer based in Shivamogga, Karnataka."
     },
     {
-      keys: ['education', 'college', 'degree', 'bca', 'university', 'study', 'studies', 'semester'],
-      answer: "Sanjay is pursuing his Bachelor of Computer Applications (BCA) in Shivamogga, Karnataka (2023–2027 · Currently in 5th Semester). Curriculum highlights: Software Engineering, Relational Database Management Systems, Data Structures, AI & ML, and Python."
+      keys: ['education', 'college', 'degree', 'bca', 'university', 'study', 'studies', 'semester', 'pes'],
+      answer: "Sanjay is a BCA student (3rd Year, 5th Semester, 2023–2027) at PES Institute of Advanced Management Studies (PES IAMS), Shivamogga, Karnataka. Curriculum highlights: Software Engineering, Relational Database Management Systems, Data Structures, AI & ML, and Python."
     },
     {
       keys: ['internship', 'experience', 'work', 'job', 'milano', 'oasis'],
@@ -424,35 +424,39 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       keys: ['skills', 'tech', 'stack', 'languages', 'tools', 'docker', 'kubernetes', 'electron', 'node'],
-      answer: "Core skills: Python, JavaScript, React, Node.js, Electron.js, HTML5/CSS3, SQL, MySQL, PostgreSQL, SQLite, Docker, Kubernetes, Cyber Security, Git, VS Code, Cursor AI, and Vercel."
+      answer: "Core skills: Python, JavaScript, React, Node.js, Electron.js, HTML5/CSS3, SQL, MySQL, PostgreSQL, SQLite, Docker, Kubernetes, Cyber Security, Git, VS Code, Cursor AI, and Vercel. Currently learning AI (50%), ML (40%), Docker (35%), and Electron.js (25%)."
     },
     {
       keys: ['projects', 'portfolio', 'built', 'work'],
-      answer: "Sanjay has built over 100 projects! Key highlights include InvoiceGuard, SentinelAI, PureWeaves, Placement Pro, Text-to-Image Studio, and Vibe Chat."
+      answer: "Sanjay has built over 100 projects! Key highlights include DataGauge (FastAPI, React), Accident Risk Prediction (Random Forest), Sai AI Assistant (Gemini Pro), InvoiceGuard, SentinelAI, PureWeaves, Placement Pro, Text-to-Image Studio, and Vibe Chat."
     },
     {
       keys: ['certificates', 'certification', 'openai', 'skill india'],
-      answer: "Sanjay holds 70+ verified certificates, including OpenAI Academy: Apply AI at Work, Skill India Cyber Security & Software Testing, Skill India Python & Full-Stack, and government CPR / Road Safety awards."
+      answer: "Sanjay holds 70+ verified certificates, including OpenAI Academy: Apply AI at Work, Skill India Cyber Security & Software Testing, Skill India Python & Full-Stack, PRAVIDHI State Level Tech Fest, and government CPR / Road Safety awards."
     },
     {
       keys: ['contact', 'email', 'phone', 'reach', 'hire'],
-      answer: "You can email Sanjay directly at sanjaygl3006@gmail.com, call +91 81232 40049, or use the contact form on this page!"
+      answer: "You can email Sanjay directly at sanjaygl2006@gmail.com, call/WhatsApp +91 8123981877, or connect on LinkedIn, GitHub, Facebook, and Salesforce Trailhead!"
     },
     {
       keys: ['resume', 'cv', 'download'],
       answer: "You can download Sanjay's verified resume PDF directly from the top navigation bar or the Resume section (assets/Sanjay_GL_Resume.pdf)."
     },
     {
-      keys: ['volunteer', 'community', 'blood', 'cpr'],
-      answer: "Sanjay has participated in community voluntary blood donation camps, CPR Save a Life award programs, and national road safety initiatives."
+      keys: ['volunteer', 'community', 'nss', 'yfs', 'blood', 'cpr'],
+      answer: "Sanjay is an active NSS Volunteer (2023 – Present) at PES IAMS Shivamogga participating in community service, and a YFS Volunteer (Mera Yuva Bharat) (2024 – Present) recognized with a Certificate of Recognition by the Ministry of Youth Affairs & Sports."
+    },
+    {
+      keys: ['interests', 'hobby', 'hobbies'],
+      answer: "Sanjay's personal interests include Cybersecurity, Computer Networking, Fish Keeping & Aquarium Care, Trekking, Historical Travel, Electronics & Components, and AI & Automation."
     },
     {
       keys: ['hello', 'hi', 'hey', 'start'],
-      answer: "Hello there! 👋 I am Sanjay's portfolio AI assistant. Ask me anything about Sanjay's education, skills, projects, certifications, or work experience!"
+      answer: "Hello there! 👋 I am Sanjay's portfolio AI assistant. Ask me anything about Sanjay's education at PES IAMS, skills, projects, certifications, or work experience!"
     }
   ];
 
-  const FALLBACK_REPLY = "I'm here to help with information on Sanjay's BCA education in Shivamogga, skills, internships (Milano Infotech & Oasis Infobyte), projects, or how to contact him. What would you like to know?";
+  const FALLBACK_REPLY = "I'm here to help with information on Sanjay's BCA education at PES IAMS Shivamogga, skills, internships (Milano Infotech & Oasis Infobyte), projects, or how to contact him (sanjaygl2006@gmail.com / +91 8123981877). What would you like to know?";
 
   function getAnswer(query) {
     const text = query.toLowerCase();

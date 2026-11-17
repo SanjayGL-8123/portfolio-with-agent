@@ -1,18 +1,30 @@
-const CACHE_NAME = 'sanjay-ai-os-v4';
+const CACHE_NAME = 'sanjay-portfolio-v6';
 const ASSETS_TO_CACHE = [
-  './',
-  './index.html',
-  './projects.html',
-  './privacy.html',
-  './css/styles.css',
-  './js/projectsData.js',
-  './knowledge.json'
+  '/',
+  '/index.html',
+  '/projects',
+  '/projects.html',
+  '/privacy',
+  '/privacy.html',
+  '/css/clean-redesign.css?v=3.0.1',
+  '/css/styles.css',
+  '/js/projectsData.js',
+  '/assets/project_placeholder.svg',
+  '/assets/project_placeholder.svg?v=2',
+  '/knowledge.json'
 ];
 
+// Resilient install: cache each asset individually so one failure doesn't block the rest
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(ASSETS_TO_CACHE);
+      return Promise.allSettled(
+        ASSETS_TO_CACHE.map((url) =>
+          cache.add(url).catch((err) => {
+            console.warn(`[SW] Failed to cache "${url}":`, err.message);
+          })
+        )
+      );
     }).then(() => self.skipWaiting())
   );
 });
@@ -36,44 +48,50 @@ self.addEventListener('fetch', (event) => {
   if (!event.request.url.startsWith('http')) return;
 
   const requestUrl = new URL(event.request.url);
-  if (requestUrl.hostname === 'localhost' || requestUrl.hostname === '127.0.0.1' || requestUrl.hostname === '[::1]') {
-    return; // Bypass Service Worker fetch interception on local development
+
+  // Bypass service worker on local development and local LAN IPs
+  const isLocal = requestUrl.hostname === 'localhost' ||
+    requestUrl.hostname === '127.0.0.1' ||
+    requestUrl.hostname === '[::1]' ||
+    requestUrl.hostname.startsWith('10.') ||
+    requestUrl.hostname.startsWith('192.168.') ||
+    requestUrl.hostname.startsWith('172.');
+
+  if (isLocal) {
+    return;
   }
 
+  // Skip third-party requests (CDN fonts, analytics, etc.)
+  if (requestUrl.origin !== self.location.origin) {
+    return;
+  }
 
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        // Fetch background update for cached items
-        fetch(event.request).then((networkResponse) => {
-          if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
-            const responseToCache = networkResponse.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
-          }
-        }).catch(() => {});
-        return cachedResponse;
-      }
-
-      // Not in cache - fetch from network
-      return fetch(event.request).then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
+    // Network-first strategy: try network, fall back to cache
+    fetch(event.request)
+      .then((networkResponse) => {
+        if (networkResponse && networkResponse.status === 200) {
           const responseToCache = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => cache.put(event.request, responseToCache));
         }
         return networkResponse;
-      }).catch(async () => {
+      })
+      .catch(async () => {
+        const cachedResponse = await caches.match(event.request);
+        if (cachedResponse) return cachedResponse;
+
+        // Fallback to cached homepage for navigation requests
         const acceptHeader = event.request.headers.get('accept') || '';
         if (acceptHeader.includes('text/html')) {
-          const fallbackHtml = await caches.match('./index.html');
+          const fallbackHtml = await caches.match('/');
           if (fallbackHtml) return fallbackHtml;
         }
-        return new Response('Network request failed', {
+
+        return new Response('Offline — Network request failed', {
           status: 503,
           statusText: 'Service Unavailable',
           headers: new Headers({ 'Content-Type': 'text/plain' })
         });
-      });
-    })
+      })
   );
 });
-

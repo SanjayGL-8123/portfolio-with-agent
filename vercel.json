@@ -12,6 +12,7 @@
           "manifest.json",
           "robots.txt",
           "sitemap.xml",
+          "sw.js",
           "knowledge.json",
           "data/**",
           "database/**",

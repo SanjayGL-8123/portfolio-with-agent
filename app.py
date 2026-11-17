@@ -389,22 +389,23 @@ def forward_contact_email(name, email, subject, message, phone=""):
 
 # Predefined fallback rules
 KNOWLEDGE_BASE = {
-    "intro": "I am Sanjay G L, a BCA student (3rd year, 5th semester) based in Shivamogga, Karnataka, India. I am a passionate full-stack developer, Python developer, and AI workflow engineer who builds production web platforms and AI tools.",
-    "education": "I am pursuing a Bachelor of Computer Applications (BCA) degree (2023–2027 · Currently in 5th Semester) in Shivamogga, Karnataka, focusing on core subjects: Software Engineering, DBMS, Data Structures & Algorithms, Computer Networks, PHP & MySQL, AI & ML, Cyber Security, and Python.",
+    "intro": "I am Sanjay G. L., a BCA student (3rd year, 5th semester) at PES Institute of Advanced Management Studies (PES IAMS) based in Shivamogga, Karnataka, India. I am a full-stack AI developer, AI agent engineer, cybersecurity explorer, and Python developer.",
+    "education": "I am pursuing a Bachelor of Computer Applications (BCA) degree (3rd Year, 5th Semester, 2023–2027) at PES Institute of Advanced Management Studies (PES IAMS) in Shivamogga, Karnataka, focusing on core subjects: Software Engineering, DBMS, Data Structures & Algorithms, Computer Networks, PHP & MySQL, AI & ML, Cyber Security, and Python.",
     "skills": "My primary technical stack covers full-stack web development (HTML5, CSS3, JavaScript ES6+, React, Node.js, Electron.js, PHP, Python, Flask, FastAPI, MySQL, PostgreSQL, SQLite), DevOps & Cloud (Docker, Kubernetes, Git, Vercel, Netlify), AI & ML pipelines (TensorFlow, Scikit-learn, YOLOv8, OpenCV), and security tooling (Kali Linux, Wireshark, Nmap).",
     "placement_pro_project": "I engineered Placement Pro, a comprehensive full-stack placement portal that streamlines recruitment workflows, student directories, company drives, automated data ingestion, and placement report generation using a FastAPI backend and modern database schemas.",
     "invoiceguard": "InvoiceGuard is an AI-powered invoice anomaly and fraud detector built for hackathon fraud mitigation using Scikit-learn, Pandas, and Flask REST APIs.",
     "sentinelai": "SentinelAI is a cyber threat early-warning intelligence system that placed 6th–7th in a state-level hackathon, featuring multi-agent security threat scanning.",
     "meluha_ai": "Meluha AI is Sanjay's flagship ambition to architect a sovereign Indian AI model trained from scratch without external API keys, alongside a scalable Public API platform.",
-    "projects": "I built InvoiceGuard, SentinelAI, PureWeaves (handcrafted saree e-commerce with WhatsApp API checkout), Placement Pro, QR Code Studio (150+ designs), Notes Management System, and Video Conferencing App.",
+    "projects": "I built DataGauge (2026), Accident Risk Prediction (2026), Sai AI Assistant (2026), AI Agent using Google API (2025), Surya Chatbot, Kai Assistant, InvoiceGuard, SentinelAI, PureWeaves, Placement Pro, and Vibe Chat.",
     "experience": "Yes. I completed a Web Development Internship with Oasis Infobyte (Star Performer, AICTE OIB-SIP, Feb–Mar 2026), and I am currently working as an AI, ML & Python Developer Intern at Milano Infotech in Shivamogga (offline, Aug 2026 – Present).",
+    "volunteer": "Sanjay is an active NSS Volunteer (2023 – Present) at PES IAMS Shivamogga participating in community service, and a YFS Volunteer (Mera Yuva Bharat) (2024 – Present) recognized with a Certificate of Recognition by the Ministry of Youth Affairs & Sports.",
     "cybersecurity": "I practice vulnerability assessments, secure API routing, and security scanning with Kali Linux, Wireshark, and Nmap, with a strong focus on defensive application architecture.",
     "ai": "I implement computer vision and deep learning pipelines with OpenCV and YOLOv8, optimize workflows with Gemini API and OpenAI pathways, and design autonomous AI agent architectures.",
     "leadership": "I build technical event platforms, share developer guides on GitHub, and organize educational tech content.",
     "strengths": "I combine rapid full-stack execution with disciplined architecture, clean database design, and real problem-solving drive.",
-    "hobbies": "Outside of programming, I enjoy gaming, music, photography, travel, fitness, and maintaining freshwater aquariums.",
-    "career goals": "My goal is to excel as a Senior Full Stack Engineer & AI Workflow Engineer, architecting scalable digital products that deliver real user and enterprise value.",
-    "who are you": "I am Sanjay G. L.'s personal AI Portfolio Assistant. Sanjay specializes in Full Stack Web Development, Frontend Engineering, and building AI‑integrated web applications with 70+ certifications.",
+    "hobbies": "Outside of programming, I enjoy cybersecurity, computer networking, fish keeping and aquarium care, trekking, historical travel, electronics & components, and AI automation.",
+    "career goals": "My goal is to excel as a Senior Full Stack AI Engineer & AI Workflow Engineer, architecting scalable digital products that deliver real user and enterprise value.",
+    "who are you": "I am Sanjay G. L.'s personal AI Portfolio Assistant. Sanjay specializes in Full Stack Web Development, AI Agent Engineering, and building AI‑integrated web applications with 70+ certifications.",
     "tell me about yourself": "I specialize in Full Stack Web Development, Frontend Engineering, and building AI‑integrated web applications. I actively use AI workflows in my daily development process and have hands‑on experience in database design and management. With 70+ certifications — including Microsoft and HackerRank credentials in CSS, JavaScript, Python, and SQL — I have completed corporate workshops, web development internships, and volunteer initiatives. I also run PureWeaves, a handmade saree accessories brand, blending entrepreneurship with modern e‑commerce technology.",
     "pureweaves": "PureWeaves is a handmade saree accessories brand founded by Sanjay, blending entrepreneurship with modern e-commerce technology.",
     "skills": "Sanjay's skills: Python, JavaScript (ES6+), React.js, Node.js, Electron.js, Flask, FastAPI, PHP, HTML5, CSS3, Bootstrap, SQL, MySQL, PostgreSQL, SQLite, C, C++, Java, Docker, Kubernetes, AI/ML, and Cyber Security.",
@@ -412,7 +413,7 @@ KNOWLEDGE_BASE = {
     "future goals": "Sanjay aims to build scalable full-stack products, deploy native AI models like Meluha AI, and launch a Public API platform.",
     "technologies": "Sanjay's tech stack includes Python, Flask, FastAPI, React, Node.js, Electron.js, JavaScript, HTML5, CSS3, SQL, MySQL, PostgreSQL, SQLite, Docker, Kubernetes, OpenCV, YOLOv8, Git, GitHub, VS Code, Cursor AI, Antigravity, and Vercel.",
     "freelance": "Yes! Sanjay is open to freelance web development, AI workflow integration, and software projects, as well as full-time internships.",
-    "contact": "You can contact Sanjay directly via email at sanjaygl3006@gmail.com, call/WhatsApp at +91 81232 40049, or use the interactive Contact Form on this site.",
+    "contact": "You can contact Sanjay directly via email at sanjaygl2006@gmail.com, call/WhatsApp at +91 8123981877, or connect via LinkedIn, GitHub, Facebook, and Salesforce Trailhead.",
     "from": "Sanjay is from Shivamogga (Shimoga), Karnataka, India.",
     "why hire": "Sanjay brings strong problem-solving skills, hands-on experience in full-stack web and AI development, 70+ certifications, a passion for clean code, and a proven track record of shipping production-ready software."
 }
@@ -615,7 +616,7 @@ def get_fallback_reply(message, proj_count=100, cert_count=70):
     if "skill" in msg or "stack" in msg or "tool" in msg:
         return "Sanjay's core technical stack includes Python, JavaScript, React, Node.js, Electron.js, HTML5/CSS3, SQL (MySQL, PostgreSQL, SQLite), Docker, Kubernetes, Git/GitHub, Cursor AI, and AI agent frameworks."
 
-    return "I am Sanjay AI Assistant v3.0, automatically trained on Sanjay's portfolio knowledge. You can ask me anything about his BCA education (2023–2027 · 5th Sem) in Shivamogga, internships at Milano Infotech & Oasis Infobyte, 100+ projects (InvoiceGuard, SentinelAI, PureWeaves, Placement Pro, Meluha AI), or technical topics like Python, Docker, Kubernetes, Electron.js, Node.js, and Cyber Security!"
+    return "I am Sanjay AI Assistant v3.0, automatically trained on Sanjay's portfolio knowledge. You can ask me anything about his BCA education (3rd Year, 5th Sem) at PES Institute of Advanced Management Studies (PES IAMS) Shivamogga, internships at Milano Infotech & Oasis Infobyte, 100+ projects (DataGauge, Sai AI, InvoiceGuard, SentinelAI, PureWeaves, Placement Pro, Meluha AI), or technical topics like Python, Docker, Kubernetes, Electron.js, Node.js, and Cyber Security!"
 
 # ----------------- FLASK ROUTING -----------------
 # is_safe_path is defined at module top (line 25)
@@ -656,7 +657,7 @@ def enforce_https_and_track_visit():
 def add_security_headers(response):
     allowed_origin = 'https://sanjaygl.vercel.app'
     req_origin = request.headers.get('Origin', '')
-    if req_origin in (allowed_origin, 'http://localhost:5000', 'http://localhost:5001', 'http://127.0.0.1:5000'):
+    if req_origin in (allowed_origin, 'http://localhost:5000', 'http://localhost:5001', 'http://127.0.0.1:5000') or req_origin.startswith('http://10.') or req_origin.startswith('http://192.168.'):
         response.headers['Access-Control-Allow-Origin'] = req_origin
     else:
         response.headers['Access-Control-Allow-Origin'] = allowed_origin
@@ -676,7 +677,11 @@ def add_security_headers(response):
         "connect-src 'self' https://api.web3forms.com https://formsubmit.co; "
         "frame-ancestors 'self';"
     )
-    if request.path.endswith(('.css', '.js')):
+    if response.status_code >= 400:
+        response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate, max-age=0'
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Expires'] = '0'
+    elif request.path.endswith(('.css', '.js')):
         response.headers['Cache-Control'] = 'no-cache, must-revalidate'
     elif request.path.endswith(('.woff2', '.png', '.jpg', '.jpeg', '.svg', '.ico')):
         response.headers['Cache-Control'] = 'public, max-age=86400'
@@ -830,7 +835,8 @@ BLOCKED_EXTENSIONS = {
 }
 
 ALLOWED_ROOT_FILES = {
-    'favicon.ico', 'manifest.json', 'robots.txt', 'sitemap.xml', 'sw.js'
+    'favicon.ico', 'manifest.json', 'robots.txt', 'sitemap.xml', 'sw.js',
+    'index.html', 'projects.html', 'privacy.html', 'knowledge.json'
 }
 
 ALLOWED_STATIC_EXTENSIONS = {
@@ -859,9 +865,9 @@ def serve_static(path):
             if is_safe_path(BASE_DIR, full_path) and os.path.isfile(full_path):
                 return send_from_directory(BASE_DIR, path)
 
-        # 4. Check explicit clean HTML routes (e.g. /projects -> projects.html, /privacy -> privacy.html)
+        # 4. Check explicit clean HTML routes (e.g. /projects -> projects.html, /privacy -> privacy.html, /index -> index.html)
         clean_name = path[:-5] if path.endswith(".html") else path
-        if clean_name in ['projects', 'privacy']:
+        if clean_name in ['projects', 'privacy', 'index']:
             html_file = clean_name + ".html"
             html_candidate = os.path.join(BASE_DIR, html_file)
             if os.path.isfile(html_candidate):
@@ -893,41 +899,10 @@ def serve_static(path):
 
 @app.route("/js/projectsData.js")
 def serve_projects_js():
-    try:
-        projects = Project.query.all()
-        if not projects:
-            raise Exception("Empty DB")
-    except Exception:
-        # Fallback to local static JS file if DB is unseeded
-        with open(os.path.join(BASE_DIR, "js", "projectsData.js"), "r", encoding="utf-8") as f:
-            return f.read(), 200, {"Content-Type": "text/javascript"}
-            
-    serialized = []
-    for p in projects:
-        serialized.append({
-            "id": p.id,
-            "title": p.title,
-            "year": p.year,
-            "category": p.category,
-            "tagline": p.tagline,
-            "desc": p.description,
-            "tech": p.tech_stack or [],
-            "live": p.live,
-            "github": p.github,
-            "status": p.status,
-            "featured": p.featured,
-            "icon": p.icon,
-            "image": p.image,
-            "overview": p.overview,
-            "architecture": p.architecture,
-            "features": p.features or [],
-            "structure": p.structure or [],
-            "futureScope": p.futureScope or [],
-            "timeline": p.timeline or [],
-            "stats": p.stats or {}
-        })
-    js_content = f"const PROJECTS_DATA = {json.dumps(serialized)};\nif (typeof window !== 'undefined') {{ window.PROJECTS_DATA = PROJECTS_DATA; }}"
-    return js_content, 200, {"Content-Type": "text/javascript"}
+    js_path = os.path.join(BASE_DIR, "js", "projectsData.js")
+    if os.path.exists(js_path):
+        return send_from_directory(os.path.join(BASE_DIR, "js"), "projectsData.js", mimetype="text/javascript")
+    return "console.error('projectsData.js not found');", 404
 
 @app.route("/api/projects", methods=["GET"])
 def get_projects_api():
@@ -975,10 +950,10 @@ def get_stats():
 @app.route("/api/about", methods=["GET"])
 def get_about():
     try:
-        proj_count = Project.query.count() or 100
+        proj_count = len(load_projects_data()) or 89
     except Exception:
-        proj_count = 100
-    cert_count = 70
+        proj_count = 89
+    cert_count = 88
 
     return jsonify({
         "name": "Sanjay G. L.",

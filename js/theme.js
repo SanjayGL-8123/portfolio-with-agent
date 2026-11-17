@@ -107,8 +107,6 @@
     }
     initMobileMenu();
 
-    // Developer Console Welcome Message
-    console.log("Welcome to Sanjay G. L. Portfolio Website!");
   });
 
   // Konami Code Easter Egg (↑ ↑ ↓ ↓ ← → ← → B A)

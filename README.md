@@ -1,6 +1,6 @@
-# Sanjay G. L. — Developer Portfolio & AIOS Neural Co-Pilot
+# Sanjay G. L. — Developer Portfolio & AI Neural Co-Pilot
 
-A production-ready developer portfolio and technical operating system for **Sanjay G. L.** — Full-Stack Developer, Python Developer, and AI Workflow Engineer, currently pursuing a Bachelor of Computer Applications (BCA · 3rd Year, 5th Semester, 2024–2027) based in **Shivamogga (Shimoga), Karnataka, India**.
+A production-ready developer portfolio for **Sanjay G. L.** — Full-Stack Developer, Python Developer, and AI Workflow Engineer, currently pursuing a Bachelor of Computer Applications (BCA · 3rd Year, 5th Semester, 2024–2027) based in **Shivamogga (Shimoga), Karnataka, India**.
 
 Powered by a high-performance Python Flask backend, dynamic JSON knowledge architecture, and an embedded autonomous AI Portfolio Assistant (`Sanjay AI`).
 

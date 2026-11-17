@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects Showcase — Sanjay G. L.</title>
-  <meta name="description" content="Explore 100 software, AI, and cybersecurity projects by Sanjay G. L. Filter by AI & ML, Web Apps, Tools & Security, Games, and Portfolios.">
+  <meta name="description" content="Explore 89 verified software, AI, and cybersecurity projects by Sanjay G. L. Filter by AI & ML, Web Apps, Tools & Security, Games, and Portfolios.">
       <!-- Geographical Meta Tags (GEO SEO) -->
   <meta name="geo.region" content="IN-KA">
   <meta name="geo.placename" content="Shivamogga, Karnataka, India">
@@ -19,23 +19,31 @@
 
   <!-- Open Graph & Twitter Cards -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Projects Showcase — Sanjay G. L.">
-  <meta property="og:description" content="Explore 100 software, AI, and cybersecurity projects by Sanjay G. L. with live demos, technical architecture, and open source code.">
+  <meta property="og:title" content="Projects Showcase (89) — Sanjay G. L.">
+  <meta property="og:description" content="Explore 89 verified software, AI, and cybersecurity projects by Sanjay G. L. with interactive 3D flip cards, technical architecture, and open source code.">
   <meta property="og:image" content="https://sanjaygl.vercel.app/assets/sanjay-logo.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Sanjay G. L. Projects Showcase banner">
   <meta property="og:url" content="https://sanjaygl.vercel.app/projects">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Projects Showcase (100) — Sanjay G. L.">
-  <meta name="twitter:description" content="Explore 100 software, AI, and cybersecurity projects by Sanjay G. L. with live demos and source code.">
+  <meta name="twitter:title" content="Projects Showcase (89) — Sanjay G. L.">
+  <meta name="twitter:description" content="Explore 89 verified software, AI, and cybersecurity projects by Sanjay G. L. with 3D flip cards, tech architecture, and source code.">
   <meta name="twitter:image" content="https://sanjaygl.vercel.app/assets/sanjay-logo.webp">
 
-  <!-- Font Awesome -->
+  <!-- Fonts: Space Grotesk, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Icon Libraries -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- CSS Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/devicon/2.15.1/devicon.min.css">
+
+  <!-- Main Design System Stylesheet -->
+  <link rel="stylesheet" href="css/clean-redesign.css?v=3.0.1">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -53,7 +61,7 @@
   "url": "https://sanjaygl.vercel.app/projects",
   "image": "https://sanjaygl.vercel.app/assets/profile.webp",
   "jobTitle": "Full Stack AI Developer",
-  "description": "Sanjay G. L. – BCA student and Full Stack AI Developer in Shivamogga, Karnataka. 100 projects, Python, React, AI.",
+  "description": "Sanjay G. L. – BCA student and Full Stack AI Developer in Shivamogga, Karnataka. 89 verified projects, Python, React, AI.",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Shivamogga",
@@ -70,9 +78,9 @@
   ],
   "sameAs": [
     "https://www.linkedin.com/in/sanjay-gl-b86631336",
-    "https://www.youtube.com/@spvm3techsolution",
-    "https://www.instagram.com/spvm3techsolution",
-    "https://t.me/Sanjaygl30"
+    "https://github.com/SanjayGL-8123",
+    "https://www.facebook.com/people/Sanjay-G-L-Sanju/100084034332588/",
+    "https://t.me/sanjaygl2006"
   ]
 }
   </script>
@@ -87,30 +95,32 @@
   <div id="toast-container"></div>
 
 
-  <!-- ===================== NAVBAR ===================== -->
-  <header class="navbar">
+  <!-- Navigation Bar (Glassmorphic) -->
+  <header id="navbar">
     <div class="container nav-inner">
-      <a href="/" class="brand-logo" style="display:flex;align-items:center;gap:10px;">
-        <img src="assets/sanjay-logo.webp" alt="Sanjay G. L. Logo" style="width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid var(--emerald-primary, #2F6FED);">
-        <span>Sanjay<span class="text-gradient">.GL</span></span>
+      <a href="/" class="logo" style="display:flex;align-items:center;gap:10px;">
+        <img src="assets/sanjay-logo.webp" alt="Sanjay G. L. Logo"
+          style="width:34px;height:34px;border-radius:50%;object-fit:cover;border:1.5px solid var(--blue);box-shadow:0 0 10px rgba(47,111,237,0.35);">
+        <span>&lt;<span>San</span>jay<span class="dot">/&gt;</span></span>
       </a>
-
-            <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
-        <a href="/" class="nav-link">Home</a>
-        <a href="/#about" class="nav-link">About</a>
-        <a href="/projects" class="nav-link active">Projects</a>
-        <a href="/#contact" class="nav-link">Contact</a>
-        <a href="assets/Sanjay_GL_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm nav-resume-btn" download="Sanjay_GL_Resume.pdf" aria-label="Download Resume PDF">
-          <i class="fa-solid fa-download" aria-hidden="true"></i> Resume (PDF)
-        </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/#about">About</a>
+        <a href="/#skills">Skills</a>
+        <a href="/#experience">Experience</a>
+        <a href="/projects" class="active">Projects</a>
+        <a href="/#certificates">Certificates</a>
+        <a href="/#resume">Resume</a>
+        <a href="/#contact">Contact</a>
       </nav>
-
       <div class="nav-actions">
-        <button class="icon-btn" id="themeToggleBtn" aria-label="Toggle Theme">
-          <i class="fa-solid fa-moon"></i>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
         </button>
-
-        <button class="hamburger" id="hamburger" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="navMenu">
+        <a href="assets/Sanjay_GL_Resume.pdf" download class="btn btn-primary btn-sm">
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
@@ -119,31 +129,32 @@
 
   <main id="main-content">
   <!-- ===================== PROJECTS HEADER ===================== -->
-  <section class="projects-section">
+  <section class="projects-page-wrap">
     <div class="container">
       <!-- Quick Navigation Back to Home & Developer Badge -->
       <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap;">
-        <a href="/" class="btn btn-outline btn-sm magnetic">
+        <a href="/" class="btn btn-outline btn-sm">
           <i class="fa-solid fa-arrow-left"></i> Back to Home Page
         </a>
-        <div style="display:inline-flex;align-items:center;gap:12px;padding:6px 16px 6px 8px;border-radius:100px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);backdrop-filter:blur(10px);">
-          <img src="assets/profile.webp" alt="Sanjay G. L." style="width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid #2F6FED;box-shadow:0 0 10px rgba(47,111,237,0.3);">
+        <div class="glass" style="display:inline-flex;align-items:center;gap:12px;padding:6px 16px 6px 8px;border-radius:100px;">
+          <img src="assets/profile.webp" alt="Sanjay G. L." style="width:38px;height:38px;border-radius:50%;object-fit:cover;border:2px solid var(--blue);box-shadow:0 0 10px rgba(47,111,237,0.3);">
           <div>
-            <div style="font-weight:700;font-size:0.9rem;line-height:1.2;">Sanjay G. L.</div>
-            <div style="font-size:0.75rem;color:var(--text-muted, #8792A6);">Full-Stack &amp; AI Developer</div>
+            <div style="font-weight:700;font-size:0.9rem;line-height:1.2;color:var(--ink);">Sanjay G. L.</div>
+            <div style="font-size:0.75rem;color:var(--ink-soft);">Full-Stack &amp; AI Developer</div>
           </div>
         </div>
       </div>
 
-      <span class="section-eyebrow">Interactive Portfolio</span>
-      <h2 class="section-title">Software & <span class="text-gradient">AI Projects</span></h2>
-      <p class="section-sub">Explore 100 real-world web apps, AI agents, calculators, games, and security utilities. Flip cards or click details to reveal full tech specs and live demos.</p>
+      <div class="projects-hero-badge">// Full Stack AI Directory • 89 Verified Systems</div>
+      <h1 class="projects-hero-title">Software &amp; <span class="text-gradient">AI Projects</span></h1>
+      <p class="projects-hero-sub">Explore 89 verified production applications, AI agent frameworks, computer vision pipelines, and full-stack platforms. Move your cursor over any card to flip and inspect full language, backend framework, database, and APIs used.</p>
 
       <!-- Controls & Filter Bar -->
       <div class="controls-bar">
         <div class="search-input-wrap">
+          <label for="projectSearch" class="sr-only">Search projects</label>
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" class="search-input" id="projectSearch" placeholder="Search projects by name, technology, or tag..." autocomplete="off">
+          <input type="text" class="search-input" id="projectSearch" placeholder="Search projects by name, technology, or tag..." autocomplete="off" aria-label="Search projects by name, technology, or tag">
         </div>
 
         <select class="filter-select" id="techFilter" aria-label="Filter by Technology">
@@ -162,8 +173,8 @@
       <div class="filter-chips-row" id="categoryFilters"></div>
 
       <!-- Visible Count Counter -->
-      <div style="font-size:0.9rem;color:var(--text-muted);margin-bottom:24px">
-        Showing <strong id="visibleCount" style="color:var(--emerald-primary)">100</strong> projects
+      <div style="font-size:0.9rem;color:var(--ink-soft);margin-bottom:24px;font-family:var(--font-mono);">
+        Showing <strong id="visibleCount" style="color:var(--blue);font-weight:700;">89</strong> verified projects
       </div>
 
       <!-- 3D Flip Cards Grid -->
@@ -232,47 +243,56 @@
   <!-- ===================== FOOTER ===================== -->
   <footer>
     <div class="container">
-      <div class="footer-content-grid">
+      <div class="footer-grid">
         <div>
-          <a href="/" class="brand-logo" style="margin-bottom:12px">
-            <i class="fa-solid fa-terminal" style="margin-right:8px;color:var(--emerald-primary);font-size:1.15rem;"></i>
-            <span>Sanjay<span class="text-gradient">.GL</span></span>
+          <a href="/" class="logo" style="display:flex;align-items:center;gap:10px;">
+            <img src="assets/sanjay-logo.webp" alt="Sanjay G. L. Logo"
+              style="width:34px;height:34px;border-radius:50%;object-fit:cover;border:1.5px solid var(--blue);box-shadow:0 0 10px rgba(47,111,237,0.35);">
+            <span>&lt;<span>San</span>jay<span class="dot">/&gt;</span></span>
           </a>
-          <p style="color:var(--text-muted);font-size:0.9rem;max-width:380px;margin-top:8px">
-            AI-Powered Portfolio & Operating System created by Sanjay G. L.
-          </p>
+          <p>Full-Stack Web Developer &amp; AI Workflow Engineer building modern, user-friendly digital systems.</p>
         </div>
-
         <div>
-          <h4 style="color:var(--text-main);margin-bottom:12px">Pages</h4>
-          <div style="display:flex;flex-direction:column;gap:6px;font-size:0.88rem">
-            <a href="/">Home</a>
-            <a href="/projects">Projects (100)</a>
-            <a href="/privacy">Privacy Policy</a>
-          </div>
+          <h5>Quick Navigation</h5>
+          <a href="/">Home</a>
+          <a href="/#about">About Sanjay</a>
+          <a href="/#skills">Skills &amp; Tech</a>
+          <a href="/projects">All 89 Projects</a>
+          <a href="/#contact">Contact</a>
         </div>
-
         <div>
-          <h4 style="color:var(--text-main);margin-bottom:12px">Quick Links</h4>
-          <div style="font-size:0.88rem;color:var(--text-muted)">
-            <div><a href="/#contact" style="color:var(--emerald-primary)">Contact Sanjay</a></div>
-          </div>
+          <h5>Resources</h5>
+          <a href="/projects">All 89 Projects Directory</a>
+          <a href="assets/Sanjay_GL_Resume.pdf" download>Download PDF Resume</a>
+          <a href="/privacy">Privacy Policy</a>
         </div>
       </div>
-
-      <div class="footer-bottom-row">
-        <div>© 2026 Sanjay G. L. All rights reserved. • <a href="/privacy" style="color:var(--text-muted);text-decoration:underline">Privacy Policy</a> • <a href="/sitemap.xml" style="color:var(--text-muted);text-decoration:underline">Sitemap</a></div>
-        <div style="color:var(--emerald-primary)">Engineered for Performance & Aesthetics</div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="current-year">2026</span> Sanjay G. L. All rights reserved.</span>
+        <div class="social-row">
+          <a href="https://github.com/SanjayGL-8123" target="_blank" rel="noopener" aria-label="GitHub"><i
+              class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/sanjay-gl-b86631336" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+              class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/people/Sanjay-G-L-Sanju/100084034332588/" target="_blank" rel="noopener"
+            aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://trailhead.salesforce.com/" target="_blank" rel="noopener"
+            aria-label="Salesforce Trailhead"><i class="fa-brands fa-salesforce"></i></a>
+          <a href="mailto:sanjaygl2006@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
       </div>
     </div>
   </footer>
 
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" aria-label="Scroll Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
   <!-- Scripts -->
-  <script src="js/projectsData.js?v=1788798009" defer></script>
-  <script src="js/toast.js" defer></script>
-  <script src="js/theme.js" defer></script>
-  <script src="js/projectsPage.js" defer></script>
-  <script src="js/agentKnowledge.js?v=2.5.2" defer></script>
-  <script src="js/aiAssistant.js?v=2.5.2" defer></script>
+  <script src="js/projectsData.js?v=1788798009"></script>
+  <script src="js/clean-redesign.js?v=3.0.0"></script>
+  <script src="js/projectsPage.js"></script>
+  <script src="js/toast.js"></script>
 </body>
 </html>
